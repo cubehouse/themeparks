@@ -1,0 +1,20 @@
+{
+	"name": "wdwJS",
+	"description": "Walt Disney World API Framework",
+	"version": "0.1.0",
+	"author": {
+		"name": "Jamie Holding",
+		"email": "me@jamie.holdings"
+	},
+	"dependencies": {
+		"request": "2.x.x",
+        "pluralize": "1.1.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/cubehouse/wdwJS.git"
+	},
+	"main": "disney.js",
+	"readmeFilename": "README.md",
+	"license": "MIT"
+}
