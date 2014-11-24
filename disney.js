@@ -113,25 +113,26 @@ function DisneyAPI(options)
                     return;
                 }
 
+                // attempt to parse the body for JSON Data
+                var JSONData = false;
+
                 try {
-                    var JSONData = JSON.parse(body);
-
-                    // do some extra data parsing for neatness
-                    if (JSONData)
-                    {
-                        TidyObject(JSONData);
-                        if (JSONData.entries)
-                        {
-                            for(var i=0; i<JSONData.entries.length; i++)
-                            {
-                                TidyObject(JSONData.entries[i]);
-                            }
-                        }
-                    }
-
-                    if (cb) cb(false, JSONData);
+                    JSONData = JSON.parse(body);
                 } catch (e) {
                     if (cb) cb(false, body);
+                }
+
+                if (JSONData)
+                {
+                    TidyObject(JSONData);
+                    if (JSONData.entries)
+                    {
+                        for(var i=0; i<JSONData.entries.length; i++)
+                        {
+                            TidyObject(JSONData.entries[i]);
+                        }
+                    }
+                    if (cb) cb(false, JSONData, resp);
                 }
             });
         });
