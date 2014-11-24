@@ -83,16 +83,30 @@ function DisneyAPI(options)
                 return;
             }
 
+            var headers = {
+                'Authorization': "BEARER " + session.access_token,
+                'Accept': 'application/json;apiversion=1',
+                'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD'
+            };
+
+            // add stored load balancer instance if we have one
+            if (session.correlation)
+            {
+                headers["X-Correlation-Id"] = session.correlation;
+            }
+
             request({
                 url: url,
                 method: "GET",
-                headers: {
-                    'Authorization': "BEARER " + session.access_token,
-                    'Accept': 'application/json;apiversion=1',
-                    'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD'
-                },
+                headers: headers,
                 qs: data
             }, function(error, resp, body) {
+                // if we get an instance ID from the load balancer, store it
+                if (resp && resp.headers && resp.headers["x-correlation-id"])
+                {
+                    session.correlation = resp.headers["x-correlation-id"];
+                }
+
                 if (error)
                 {
                     if (cb) cb(error);
