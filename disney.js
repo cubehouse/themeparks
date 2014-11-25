@@ -12,11 +12,25 @@ function DisneyAPI(options)
         expire_time: 0
     };
 
-    // load request library
-    var request = require('request').defaults({
-        // use a cookie jar for logging in page
+    var request_vars = {
         jar: true
-    });
+    };
+
+    // optionally accept a proxy for request
+    if (options && options.proxy)
+    {
+        request_vars.proxy = options.proxy;
+    }
+
+    var requestAgent = false;
+    if (options && options.agent)
+    {
+        requestAgent = options.agent;
+        request_vars.agent = options.agent;
+    }
+
+    // load request library
+    var request = require('request').defaults(request_vars);
 
     // get fresh access token from Disney API
     function GetAccessToken(cb)
