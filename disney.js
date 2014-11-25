@@ -40,10 +40,15 @@ function DisneyAPI(options)
             url: "https://authorization.go.com/token",
             method: "POST",
             body: "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion"
-
         },
         function(err, resp, body)
         {
+            if (err)
+            {
+                if (cb) cb(err);
+                return;
+            }
+
             if (resp.statusCode == 200)
             {
                 var data = JSON.parse(body);
