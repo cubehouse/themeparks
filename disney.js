@@ -4,6 +4,12 @@ var pluralize = require('pluralize');
 // our default user-agent
 var useragent = "Mozilla/5.0 (Linux; U; Android 4.3; en-GB; C6502 Build/10.4.1.B.0.101) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30";
 
+// park IDs
+var ID_Epcot = "80007838";
+var ID_MagicKingdom = "80007944";
+var ID_HollywoodStudios = "80007998";
+var ID_AnimalKingdom = "80007998";
+
 function DisneyAPI(options)
 {
     // keep session data about
@@ -259,22 +265,48 @@ function DisneyAPI(options)
     // helper functions for various main parks
     this.GetEpcotTimes = function(cb)
     {
-        this.GetTimes("80007838", "theme-park", cb);
+        this.GetTimes(ID_Epcot, "theme-park", cb);
     };
 
     this.GetMagicKingdomTimes = function(cb)
     {
-        this.GetTimes("80007944", "theme-park", cb);
+        this.GetTimes(ID_MagicKingdom, "theme-park", cb);
     };
 
     this.GetHollywoodStudiosTimes = function(cb)
     {
-        this.GetTimes("80007998", "theme-park", cb);
+        this.GetTimes(ID_HollywoodStudios, "theme-park", cb);
     };
 
     this.GetAnimalKingdomTimes = function(cb)
     {
-        this.GetTimes("80007823", "theme-park", cb);
+        this.GetTimes(ID_AnimalKingdom, "theme-park", cb);
+    };
+
+    /** Get schedule (opening hours) for given ID */
+    this.GetSchedule = function(id, cb)
+    {
+        this.GetID(id, "schedule", cb);
+    };
+
+    this.GetEpcotSchedule = function(cb)
+    {
+        this.GetSchedule(ID_Epcot, cb);
+    };
+
+    this.GetMagicKingdomSchedule = function(cb)
+    {
+        this.GetSchedule(ID_MagicKingdom, cb);
+    };
+
+    this.GetHollywoodStudiosSchedule = function(cb)
+    {
+        this.GetSchedule(ID_HollywoodStudios, cb);
+    };
+
+    this.GetAnimalKingdomSchedule = function(cb)
+    {
+        this.GetSchedule(ID_AnimalKingdom, cb);
     };
 };
 
