@@ -1,43 +1,85 @@
 // need pluralize to turn types into plural versions for API pages
 var pluralize = require('pluralize');
 
-// our default user-agent
-var useragent = "Mozilla/5.0 (Linux; U; Android 4.3; en-GB; C6502 Build/10.4.1.B.0.101) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30";
+function DisneyRequest(options)
+{ 
+    /* ===== Exports ===== */
+    
 
-// park IDs
-var ID_Epcot = "80007838";
-var ID_MagicKingdom = "80007944";
-var ID_HollywoodStudios = "80007998";
-var ID_AnimalKingdom = "80007998";
 
-function DisneyAPI(options)
-{
-    // keep session data about
+    /** Get a URL from the Disney API */
+    this.GetURL = function(url, cb)
+    {
+        MakeGet(url, {}, cb);
+    };
+
+
+    /** Get an API page 
+    * id: Page ID (eg. 80007944 - ID for the Magic Kingdom)
+    * type: Page type (eg. "wait-times" - for park wait times)
+    * subpage (optional): Sub-page of an API page (TODO - find example)
+    * callback: function return with arguments (error, data)
+    */
+    this.GetPage = function(id, type, subpage, cb)
+    {
+        if (typeof subpage == "function")
+        {
+            cb = subpage;
+            subpage = "";
+        }
+        else
+        {
+            // make sure subpage starts with a slash
+            if (subpage !== "" && subpage[0] != "/") subpage = "/" + subpage;
+        }
+
+        // tidy up inputs
+        id = parseInt(id, 10);
+        type = type.toLowerCase().replace(/[^a-z0-9-]/g, "");
+        // pluralize type
+        type = pluralize(type);
+
+        MakeGet("https://api.wdpro.disney.go.com/facility-service/" + type + "/" + id + subpage, {}, cb);
+    };
+    
+    
+    
+    /* ===== Variables ===== */
+    
+    
+    
+    // keep session data
     var session = {
         access_token: false,
         expire_time: 0
     };
 
+    // our default user-agent
+    var useragent = "Mozilla/5.0 (Linux; U; Android 4.3; en-GB; C6502 Build/10.4.1.B.0.101) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30";
+
+    // define any Request settings we want
     var request_vars = {
         jar: true
     };
-
-    // optionally accept a proxy for request
-    if (options && options.proxy)
+    
+    // support passing extra options for Request (eg. proxy/Tor settings)
+    if (options && options.request)
     {
-        request_vars.proxy = options.proxy;
-    }
-
-    var requestAgent = false;
-    if (options && options.agent)
-    {
-        requestAgent = options.agent;
-        request_vars.agent = options.agent;
+        for(var k in options.request)
+        {
+            request_vars[k] = options.request[k];
+        }
     }
 
     // load request library
     var request = require('request').defaults(request_vars);
 
+    
+    
+    /* ===== Internal Functions ===== */
+    
+    
+    
     // get fresh access token from Disney API
     function GetAccessToken(cb)
     {
@@ -45,6 +87,9 @@ function DisneyAPI(options)
         {
             url: "https://authorization.go.com/token",
             method: "POST",
+            headers: {
+                "User-Agent": useragent
+            },
             body: "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion"
         },
         function(err, resp, body)
@@ -97,8 +142,9 @@ function DisneyAPI(options)
         {
             if (cb) cb();
         }
-    };
+    }
 
+    /** Make a GET request to the Disney API */
     function MakeGet(url, data, cb)
     {
         CheckAccessToken(function(error) {
@@ -111,7 +157,8 @@ function DisneyAPI(options)
             var headers = {
                 'Authorization': "BEARER " + session.access_token,
                 'Accept': 'application/json;apiversion=1',
-                'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD'
+                'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD',
+                "User-Agent": useragent
             };
 
             // add stored load balancer instance if we have one
@@ -163,12 +210,14 @@ function DisneyAPI(options)
         });
     }
 
+    /** Helper function to call all tidy functions in-use */
     function TidyObject(obj)
     {
         TidyID(obj);
         TidyGPS(obj);
     }
 
+    /** Tidy up any IDs in the object to only include digits and parse to a JavaScript Int */
     function TidyID(obj)
     {
         if (!obj) return;
@@ -176,10 +225,11 @@ function DisneyAPI(options)
         var capture = /^([0-9]+)/.exec(obj.id);
         if (capture && capture.length > 1)
         {
-            obj.id = parseInt(capture[1]);
+            obj.id = parseInt(capture[1], 10);
         }
     }
 
+    /** Look for any GPS data in the object and replace it with more human-friendly information */
     function TidyGPS(object)
     {
         if (!object) return;
@@ -192,8 +242,8 @@ function DisneyAPI(options)
 
             if (obj.xyMaps && obj.xyMaps.x && obj.xyMaps.y)
             {
-                obj.xyMaps.x = parseInt(obj.xyMaps.x);
-                obj.xyMaps.y = parseInt(obj.xyMaps.y);
+                obj.xyMaps.x = parseInt(obj.xyMaps.x, 10);
+                obj.xyMaps.y = parseInt(obj.xyMaps.y, 10);
             }
 
             if (obj.gps && obj.gps.longitude && obj.gps.latitude)
@@ -207,11 +257,13 @@ function DisneyAPI(options)
         // Disney themed Google Map links
         if (object.type && object.id)
         {
+            // Disney.go.com uses a Base64 encoded JSON object to pass map configurations around
+            //  this is passed through a bookmark hash to tell the map what to load
+            //  below I create my own JSON object and encode it to generate my own map URL
             var mapObject = {
                 options: {
-// can't get zoom to work at all
-//                    viewportOptions: {zoom: 16},
                     pins: [
+                        // create a pin on the map to make it center at this position
                         {
                             type: object.type,
                             id: object.id
@@ -227,89 +279,7 @@ function DisneyAPI(options)
         }
     }
 
-    /** Generic "get whatever API URL you want" call */
-    this.GetAPIURL = function(url, cb)
-    {
-        MakeGet(url, {}, cb);
-    };
-
-    this.GetID = function(id, type, subpage, cb)
-    {
-        if (typeof subpage == "function")
-        {
-            cb = subpage;
-            subpage = "";
-        }
-        else
-        {
-            // make sure subpage starts with a slash
-            if (subpage != "" && subpage[0] != "/") subpage = "/" + subpage;
-        }
-
-        // tidy up inputs
-        id = parseInt(id);
-        type = type.toLowerCase().replace(/[^a-z0-9-]/g, "");
-        // pluralize type
-        type = pluralize(type);
-
-        MakeGet("https://api.wdpro.disney.go.com/facility-service/" + type + "/" + id + subpage, {}, cb);
-    };
-
-    /** Get wait times for a given ID, with type Type */
-    this.GetTimes = function(id, type, cb)
-    {
-        // request wait-times sub-page for this object
-        this.GetID(id, type, "wait-times", cb);
-    };
-
-    // helper functions for various main parks
-    this.GetEpcotTimes = function(cb)
-    {
-        this.GetTimes(ID_Epcot, "theme-park", cb);
-    };
-
-    this.GetMagicKingdomTimes = function(cb)
-    {
-        this.GetTimes(ID_MagicKingdom, "theme-park", cb);
-    };
-
-    this.GetHollywoodStudiosTimes = function(cb)
-    {
-        this.GetTimes(ID_HollywoodStudios, "theme-park", cb);
-    };
-
-    this.GetAnimalKingdomTimes = function(cb)
-    {
-        this.GetTimes(ID_AnimalKingdom, "theme-park", cb);
-    };
-
-    /** Get schedule (opening hours) for given ID */
-    this.GetSchedule = function(id, cb)
-    {
-        this.GetID(id, "schedule", cb);
-    };
-
-    this.GetEpcotSchedule = function(cb)
-    {
-        this.GetSchedule(ID_Epcot, cb);
-    };
-
-    this.GetMagicKingdomSchedule = function(cb)
-    {
-        this.GetSchedule(ID_MagicKingdom, cb);
-    };
-
-    this.GetHollywoodStudiosSchedule = function(cb)
-    {
-        this.GetSchedule(ID_HollywoodStudios, cb);
-    };
-
-    this.GetAnimalKingdomSchedule = function(cb)
-    {
-        this.GetSchedule(ID_AnimalKingdom, cb);
-    };
-};
+}
 
 // export module object
-module.exports = DisneyAPI;
-
+module.exports = DisneyRequest;

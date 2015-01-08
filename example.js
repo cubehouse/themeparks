@@ -1,12 +1,12 @@
-var DisneyAPI = require("./disney.js");
+var DisneyAPI = require("./index");
 var api = new DisneyAPI();
 
-api.GetMagicKingdomTimes(function(error, data) {
-    if (error)
+api.MagicKingdom.GetWaitTimes(function(err, data) {
+    if (err)
     {
-        console.log("Error fetching times: " + error);
+        console.log("Error fetching times: " + err);
         return;
     }
-
+    
     console.log(JSON.stringify(data, null, 2));
 });

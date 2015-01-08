@@ -14,7 +14,7 @@
 		"type": "git",
 		"url": "git://github.com/cubehouse/wdwJS.git"
 	},
-	"main": "disney.js",
+	"main": "index.js",
 	"readmeFilename": "README.md",
 	"license": "MIT"
 }
