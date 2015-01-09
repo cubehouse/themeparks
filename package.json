@@ -1,14 +1,14 @@
 {
 	"name": "wdwjs",
 	"description": "Walt Disney World API Framework",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": {
 		"name": "Jamie Holding",
 		"email": "me@jamie.holdings"
 	},
 	"dependencies": {
 		"request": "2.x.x",
-        "pluralize": "1.1.x"
+		"pluralize": "1.1.x"
 	},
 	"repository": {
 		"type": "git",
