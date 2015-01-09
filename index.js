@@ -17,7 +17,7 @@ function DisneyAPI(options)
     // export DRequest exports too
     for(var func in DRequest)
     {
-        exports[func] = DRequest[func];
+        this[func] = DRequest[func];
     }
 }
 
