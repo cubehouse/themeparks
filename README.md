@@ -4,12 +4,12 @@ An unofficial API library for accessing Disney park wait times, opening times an
 
 # Install
 
-    npm install wdwJS
+    npm install wdwjs
   
 # Example Use
 
     // Setup API
-    var DisneyAPI = require("./index");
+    var DisneyAPI = require("wdwjs");
     var api = new DisneyAPI();
     
     // Get Magic Kingdom wait times
