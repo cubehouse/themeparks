@@ -8,6 +8,8 @@ var dataFile = dataCacheDir + "/appState.json";
 var headers = null;
 var appData = null;
 
+var checkForNewContentMinutes = 5;
+
 // write app data so we know the state of our app content and can upgrade incrementally
 function SaveAppContent(cb)
 {
@@ -80,18 +82,37 @@ var attractionIDs = [
 
 function FetchContentList(ids, loc_id, cb)
 {
+	// gather the content lists into one list
+	var result = null;
+
 	var step = function()
 	{
 		var c = ids.shift();
 		if (!c)
 		{
-			return cb(null, true);
+			return cb(null, result);
 		}
 
 		UpdateContent(c, loc_id, function(err, data) {
+
+			if (!result)
+			{
+				// first result becomes the returned object
+				result = data;
+			}
+			else if (data.l)
+			{
+				// merge array into result array
+				for(var i=0; i<data.l.length; i++)
+				{
+					result.l.push(data.l[i]);
+				}
+			}
+
 			process.nextTick(step);
 		});
 	};
+
 	process.nextTick(step);
 }
 
@@ -112,7 +133,7 @@ function UpdateContent(content_id, loc_id, cb)
 		if (headers[ content_id ]) header = headers[ content_id ];
 
 		// goto cache if fetched in last two hours
-		if (appData[ content_id ] && appData[ content_id ].updated > ( Date.now() - 1000 * 60 * 60 * 2 ))
+		if (appData[ content_id ] && appData[ content_id ].updated > ( Date.now() - 1000 * 60 * checkForNewContentMinutes ))
 		{
 			console.log("Using cached content pack " + content_id + ".");
 			return cb(null, appData[ content_id ].data);
@@ -279,7 +300,7 @@ function CacheRideNames(cb)
 {
 	if (rideNames) return cb(null, true);
 
-	UpdateContent(1, 2, function(err, data) {
+	FetchContentList(attractionIDs, 2, function(err, data) {
 		if (err) return cb(err);
 
 		if (data && data.l)
@@ -308,7 +329,7 @@ function GetRideTimes(cb)
 	// make sure we've restored our app content first
 	RestoreAppContent(function() {
 		console.log("Fetching live ride times...");
-		
+
 		GetParisURL("http://disney.cms.pureagency.com/cms/ProxyTempsAttente", null, function(err, body) {
 			if (err)
 			{
