@@ -1,20 +1,21 @@
 {
-	"name": "wdwjs",
-	"description": "Walt Disney World API Framework",
-	"version": "0.1.4",
-	"author": {
-		"name": "Jamie Holding",
-		"email": "me@jamie.holdings"
-	},
-	"dependencies": {
-		"request": "2.x.x",
-		"pluralize": "1.1.x"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/cubehouse/wdwJS.git"
-	},
-	"main": "index.js",
-	"readmeFilename": "README.md",
-	"license": "MIT"
+  "name": "wdwjs",
+  "description": "Walt Disney World API Framework",
+  "version": "0.1.4",
+  "author": {
+    "name": "Jamie Holding",
+    "email": "me@jamie.holdings"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "pluralize": "1.1.x",
+    "request": "2.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cubehouse/wdwJS.git"
+  },
+  "main": "index.js",
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
