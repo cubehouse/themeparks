@@ -13,10 +13,17 @@ var checkForNewContentMinutes = 5;
 // write app data so we know the state of our app content and can upgrade incrementally
 function SaveAppContent(cb)
 {
-	fs.writeFile(dataFile, JSON.stringify({
-		headers: headers,
-		appData: appData
-	}, null, 2), cb);
+	fs.exists(dataCacheDir, function(e) {
+		if (!e)
+		{
+			fs.mkdirSync(dataCacheDir);
+		}
+
+		fs.writeFile(dataFile, JSON.stringify({
+			headers: headers,
+			appData: appData
+		}, null, 2), cb);
+	});
 }
 
 // restore app content we've already fetched
