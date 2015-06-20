@@ -63,6 +63,9 @@ function DisneyParis(options, data_cache)
 	{
 		var cb = arguments[ arguments.length - 1 ];
 
+		// make sure park_id is a number, otherwise ignore
+		if (typeof park_id != "number") park_id = 0;
+
 		// make sure we've restored our app content first
 		log("Fetching live ride times...");
 
