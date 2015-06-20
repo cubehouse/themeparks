@@ -44,6 +44,34 @@ An unofficial API library for accessing Disney park wait times, opening times an
     //  DisneyAPI.DisneylandParis
     //  DisneyAPI.WaltDisneyStudios
 
+# Result Objects
+
+## Ride Wait Times
+
+    [
+        {
+            id: (string: uniquely identifying a ride, from internal Disney APIs),
+            name: (string: ride name),
+            waitTime: (number: current wait time in minutes),
+            active: (bool: is the ride currently active?),
+            fastPass: (bool: is fastpass available for this ride?),
+            openingTime: (timeFormat timestamp: ride opening time - only available in Paris APIs at the moment),
+            closingTime: (timeFormat timestamp: ride closing time - only available in Paris APIs at the moment)
+        },
+        ...
+    ]
+
+## Schedules
+
+    [
+        {
+            date: (dateFormat timestamp: day this schedule applies),
+            openingTime: (timeFormat timestamp: opening time for requested park),
+            closingTime: (timeFormat timestamp: closing time for requested park),
+            type: (string: type of schedule, usually "Operating", "Extra Magic Hours", but can be "Event" or "Special Ticketed Event" or other)
+        },
+        ...
+    ]
 
 # API Options
 
@@ -77,4 +105,4 @@ Based on code from lloydpick/echelon https://github.com/lloydpick/echelon/
 # TODO
 
 Currently missing ride opening/closing times on WDW rides
-Currently missing park opening/closing times for EuroDisney
+Missing fastpass details for EuroDisney rides

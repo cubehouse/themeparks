@@ -40,8 +40,7 @@ function DisneyAPI(options)
 
         this.GetSchedule = function()
         {
-            // return error for now, will be implemented soon
-            arguments[ arguments.length - 1 ]("Not implemented yet.");
+            DisneyParisAPI.GetSchedule(park_id, arguments[ arguments.length - 1 ]);
         };
     }
 

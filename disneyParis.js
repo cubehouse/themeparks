@@ -138,6 +138,76 @@ function DisneyParis(options, data_cache)
 		});
 	};
 
+	/** Get Paris schedule */
+	var parisDayTimeFormat = "DD/MM/YYHH:mm"
+	var parisDayFormat = "DD/MM/YY"
+	this.GetSchedule = function(park_id)
+	{
+		var cb = arguments[ arguments.length - 1 ];
+
+		// default to magic kingdom opening times
+		if (typeof(park_id) != "number") park_id = 1;
+
+		// opening times are stored in a lovely simple JSON file like a normal API :)
+		GetParisURL("http://disney.cms.pureagency.com/cmsdisney/horaires/hpdeaf.json", function(err, body) {
+			if (err) return cb(err);
+
+			var json;
+			try
+			{
+				var str = body.toString();
+				// tidy up their JSON file so it is a real JSON file
+				str = str.replace(/FERMETURE\:/g, "\"FERMETURE\"\:");
+				str = str.replace(/HORAIRE\:/g, "\"HORAIRE\"\:");
+				//console.log(str);
+				json = JSON.parse(str);
+			}
+			catch(e)
+			{
+				return cb(e);
+			}
+
+			if (!json) return cb("Unable to parse JSON file for park schedules");
+
+			var times = [];
+			for(var i=0; i<json.length; i++)
+			{
+				var date = moment(json[i].JOUR, parisDayFormat).format(config.dateFormat);
+
+				for(var j=0; j<json[i].HORAIRE.length; j++)
+				{
+					// skip park if it's not the one we want to get data for
+					if (json[i].HORAIRE[j].PARC != "P" + park_id) continue;
+
+					var o = {
+						date: date,
+						openingTime: moment.tz(json[i].JOUR + json[i].HORAIRE[j].DEBTIME, parisDayTimeFormat, parisTimezone).format(config.timeFormat),
+						closingTime: moment.tz(json[i].JOUR + json[i].HORAIRE[j].FINTIME, parisDayTimeFormat, parisTimezone).format(config.timeFormat)
+					};
+
+					// make our type match that of the wdw API
+					if (json[i].HORAIRE[j].SEGMENT == "EMH")
+					{
+						o.type = "Extra Magic Hours";
+					}
+					else if (json[i].HORAIRE[j].SEGMENT == "DAY")
+					{
+						o.type = "Operating";
+					}
+					else
+					{
+						// unknown type? Use generic "event" to suggest you probably need a special ticket to get in
+						o.type = "Event";
+					}
+
+					times.push(o);
+				}
+			}
+
+			console.log(JSON.stringify(times, null, 2));
+		});
+	}
+
 	// helper log function
 	function log(msg)
 	{
@@ -199,10 +269,12 @@ function DisneyParis(options, data_cache)
 
 
 	/** Internal function to fetch data from the Disneyland Paris API server */
-	function GetParisURL(url, json, cb)
+	function GetParisURL(url, json)
 	{
 		// build basic POST data, including just the app_key
 		var form = {key: config.paris_app_key};
+
+		var cb = arguments[ arguments.length -1 ];
 
 		// if we've been passed a json object, stringify it and pass it as key "json" in the form
 		if (json)
@@ -417,38 +489,6 @@ function DisneyParis(options, data_cache)
 		});
 	}
 
-}
-
-// debug function, call node disneyParis.js to call this
-if (!module.parent)
-{
-	var a = new DisneyParis({
-		debug: true,
-		// for this sample, I'm showing how long a ride is staying open for, so having correct UTC times is super important
-		localTime: false
-	});
-
-	a.GetWaitTimes(function(err, res) {
-		if (err) return console.error(err);
-
-		var now = Date.now();
-
-		for(var i=0; i<res.length; i++)
-		{
-			console.log(res[i].name + " :: " + res[i].waitTime + " minute wait");
-			if (res[i].active)
-			{
-				console.log("\tcloses " + moment.duration( (res[i].closingTime - now) / 60000, "minutes").humanize(true) );
-				// look at using juration for better human reading time durations
-				//var juration = require('juration');
-				//console.log("\tcloses in " + juration.stringify( (res[i].closingTime - now) / 1000) );
-			}
-			else
-			{
-				console.log("\tclosed");
-			}
-		}
-	});
 }
 
 // === Below is some example content for fetching various content packs from the EuroDisney app */
