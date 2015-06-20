@@ -4,7 +4,7 @@ An unofficial API library for accessing Disney park wait times, opening times an
 
 # Install
 
-    npm install wdwjs
+    npm install wdwjs --save
   
 # Example Use
 
