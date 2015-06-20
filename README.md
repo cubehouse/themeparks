@@ -45,13 +45,14 @@ An unofficial API library for accessing Disney park wait times, opening times an
 # API Options
 
     var api = new DisneyAPI({
-        // return all times in local time for each park
-        //  or in UTC time
-        //  defaults: true
-        localTime: true,
         // turn on debug logging
         //  defaults: false
-        debug: false
+        debug: false,
+        // time format for any times returned by the API
+        //  see MomentJS docs for format options http://momentjs.com/docs/#/displaying/format/
+        timeFormat: "YYYY-MM-DDTHH:mm:ssZ",
+        // date format for any dates returned by the API
+        dateFormat: "YYYY-MM-DD"
     });
 
 # Advanced Use (Disney World / California APIs only)    
