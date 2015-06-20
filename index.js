@@ -11,14 +11,22 @@ function DisneyAPI(options)
     
     // == make park objects ==
     // DisneyWorld Resorts
-    this.Epcot = new DisneyParks("80007838", DRequest);
-    this.MagicKingdom = new DisneyParks("80007944", DRequest);
-    this.HollywoodStudios = new DisneyParks("80007998", DRequest);
-    this.AnimalKingdom = new DisneyParks("80007823", DRequest);
+    this.Epcot = new DisneyParks({wdw_park_id: "80007838"}, DRequest);
+    this.MagicKingdom = new DisneyParks({wdw_park_id: "80007944"}, DRequest);
+    this.HollywoodStudios = new DisneyParks({wdw_park_id: "80007998"}, DRequest);
+    this.AnimalKingdom = new DisneyParks({wdw_park_id: "80007823"}, DRequest);
 
     // Disneyland California
-    this.Disneyland = new DisneyParks("330339", DRequest);
-    this.CaliforniaAdventure = new DisneyParks("336894", DRequest);
+    this.Disneyland = new DisneyParks({wdw_park_id: "330339", timezone: "America/Los_Angeles"}, DRequest);
+    this.CaliforniaAdventure = new DisneyParks({wdw_park_id: "336894", timezone: "America/Los_Angeles"}, DRequest);
+
+    // push options through to objects
+    this.Epcot.TakeOptions(options);
+    this.MagicKingdom.TakeOptions(options);
+    this.HollywoodStudios.TakeOptions(options);
+    this.AnimalKingdom.TakeOptions(options);
+    this.Disneyland.TakeOptions(options);
+    this.CaliforniaAdventure.TakeOptions(options);
 
     // Disneyland Paris
     var DisneyParisAPI = new DisneyParis(options);

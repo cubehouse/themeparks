@@ -36,8 +36,11 @@ function DisneyParis(options, data_cache)
 			//8, // other (ATM machines etc.)
 			//9, // bars
 		],
-		// return times in UTC? or local time?
-		localTime: true,
+        // time format to return dates in (see momentjs doc http://momentjs.com/docs/#/displaying/format/)
+        //  default is ISO8601 format YYYY-MM-DDTHH:mm:ssZ
+        timeFormat: "YYYY-MM-DDTHH:mm:ssZ",
+        // format for printing days
+        dateFormat: "YYYY-MM-DD"
 	};
 
 	// overwrite config with supplied options if they exist
@@ -159,20 +162,7 @@ function DisneyParis(options, data_cache)
 	var parisTimezone = "Europe/Paris";
 	function ParseParisTime(time)
 	{
-		// force time into UTC time
-		var ms = moment.tz(time, parisTimeFormat, parisTimezone).valueOf();
-
-		// if we want times in local time...
-		if (config.localTime)
-		{
-			// add on the Europe/Paris timezone to UTC manually
-			var offset = moment.tz.zone(parisTimezone).parse(new Date(ms));
-
-			// add on offset (converted from minutes to milliseconds)
-			ms -= offset * 60000;
-		}
-
-		return new Date(ms);
+		return moment.tz(time, parisTimeFormat, parisTimezone).format(config.timeFormat);
 	}
 
 	// store ride names

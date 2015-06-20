@@ -69,3 +69,8 @@ An unofficial API library for accessing Disney park wait times, opening times an
 # Acknowledgments
 
 Based on code from lloydpick/echelon https://github.com/lloydpick/echelon/
+
+# TODO
+
+Currently missing ride opening/closing times on WDW rides
+Currently missing park opening/closing times for EuroDisney
