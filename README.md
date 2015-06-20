@@ -9,11 +9,11 @@ An unofficial API library for accessing Disney park wait times, opening times an
 # Example Use
 
     // Setup API
-    var api = new require("wdwjs")({
+    var DisneyAPI = new (require("wdwjs"))({
         timeFormat: "HH:mm"
     });
 
-    var MagicKingdom = api.MagicKingdom;
+    var MagicKingdom = DisneyAPI.MagicKingdom;
     
     // Get Magic Kingdom wait times
     MagicKingdom.GetWaitTimes(function(err, data) {
@@ -31,23 +31,23 @@ An unofficial API library for accessing Disney park wait times, opening times an
 
     // Parks available
     //  ** Disney World **
-    //  api.MagicKingdom
-    //  api.Epcot
-    //  api.AnimalKingdom
-    //  api.HollywoodStudios
+    //  DisneyAPI.MagicKingdom
+    //  DisneyAPI.Epcot
+    //  DisneyAPI.AnimalKingdom
+    //  DisneyAPI.HollywoodStudios
     //
     //  ** Disney California **
-    //  api.Disneyland
-    //  api.CaliforniaAdventure
+    //  DisneyAPI.Disneyland
+    //  DisneyAPI.CaliforniaAdventure
     //
     //  ** Disney Paris **
-    //  api.DisneylandParis
-    //  api.WaltDisneyStudios
+    //  DisneyAPI.DisneylandParis
+    //  DisneyAPI.WaltDisneyStudios
 
 
 # API Options
 
-    var api = new DisneyAPI({
+    var DisneyAPI = new (require("wdwjs"))({
         // turn on debug logging
         //  defaults: false
         debug: false,
@@ -61,12 +61,12 @@ An unofficial API library for accessing Disney park wait times, opening times an
 # Advanced Use (Disney World / California APIs only)    
 
     // Get an API page using an ID and type
-    api.GetPage(80010208, "Attraction", function(error, data) {
+    DisneyAPI.GetPage(80010208, "Attraction", function(error, data) {
         console.log(JSON.stringify(data, null, 2));
     });
     
     // Get a specific API URL
-    api.GetURL("https://api.wdpro.disney.go.com/global-pool-override-B/facility-service/theme-parks/80007944", function(e, data) {
+    DisneyAPI.GetURL("https://api.wdpro.disney.go.com/global-pool-override-B/facility-service/theme-parks/80007944", function(e, data) {
        console.log(JSON.stringify(data, null, 2));
     });
 
