@@ -41,6 +41,19 @@ An unofficial API library for accessing Disney park wait times, opening times an
     //  api.DisneylandParis
     //  api.WaltDisneyStudios
 
+
+# API Options
+
+    var api = new DisneyAPI({
+        // return all times in local time for each park
+        //  or in UTC time
+        //  defaults: true
+        localTime: true,
+        // turn on debug logging
+        //  defaults: false
+        debug: false
+    });
+
 # Advanced Use (Disney World / California APIs only)    
 
     // Get an API page using an ID and type

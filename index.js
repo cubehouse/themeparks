@@ -21,7 +21,7 @@ function DisneyAPI(options)
     this.CaliforniaAdventure = new DisneyParks("336894", DRequest);
 
     // Disneyland Paris
-    var DisneyParisAPI = new DisneyParis();
+    var DisneyParisAPI = new DisneyParis(options);
     // build a mini proxy for Paris parks
     function ParisProxy(park_id)
     {

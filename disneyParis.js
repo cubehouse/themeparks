@@ -2,6 +2,8 @@
 var request = require("request");
 // need to unzip API responses
 var AdmZip = require('adm-zip');
+// moment for time parsing
+var moment = require("moment-timezone");
 
 // export our Paris object
 module.exports = DisneyParis;
@@ -11,19 +13,19 @@ function DisneyParis(options, data_cache)
 	var config = {
 		debug: false,
 		// key app uses to communicate with the API server
-		app_key: "Ajjjsh;Uj",
+		paris_app_key: "Ajjjsh;Uj",
 		// minutes before checking for updated ride names
 		//  (4 hours default)
 		cache_minutes: 240,
 		// optional save function that will be called when data have updated
 		//  will be called as: config.save(data, callback)
 		// in reverse, to restore data, create our DisneyParis object with data_cache populated
-		save: null,
+		paris_save: null,
 		// attraction content IDs (for ride/attraction names)
 		//  we only really need ones that will have opening/close/wait times
 		//  others are here in the comments for reference
 		// can enable these when we expand to support the shows and other opening times etc.
-		attractionIDs: [
+		paris_attractionIDs: [
 			1, // attractions
 			//2, // shops
 			//3, // hotels
@@ -34,6 +36,8 @@ function DisneyParis(options, data_cache)
 			//8, // other (ATM machines etc.)
 			//9, // bars
 		],
+		// return times in UTC? or local time?
+		localTime: true,
 	};
 
 	// overwrite config with supplied options if they exist
@@ -114,8 +118,8 @@ function DisneyParis(options, data_cache)
 							rides.push({
 								id: data.l[i],
 								name: rideNames[ data.l[i] ].name,
-								openingTime: data.l[i + 1],
-								closingTime: data.l[i + 2],
+								openingTime: ParseParisTime(data.l[i + 1]),
+								closingTime: ParseParisTime(data.l[i + 2]),
 								active: data.l[i + 3] ? true : false,
 								waitTime: data.l[i + 4]
 							});
@@ -142,13 +146,33 @@ function DisneyParis(options, data_cache)
 	/** Try to save module internal state (optional) */
 	function Save(cb)
 	{
-		if (!config.save) return cb();
+		if (!config.paris_save) return cb();
 
 		// send save object to config.save function
-		config.save({
+		config.paris_save({
 			headers: headers,
 			appData: appData
 		}, cb);
+	}
+
+	var parisTimeFormat = "YYYYMMDDHHmm";
+	var parisTimezone = "Europe/Paris";
+	function ParseParisTime(time)
+	{
+		// force time into UTC time
+		var ms = moment.tz(time, parisTimeFormat, parisTimezone).valueOf();
+
+		// if we want times in local time...
+		if (config.localTime)
+		{
+			// add on the Europe/Paris timezone to UTC manually
+			var offset = moment.tz.zone(parisTimezone).parse(new Date(ms));
+
+			// add on offset (converted from minutes to milliseconds)
+			ms -= offset * 60000;
+		}
+
+		return new Date(ms);
 	}
 
 	// store ride names
@@ -157,7 +181,7 @@ function DisneyParis(options, data_cache)
 	{
 		if (rideNames) return cb(null, true);
 
-		FetchContentList(config.attractionIDs, 2, function(err, data) {
+		FetchContentList(config.paris_attractionIDs, 2, function(err, data) {
 			if (err) return cb(err);
 
 			if (data && data.l)
@@ -188,7 +212,7 @@ function DisneyParis(options, data_cache)
 	function GetParisURL(url, json, cb)
 	{
 		// build basic POST data, including just the app_key
-		var form = {key: config.app_key};
+		var form = {key: config.paris_app_key};
 
 		// if we've been passed a json object, stringify it and pass it as key "json" in the form
 		if (json)
@@ -408,14 +432,31 @@ function DisneyParis(options, data_cache)
 // debug function, call node disneyParis.js to call this
 if (!module.parent)
 {
-	var a = new DisneyParis({debug: true});
+	var a = new DisneyParis({
+		debug: true,
+		// for this sample, I'm showing how long a ride is staying open for, so having correct UTC times is super important
+		localTime: false
+	});
 
 	a.GetWaitTimes(function(err, res) {
 		if (err) return console.error(err);
 
+		var now = Date.now();
+
 		for(var i=0; i<res.length; i++)
 		{
-			console.log(res[i].name + " :: " + res[i].waitTime + ((res[i].active) ? "" : " (closed)"));
+			console.log(res[i].name + " :: " + res[i].waitTime + " minute wait");
+			if (res[i].active)
+			{
+				console.log("\tcloses " + moment.duration( (res[i].closingTime - now) / 60000, "minutes").humanize(true) );
+				// look at using juration for better human reading time durations
+				//var juration = require('juration');
+				//console.log("\tcloses in " + juration.stringify( (res[i].closingTime - now) / 1000) );
+			}
+			else
+			{
+				console.log("\tclosed");
+			}
 		}
 	});
 }
