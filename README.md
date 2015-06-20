@@ -9,18 +9,21 @@ An unofficial API library for accessing Disney park wait times, opening times an
 # Example Use
 
     // Setup API
-    var DisneyAPI = require("wdwjs");
-    var api = new DisneyAPI();
+    var api = new require("wdwjs")({
+        timeFormat: "HH:mm"
+    });
+
+    var MagicKingdom = api.MagicKingdom;
     
     // Get Magic Kingdom wait times
-    api.MagicKingdom.GetWaitTimes(function(err, data) {
+    MagicKingdom.GetWaitTimes(function(err, data) {
         if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
         
         console.log(JSON.stringify(data, null, 2));
     });
     
     // Get Magic Kingdom opening times
-    api.MagicKingdom.GetSchedule(function(err, data) {
+    MagicKingdom.GetSchedule(function(err, data) {
         if (err) return console.error("Error fetching Magic Kingdom schedule: " + err);
 
         console.log(JSON.stringify(data, null, 2));
