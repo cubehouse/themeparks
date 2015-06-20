@@ -75,9 +75,10 @@ An unofficial API library for accessing Disney park wait times, opening times an
 
 # API Options
 
+Defaults are shown below.
+
     var DisneyAPI = new (require("wdwjs"))({
         // turn on debug logging
-        //  defaults: false
         debug: false,
         // time format for any times returned by the API
         //  see MomentJS docs for format options http://momentjs.com/docs/#/displaying/format/
