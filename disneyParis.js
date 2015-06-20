@@ -59,7 +59,7 @@ function DisneyParis(options, data_cache)
 	/** ===== Exports ===== */
 
 	/** Get park waiting times for rides */
-	this.GetWaitTimes = function(include_entertainment)
+	this.GetWaitTimes = function(park_id)
 	{
 		var cb = arguments[ arguments.length - 1 ];
 
@@ -104,6 +104,9 @@ function DisneyParis(options, data_cache)
 							//  removed from the park that no longer appear on the app
 							//  eg. River Rogue Keelboats and Captain EO
 							if (!rideNames[ data.l[i] ]) continue;
+
+							// skip if we're fetching for a specific Disneyland Paris park
+							if (park_id && rideNames[ data.l[i] ].park != park_id) continue;
 
 							rides.push({
 								id: data.l[i],
@@ -162,7 +165,9 @@ function DisneyParis(options, data_cache)
 				{
 					rideNames[ data.l[i][12] ] = {
 						name: data.l[i][1],
-						desc: data.l[i][11]
+						desc: data.l[i][11],
+						// park ID (1: Disneyland Park, 2: Walt Disney Studios, Park 3: Disney Village, 4: Hotels)
+						park: data.l[i][7]
 					};
 				}
 

@@ -14,25 +14,35 @@ An unofficial API library for accessing Disney park wait times, opening times an
     
     // Get Magic Kingdom wait times
     api.MagicKingdom.GetWaitTimes(function(err, data) {
-        if (err)
-        {
-            console.log("Error fetching Magic Kingdom wait times: " + err);
-            return;
-        }
+        if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
         
         console.log(JSON.stringify(data, null, 2));
     });
     
     // Get Magic Kingdom opening times
     api.MagicKingdom.GetSchedule(function(err, data) {
+        if (err) return console.error("Error fetching Magic Kingdom schedule: " + err);
+
         console.log(JSON.stringify(data, null, 2));
     });
 
-    // other parks available
+    // Parks available
+    //  ** Disney World **
+    //  api.MagicKingdom
     //  api.Epcot
     //  api.AnimalKingdom
     //  api.HollywoodStudios
-    
+    //
+    //  ** Disney California **
+    //  api.Disneyland
+    //  api.CaliforniaAdventure
+    //
+    //  ** Disney Paris **
+    //  api.DisneylandParis
+    //  api.WaltDisneyStudios
+
+# Advanced Use (Disney World / California APIs only)    
+
     // Get an API page using an ID and type
     api.GetPage(80010208, "Attraction", function(error, data) {
         console.log(JSON.stringify(data, null, 2));
