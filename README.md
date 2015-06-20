@@ -106,4 +106,3 @@ Based on code from lloydpick/echelon https://github.com/lloydpick/echelon/
 # TODO
 
 Currently missing ride opening/closing times on WDW rides
-Missing fastpass details for EuroDisney rides

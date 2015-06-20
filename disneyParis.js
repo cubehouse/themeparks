@@ -124,7 +124,8 @@ function DisneyParis(options, data_cache)
 								openingTime: ParseParisTime(data.l[i + 1]),
 								closingTime: ParseParisTime(data.l[i + 2]),
 								active: data.l[i + 3] ? true : false,
-								waitTime: data.l[i + 4]
+								waitTime: data.l[i + 4],
+								fastPass: rideNames[ data.l[i] ].fastPass
 							});
 						}
 						return cb(null, rides);
@@ -254,7 +255,9 @@ function DisneyParis(options, data_cache)
 						name: data.l[i][1],
 						desc: data.l[i][11],
 						// park ID (1: Disneyland Park, 2: Walt Disney Studios, Park 3: Disney Village, 4: Hotels)
-						park: data.l[i][7]
+						park: data.l[i][7],
+						// store whether this ride has fastpass
+						fastPass: (data.l[i][6] ? true : false)
 					};
 				}
 
