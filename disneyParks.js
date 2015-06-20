@@ -72,7 +72,7 @@ function DisneyPark(options, DRequest)
                     if (ride.waitTime && ride.waitTime && ride.waitTime.postedWaitMinutes)
                     {
                         // report the posted wait time if present
-                        obj.waitTime = ride.waitTIme.postedWaitMinutes;
+                        obj.waitTime = ride.waitTime.postedWaitMinutes;
                     }
                     else
                     {
