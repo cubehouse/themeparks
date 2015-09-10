@@ -9,7 +9,7 @@
   "dependencies": {
     "adm-zip": "^0.4.7",
     "moment-timezone": "^0.4.0",
-    "pluralize": "1.1.x",
+    "pluralize": "1.x.x",
     "request": "2.x.x"
   },
   "repository": {
