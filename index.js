@@ -49,10 +49,13 @@ function DisneyAPI(options)
     // Disneyland Paris Disney Studios
     this.WaltDisneyStudios = new ParisProxy(2);
     
-    // == export DRequest exports too ==
-    for(var func in DRequest)
+    // == export DRequest exports too (if asked for) ==
+    if (options && options.WDWRequests)
     {
-        this[func] = DRequest[func];
+        for(var func in DRequest)
+        {
+            this[func] = DRequest[func];
+        }
     }
 }
 
