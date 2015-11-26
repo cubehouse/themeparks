@@ -2,7 +2,6 @@
 // first, we need to make a request to (replacing [LAT] and [LONG]:
 //   http://info.tokyodisneyresort.jp/s/gps/tdl_index.html?nextUrl=http%3A%2F%2Finfo.tokyodisneyresort.jp%2Frt%2Fs%2Frealtime%2Ftdl_attraction.html&lat=[LAT]&lng=[LONG]
 // we'll get a cookie "tdrloc" set
-// TODO - what does this cookie mean? First day of testing, it's the same from multiple requests from multiple IPs!
 
 // handy URL request module
 var request = require("request");
@@ -63,8 +62,6 @@ function DisneyTokyo(options) {
 	 */
 	this.GetWaitTimes = function(park_id) {
 		var cb = arguments[arguments.length - 1];
-
-		// TODO - validate the park ID
 
 		// make sure we have all our data up-to-date
 		CheckInitData(function(err) {
@@ -184,8 +181,13 @@ function DisneyTokyo(options) {
 			}
 
 			// ride is active if we got an opening time!
-			// TODO - check we're currently within it's opening/closing range
 			ride_data.active = ride_data.openingTime ? true : false;
+
+			//  also check we're inside it's opening times!
+			if (ride_data.active) {
+				ride_data.active = moment()
+					.isBetween(ride_data.openingTime, ride_data.closingTime);
+			}
 
 			// get ride name from the loc data
 			if (state.rideData[ride_data.id]) {
@@ -215,19 +217,26 @@ function DisneyTokyo(options) {
 		return cb(null, results);
 	}
 
-	var tokyoTimeFormat = "HH:mm";
+	var tokyoTimeFormat = "YYYY-MM-DD HH:mm";
 	var tokyoTimezone = "Asia/Tokyo";
 
 	function ParseTokyoTime(time) {
-		return moment.tz(time, tokyoTimeFormat, tokyoTimezone)
+		// add the current date in Tokyo to the time to make sure it's in the right day!
+		var day = moment()
+			.tz(tokyoTimezone)
+			.format("YYYY-MM-DD ");
+
+		return moment.tz(day + time, tokyoTimeFormat, tokyoTimezone)
 			.format(config.timeFormat);
 	}
 
 	/** Get all the ride names */
 	function GetRideNames(cb) {
 		if (state.rideData) {
-			// TODO - invalidate this every 6-24 hours or so
-			return cb(null, state.rideData);
+			// make sure data is at most 3 hours old
+			if (state.rideDataFetch > (Date.now() - 1000 * 60 * 60 * 3)) {
+				return cb(null, state.rideData);
+			}
 		}
 
 		// store ride data here
@@ -303,6 +312,7 @@ function DisneyTokyo(options) {
 
 			// save ride data into the state and return
 			state.rideData = rideData;
+			state.rideDataFetch = Date.now();
 			return cb(null, state.rideData);
 		});
 	}
@@ -382,7 +392,10 @@ function DisneyTokyo(options) {
 	function GetGeoCookie(cb) {
 		// skip if we have already fetched our cookie!
 		if (state.cookie) {
-			return cb(null, state.cookie);
+			// refresh cookie every 2 hours
+			if (state.cookieFetch > (Date.now() - 1000 * 60 * 60 * 2)) {
+				return cb(null, state.cookie);
+			}
 		}
 
 		// create random GPS coordinates!
@@ -437,6 +450,7 @@ function DisneyTokyo(options) {
 
 				// save GPS cookie in our state
 				state.cookie = GPScookie;
+				state.cookieFetch = Date.now();
 
 				// we got this far! hurrah! return the cookie value
 				return cb(null, GPScookie);
