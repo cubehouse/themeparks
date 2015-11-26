@@ -87,15 +87,20 @@ function DisneyTokyo(options) {
 				}
 
 				// parse fetched body
-				ParseTokyoHTML(body, function(err, result) {
-					return cb(err, result);
+				ParseTokyoHTML(body, park_id, function(err, result) {
+					if (err) return cb(err);
+
+					// turn object into array and return
+					var res = [];
+					for (var ride in result) res.push(result[ride]);
+					return cb(err, res);
 				});
 			});
 		});
 	}
 
 	/** Parse an HTML page from Tokyo website to get ride times etc. */
-	function ParseTokyoHTML(body, cb) {
+	function ParseTokyoHTML(body, park_id, cb) {
 		var results = {};
 
 		// make a parsed HTML object of our HTML body
@@ -188,6 +193,23 @@ function DisneyTokyo(options) {
 			}
 
 			results[ride_data.id] = ride_data;
+		}
+
+		// check for any rides we know about (from localisation data)
+		//  but doesn't have a wait time. Assume it is closed (or the park is closed and returning no data)
+		for (var ride in state.rideData) {
+			if (!results[ride]) {
+				// make sure this ride is meant to be in this park
+				if (state.rideData[ride].park_id.id == park_id) {
+					results[ride] = {
+						id: ride,
+						waitTime: 0,
+						fastpass: false,
+						active: false,
+						name: state.rideData[ride].name,
+					};
+				}
+			}
 		}
 
 		return cb(null, results);
@@ -458,7 +480,7 @@ function DisneyTokyo(options) {
 			.readFileSync(__dirname + "/test_disneysea.html");
 		CheckInitData(function(err) {
 			if (err) return cb(err);
-			ParseTokyoHTML(file, cb);
+			ParseTokyoHTML(file, "tds", cb);
 		});
 		//GetRideNames("tdr", cb);
 	};
@@ -471,6 +493,6 @@ if (!module.parent) {
 	};
 
 	var app = new DisneyTokyo();
-	//app.GetWaitTimes("tds", cb);
-	app.Test(cb);
+	app.GetWaitTimes("tds", cb);
+	//app.Test(cb);
 }
