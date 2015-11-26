@@ -1,6 +1,7 @@
 var DisneyRequest = require("./disneyRequest");
 var DisneyParks = require("./disneyParks");
 var DisneyParis = require("./disneyParis");
+var DisneyTokyo = require("./disneyTokyo");
 
 /** This is a wrapper object to tie the API components together */
 
@@ -48,6 +49,28 @@ function DisneyAPI(options)
     this.DisneylandParis = new ParisProxy(1);
     // Disneyland Paris Disney Studios
     this.WaltDisneyStudios = new ParisProxy(2);
+
+    // Tokyo Disney
+    var DisneyTokyoAPI = new DisneyTokyo(options);
+    // build a mini proxy for Tokyo
+    function TokyoProxy(park_id)
+    {
+        this.GetWaitTimes = function()
+        {
+            DisneyTokyoAPI.GetWaitTimes(park_id, arguments[ arguments.length - 1 ]);
+        };
+
+        this.GetSchedule = function()
+        {
+            arguments[ arguments.length - 1 ]("Not Yet Implemented");
+            //DisneyTokyoAPI.GetSchedule(park_id, arguments[ arguments.length - 1 ]);
+        };
+    }
+
+    // Tokyo Disneyland
+    this.TokyoDisneyland = new TokyoProxy("tdl");
+    // Tokyo DisneySea
+    this.TokyoDisneySea = new TokyoProxy("tds");
     
     // == export DRequest exports too (if asked for) ==
     if (options && options.WDWRequests)
