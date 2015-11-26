@@ -18,6 +18,8 @@ var cookie = require('cookie');
 var astify = require('astify');
 // sandbox to execute the gathered JavaScript code safely
 var jailed = require('jailed');
+// async task utility
+var async = require("async");
 
 module.exports = DisneyTokyo;
 
@@ -53,8 +55,8 @@ function DisneyTokyo(options) {
 		}
 	}
 
-	// our local localisation object
-	var loc = null;
+	// our saved state object
+	var state = {};
 
 	/** Get wait times for given park_id
 	 * eg. DisneySea: tds
@@ -64,8 +66,8 @@ function DisneyTokyo(options) {
 
 		// TODO - validate the park ID
 
-		// TODO - make sure we have up-to-date cookie
-		GetGeoCookie(function(err, GPScookie) {
+		// make sure we have all our data up-to-date
+		CheckInitData(function(err) {
 			if (err) {
 				return cb(err);
 			}
@@ -75,9 +77,8 @@ function DisneyTokyo(options) {
 				url: "http://info.tokyodisneyresort.jp/rt/s/realtime/" + park_id + "_attraction.html",
 				method: "GET",
 				headers: {
-					// TODO - make this stable! Only generate when making new cookie
-					'User-Agent': GetRandomUserAgent(),
-					'Cookie': 'tdrloc=' + GPScookie
+					'User-Agent': state.userAgent,
+					'Cookie': 'tdrloc=' + state.cookie,
 				},
 			}, function(err, resp, body) {
 				if (err) {
@@ -181,7 +182,10 @@ function DisneyTokyo(options) {
 			// TODO - check we're currently within it's opening/closing range
 			ride_data.active = ride_data.openingTime ? true : false;
 
-			// TODO - get ride name from the loc data
+			// get ride name from the loc data
+			if (state.rideData[ride_data.id]) {
+				ride_data.name = state.rideData[ride_data.id].name;
+			}
 
 			results[ride_data.id] = ride_data;
 		}
@@ -197,64 +201,109 @@ function DisneyTokyo(options) {
 			.format(config.timeFormat);
 	}
 
-	function GetRideNames(park_id, cb) {
-		// TODO - cache this once-a-day
+	/** Get all the ride names */
+	function GetRideNames(cb) {
+		if (state.rideData) {
+			// TODO - invalidate this every 6-24 hours or so
+			return cb(null, state.rideData);
+		}
 
-		// first, get localisation file
-		GetLocalisationObject(function(err) {
-			// make API request to get ride list
-			request({
-				url: "http://www.tokyodisneyresort.jp/api/v1/wapi_attractions/lists/sort_type:1/locale:1/park_kind:1/",
-				headers: {
-					"Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + park_id,
-					"User-Agent": GetRandomUserAgent(),
-					"X-Requested-With": "XMLHttpRequest",
-					"Accept": "text/javascript, application/javascript, */*; q=0.01",
-				},
-				// auto-parse the result with requestjs
-				json: true
-			}, function(err, resp, body) {
-				if (err) {
-					console.log("Error getting ride names: " + err);
-					return cb(err);
-				}
+		// store ride data here
+		var rideData = {};
 
-				//console.log(JSON.stringify(body, null, 2));
-				//console.log(JSON.stringify(loc, null, 2));
+		async.waterfall([
+			// step 1, get loc
+			GetLocalisationObject,
+			// step 2, loop through each park and gather data!
+			function(cb) {
+				// parks we want to fetch
+				var parks = [{
+					id: "tds",
+					kind: 2
+				}, {
+					id: "tdl",
+					kind: 1
+				}];
 
-				var rides = {};
+				// for each park, get the ride data
+				async.eachSeries(parks, function(park_id, cb) {
+					Dbg("Fetching ride data for " + park_id.id + "...");
 
-				if (body && body.entries && body.entries.length) {
-					for (var i = 0, ride; ride = body.entries[i++];) {
-						// calculate tags
-						var tags = [];
-						if (ride.tag_ids) {
-							for (var tag in ride.tag_ids) tags.push(GetLoc("tags", tag));
+					// make API request to get ride list
+					request({
+						url: "http://www.tokyodisneyresort.jp/api/v1/wapi_attractions/lists/sort_type:1/locale:1/park_kind:" + park_id.kind + "/",
+						headers: {
+							"Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + park_id.id,
+							"User-Agent": GetRandomUserAgent(),
+							"X-Requested-With": "XMLHttpRequest",
+							"Accept": "text/javascript, application/javascript, */*; q=0.01",
+						},
+						// auto-parse the result with requestjs
+						json: true
+					}, function(err, resp, body) {
+						if (err) {
+							console.log("Error getting ride names: " + err);
+							return cb(err);
 						}
 
-						rides[ride.str_id] = {
-							id: ride.str_id,
-							name: ride.name,
-							name_yomi: ride.name_yomi,
-							image: ride.thum_url_pc,
-							// localise the tags from the website
-							tags: tags,
-							park_id: park_id,
-							// get park and area names
-							park_name: loc.place["1"][ride.park_kind],
-							area_name: GetLoc("area_name", ride.park_kind, ride.m_areas_id),
-						};
-					}
-				}
+						if (body && body.entries && body.entries.length) {
+							for (var i = 0, ride; ride = body.entries[i++];) {
+								// calculate tags
+								var tags = [];
+								if (ride.tag_ids) {
+									for (var tag in ride.tag_ids) tags.push(GetLoc("tags", tag));
+								}
 
-				console.log(JSON.stringify(rides, null, 2));
+								rideData[ride.str_id] = {
+									id: ride.str_id,
+									name: ride.name,
+									name_yomi: ride.name_yomi,
+									image: ride.thum_url_pc,
+									// localise the tags from the website
+									tags: tags,
+									park_id: park_id,
+									// get park and area names
+									park_name: state.loc.place["1"][ride.park_kind],
+									area_name: GetLoc("area_name", ride.park_kind, ride.m_areas_id),
+								};
+							}
+						}
+
+						return cb(null);
+					});
+				}, function(err, res) {
+					if (err) return cb(err);
+					return cb(null);
+				});
+			}
+		], function(err) {
+			if (err) return cb(err);
+
+			// save ride data into the state and return
+			state.rideData = rideData;
+			return cb(null, state.rideData);
+		});
+	}
+
+	/** Check we have the GPS cookie, localisation data etc. ready to generally handle requests */
+	function CheckInitData(cb) {
+		GetLocalisationObject(function(err) {
+			if (err) return cb(err);
+
+			GetRideNames(function(err) {
+				if (err) return cb(err);
+
+				GetGeoCookie(function(err) {
+					return cb(err);
+				});
 			});
+
 		});
 	}
 
 	function GetLocalisationObject(cb) {
 		// if we already have localisation data, return
-		if (loc) return cb(null);
+		if (state.loc) return cb(null);
 
 		// step 1, download the application logic holding the localisation
 		request({
@@ -282,7 +331,7 @@ function DisneyTokyo(options) {
 						var loc_sandbox = new jailed.DynamicPlugin(loc_src, {
 							send_loc: function(obj) {
 								// store returned object
-								loc = obj;
+								state.loc = obj;
 								// disconnect sandbox
 								loc_sandbox.disconnect();
 
@@ -298,19 +347,27 @@ function DisneyTokyo(options) {
 	}
 
 	function GetLoc(type, id, id2) {
-		if (!loc || !loc["1"] || !loc["1"][type] || !loc["1"][type][id]) return type + ":" + id;
+		if (!state.loc || !state.loc["1"] || !state.loc["1"][type] || !state.loc["1"][type][id]) return type + ":" + id;
 
 		if (id2) {
-			if (!loc["1"][type][id][id2]) return type + ":" + id + ":" + id2;
-			return loc["1"][type][id][id2];
+			if (!state.loc["1"][type][id][id2]) return type + ":" + id + ":" + id2;
+			return state.loc["1"][type][id][id2];
 		} else {
-			return loc["1"][type][id];
+			return state.loc["1"][type][id];
 		}
 	}
 
 	function GetGeoCookie(cb) {
+		// skip if we have already fetched our cookie!
+		if (state.cookie) {
+			return cb(null, state.cookie);
+		}
+
 		// create random GPS coordinates!
 		var gps = GenerateRandomGeoLoc();
+
+		// create (and store) a user-agent
+		state.userAgent = GetRandomUserAgent();
 
 		// make request using our fake GPS position to get our cookie!
 		request({
@@ -322,7 +379,7 @@ function DisneyTokyo(options) {
 			},
 			method: "GET",
 			headers: {
-				'User-Agent': GetRandomUserAgent()
+				'User-Agent': state.userAgent,
 			},
 			// don't follow redirects! Our cookie doesn't follow us in Request
 			followRedirect: false,
@@ -355,6 +412,9 @@ function DisneyTokyo(options) {
 				}
 
 				Dbg("Fetched GPS cookie: " + GPScookie);
+
+				// save GPS cookie in our state
+				state.cookie = GPScookie;
 
 				// we got this far! hurrah! return the cookie value
 				return cb(null, GPScookie);
@@ -394,7 +454,13 @@ function DisneyTokyo(options) {
 	}
 
 	this.Test = function(cb) {
-		GetRideNames("tdr", cb);
+		var file = require("fs")
+			.readFileSync(__dirname + "/test_disneysea.html");
+		CheckInitData(function(err) {
+			if (err) return cb(err);
+			ParseTokyoHTML(file, cb);
+		});
+		//GetRideNames("tdr", cb);
 	};
 }
 
@@ -405,10 +471,6 @@ if (!module.parent) {
 	};
 
 	var app = new DisneyTokyo();
-	app.GetWaitTimes("tds", cb);
-	//app.Test(cb);
-
-	/*var file = require("fs")
-		.readFileSync(__dirname + "/test_disneysea.html");
-	app.ParseTokyoHTML(file, cb);*/
+	//app.GetWaitTimes("tds", cb);
+	app.Test(cb);
 }
