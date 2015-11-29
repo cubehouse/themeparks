@@ -7,7 +7,7 @@ An unofficial API library for accessing Disney park wait times, opening times an
     npm install wdwjs --save
 
 Note that the API changed in 1.0.0 to return formatted objects to API requests, instead of the raw API data from Disney.
-  
+
 # Example Use
 
     // Setup API
@@ -16,14 +16,14 @@ Note that the API changed in 1.0.0 to return formatted objects to API requests, 
     });
 
     var MagicKingdom = DisneyAPI.MagicKingdom;
-    
+
     // Get Magic Kingdom wait times
     MagicKingdom.GetWaitTimes(function(err, data) {
         if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
-        
+
         console.log(JSON.stringify(data, null, 2));
     });
-    
+
     // Get Magic Kingdom opening times
     MagicKingdom.GetSchedule(function(err, data) {
         if (err) return console.error("Error fetching Magic Kingdom schedule: " + err);
@@ -95,7 +95,7 @@ Defaults are shown below.
     DisneyAPI.GetPage(80010208, "Attraction", function(error, data) {
         console.log(JSON.stringify(data, null, 2));
     });
-    
+
     // Get a specific API URL
     DisneyAPI.GetURL("https://api.wdpro.disney.go.com/global-pool-override-B/facility-service/theme-parks/80007944", function(e, data) {
        console.log(JSON.stringify(data, null, 2));
