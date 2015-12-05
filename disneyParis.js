@@ -106,12 +106,25 @@ function DisneyParis(options, data_cache) {
               // skip if we're fetching for a specific Disneyland Paris park
               if (park_id && rideNames[data.l[i]].park != park_id) continue;
 
+              // parse ride opening & closing times now as we need these to
+              //  calculate if the ride is active or not
+              var openingTime = ParseParisTime(data.l[i + 1]);
+              var closingTime = ParseParisTime(data.l[i + 2]);
+
+              // is this ride active?
+              var ride_active = data.l[i + 3] ? true : false;
+              // override API-returned data if we're currently outside of the
+              //  ride's opening hours
+              if (ride_active) {
+                ride_active = moment().isBetween(openingTime, closingTime);
+              }
+
               rides.push({
                 id: data.l[i],
                 name: rideNames[data.l[i]].name,
-                openingTime: ParseParisTime(data.l[i + 1]),
-                closingTime: ParseParisTime(data.l[i + 2]),
-                active: data.l[i + 3] ? true : false,
+                openingTime: openingTime,
+                closingTime: closingTime,
+                active: ride_active,
                 waitTime: data.l[i + 4],
                 fastPass: rideNames[data.l[i]].fastPass
               });
