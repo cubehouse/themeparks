@@ -15,7 +15,7 @@
     "jailed": "^0.2.0",
     "moment-timezone": "^0.4.0",
     "pluralize": "1.x.x",
-    "random-useragent": "^0.1.1",
+    "random-useragent": "^0.2.1",
     "request": "2.x.x"
   },
   "repository": {
