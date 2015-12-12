@@ -48,6 +48,8 @@ Note that the API changed in 1.0.0 to return formatted objects to API requests, 
 
 # Result Objects
 
+Some parks may return additional data about rides (check their output). However the data defined below will be available for all implemented parks in wdwJS.
+
 ## Ride Wait Times
 
     [
@@ -91,6 +93,12 @@ Defaults are shown below.
 
 # Advanced Use (Disney World / California APIs only)    
 
+If you want to access these API calls, you must specify "WDWRequests: true" in the options when creating your DisneyAPI object (this is new in v2.0.0 onwards).
+
+    var DisneyAPI = new (require("wdwjs"))({
+        WDWRequests: true
+    });
+
     // Get an API page using an ID and type
     DisneyAPI.GetPage(80010208, "Attraction", function(error, data) {
         console.log(JSON.stringify(data, null, 2));
@@ -103,8 +111,9 @@ Defaults are shown below.
 
 # Acknowledgments
 
-Based on code from lloydpick/echelon https://github.com/lloydpick/echelon/
+Walt Disney World and Disneyland Paris code based on work from lloydpick/echelon https://github.com/lloydpick/echelon/
 
 # TODO
 
-Currently missing ride opening/closing times on WDW rides
+* Missing ride opening/closing times on WDW rides (Florida & California)
+* Missing park schedule for Tokyo Disneyland
