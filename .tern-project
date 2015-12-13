@@ -1,5 +1,5 @@
 {
-  "ecmaVersion": 6,
+  "ecmaVersion": 5,
   "libs": [],
   "loadEagerly": [
     "*.js"
