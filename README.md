@@ -2,6 +2,9 @@
 
 An unofficial API library for accessing Disney park wait times, opening times and other information from the Disney API.
 
+[![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/nodejs/wdwjs/1.0.1/badge?style=flat)](https://www.versioneye.com/nodejs/wdwjs/1.0.1)
+[![npm history](https://nodei.co/npm-dl/wdwjs.png)](https://www.npmjs.com/package/wdwjs/)
+
 # Install
 
     npm install wdwjs --save
