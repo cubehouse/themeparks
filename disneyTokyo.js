@@ -96,6 +96,68 @@ function DisneyTokyo(options) {
     });
   }
 
+  this.GetSchedule = function(park_id) {
+    var cb = arguments[arguments.length - 1];
+
+    // get today's date in Tokyo time and the ending date for our schedule fetch
+    var today = moment().tz(tokyoTimezone);
+    var endDay = moment().add(30, 'days').tz(tokyoTimezone);
+
+    // get today's date and the current month
+    var dateToday = today.format("YYYY/MM/DD");
+    var requestStart = today.format("YYYYMM");
+
+    // get formatted end date for fetching
+    var dateEnd = endDay.format("YYYY/MM/DD");
+    var requestEnd = endDay.format("YYYYMM");
+
+    // get list of month calendars to process (either just this month, or this month and next)
+    var todo = [requestStart];
+    if (requestEnd != requestStart) {
+      todo.push(requestEnd);
+    }
+
+    var schedule = [];
+    var startDateFound = false;
+
+    async.eachSeries(todo, function(calendarMonth, cb) {
+      MakeMobileAppRequest(park_id, "http://www.tokyodisneyresort.jp/api/v1/wapi_monthlycalendars/detail/ym:" + calendarMonth + "/", function(err, resp, body) {
+        if (err) return cb(err);
+
+        // loop through returned dates
+        for (var date in body.entry) {
+          // don't start adding to return object until we find our start date value
+          if (!startDateFound && !schedule.length) {
+            if (date != dateToday) continue;
+            startDateFound = true;
+          }
+
+          if (body.entry[date][park_id]) {
+            var schedDate = moment(date, "YYYY/MM/DD").format(config.dateFormat);
+            schedule.push({
+              date: schedDate,
+              openingTime: moment.tz(schedDate + body.entry[date][park_id].open_time_1, tokyoTimeFormat, tokyoTimezone).format(config.timeFormat),
+              closingTime: moment.tz(schedDate + body.entry[date][park_id].close_time_1, tokyoTimeFormat, tokyoTimezone).format(config.timeFormat),
+              type: "Operating",
+            });
+          }
+
+          if (date == dateEnd) {
+            // reached desired end date, return
+            return cb(null);
+          }
+        }
+
+        // not reached end date yet, return for next async series to process
+        return cb(null);
+      });
+    }, function(err) {
+      if (err) return cb(err);
+
+      return cb(null, schedule);
+    });
+  }
+
   /** Parse an HTML page from Tokyo website to get ride times etc. */
   function ParseTokyoHTML(body, park_id, cb) {
     var results = {};
@@ -261,17 +323,7 @@ function DisneyTokyo(options) {
           Dbg("Fetching ride data for " + park_id.id + "...");
 
           // make API request to get ride list
-          request({
-            url: "http://www.tokyodisneyresort.jp/api/v1/wapi_attractions/lists/sort_type:1/locale:1/park_kind:" + park_id.kind + "/",
-            headers: {
-              "Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + park_id.id,
-              "User-Agent": GetRandomUserAgent(),
-              "X-Requested-With": "XMLHttpRequest",
-              "Accept": "text/javascript, application/javascript, */*; q=0.01",
-            },
-            // auto-parse the result with requestjs
-            json: true
-          }, function(err, resp, body) {
+          MakeMobileAppRequest(park_id.id, "http://www.tokyodisneyresort.jp/api/v1/wapi_attractions/lists/sort_type:1/locale:1/park_kind:" + park_id.kind + "/", function(err, resp, body) {
             if (err) {
               console.log("Error getting ride names: " + err);
               return cb(err);
@@ -460,6 +512,20 @@ function DisneyTokyo(options) {
     });
   }
 
+  function MakeMobileAppRequest(park_id, url, cb) {
+    request({
+      url: url,
+      headers: {
+        "Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + park_id,
+        "User-Agent": GetRandomUserAgent(),
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "text/javascript, application/javascript, */*; q=0.01",
+      },
+      // auto-parse the result with requestjs
+      json: true
+    }, cb);
+  }
+
   function GenerateRandomGeoLoc() {
     // generate a random co-ordinate from within Tokyo Disney
     var parks = Object.keys(config.gps);
@@ -490,13 +556,10 @@ function DisneyTokyo(options) {
   }
 
   this.Test = function(cb) {
-    var file = require("fs")
-      .readFileSync(__dirname + "/test_disneysea.html");
-    CheckInitData(function(err) {
-      if (err) return cb(err);
-      ParseTokyoHTML(file, "tds", cb);
+    MakeMobileAppRequest("tds", "http://www.tokyodisneyresort.jp/api/v1/wapi_monthlycalendars/detail/ym:201512/", function(err, res) {
+      if (err) return console.error(err);
+      console.log(JSON.stringify(res, null, 2));
     });
-    //GetRideNames("tdr", cb);
   };
 }
 
@@ -507,6 +570,6 @@ if (!module.parent) {
   };
 
   var app = new DisneyTokyo();
-  app.GetWaitTimes("tds", cb);
-  //app.Test(cb);
+  //app.GetWaitTimes("tds", cb);
+  app.Test(cb);
 }

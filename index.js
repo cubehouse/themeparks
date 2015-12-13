@@ -64,8 +64,7 @@ function DisneyAPI(options) {
     };
 
     this.GetSchedule = function() {
-      arguments[arguments.length - 1]("Not Yet Implemented");
-      //DisneyTokyoAPI.GetSchedule(park_id, arguments[ arguments.length - 1 ]);
+      DisneyTokyoAPI.GetSchedule(park_id, arguments[arguments.length - 1]);
     };
   }
 
