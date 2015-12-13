@@ -1,6 +1,5 @@
 var DisneyRequest = require("./disneyRequest");
 var DisneyParks = require("./disneyParks");
-var DisneyParis = require("./disneyParis");
 var DisneyTokyo = require("./disneyTokyo");
 
 /** This is a wrapper object to tie the API components together */
@@ -34,31 +33,27 @@ function DisneyAPI(options) {
     timezone: "America/Los_Angeles"
   }, DRequest);
 
+  // Disneyland Paris
+  this.DisneylandParis = new DisneyParks({
+    wdw_park_id: "P1",
+    timezone: "Europe/Paris",
+    waitTimeDestination: "dlp/wait-times",
+  }, DRequest);
+
+  this.WaltDisneyStudios = new DisneyParks({
+    wdw_park_id: "P2",
+    timezone: "Europe/Paris",
+    waitTimeDestination: "dlp/wait-times",
+  }, DRequest);
+
   // push options through to objects
   this.Epcot.TakeOptions(options);
   this.MagicKingdom.TakeOptions(options);
   this.HollywoodStudios.TakeOptions(options);
   this.AnimalKingdom.TakeOptions(options);
   this.Disneyland.TakeOptions(options);
-  this.CaliforniaAdventure.TakeOptions(options);
-
-  // Disneyland Paris
-  var DisneyParisAPI = new DisneyParis(options);
-  // build a mini proxy for Paris parks
-  function ParisProxy(park_id) {
-    this.GetWaitTimes = function() {
-      DisneyParisAPI.GetWaitTimes(park_id, arguments[arguments.length - 1]);
-    };
-
-    this.GetSchedule = function() {
-      DisneyParisAPI.GetSchedule(park_id, arguments[arguments.length - 1]);
-    };
-  }
-
-  // Disneyland Paris Magic Kingdon
-  this.DisneylandParis = new ParisProxy(1);
-  // Disneyland Paris Disney Studios
-  this.WaltDisneyStudios = new ParisProxy(2);
+  this.DisneylandParis.TakeOptions(options);
+  this.WaltDisneyStudios.TakeOptions(options);
 
   // Tokyo Disney
   var DisneyTokyoAPI = new DisneyTokyo(options);

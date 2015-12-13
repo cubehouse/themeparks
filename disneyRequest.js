@@ -4,7 +4,17 @@ var pluralize = require('pluralize');
 function DisneyRequest(options) {
   /* ===== Exports ===== */
 
+  var config = {
+    // region to report to API
+    region: "us",
+  };
 
+  // overwrite config with supplied options if they exist
+  if (options) {
+    for (var key in options) {
+      config[key] = options[key];
+    }
+  }
 
   /** Get a URL from the Disney API */
   this.GetURL = function(url, cb) {
@@ -15,28 +25,45 @@ function DisneyRequest(options) {
   /** Get an API page
    * id: Page ID (eg. 80007944 - ID for the Magic Kingdom)
    * type: Page type (eg. "wait-times" - for park wait times)
-   * subpage (optional): Sub-page of an API page (TODO - find example)
+   * options (optional): Pass subpage or apiopts settings to API (see WDW and DLP)
+   *   subpage example: "wait-times"
+   *   apiopts example: "destination=dlp"
    * callback: function return with arguments (error, data)
    */
-  this.GetPage = function(id, type, subpage, cb) {
-    if (typeof subpage == "function") {
-      cb = subpage;
-      subpage = "";
+  this.GetPage = function(id, type, options, cb) {
+    if (typeof options == "function") {
+      cb = options;
+      options = {};
+    }
+
+    // handle optional subpage option
+    if (options.subpage) {
+      // subpage must start with /
+      if (options.subpage !== "" && options.subpage[0] != "/") options.subpage = "/" + options.subpage;
     } else {
-      // make sure subpage starts with a slash
-      if (subpage !== "" && subpage[0] != "/") subpage = "/" + subpage;
+      options.subpage = "";
+    }
+
+    // initialise optional apiopts option if not set
+    if (!options.apiopts) {
+      options.apiopts = "";
+    } else if (options.apiopts[0] != ";") {
+      // make sure apiopts starts with ;
+      options.apiopts = ";" + options.apiopts;
     }
 
     // tidy up inputs
-    id = parseInt(id, 10);
     type = type.toLowerCase().replace(/[^a-z0-9-]/g, "");
     // pluralize type
     type = pluralize(type);
 
-    MakeGet("https://api.wdpro.disney.go.com/facility-service/" + type + "/" + id + subpage, {}, cb);
+    // pass region to API
+    var data = {
+      region: config.region,
+    };
+
+    MakeGet("https://api.wdpro.disney.go.com/facility-service/" + type + "/" + id + options.apiopts + options.subpage, data, cb);
   };
-
-
 
   /* ===== Variables ===== */
 
@@ -56,10 +83,10 @@ function DisneyRequest(options) {
     jar: true
   };
 
-  // support passing extra options for Request (eg. proxy/Tor settings)
-  if (options && options.request) {
-    for (var k in options.request) {
-      request_vars[k] = options.request[k];
+  // support passing extra config for Request (eg. proxy/Tor settings)
+  if (config && config.request) {
+    for (var k in config.request) {
+      request_vars[k] = config.request[k];
     }
   }
 

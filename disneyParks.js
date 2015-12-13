@@ -6,7 +6,6 @@ var moment = require("moment-timezone");
  * eg. new DisneyPark("80007944", new DisneyRequest());
  */
 function DisneyPark(options, DRequest) {
-
   var config = {
     wdw_park_id: null,
     // default timezone (Florida time)
@@ -15,7 +14,12 @@ function DisneyPark(options, DRequest) {
     //  default is ISO8601 format YYYY-MM-DDTHH:mm:ssZ
     timeFormat: "YYYY-MM-DDTHH:mm:ssZ",
     // format for printing days
-    dateFormat: "YYYY-MM-DD"
+    dateFormat: "YYYY-MM-DD",
+    // request region (mostly for Disneyland Paris API, but may get rolled out elsewhere!)
+    //  default to US (United States)
+    apiRegion: "us",
+    // wait time destination is a Disneyland Paris specific configuration
+    waitTimeDestination: ""
   };
 
   this.TakeOptions = function(options) {
@@ -41,7 +45,10 @@ function DisneyPark(options, DRequest) {
     if (typeof include_entertainment == "function") include_entertainment = false;
 
     // fetch wait times from the API
-    DRequest.GetPage(config.wdw_park_id, "theme-park", "wait-times", function(err, data) {
+    DRequest.GetPage(config.wdw_park_id, "theme-park", {
+      subpage: config.waitTimeDestination == "" ? "wait-times" : "",
+      apiopts: config.waitTimeDestination == "" ? "" : ("destination\u003d" + config.waitTimeDestination),
+    }, function(err, data) {
       if (err) return cb(err);
 
       // build ride array
@@ -56,7 +63,7 @@ function DisneyPark(options, DRequest) {
           }
 
           var obj = {
-            id: ride.id,
+            id: CleanRideID(ride.id),
             name: ride.name
           };
 
@@ -84,6 +91,15 @@ function DisneyPark(options, DRequest) {
       cb(null, rides);
     });
   };
+
+  /** Tidy up IDs returned from API with ;entity_type junk in them */
+  var regexRideIDCleanup = /^([^;]+)/;
+
+  function CleanRideID(ride_id) {
+    var matches = ride_id.match(regexRideIDCleanup);
+    if (!matches) return ride_id;
+    return matches[1];
+  }
 
   /** Get park opening hours */
   this.GetSchedule = function(cb) {
