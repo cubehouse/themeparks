@@ -6,7 +6,18 @@ An unofficial API library for accessing Disney park wait times, opening times an
 
     npm install wdwjs --save
 
-Note that the API changed in 1.0.0 to return formatted objects to API requests, instead of the raw API data from Disney.
+# Change Log
+
+v2.0.0
+
+* (breaking change) You must now specify "WDWRequests: true" in your setup options if you wish direct access to WDW API function helpers
+* Disneyland Paris is now part of the same API service as Disney World Resort and Disneyland California.
+* Added Tokyo Disneyland to supported parks
+
+v1.0.0
+
+* (breaking change) Response formats simplified so all parks return same data structure
+* Added Disneyland Paris
 
 # Example Use
 
@@ -14,6 +25,11 @@ Note that the API changed in 1.0.0 to return formatted objects to API requests, 
     var DisneyAPI = new (require("wdwjs"))({
         timeFormat: "HH:mm"
     });
+
+    // List theme parks supported by API
+    for(var parkID in DisneyAPI) {
+      if (DisneyAPI[parkID].GetWaitTimes) console.log("* DisneyAPI." + parkID + ".[ GetWaitTimes() | GetSchedule() ]");
+    }
 
     var MagicKingdom = DisneyAPI.MagicKingdom;
 
@@ -45,6 +61,10 @@ Note that the API changed in 1.0.0 to return formatted objects to API requests, 
     //  ** Disney Paris **
     //  DisneyAPI.DisneylandParis
     //  DisneyAPI.WaltDisneyStudios
+    //
+    //  ** Tokyo Disneyland **
+    //  DisneyAPI.TokyoDisneyland
+    //  DisneyAPI.TokyoDisneySea
 
 # Result Objects
 
@@ -59,8 +79,8 @@ Some parks may return additional data about rides (check their output). However 
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
-            openingTime: (timeFormat timestamp: ride opening time - only available in Paris APIs at the moment),
-            closingTime: (timeFormat timestamp: ride closing time - only available in Paris APIs at the moment)
+            openingTime: (timeFormat timestamp: ride opening time - only available in Paris and Tokyo APIs at the moment),
+            closingTime: (timeFormat timestamp: ride closing time - only available in Paris and Tokyo APIs at the moment)
         },
         ...
     ]
@@ -91,7 +111,7 @@ Defaults are shown below.
         dateFormat: "YYYY-MM-DD"
     });
 
-# Advanced Use (Disney World / California APIs only)    
+# Advanced Use (Disney World / California / Paris APIs only)    
 
 If you want to access these API calls, you must specify "WDWRequests: true" in the options when creating your DisneyAPI object (this is new in v2.0.0 onwards).
 
@@ -116,4 +136,3 @@ Walt Disney World and Disneyland Paris code based on work from lloydpick/echelon
 # TODO
 
 * Missing ride opening/closing times on WDW rides (Florida & California)
-* Missing park schedule for Tokyo Disneyland
