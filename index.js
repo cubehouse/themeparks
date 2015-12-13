@@ -37,13 +37,13 @@ function DisneyAPI(options) {
   this.DisneylandParis = new DisneyParks({
     wdw_park_id: "P1",
     timezone: "Europe/Paris",
-    waitTimeDestination: "dlp/wait-times",
+    dlpMode: true,
   }, DRequest);
 
   this.WaltDisneyStudios = new DisneyParks({
     wdw_park_id: "P2",
     timezone: "Europe/Paris",
-    waitTimeDestination: "dlp/wait-times",
+    dlpMode: true,
   }, DRequest);
 
   // push options through to objects

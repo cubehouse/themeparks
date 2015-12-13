@@ -1,5 +1,7 @@
 // need pluralize to turn types into plural versions for API pages
 var pluralize = require('pluralize');
+// moment to sort out schedule dates/times
+var moment = require("moment-timezone");
 
 function DisneyRequest(options) {
   /* ===== Exports ===== */
@@ -64,6 +66,77 @@ function DisneyRequest(options) {
 
     MakeGet("https://api.wdpro.disney.go.com/facility-service/" + type + "/" + id + options.apiopts + options.subpage, data, cb);
   };
+
+  /** Get the schedule for DLP
+   * This is separate as we can fetch all schedules for parks and rides in one request
+   *  If we can work out this for WDW etc. we can use it there too :)
+   */
+  this.GetDLPSchedule = function(cb) {
+    // work out today's day (in the target timezone)
+    var date = moment().tz("Europe/Paris").format("YYYY-MM-DD");
+
+    if (!dlpScheduleCache || !dlpScheduleLastCacheDay || dlpScheduleLastCacheDay != date) {
+      // cache is empty or invalid! Fetch new data
+
+      // calculate end date to grab schedules for (30 days after today)
+      // TODO - expose this as an API setting
+      var endDate = moment().add(30, 'days').tz("Europe/Paris").format("YYYY-MM-DD");
+
+      MakeGet("https://api.wdpro.disney.go.com/mobile-service/public/ancestor-activities-schedules/dlp;entityType=destination", {
+        // fetch park and attraction data
+        "filters": "theme-park,Attraction",
+        // start and end date to fetch between
+        "startDate": date,
+        "endDate": endDate,
+        // must supply a region for DLP
+        "region": config.region
+      }, function(err, data) {
+        if (err) {
+          console.error("Error fetching DLP schedule: " + err);
+          return cb("Error fetching DLP schedule data");
+        }
+
+        // parse response into a useful data format
+        var schedule = {};
+        for (var i = 0, sched; sched = data.activities[i++];) {
+          // if object has no schedule data, ignore
+          if (!sched.schedule || !sched.schedule.schedules) continue;
+
+          // tidy up object (mainly sorting out the ID)
+          TidyObject(sched);
+
+          // start building schedule object
+          var scheduleData = {
+            id: sched.id,
+            times: {},
+          };
+
+          for (var j = 0, time; time = sched.schedule.schedules[j++];) {
+            // calculate opening and closing time using moment-timezone
+            if (!scheduleData.times[time.date]) scheduleData.times[time.date] = [];
+            scheduleData.times[time.date].push({
+              openingTime: moment.tz(time.date + time.startTime, "YYYY-MM-DDHH:mm:ss", "Europe/Paris"),
+              closingTime: moment.tz(time.date + time.endTime, "YYYY-MM-DDHH:mm:ss", "Europe/Paris"),
+              // usually "Operating" or "Extra Magic Hours", but can occasionally be "Event" or something unusual! So expect anything to be here
+              type: time.type,
+            });
+          }
+          schedule[sched.id] = scheduleData;
+        }
+
+        // store current date so we re-fetch once a day
+        dlpScheduleCache = schedule;
+        dlpScheduleLastCacheDay = date;
+
+        return cb(null, schedule);
+      });
+    } else {
+      // return cached data
+      return cb(null, dlpScheduleCache);
+    }
+  };
+  var dlpScheduleLastCacheDay = null;
+  var dlpScheduleCache = null;
 
   /* ===== Variables ===== */
 
@@ -212,13 +285,15 @@ function DisneyRequest(options) {
     TidyGPS(obj);
   }
 
-  /** Tidy up any IDs in the object to only include digits and parse to a JavaScript Int */
+  /** Tidy up any IDs in the returned object */
+  var regexTidyID = /^([^;]+)/;
+
   function TidyID(obj) {
     if (!obj) return;
-    if (!obj.id || !obj.type) return;
-    var capture = /^([0-9]+)/.exec(obj.id);
+    if (!obj.id) return;
+    var capture = regexTidyID.exec(obj.id);
     if (capture && capture.length > 1) {
-      obj.id = parseInt(capture[1], 10);
+      obj.id = capture[1];
     }
   }
 
@@ -266,8 +341,15 @@ function DisneyRequest(options) {
       object.disneyMapMini = "https://disneyworld.disney.go.com/maps/thumbnail" + "#" + mapHash;
     }
   }
-
 }
 
 // export module object
 module.exports = DisneyRequest;
+
+if (!module.parent) {
+  var api = new DisneyRequest();
+  api.GetDLPSchedule(function(err, data) {
+    if (err) return console.error(err);
+    console.log(JSON.stringify(data, null, 2));
+  });
+}

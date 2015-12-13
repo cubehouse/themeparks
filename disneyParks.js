@@ -18,8 +18,8 @@ function DisneyPark(options, DRequest) {
     // request region (mostly for Disneyland Paris API, but may get rolled out elsewhere!)
     //  default to US (United States)
     apiRegion: "us",
-    // wait time destination is a Disneyland Paris specific configuration
-    waitTimeDestination: ""
+    // do we need to make DLP-style requests?
+    dlpMode: false,
   };
 
   this.TakeOptions = function(options) {
@@ -46,8 +46,8 @@ function DisneyPark(options, DRequest) {
 
     // fetch wait times from the API
     DRequest.GetPage(config.wdw_park_id, "theme-park", {
-      subpage: config.waitTimeDestination == "" ? "wait-times" : "",
-      apiopts: config.waitTimeDestination == "" ? "" : ("destination\u003d" + config.waitTimeDestination),
+      subpage: config.dlpMode ? "" : "wait-times",
+      apiopts: config.dlpMode ? "destination\u003ddlp/wait-times" : "",
     }, function(err, data) {
       if (err) return cb(err);
 
@@ -63,7 +63,7 @@ function DisneyPark(options, DRequest) {
           }
 
           var obj = {
-            id: CleanRideID(ride.id),
+            id: ride.id,
             name: ride.name
           };
 
@@ -87,46 +87,89 @@ function DisneyPark(options, DRequest) {
         }
       }
 
-      // return rides
-      cb(null, rides);
+      if (config.dlpMode) {
+        // we have ride opening/closing times for DLP too, so add them if we can find them
+        DRequest.GetDLPSchedule(function(err, data) {
+          // ignore if we get an error
+          if (err) return cb(null, rides);
+
+          for (var i = 0, ride; ride = rides[i++];) {
+            if (data[ride.id]) {
+              // get today's date to find the correct opening times
+              var today = moment().tz(config.timezone).format("YYYY-MM-DD");
+              if (data[ride.id].times[today]) {
+                for (var j = 0, time; time = data[ride.id].times[today][j++];) {
+                  // look for "Operating" times (ignore any unusual times)
+                  if (time.type == "Operating") {
+                    rides[i - 1].openingTime = time.openingTime;
+                    rides[i - 1].closingTime = time.closingTime;
+                    break;
+                  }
+                }
+              }
+            }
+          }
+
+          // return rides with opening/closing times injected
+          cb(null, rides);
+        });
+      } else {
+        // return rides
+        cb(null, rides);
+      }
     });
   };
 
-  /** Tidy up IDs returned from API with ;entity_type junk in them */
-  var regexRideIDCleanup = /^([^;]+)/;
-
-  function CleanRideID(ride_id) {
-    var matches = ride_id.match(regexRideIDCleanup);
-    if (!matches) return ride_id;
-    return matches[1];
-  }
-
   /** Get park opening hours */
   this.GetSchedule = function(cb) {
-    // TODO - format this data nicely
-    DRequest.GetPage(config.wdw_park_id, "schedule", function(err, data) {
-      if (err) return cb(err);
+    // DLP has a different way of fetching our schedule times
+    if (config.dlpMode) {
+      DRequest.GetDLPSchedule(function(err, data) {
+        if (err) return cb(err);
 
-      var times = [];
-      // parse data into a nice format
-      for (var i = 0; i < data.schedules.length; i++) {
-        var o = {
-          // format date as well as times
-          date: moment(data.schedules[i].date).format(config.dateFormat),
-          // format time to the timezone properly using momentjs
-          openingTime: ParseTime(data.schedules[i].date + data.schedules[i].startTime),
-          // add an extra day if the closing time is past midnight
-          closingTime: ParseTime(data.schedules[i].date + data.schedules[i].endTime, (data.schedules[i].endTime[0] == "0") ? 1 : 0),
-          // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event"
-          //  consider only using "Operating" or have special UI to handle any type of park hours
-          type: data.schedules[i].type
-        };
+        if (!data) return cb("No schedule data available");
 
-        times.push(o);
-      }
+        if (!data[config.wdw_park_id]) return cb("Unable to find park schedule data");
 
-      return cb(null, times);
-    });
+        var times = [];
+        for (var date in data[config.wdw_park_id].times) {
+          for (var i = 0, time; time = data[config.wdw_park_id].times[date][i++];) {
+            times.push({
+              date: moment(date).format(config.dateFormat),
+              openingTime: time.openingTime,
+              closingTime: time.closingTime,
+              type: time.type,
+            });
+          }
+        }
+        return cb(null, times);
+      });
+    } else {
+      // TODO - format this data nicely
+      DRequest.GetPage(config.wdw_park_id, "schedule", function(err, data) {
+        if (err) return cb(err);
+
+        var times = [];
+        // parse data into a nice format
+        for (var i = 0; i < data.schedules.length; i++) {
+          var o = {
+            // format date as well as times
+            date: moment(data.schedules[i].date).format(config.dateFormat),
+            // format time to the timezone properly using momentjs
+            openingTime: ParseTime(data.schedules[i].date + data.schedules[i].startTime),
+            // add an extra day if the closing time is past midnight
+            closingTime: ParseTime(data.schedules[i].date + data.schedules[i].endTime, (data.schedules[i].endTime[0] == "0") ? 1 : 0),
+            // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event"
+            //  consider only using "Operating" or have special UI to handle any type of park hours
+            type: data.schedules[i].type
+          };
+
+          times.push(o);
+        }
+
+        return cb(null, times);
+      });
+    }
   };
 
   // format of wdw API times
