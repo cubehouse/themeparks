@@ -1,28 +1,27 @@
-// Setup API
+// Disney API
 var DisneyAPI = new(require("wdwjs"))();
 
-var MagicKingdom = DisneyAPI.MagicKingdom;
-var Paris = DisneyAPI.DisneylandParis;
+// Get list of supported parks
+console.log("*** Supported Parks ***");
+for (var park in DisneyAPI) {
+  // (only parks with "GetWaitTimes" function will be valid)
+  if (DisneyAPI[park].GetWaitTimes && typeof(DisneyAPI[park].GetWaitTimes) == "function") {
+    console.log(park);
+  }
+}
 
 // Get Magic Kingdom wait times
-MagicKingdom.GetWaitTimes(function(err, data) {
+DisneyAPI.MagicKingdom.GetWaitTimes(function(err, data) {
   if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
 
+  console.log(" *** Magic Kingdom Florida Wait Times ***");
   console.log(JSON.stringify(data, null, 2));
-});
 
-DisneylandParis.GetSchedule(function(err, data) {
-  console.log(JSON.stringify(data, null, 2));
-});
+  // Get Disneyland Paris park schedule
+  DisneyAPI.DisneylandParis.GetSchedule(function(err, data) {
+    if (err) return console.error("Error fetching Disneyland Paris schedule: " + err);
 
-DisneyAPI.GetURL("https://api.wdpro.disney.go.com/global-pool-override-B/facility-service/theme-parks/80007944", function(e, d) {
-  console.log(JSON.stringify(d, null, 2));
-});
-
-DisneyAPI.GetURL("https://api.wdpro.disney.go.com/global-pool-override-B/facility-service/destinations/80007798", function(e, d) {
-  console.log(JSON.stringify(d, null, 2));
-});
-
-DisneyAPI.GetPage(80010208, "Attraction", function(error, data) {
-  console.log(JSON.stringify(data, null, 2));
+    console.log(" *** Magic Kingdom Paris Schedule ***");
+    console.log(JSON.stringify(data, null, 2));
+  });
 });
