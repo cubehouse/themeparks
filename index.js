@@ -1,6 +1,7 @@
 var DisneyRequest = require("./disneyRequest");
 var DisneyParks = require("./disneyParks");
 var DisneyTokyo = require("./disneyTokyo");
+var UniversalOrlando = require("./universalOrlando");
 
 /** This is a wrapper object to tie the API components together */
 
@@ -72,6 +73,19 @@ function DisneyAPI(options) {
   this.TokyoDisneyland = new TokyoProxy("tdl");
   // Tokyo DisneySea
   this.TokyoDisneySea = new TokyoProxy("tds");
+
+  // Universal Studios Orlando
+  this.UniversalStudiosOrlando = new UniversalOrlando({
+    park_id: 10010,
+    calendar_URL: "https://www.universalorlando.com/Resort-Information/USF-Park-Hours-Mobile.aspx",
+    calendar_VStarget: "UniversalStudiosFloridaCalendar$ECalendar",
+  });
+  // Universal Island Of Adventure Orlando
+  this.UniversalIslandOfAdventure = new UniversalOrlando({
+    park_id: 10000,
+    calendar_URL: "https://www.universalorlando.com/Resort-Information/IOA-Park-Hours-Mobile.aspx",
+    calendar_VStarget: "IslandOfAdventureCalendar$ECalendar",
+  });
 
   // == export DRequest exports too (if asked for) ==
   if (options && options.WDWRequests) {
