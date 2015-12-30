@@ -16,6 +16,7 @@ v2.0.0
 * (breaking change) You must now specify "WDWRequests: true" in your setup options if you wish direct access to WDW API function helpers
 * Disneyland Paris is now part of the same API service as Disney World Resort and Disneyland California.
 * Added Tokyo Disneyland to supported parks
+* Added (non-Disney) Universal Orlando parks to supported parks (added: 2.0.4)
 
 v1.0.0
 
