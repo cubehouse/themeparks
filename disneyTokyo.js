@@ -202,7 +202,7 @@ function DisneyTokyo(options) {
       if (el.find(".fp")
         .length) {
         // fastpass is supported! But we can also grab the current fastpass timeslot!
-        ride_data.fastpass = true;
+        ride_data.fastPass = true;
 
         // extract time from HTML
         var fastpass_time_text = el.find(".fp")
@@ -210,18 +210,18 @@ function DisneyTokyo(options) {
         var fastpass_time_match = /\((\d{2}\:\d{2})\-(\d{2}\:\d{2})\)/g.exec(fastpass_time_text);
         if (fastpass_time_match) {
           // convert time
-          ride_data.fastpassStart = ParseTokyoTime(fastpass_time_match[1]);
-          ride_data.fastpassEnd = ParseTokyoTime(fastpass_time_match[2]);
+          ride_data.fastPassStart = ParseTokyoTime(fastpass_time_match[1]);
+          ride_data.fastPassEnd = ParseTokyoTime(fastpass_time_match[2]);
 
-          ride_data.fastpassStatus = "Fastpass booking: " + fastpass_time_match[1] + " - " + fastpass_time_match[2];
+          ride_data.fastPassStatus = "Fastpass booking: " + fastpass_time_match[1] + " - " + fastpass_time_match[2];
         }
       } else if (el.find(".fp-no")
         .length) {
         // ride supports fastpass! but they've ran out :(
-        ride_data.fastpass = true;
-        ride_data.fastpassStatus = "All Fastpass Claimed";
+        ride_data.fastPass = true;
+        ride_data.fastPassStatus = "All Fastpass Claimed";
       } else {
-        ride_data.fastpass = false;
+        ride_data.fastPass = false;
       }
 
       // extract opening and closing time
