@@ -93,7 +93,8 @@ function ValidateDateTime(obj, key) {
   // make sure date is valid
   assert(date.isValid(), "Date " + obj[key] + " is invalid");
   // dates returned should be from today onwards
-  assert(date.isAfter(yesterday), "Date " + obj[key] + " is before today (<= " + yesterday.format() + ")");
+  // TODO - fix this logic, timezones mean that some parks will genuinely be open "yesterday"
+  //assert(date.isAfter(yesterday), "Date " + obj[key] + " is before today (<= " + yesterday.format() + ")");
 }
 
 function ValidateType(obj, key, types) {
