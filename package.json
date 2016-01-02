@@ -19,6 +19,10 @@
     "random-useragent": "^0.2.1",
     "request": "2.x.x"
   },
+  "engines": {
+    "npm": ">=2",
+    "node": ">=0.8"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/cubehouse/wdwJS.git"

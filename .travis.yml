@@ -10,7 +10,7 @@ node_js:
   - "0.10"
   - "0.8"
 before_install:
-  - npm -g install npm@latest
+  - npm -g install npm@'>=2'
 before_script:
   - npm install -g mocha
 script: mocha
