@@ -2,7 +2,7 @@
 
 An unofficial API library for accessing Disney park wait times, opening times and other information from the Disney API.
 
-[![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/nodejs/wdwjs/1.0.1/badge?style=flat)](https://www.versioneye.com/nodejs/wdwjs/1.0.1)
+[![Build Status](https://travis-ci.org/cubehouse/wdwJS.svg?branch=master)](https://travis-ci.org/cubehouse/wdwJS) [![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/nodejs/wdwjs/badge?style=flat)](https://www.versioneye.com/nodejs/wdwjs)
 [![npm history](https://nodei.co/npm-dl/wdwjs.png)](https://www.npmjs.com/package/wdwjs/)
 
 # Install
@@ -69,6 +69,10 @@ v1.0.0
     //  ** Tokyo Disneyland **
     //  DisneyAPI.TokyoDisneyland
     //  DisneyAPI.TokyoDisneySea
+    //
+    // ** Universal Studios Florida **
+    //  DisneyAPI.UniversalStudiosOrlando
+    //  DIsneyAPI.UniversalIslandOfAdventure
 
 # Result Objects
 
@@ -78,7 +82,7 @@ Some parks may return additional data about rides (check their output). However 
 
     [
         {
-            id: (string: uniquely identifying a ride, from internal Disney APIs),
+            id: (string or number: uniquely identifying a ride),
             name: (string: ride name),
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
