@@ -1,7 +1,7 @@
 {
   "name": "wdwjs",
   "description": "Walt Disney World API Framework",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
@@ -27,8 +27,14 @@
     "type": "git",
     "url": "git://github.com/cubehouse/wdwJS.git"
   },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
   "main": "index.js",
   "readmeFilename": "README.md",
   "tonicExampleFilename": "example.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
 }
