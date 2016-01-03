@@ -26,7 +26,7 @@ function DisneyTokyo(options) {
 
   // default options
   var config = {
-    debug: true,
+    debug: false,
     // geo-coordinates to create fake GPS positions
     //  each park should have an array containing 2 "pair arrays"
     //  i.e, two points to form an equater-aligned rectangle enclosing the area we're after
