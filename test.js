@@ -1,6 +1,6 @@
 var assert = require("assert");
 var Park = require("./parkBase");
-var DisneyBase = require("./disney/DisneyBase");
+var DisneyBase = require("./Disney/DisneyBase");
 
 describe("ParkBase", function() {
   var parkBase = new Park();
