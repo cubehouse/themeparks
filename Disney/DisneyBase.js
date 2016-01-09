@@ -28,10 +28,73 @@ function DisneyBase(config) {
   self._accessTokenURLBody = "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion";
   self._accessTokenURLMethod = "POST";
 
-  // TODO - some generic processing for Disney parks
-  //  each implementation will need to define some extra logic/vars for this
-  this.GetOpeningTimes = function(callback) {
-    return callback("TODO - implement this");
+  // Generic implementation of GetWaitTimes
+  //  can be overriden if needed
+  this.GetWaitTimes = function(callback) {
+    // check the park ID is set
+    if (!self.park_id) return self.Error("Park not configured correctly", "Park ID not configured", callback);
+    if (!self.park_region) return self.Error("Park not configured correctly", "Park region not configured", callback);
+
+    // fetch wait times from API
+    self.FetchURL(self.ContructWaitTimesURL(), {
+        data: {
+          region: self.park_region,
+        },
+      },
+      function(err, data) {
+        if (err) return self.Error("Error fetching wait times", err, callback);
+        if (!data) return self.Error("No data returned for wait times", "data is null", callback);
+        if (!data.entries) return self.Error("Invalid data returned from API (no entries)", data, callback);
+
+        // build ride array
+        var rides = [];
+        for (var i = 0; i < data.entries.length; i++) {
+          var ride = data.entries[i];
+
+          if (ride.id && ride.name && ride.type && ride.type == "Attraction") {
+
+            var obj = {
+              id: self.CleanRideID(ride.id),
+              name: ride.name
+            };
+
+            // try to find wait time value
+            if (ride.waitTime && ride.waitTime && ride.waitTime.postedWaitMinutes) {
+              // report the posted wait time if present
+              obj.waitTime = ride.waitTime.postedWaitMinutes;
+            } else {
+              // zero if we cannot find a wait time
+              obj.waitTime = 0;
+            }
+
+            // work out if the ride is active
+            obj.active = (ride.waitTime && ride.waitTime.status == "Operating") ? true : false;
+
+            // work out if we have fastpass
+            obj.fastPass = (ride.waitTime.fastPass && ride.waitTime.fastPass.available);
+
+            // add to our return rides array
+            rides.push(obj);
+          }
+        }
+
+        return callback(null, rides);
+      });
+  };
+
+  // Create the URL for requesting wait times
+  this.ContructWaitTimesURL = function() {
+    return "https://api.wdpro.disney.go.com/facility-service/theme-parks/" + self.park_id + "/wait-times";
+  };
+
+  self.regexTidyID = /^([^;]+)/;
+  // clean up ride IDs returned by API
+  this.CleanRideID = function(ride_id) {
+    var capture = self.regexTidyID.exec(ride_id);
+    if (capture && capture.length > 1) {
+      return capture[1];
+    }
+    return ride_id;
   };
 
   // Fetch cached/new access token for Disney API methods
@@ -168,18 +231,3 @@ function DisneyBase(config) {
 // sort out prototype inheritance
 DisneyBase.prototype = Object.create(Park.prototype);
 DisneyBase.prototype.constructor = DisneyBase;
-
-// DEBUG TEST CODE
-if (!module.parent) {
-  // test request
-  var d = new DisneyBase();
-  // test getting Disneyland Paris schedule
-  d.FetchURL("https://api.wdpro.disney.go.com/mobile-service/public/ancestor-activities-schedules/dlp;entityType=destination", {
-    data: {
-      "filters": "theme-park,Attraction",
-      "startDate": "2016-01-09",
-      "endDate": "2016-01-29",
-      "region": "fr",
-    }
-  }, console.log);
-}

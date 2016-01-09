@@ -14,6 +14,11 @@ function Park(config) {
   // park's human-readable name
   this.name = this.name || "Default Blank Park";
 
+  // park date format configurations
+  //  see http://momentjs.com/docs/#/displaying/format/
+  this.timeFormat = this.timeFormat || "YYYY-MM-DDTHH:mm:ssZ";
+  this.dateFormat = this.dateFormat || "YYYY-MM-DD";
+
   // set user-agent
   if (config && config.useragent) {
     // if useragent is supplied, use that one
