@@ -2,6 +2,8 @@
 var Park = require("../parkBase");
 // request library
 var request = require("request");
+// moment library for time formatting
+var moment = require("moment-timezone");
 
 // export the Disney base park object
 module.exports = DisneyBase;
@@ -11,6 +13,9 @@ function DisneyBase(config) {
   var self = this;
 
   self.name = self.name || "Generic Disney Park";
+
+  // base API URL to use for requests
+  self.APIBase = self.APIBase || "https://api.wdpro.disney.go.com/facility-service/";
 
   // Call to parent class "Park" to inherit
   Park.call(self, config);
@@ -84,7 +89,77 @@ function DisneyBase(config) {
 
   // Create the URL for requesting wait times
   this.ContructWaitTimesURL = function() {
-    return "https://api.wdpro.disney.go.com/facility-service/theme-parks/" + self.park_id + "/wait-times";
+    return self.APIBase + "theme-parks/" + self.park_id + "/wait-times";
+  };
+
+  // Get park opening times
+  this.GetOpeningTimes = function(callback) {
+    self.FetchURL(self.ConstructScheduleURL(), {}, function(err, data) {
+      if (err) return self.Error("Error fetching park schedule", err, callback);
+      if (!data) return self.Error("No schedule data returned", null, callback);
+      if (!data.schedules) return self.Error("No schedule data returned", data, callback);
+
+      var times = {};
+      // first grab all the "normal" operating hours
+      for (var i = 0; i < data.schedules.length; i++) {
+        // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event" (or potentially anything else)
+        if (data.schedules[i].type == "Operating") {
+          // add standard opening times to object
+          var dayObj = self.ParseScheduleEntry(data.schedules[i]);
+          dayObj.special = [];
+          times[dayObj.date] = dayObj;
+        }
+      }
+
+      // Fetch extra magic hours/ticketed events etc. and add them to existing objects
+      for (var i = 0; i < data.schedules.length; i++) {
+        if (data.schedules[i].type != "Operating") {
+          // add non-standard to the standard date objects
+          var dayObj = self.ParseScheduleEntry(data.schedules[i]);
+
+          // inject special hours type into object
+          dayObj.type = data.schedules[i].type;
+
+          // don't need date part for special hours
+          var day = dayObj.date;
+          delete dayObj.date;
+
+          // add onto special hours array for this day
+          if (times[day]) times[day].special.push(dayObj);
+        }
+      }
+
+      // convert from object into array
+      var timeArray = [];
+      for (var day in times) {
+        timeArray.push(times[day]);
+      }
+
+      return callback(null, timeArray);
+    });
+  };
+
+  this.ConstructScheduleURL = function() {
+    return self.APIBase + "schedules/" + self.park_id;
+  };
+
+  this.ParseScheduleEntry = function(entry) {
+    var day = moment(entry.date).format(self.dateFormat);
+    // work out opening closing times based on date added to the opening/closing time strings
+    var openingTime = moment.tz(entry.date + entry.startTime, "YYYY-MM-DDHH:mm", self.park_timezone);
+    var closingTime = moment.tz(entry.date + entry.endTime, "YYYY-MM-DDHH:mm", self.park_timezone);
+
+    // if closing time happens before opening time, must have overspilled into following day
+    if (closingTime.isBefore(openingTime)) {
+      closingTime.add("1", "day");
+    }
+
+    return {
+      date: day,
+      // format opening and closing times in 'timeFormat' format
+      openingTime: openingTime.format(self.timeFormat),
+      closingTime: closingTime.format(self.timeFormat),
+    };
   };
 
   self.regexTidyID = /^([^;]+)/;

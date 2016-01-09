@@ -9,7 +9,7 @@ function DisneylandParisBase(config) {
 
   // override wait times URL for Paris API
   this.ContructWaitTimesURL = function() {
-    return "https://api.wdpro.disney.go.com/facility-service/theme-parks/" + self.park_id + ";destination\u003ddlp/wait-times";
+    return self.APIBase + "theme-parks/" + self.park_id + ";destination\u003ddlp/wait-times";
   };
 }
 DisneylandParisBase.prototype = Object.create(DisneyBase.prototype);
