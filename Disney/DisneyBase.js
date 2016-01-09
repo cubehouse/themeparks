@@ -10,7 +10,7 @@ function DisneyBase(config) {
   // keep hold of 'this'
   var self = this;
 
-  self.name = "Generic Disney Park";
+  self.name = self.name || "Generic Disney Park";
 
   // Call to parent class "Park" to inherit
   Park.call(self, config);
