@@ -19,6 +19,10 @@ function Park(config) {
   this.timeFormat = this.timeFormat || "YYYY-MM-DDTHH:mm:ssZ";
   this.dateFormat = this.dateFormat || "YYYY-MM-DD";
 
+  // maximum number of dates to return for a park schedule
+  //  Note: Some parks will return less than this
+  this.scheduleMaxDates = this.scheduleMaxDates || 30;
+
   // set user-agent
   if (config && config.useragent) {
     // if useragent is supplied, use that one

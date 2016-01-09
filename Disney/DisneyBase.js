@@ -29,9 +29,9 @@ function DisneyBase(config) {
   //  will be an object with string 'token' and unix timestamp 'expires'
   self._accessToken = null;
   // access token URL requester
-  self._accessTokenURL = "https://authorization.go.com/token";
-  self._accessTokenURLBody = "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion";
-  self._accessTokenURLMethod = "POST";
+  self._accessTokenURL = self._accessTokenURL || "https://authorization.go.com/token";
+  self._accessTokenURLBody = self._accessTokenURLBody || "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion";
+  self._accessTokenURLMethod = self._accessTokenURLMethod || "POST";
 
   // Generic implementation of GetWaitTimes
   //  can be overriden if needed
@@ -94,57 +94,87 @@ function DisneyBase(config) {
 
   // Get park opening times
   this.GetOpeningTimes = function(callback) {
-    self.FetchURL(self.ConstructScheduleURL(), {}, function(err, data) {
+    // get start and end date in park's timezone
+    var startDate = moment().tz(self.park_timezone);
+    var endDate = moment().add(self.scheduleMaxDates, "days").tz(self.park_timezone);
+
+    self.FetchURL(self.ConstructScheduleURL(startDate, endDate), {
+      data: self.ConstructScheduleData(startDate, endDate)
+    }, function(err, data) {
       if (err) return self.Error("Error fetching park schedule", err, callback);
       if (!data) return self.Error("No schedule data returned", null, callback);
-      if (!data.schedules) return self.Error("No schedule data returned", data, callback);
 
-      var times = {};
-      // first grab all the "normal" operating hours
-      for (var i = 0; i < data.schedules.length; i++) {
-        // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event" (or potentially anything else)
-        if (data.schedules[i].type == "Operating") {
-          // add standard opening times to object
-          var dayObj = self.ParseScheduleEntry(data.schedules[i]);
-          dayObj.special = [];
-          times[dayObj.date] = dayObj;
-        }
-      }
+      // parse/extract schedule data
+      self.ParseScheduleData(data, startDate, endDate, function(err, times) {
+        if (err) return callback(err);
 
-      // Fetch extra magic hours/ticketed events etc. and add them to existing objects
-      for (var i = 0; i < data.schedules.length; i++) {
-        if (data.schedules[i].type != "Operating") {
-          // add non-standard to the standard date objects
-          var dayObj = self.ParseScheduleEntry(data.schedules[i]);
-
-          // inject special hours type into object
-          dayObj.type = data.schedules[i].type;
-
-          // don't need date part for special hours
-          var day = dayObj.date;
-          delete dayObj.date;
-
-          // add onto special hours array for this day
-          if (times[day]) times[day].special.push(dayObj);
-        }
-      }
-
-      // convert from object into array
-      var timeArray = [];
-      for (var day in times) {
-        timeArray.push(times[day]);
-      }
-
-      return callback(null, timeArray);
+        return callback(null, times);
+      });
     });
   };
 
-  this.ConstructScheduleURL = function() {
+  this.ConstructScheduleURL = function(startDate, endDate) {
     return self.APIBase + "schedules/" + self.park_id;
   };
 
+  this.ConstructScheduleData = function(startDate, endDate) {
+    return {};
+  };
+
+  // default schedule data parser
+  //  override for any special park implementations
+  this.ParseScheduleData = function(data, startDate, endDate, callback) {
+    if (!data.schedules) return self.Error("No schedule data returned", data, callback);
+
+    var times = {};
+    // first grab all the "normal" operating hours
+    for (var i = 0; i < data.schedules.length; i++) {
+      // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event" (or potentially anything else)
+      if (data.schedules[i].type == "Operating") {
+        var day = moment(data.schedules[i].date);
+        // skip this entry if it's after the last date we are interested in
+        if (day.isAfter(endDate)) continue;
+        if (day.isBefore(startDate)) continue;
+
+        // add standard opening times to object
+        var dayObj = self.ParseScheduleEntry(data.schedules[i]);
+        dayObj.special = [];
+        dayObj.date = day.format(self.dateFormat);
+        times[dayObj.date] = dayObj;
+      }
+    }
+
+    // Fetch extra magic hours/ticketed events etc. and add them to existing objects
+    for (var i = 0; i < data.schedules.length; i++) {
+      if (data.schedules[i].type != "Operating") {
+        var day = moment(data.schedules[i].date);
+        // skip this entry if it's after the last date we are interested in
+        if (day.isAfter(endDate)) continue;
+        if (day.isBefore(startDate)) continue;
+
+        var dayFormatted = day.format(self.dateFormat);
+
+        // add non-standard to the standard date objects
+        var dayObj = self.ParseScheduleEntry(data.schedules[i]);
+
+        // inject special hours type into object
+        dayObj.type = data.schedules[i].type;
+
+        // add onto special hours array for this day
+        if (times[dayFormatted]) times[dayFormatted].special.push(dayObj);
+      }
+    }
+
+    // convert from object into array
+    var timeArray = [];
+    for (var day in times) {
+      timeArray.push(times[day]);
+    }
+
+    return callback(null, timeArray);
+  };
+
   this.ParseScheduleEntry = function(entry) {
-    var day = moment(entry.date).format(self.dateFormat);
     // work out opening closing times based on date added to the opening/closing time strings
     var openingTime = moment.tz(entry.date + entry.startTime, "YYYY-MM-DDHH:mm", self.park_timezone);
     var closingTime = moment.tz(entry.date + entry.endTime, "YYYY-MM-DDHH:mm", self.park_timezone);
@@ -155,7 +185,6 @@ function DisneyBase(config) {
     }
 
     return {
-      date: day,
       // format opening and closing times in 'timeFormat' format
       openingTime: openingTime.format(self.timeFormat),
       closingTime: closingTime.format(self.timeFormat),
@@ -204,15 +233,19 @@ function DisneyBase(config) {
 
   // Make the network request to create a new access token
   this.FetchAccessToken = function(callback) {
-    // request new access token
-    request({
-        url: self._accessTokenURL,
-        method: self._accessTokenURLMethod,
-        headers: {
-          "User-Agent": self.useragent,
-        },
-        body: self._accessTokenURLBody,
+    var reqObj = {
+      url: self._accessTokenURL,
+      method: self._accessTokenURLMethod,
+      headers: {
+        "User-Agent": self.useragent,
       },
+      body: self._accessTokenURLBody,
+    };
+
+    self.Dbg("Fetching", reqObj);
+
+    // request new access token
+    request(reqObj,
       function(err, resp, body) {
         if (err) return self.Error("Failed to get access token", err, callback);
 
@@ -278,6 +311,8 @@ function DisneyBase(config) {
           requestBody.data = options.data;
         }
       }
+
+      self.Dbg("Fetching", requestBody);
 
       // make request
       request(requestBody, function(err, resp, body) {

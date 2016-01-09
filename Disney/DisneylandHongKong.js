@@ -1,4 +1,5 @@
-var DisneyBase = require("./DisneyBase.js");
+// this is actually based on our Disneyland Paris codebase
+var DisneylandParisBase = require("./DisneyParisBase.js");
 
 function DisneylandHongKong(config) {
   var self = this;
@@ -8,16 +9,12 @@ function DisneylandHongKong(config) {
   self.park_id = "desHongKongDisneyland";
   self.park_timezone = "Asia/Hong_Kong";
   self.park_region = "INTL";
+  self.resort_id = "hkdl";
 
-  // inherit from base Disney park object
-  DisneyBase.call(self, config);
-
-  // override wait times URL for Paris API
-  this.ContructWaitTimesURL = function() {
-    return "https://api.wdpro.disney.go.com/facility-service/theme-parks/" + self.park_id + ";destination\u003dhkdl/wait-times";
-  };
+  // inherit from base Disney Paris park object (they're vaguely similar)
+  DisneylandParisBase.call(self, config);
 }
-DisneylandHongKong.prototype = Object.create(DisneyBase.prototype);
+DisneylandHongKong.prototype = Object.create(DisneylandParisBase.prototype);
 DisneylandHongKong.prototype.constructor = DisneylandHongKong;
 
 // export parks
