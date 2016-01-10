@@ -42,8 +42,8 @@ describe("DisneyBase", function() {
 function TestPark(park) {
   // === Test Wait Times Fetching ===
   describe("Get Park Wait Times", function() {
-    // give each test a minute to finish
-    this.timeout(1000 * 60);
+    // give each test 2 minutes to finish
+    this.timeout(1000 * 60 * 2);
 
     var times = [];
 
@@ -83,8 +83,8 @@ function TestPark(park) {
 
   // === Test Schedule Fetching ===
   describe("Get Schedule", function() {
-    // give each test a minute to finish
-    this.timeout(1000 * 60);
+    // give each test 2 minutes to finish
+    this.timeout(1000 * 60 * 2);
 
     var schedule = [];
     it("should not error when fetching schedule", function(done) {
