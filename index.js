@@ -4,6 +4,7 @@ var parks = [
   require("./Disney/DisneylandCalifornia"),
   require("./Disney/DisneylandParis"),
   require("./Disney/DisneylandHongKong"),
+  require("./Disney/DisneyTokyo"),
 ];
 
 // export all parks

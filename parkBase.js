@@ -23,6 +23,8 @@ function Park(config) {
   //  Note: Some parks will return less than this
   this.scheduleMaxDates = this.scheduleMaxDates || 30;
 
+  this.park_timezone = this.park_timezone || "America/New_York";
+
   // set user-agent
   if (config && config.useragent) {
     // if useragent is supplied, use that one
