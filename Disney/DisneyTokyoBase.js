@@ -372,8 +372,6 @@ function DisneylandTokyoBase(config) {
                 // disconnect sandbox
                 loc_sandbox.disconnect();
 
-                self.Dbg("Fetched loc strings", obj);
-
                 return callback(null);
               }
             });
