@@ -9,6 +9,7 @@ function WaltDisneyWorldMagicKingdom(config) {
   self.park_id = "80007944";
   self.park_timezone = "America/New_York";
   self.park_region = "us";
+  self.resort_id = "80007798";
 
   // Inherit from base Disney park
   DisneyBase.call(self, config);
@@ -25,6 +26,7 @@ function WaltDisneyWorldEpcot(config) {
   self.park_id = "80007838";
   self.park_timezone = "America/New_York";
   self.park_region = "us";
+  self.resort_id = "80007798";
 
   // Inherit from base Disney park
   DisneyBase.call(self, config);
@@ -41,6 +43,7 @@ function WaltDisneyWorldHollywoodStudios(config) {
   self.park_id = "80007998";
   self.park_timezone = "America/New_York";
   self.park_region = "us";
+  self.resort_id = "80007798";
 
   // Inherit from base Disney park
   DisneyBase.call(self, config);
@@ -57,6 +60,7 @@ function WaltDisneyWorldAnimalKingdom(config) {
   self.park_id = "80007823";
   self.park_timezone = "America/New_York";
   self.park_region = "us";
+  self.resort_id = "80007798";
 
   // Inherit from base Disney park
   DisneyBase.call(self, config);

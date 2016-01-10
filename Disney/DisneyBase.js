@@ -5,6 +5,9 @@ var request = require("request");
 // moment library for time formatting
 var moment = require("moment-timezone");
 
+// cache resort schedules
+var scheduleCache = {};
+
 // export the Disney base park object
 module.exports = DisneyBase;
 
@@ -16,6 +19,12 @@ function DisneyBase(config) {
 
   // base API URL to use for requests
   self.APIBase = self.APIBase || "https://api.wdpro.disney.go.com/facility-service/";
+
+  // set resort ID
+  self.resort_id = self.resort_id;
+  if (config && !self.resort_id) self.resort_id = config.resort_id;
+  // default resort ID is "dlp" (Disneyland Paris)
+  if (!self.resort_id) self.resort_id = "dlp";
 
   // Call to parent class "Park" to inherit
   Park.call(self, config);
@@ -89,11 +98,18 @@ function DisneyBase(config) {
 
   // Create the URL for requesting wait times
   this.ContructWaitTimesURL = function() {
-    return self.APIBase + "theme-parks/" + self.park_id + "/wait-times";
+    return self.APIBase + "theme-parks/" + self.park_id + ";destination\u003d" + self.resort_id + "/wait-times";
   };
 
-  // Get park opening times
+  // get park opening times (also fetches ride times, which we'll cache)
   this.GetOpeningTimes = function(callback) {
+    if (scheduleCache[self.resort_id]) {
+      if (scheduleCache[self.resort_id].expires >= Date.now()) {
+        // return cached data!
+        return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
+      }
+    }
+
     // get start and end date in park's timezone
     var startDate = moment().tz(self.park_timezone);
     var endDate = moment().add(self.scheduleMaxDates, "days").tz(self.park_timezone);
@@ -113,65 +129,90 @@ function DisneyBase(config) {
     });
   };
 
-  this.ConstructScheduleURL = function(startDate, endDate) {
-    return self.APIBase + "schedules/" + self.park_id;
+  this.ConstructScheduleURL = function(startDate, endDate) { // get schedules for theme parks and attractions
+    return "https://api.wdpro.disney.go.com/mobile-service/public/ancestor-activities-schedules/" + self.resort_id + ";entityType=destination";
   };
 
   this.ConstructScheduleData = function(startDate, endDate) {
-    return {};
+    return {
+      "filters": "theme-park,Attraction",
+      // start and end date to fetch between
+      "startDate": startDate.format("YYYY-MM-DD"),
+      "endDate": endDate.format("YYYY-MM-DD"),
+      // must supply a region for DLP
+      "region": self.park_region
+    };
   };
 
   // default schedule data parser
   //  override for any special park implementations
   this.ParseScheduleData = function(data, startDate, endDate, callback) {
-    if (!data.schedules) return self.Error("No schedule data returned", data, callback);
+    if (!data.activities) return self.Error("No schedule data returned", data, callback);
 
-    var times = {};
-    // first grab all the "normal" operating hours
-    for (var i = 0; i < data.schedules.length; i++) {
-      // type, can be "Operating", "Extra Magic Hours" or "Special Ticketed Event" (or potentially anything else)
-      if (data.schedules[i].type == "Operating") {
-        var day = moment(data.schedules[i].date);
-        // skip this entry if it's after the last date we are interested in
-        if (day.isAfter(endDate)) continue;
-        if (day.isBefore(startDate)) continue;
+    var schedule = {};
 
-        // add standard opening times to object
-        var dayObj = self.ParseScheduleEntry(data.schedules[i]);
-        dayObj.special = [];
-        dayObj.date = day.format(self.dateFormat);
-        times[dayObj.date] = dayObj;
+    for (var i = 0, sched; sched = data.activities[i++];) {
+      // if object has no schedule data, ignore
+      if (!sched.schedule || !sched.schedule.schedules) continue;
+
+      var times = {};
+
+      // first add all the "normal" operating hours
+      for (var j = 0, time; time = sched.schedule.schedules[j++];) {
+        if (time.type == "Operating") {
+          var day = moment(time.date);
+          // skip this entry if it's after the last date we are interested in
+          if (day.isAfter(endDate)) continue;
+          if (day.isBefore(startDate)) continue;
+
+          // add standard opening times to object
+          var dayObj = self.ParseScheduleEntry(time);
+          dayObj.special = [];
+          dayObj.date = day.format(self.dateFormat);
+          times[dayObj.date] = dayObj;
+        }
       }
-    }
 
-    // Fetch extra magic hours/ticketed events etc. and add them to existing objects
-    for (var i = 0; i < data.schedules.length; i++) {
-      if (data.schedules[i].type != "Operating") {
-        var day = moment(data.schedules[i].date);
-        // skip this entry if it's after the last date we are interested in
-        if (day.isAfter(endDate)) continue;
-        if (day.isBefore(startDate)) continue;
+      // now back-fill all the special hours
+      for (var j = 0, time; time = sched.schedule.schedules[j++];) {
+        if (time.type != "Operating") {
+          var day = moment(time.date);
+          // skip this entry if it's after the last date we are interested in
+          if (day.isAfter(endDate)) continue;
+          if (day.isBefore(startDate)) continue;
 
-        var dayFormatted = day.format(self.dateFormat);
+          var dayFormatted = day.format(self.dateFormat);
 
-        // add non-standard to the standard date objects
-        var dayObj = self.ParseScheduleEntry(data.schedules[i]);
+          // add non-standard to the standard date objects
+          var dayObj = self.ParseScheduleEntry(time);
 
-        // inject special hours type into object
-        dayObj.type = data.schedules[i].type;
+          // inject special hours type into object
+          dayObj.type = time.type;
 
-        // add onto special hours array for this day
-        if (times[dayFormatted]) times[dayFormatted].special.push(dayObj);
+          // add onto special hours array for this day
+          if (times[dayFormatted]) times[dayFormatted].special.push(dayObj);
+        }
       }
+
+      // convert from object into array
+      var timeArray = [];
+      for (var day in times) {
+        timeArray.push(times[day]);
+      }
+
+      // store schedule for this park/ride
+      schedule[self.CleanRideID(sched.id)] = timeArray;
     }
 
-    // convert from object into array
-    var timeArray = [];
-    for (var day in times) {
-      timeArray.push(times[day]);
-    }
+    // store schedule data for this resort in cache
+    scheduleCache[self.resort_id] = {
+      // refetch every 12 hours
+      expires: Date.now() + 1000 * 60 * 60 * 12,
+      data: schedule,
+    };
 
-    return callback(null, timeArray);
+    // return schedule data for this park
+    return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
   };
 
   this.ParseScheduleEntry = function(entry) {

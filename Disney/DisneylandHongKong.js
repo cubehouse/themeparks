@@ -1,5 +1,5 @@
 // this is actually based on our Disneyland Paris codebase
-var DisneylandParisBase = require("./DisneyParisBase.js");
+var DisneyBase = require("./DisneyBase.js");
 
 function DisneylandHongKong(config) {
   var self = this;
@@ -12,9 +12,9 @@ function DisneylandHongKong(config) {
   self.resort_id = "hkdl";
 
   // inherit from base Disney Paris park object (they're vaguely similar)
-  DisneylandParisBase.call(self, config);
+  DisneyBase.call(self, config);
 }
-DisneylandHongKong.prototype = Object.create(DisneylandParisBase.prototype);
+DisneylandHongKong.prototype = Object.create(DisneyBase.prototype);
 DisneylandHongKong.prototype.constructor = DisneylandHongKong;
 
 // export parks

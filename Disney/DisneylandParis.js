@@ -1,4 +1,4 @@
-var DisneylandParisBase = require("./DisneyParisBase");
+var DisneyBase = require("./DisneyBase");
 
 // Magic Kingdom
 function DisneylandParisMagicKingdom(config) {
@@ -11,9 +11,9 @@ function DisneylandParisMagicKingdom(config) {
   self.park_region = "fr";
 
   // Inherit from base Disneyland Paris park
-  DisneylandParisBase.call(self, config);
+  DisneyBase.call(self, config);
 };
-DisneylandParisMagicKingdom.prototype = Object.create(DisneylandParisBase.prototype);
+DisneylandParisMagicKingdom.prototype = Object.create(DisneyBase.prototype);
 DisneylandParisMagicKingdom.prototype.constructor = DisneylandParisMagicKingdom;
 
 // Walt Disney Studios
@@ -27,9 +27,9 @@ function DisneylandParisWaltDisneyStudios(config) {
   self.park_region = "fr";
 
   // Inherit from base Disneyland Paris park
-  DisneylandParisBase.call(self, config);
+  DisneyBase.call(self, config);
 };
-DisneylandParisWaltDisneyStudios.prototype = Object.create(DisneylandParisBase.prototype);
+DisneylandParisWaltDisneyStudios.prototype = Object.create(DisneyBase.prototype);
 DisneylandParisWaltDisneyStudios.prototype.constructor = DisneylandParisWaltDisneyStudios;
 
 // export parks
