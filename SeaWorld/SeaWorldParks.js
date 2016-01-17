@@ -15,7 +15,7 @@ function SeaWorldFlorida(config) {
   self.park_id = "SW_MCO";
   self.park_timezone = "America/New_York";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 SeaWorldFlorida.prototype = Object.create(SeaWorldBase.prototype);
 SeaWorldFlorida.prototype.constructor = SeaWorldFlorida;
@@ -28,7 +28,7 @@ function SeaWorldSanAntonio(config) {
   self.park_id = "SW_SAT";
   self.park_timezone = "America/Chicago";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 SeaWorldSanAntonio.prototype = Object.create(SeaWorldBase.prototype);
 SeaWorldSanAntonio.prototype.constructor = SeaWorldSanAntonio;
@@ -41,7 +41,7 @@ function SeaWorldSanDiego(config) {
   self.park_id = "SW_SAN";
   self.park_timezone = "America/Los_Angeles";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 SeaWorldSanDiego.prototype = Object.create(SeaWorldBase.prototype);
 SeaWorldSanDiego.prototype.constructor = SeaWorldSanDiego;

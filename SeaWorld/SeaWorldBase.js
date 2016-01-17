@@ -132,6 +132,8 @@ function SeaworldBase(config) {
         if (!daydata[dayString] || !daydata[dayString].isOpen) {
           schedule.push({
             date: moment(dayString, "YYYY-MM-DD").format(self.dateFormat),
+            openingTime: null,
+            closingTime: null,
             type: "Closed",
           });
         } else {

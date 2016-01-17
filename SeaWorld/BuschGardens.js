@@ -14,7 +14,7 @@ function BuschGardensWilliamsburg(config) {
   self.park_id = "BG_PHF";
   self.park_timezone = "America/New_York";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 BuschGardensWilliamsburg.prototype = Object.create(SeaWorldBase.prototype);
 BuschGardensWilliamsburg.prototype.constructor = BuschGardensWilliamsburg;
@@ -27,7 +27,7 @@ function BuschGardensTampa(config) {
   self.park_id = "BG_TPA";
   self.park_timezone = "America/New_York";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 BuschGardensTampa.prototype = Object.create(SeaWorldBase.prototype);
 BuschGardensTampa.prototype.constructor = BuschGardensTampa;

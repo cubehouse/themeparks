@@ -13,7 +13,7 @@ function SesamePlace(config) {
   self.park_id = "SP_PHL";
   self.park_timezone = "America/New_York";
 
-  SeaWorldBase.apply(self, config);
+  SeaWorldBase.call(self, config);
 }
 SesamePlace.prototype = Object.create(SeaWorldBase.prototype);
 SesamePlace.prototype.constructor = SesamePlace;
