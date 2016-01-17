@@ -248,6 +248,7 @@ function DisneylandTokyoBase(config) {
               date: schedDate,
               openingTime: moment.tz(schedDate + body.entry[date][self.park_id].open_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).format(self.timeFormat),
               closingTime: moment.tz(schedDate + body.entry[date][self.park_id].close_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).format(self.timeFormat),
+              type: "Operating",
             });
           }
 

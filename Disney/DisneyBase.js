@@ -169,6 +169,7 @@ function DisneyBase(config) {
           var dayObj = self.ParseScheduleEntry(time);
           dayObj.special = [];
           dayObj.date = day.format(self.dateFormat);
+          dayObj.type = "Operating"; // add this to basically state we're not "Closed"
           times[dayObj.date] = dayObj;
         }
       }
