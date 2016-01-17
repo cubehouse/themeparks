@@ -25,6 +25,8 @@ function DisneylandTokyoBase(config) {
 
   self.name = self.name || "Generic Disney Tokyo Park";
 
+  self.park_timezone = "Asia/Tokyo";
+
   // Call to parent class "Park" to inherit
   ParkBase.call(self, config);
 
