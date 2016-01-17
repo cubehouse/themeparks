@@ -1,10 +1,15 @@
 // require all the different park files
 var parks = [
+  // Disney
   require("./Disney/WaltDisneyWorldFlorida"),
   require("./Disney/DisneylandCalifornia"),
   require("./Disney/DisneylandParis"),
   require("./Disney/DisneylandHongKong"),
   require("./Disney/DisneyTokyo"),
+  // SeaWorld
+  require("./SeaWorld/SeaWorldParks"),
+  require("./SeaWorld/BuschGardens"),
+  require("./SeaWorld/SesamePlace"),
 ];
 
 // export all parks
