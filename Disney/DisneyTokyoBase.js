@@ -185,7 +185,7 @@ function DisneylandTokyoBase(config) {
         results[ride] = {
           id: ride,
           waitTime: 0,
-          fastpass: false,
+          fastPass: false,
           active: false,
           name: cachedRideData[self.park_id][ride].name,
         };
