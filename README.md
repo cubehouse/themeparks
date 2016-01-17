@@ -144,8 +144,8 @@ Prints:
     * Magic Kingdom - Disneyland Paris => Europe/Paris
     * Walt Disney Studios - Disneyland Paris => Europe/Paris
     * Disneyland Hong Kong => Asia/Hong_Kong
-    * Disneyland Tokyo => America/New_York
-    * DisneySea Tokyo => America/New_York
+    * Disneyland Tokyo => Asia/Tokyo
+    * DisneySea Tokyo => Asia/Tokyo
     * SeaWorld Florida => America/New_York
     * SeaWorld San Antonio => America/Chicago
     * SeaWorld San Diego => America/Los_Angeles
