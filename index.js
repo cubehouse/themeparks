@@ -10,6 +10,8 @@ var parks = [
   require("./SeaWorld/SeaWorldParks"),
   require("./SeaWorld/BuschGardens"),
   require("./SeaWorld/SesamePlace"),
+  // Universal
+  require("./Universal/UniversalStudiosFlorida"),
 ];
 
 // export all parks
