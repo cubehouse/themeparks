@@ -1,6 +1,6 @@
 # wdwJS
 
-An unofficial API library for accessing Disney and SeaWorld ride wait times and park opening times.
+An unofficial API library for accessing Disney, Universal and SeaWorld ride wait times and park opening times.
 
 [![Build Status](https://travis-ci.org/cubehouse/wdwJS.svg?branch=master)](https://travis-ci.org/cubehouse/wdwJS) [![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/nodejs/wdwjs/badge?style=flat)](https://www.versioneye.com/nodejs/wdwjs)
 [![npm history](https://nodei.co/npm-dl/wdwjs.png)](https://www.npmjs.com/package/wdwjs/)
@@ -13,8 +13,9 @@ An unofficial API library for accessing Disney and SeaWorld ride wait times and 
 
 v3.0.0
 
-* Refactored codebase to make it easier to maintain
+* Refactored codebase significantly
 * Added SeaWorld parks (including Busch Gardens and Sesame Place)
+* Added Universal Studios and Island Of Adventure parks to API
 * Setting environment variable "DEBUG=true" will supply better debugging information that we've had in previous versions
 * Disney World Florida, Disneyland California, Disneyland Paris, Disneyland Shanghai and Disneyland Hong Kong now share a common codebase.
 * (breaking change) GetSchedule is now GetOpeningTimes
@@ -79,6 +80,8 @@ v1.0.0
     * Busch Gardens Williamsburg (DisneyAPI.BuschGardensWilliamsburg)
     * Busch Gardens Tampa (DisneyAPI.BuschGardensTampa)
     * Sesame Place (DisneyAPI.SesamePlace)
+    * Universal Studios Orlando (DisneyAPI.UniversalStudiosFlorida)
+    * Universal Island Of Adventure (DisneyAPI.UniversalIslandOfAdventure)
 
 
 # Result Objects
@@ -148,6 +151,8 @@ Prints:
     * Busch Gardens Williamsburg => America/New_York
     * Busch Gardens Tampa => America/New_York
     * Sesame Place => America/New_York
+    * Universal Studios Orlando => America/New_York
+    * Universal Island Of Adventure => America/New_York
 
 # API Options
 
