@@ -101,7 +101,7 @@ function SeaworldBase(config) {
               // make sure this can't be "undefined" if isOpen just isn't there
               active: poi.status.isOpen ? true : false,
               // TODO - work out which rides have fastPass
-              // fastPass: false,
+              fastPass: false,
             });
           }
         }
