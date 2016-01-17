@@ -199,7 +199,7 @@ function DisneylandTokyoBase(config) {
     // add the current date in Tokyo to the time to make sure it's in the right day!
     var day = moment().tz(self.park_timezone).format("YYYY-MM-DD ");
 
-    return moment.tz(day + time, "YYYY-MM-DD HH:mm", self.park_timezone).format(self.timeFormat);
+    return moment.tz(day + time, "YYYY-MM-DD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat);
   };
 
   this.GetOpeningTimes = function(callback) {
@@ -246,8 +246,8 @@ function DisneylandTokyoBase(config) {
             var schedDate = moment(date, "YYYY/MM/DD").format(self.dateFormat);
             schedule.push({
               date: schedDate,
-              openingTime: moment.tz(schedDate + body.entry[date][self.park_id].open_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).format(self.timeFormat),
-              closingTime: moment.tz(schedDate + body.entry[date][self.park_id].close_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).format(self.timeFormat),
+              openingTime: moment.tz(schedDate + body.entry[date][self.park_id].open_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+              closingTime: moment.tz(schedDate + body.entry[date][self.park_id].close_time_1, "YYYY-MM-DD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
               type: "Operating",
             });
           }

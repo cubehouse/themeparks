@@ -228,8 +228,8 @@ function DisneyBase(config) {
 
     return {
       // format opening and closing times in 'timeFormat' format
-      openingTime: openingTime.format(self.timeFormat),
-      closingTime: closingTime.format(self.timeFormat),
+      openingTime: openingTime.tz(self.timeFormatTimezone).format(self.timeFormat),
+      closingTime: closingTime.tz(self.timeFormatTimezone).format(self.timeFormat),
     };
   };
 

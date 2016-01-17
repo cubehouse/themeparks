@@ -25,6 +25,9 @@ function Park(config) {
 
   this.park_timezone = this.park_timezone || "America/New_York";
 
+  // timezone to return times in (default to park's timezone)
+  this.timeFormatTimezone = this.timeFormatTimezone || this.park_timezone;
+
   // set user-agent
   if (config && config.useragent) {
     // if useragent is supplied, use that one

@@ -140,8 +140,8 @@ function SeaworldBase(config) {
           schedule.push({
             date: moment(daydata[dayString].date, "YYYY-MM-DD").format(self.dateFormat),
             // times are already in lovely timestamps!
-            openingTime: moment(daydata[dayString].open, "YYYY-MM-DDTHH:mm:ss.SSSZ").format(self.timeFormat),
-            closingTime: moment(daydata[dayString].close, "YYYY-MM-DDTHH:mm:ss.SSSZ").format(self.timeFormat),
+            openingTime: moment(daydata[dayString].open, "YYYY-MM-DDTHH:mm:ss.SSSZ").tz(self.timeFormatTimezone).format(self.timeFormat),
+            closingTime: moment(daydata[dayString].close, "YYYY-MM-DDTHH:mm:ss.SSSZ").tz(self.timeFormatTimezone).format(self.timeFormat),
             // jsut use standard opening type, API doesn't return any special hours
             type: "Operating",
           });
