@@ -134,6 +134,7 @@ There are some values available on each park object that may be useful.
     }
 
 Prints:
+
     * Magic Kingdom - Walt Disney World Florida => America/New_York
     * Epcot - Walt Disney World Florida => America/New_York
     * Hollywood Studios - Walt Disney World Florida => America/New_York
