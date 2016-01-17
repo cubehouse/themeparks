@@ -1,21 +1,20 @@
 {
   "name": "wdwjs",
   "description": "Walt Disney World API Framework",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
   },
   "dependencies": {
-    "adm-zip": "^0.4.7",
     "astify": "0.0.4",
     "async": "^1.5.0",
     "cheerio": "^0.19.0",
     "cookie": "^0.2.3",
     "jailed": "^0.2.0",
+    "moment": "^2.11.1",
     "moment-range": "^2.1.0",
     "moment-timezone": "^0.5.0",
-    "pluralize": "1.x.x",
     "random-useragent": "^0.2.1",
     "request": "2.x.x"
   },
