@@ -111,8 +111,8 @@ function DisneyBase(config) {
     }
 
     // get start and end date in park's timezone
-    var startDate = moment().tz(self.park_timezone);
-    var endDate = moment().add(self.scheduleMaxDates, "days").tz(self.park_timezone);
+    var startDate = moment().tz(self.park_timezone).startOf('day');
+    var endDate = moment().add(self.scheduleMaxDates, "days").tz(self.park_timezone).endOf('day');
 
     self.FetchURL(self.ConstructScheduleURL(startDate, endDate), {
       data: self.ConstructScheduleData(startDate, endDate)
