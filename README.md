@@ -182,3 +182,55 @@ Default options:
 
     // You can also configure these settings after initialisation with Config(key, value)
     MagicKingdom.Config("debug", false);
+
+# Development
+
+## Running Tests
+
+wdwJS supports mocha unit tests. Install mocha with npm install -g mocha
+
+Run the following to test all the supported parks
+
+    mocha
+
+You can also test an individual park using the PARK_ID environment variable, for example:
+
+    PARKID=UniversalStudiosFlorida mocha
+
+Each pull request and commit will run these tests automatically on travis-ci.org. For test history, see https://travis-ci.org/cubehouse/wdwJS
+
+## Debug Mode
+
+You can enable debug mode for any individual park by passing debug: true into it's configuration object (see "API Options" above).
+
+You can also set the environment variable "DEBUG" to enable debug logs for all parks.
+
+wdwJS also supports the standard NODE_DEBUG environment variable.
+
+    NODE_DEBUG=wdwjs mocha
+
+Environment variables can be combined:
+
+    NODE_DEBUG=wdwjs PARKID=UniversalStudiosFlorida mocha
+
+## Contributing
+
+Each park inherits it's core logic from parkBase.js.
+
+For each set of parks, a base object should be made with all the core logic for that API/park group.
+
+Then, for each park, a basic shell object should be implemented that just configures the park's base object (and overrides anything in unusual setups).
+
+Throughout the API, please make use of the Dbg function so parks are easy to maintain if APIs change.
+
+Please raise issues and make pull requests with new features :)
+
+# People using wdwJS
+
+If you're using wdwJS for a project, please let me know! I'd love to see what people are doing!
+
+## Pebble Apps
+
+* [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
+* [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
+* [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
