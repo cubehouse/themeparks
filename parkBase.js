@@ -4,6 +4,10 @@
 // random useragent generator
 var random_useragent = require("random-useragent");
 
+// use standard NodeJS debug log function
+var util = require("util");
+var debuglog = util.debuglog('wdwjs');
+
 // export the main object
 module.exports = Park;
 
@@ -52,12 +56,21 @@ function Park(config) {
   // Debug print helper function. Calls console.log with all passed arguments
   // if we're in debug mode
   this.Dbg = function() {
-    if (!this.debug) return;
+    // skip if the env DEBUG isn't set and the manual debug isn't set
+    if (!process.env.NODE_DEBUG && !this.debug) return;
+
     var args = ["[Debug :: " + this.name + "]", arguments.callee.caller.name];
     for (var n in arguments) {
       if (typeof(arguments[n] != "function")) args.push(arguments[n]);
     }
-    console.log.apply(this, args);
+
+    // if we've manaully requested debug, use console log
+    if (this.debug) {
+      console.log.apply(this, args);
+    } else {
+      // ... otherwise, use util debuglog
+      debuglog.apply(this, args);
+    }
   };
 
   // Output an error message for debugging
