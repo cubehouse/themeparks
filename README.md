@@ -2,7 +2,7 @@
 
 An unofficial API library for accessing Disney, Universal and SeaWorld ride wait times and park opening times.
 
-[![Build Status](https://travis-ci.org/cubehouse/wdwJS.svg?branch=master)](https://travis-ci.org/cubehouse/wdwJS) [![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/nodejs/wdwjs/badge?style=flat)](https://www.versioneye.com/nodejs/wdwjs)
+[![Build Status](https://travis-ci.org/cubehouse/wdwJS.svg?branch=master)](https://travis-ci.org/cubehouse/wdwJS) [![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/user/projects/55858111363861001500042c/badge.svg?style=flat)](https://www.versioneye.com/nodejs/wdwjs)
 [![npm history](https://nodei.co/npm-dl/wdwjs.png)](https://www.npmjs.com/package/wdwjs/)
 
 # Install
