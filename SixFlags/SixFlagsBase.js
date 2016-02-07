@@ -123,7 +123,7 @@ function SixFlagsBase(config) {
             rideTimes.push({
               id: ride.rideId,
               name: rideNames[ride.rideId] ? rideNames[ride.rideId].name : "Ride " + ride.rideId,
-              waitTime: ride.status == "AttractionStatusOpen" ? (ride.waitTime || 0) : 0,
+              waitTime: ride.status == "AttractionStatusOpen" ? (parseInt(ride.waitTime, 10) || 0) : 0,
               active: ride.status == "AttractionStatusOpen" ? true : false,
               fastPass: rideNames[ride.rideId] && rideNames[ride.rideId].isFlashPassEligible ? true : false,
             });
