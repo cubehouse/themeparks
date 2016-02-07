@@ -48,7 +48,8 @@ function SixFlagsBase(config) {
     self.MakeRequest(self.APIBase + "Authentication/identity/connect/token", {
       method: "POST",
       headers: {
-        "Authorization": "Basic " + self.authToken
+        "Authorization": "Basic " + self.authToken,
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       json: true,
       body: "grant_type=client_credentials&scope=mobileApp",
@@ -56,9 +57,11 @@ function SixFlagsBase(config) {
       if (err) return self.Error("Error fetching Six Flags access token", err, callback);
       if (!result.access_token) return self.Error("No access token returned by Six Flags API", result, callback);
 
+      self.Dbg("Got Six Flags access token " + result.access_token);
+
       // set access token
       sixFlagsAccessToken = {
-        token: "9a5c8a8f54cf073f00ab7e01e06e46f5", //result.access_token,
+        token: result.access_token,
         expires: moment().add(result.expires_in, "seconds"),
       };
 
@@ -211,9 +214,9 @@ function SixFlagsBase(config) {
   // make an API request
   this.MakeRequest = function(url, options, callback) {
     var headers = {
-      "Content-Type": "application/x-www-form-urlencoded",
       "User-Agent": self.useragent,
       'Accept-Language': 'en-US',
+      'Connection': 'Keep-Alive',
     };
 
     // apply custom headers (if set)
