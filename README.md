@@ -63,26 +63,45 @@ v1.0.0
 
 ## Parks available
 
-    * Magic Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldMagicKingdom)
-    * Epcot - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldEpcot)
-    * Hollywood Studios - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldHollywoodStudios)
-    * Animal Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldAnimalKingdom)
-    * Magic Kingdom - Disneyland California (DisneyAPI.DisneylandMagicKingdom)
-    * California Adventure - Disneyland California (DisneyAPI.DisneylandCaliforniaAdventure)
-    * Magic Kingdom - Disneyland Paris (DisneyAPI.DisneylandParisMagicKingdom)
-    * Walt Disney Studios - Disneyland Paris (DisneyAPI.DisneylandParisWaltDisneyStudios)
-    * Disneyland Hong Kong (DisneyAPI.DisneylandHongKong)
-    * Disneyland Tokyo (DisneyAPI.DisneylandTokyo)
-    * DisneySea Tokyo (DisneyAPI.DisneySeaTokyo)
-    * SeaWorld Florida (DisneyAPI.SeaWorldFlorida)
-    * SeaWorld San Antonio (DisneyAPI.SeaWorldSanAntonio)
-    * SeaWorld San Diego (DisneyAPI.SeaWorldSanDiego)
-    * Busch Gardens Williamsburg (DisneyAPI.BuschGardensWilliamsburg)
-    * Busch Gardens Tampa (DisneyAPI.BuschGardensTampa)
-    * Sesame Place (DisneyAPI.SesamePlace)
-    * Universal Studios Orlando (DisneyAPI.UniversalStudiosFlorida)
-    * Universal Island Of Adventure (DisneyAPI.UniversalIslandOfAdventure)
+<!-- START_SUPPORTED_PARKS_LIST -->
+* Magic Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldMagicKingdom)
+* Epcot - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldEpcot)
+* Hollywood Studios - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldHollywoodStudios)
+* Animal Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldAnimalKingdom)
+* Magic Kingdom - Disneyland California (DisneyAPI.DisneylandMagicKingdom)
+* California Adventure - Disneyland California (DisneyAPI.DisneylandCaliforniaAdventure)
+* Magic Kingdom - Disneyland Paris (DisneyAPI.DisneylandParisMagicKingdom)
+* Walt Disney Studios - Disneyland Paris (DisneyAPI.DisneylandParisWaltDisneyStudios)
+* Disneyland Hong Kong (DisneyAPI.DisneylandHongKong)
+* Disneyland Tokyo (DisneyAPI.DisneylandTokyo)
+* DisneySea Tokyo (DisneyAPI.DisneySeaTokyo)
+* SeaWorld Florida (DisneyAPI.SeaWorldFlorida)
+* SeaWorld San Antonio (DisneyAPI.SeaWorldSanAntonio)
+* SeaWorld San Diego (DisneyAPI.SeaWorldSanDiego)
+* Busch Gardens Williamsburg (DisneyAPI.BuschGardensWilliamsburg)
+* Busch Gardens Tampa (DisneyAPI.BuschGardensTampa)
+* Sesame Place (DisneyAPI.SesamePlace)
+* Universal Studios Orlando (DisneyAPI.UniversalStudiosFlorida)
+* Universal Island Of Adventure (DisneyAPI.UniversalIslandOfAdventure)
+* Six Flags Over Texas (DisneyAPI.SixFlagsOverTexas)
+* Six Flags Over Georgia (DisneyAPI.SixFlagsOverGeorgia)
+* Six Flags St. Louis (DisneyAPI.SixFlagsStLouis)
+* Six Flags Great Adventure (DisneyAPI.SixFlagsGreatAdventure)
+* Six Flags Magic Mountain (DisneyAPI.SixFlagsMagicMountain)
+* Six Flags Great America (DisneyAPI.SixFlagsGreatAmerica)
+* Six Flags Fiesta Texas (DisneyAPI.SixFlagsFiestaTexas)
+* Six Flags Hurricane Harbor, Arlington (DisneyAPI.SixFlagsHurricaneHarborArlington)
+* Six Flags Hurricane Harbor, Los Angeles (DisneyAPI.SixFlagsHurricaneHarborLosAngeles)
+* Six Flags America (DisneyAPI.SixFlagsAmerica)
+* Six Flags Discovery Kingdom (DisneyAPI.SixFlagsDiscoveryKingdom)
+* Six Flags New England (DisneyAPI.SixFlagsNewEngland)
+* Six Flags Hurricane Harbor, Jackson (DisneyAPI.SixFlagsHurricaneHarborJackson)
+* The Great Escape (DisneyAPI.SixFlagsTheGreatEscape)
+* Six Flags White Water, Atlanta (DisneyAPI.SixFlagsWhiteWaterAtlanta)
+* Six Flags Mexico (DisneyAPI.SixFlagsMexico)
+* La Ronde, Montreal (DisneyAPI.SixFlagsLaRondeMontreal)
 
+<!-- END_SUPPORTED_PARKS_LIST -->
 
 # Result Objects
 
@@ -135,6 +154,7 @@ There are some values available on each park object that may be useful.
 
 Prints:
 
+<!-- START_PARK_TIMEZONE_LIST -->
     * Magic Kingdom - Walt Disney World Florida => America/New_York
     * Epcot - Walt Disney World Florida => America/New_York
     * Hollywood Studios - Walt Disney World Florida => America/New_York
@@ -154,6 +174,25 @@ Prints:
     * Sesame Place => America/New_York
     * Universal Studios Orlando => America/New_York
     * Universal Island Of Adventure => America/New_York
+    * Six Flags Over Texas => America/Chicago
+    * Six Flags Over Georgia => America/New_York
+    * Six Flags St. Louis => America/Chicago
+    * Six Flags Great Adventure => America/New_York
+    * Six Flags Magic Mountain => America/Los_Angeles
+    * Six Flags Great America => America/Chicago
+    * Six Flags Fiesta Texas => America/Chicago
+    * Six Flags Hurricane Harbor, Arlington => America/Chicago
+    * Six Flags Hurricane Harbor, Los Angeles => America/Los_Angeles
+    * Six Flags America => America/New_York
+    * Six Flags Discovery Kingdom => America/Los_Angeles
+    * Six Flags New England => America/New_York
+    * Six Flags Hurricane Harbor, Jackson => America/New_York
+    * The Great Escape => America/New_York
+    * Six Flags White Water, Atlanta => America/New_York
+    * Six Flags Mexico => America/Toronto
+    * La Ronde, Montreal => America/Toronto
+
+<!-- END_PARK_TIMEZONE_LIST -->
 
 # API Options
 
