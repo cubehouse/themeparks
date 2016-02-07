@@ -148,6 +148,25 @@ function SixFlagsBase(config) {
         var today = moment().tz(self.park_timezone);
         var endDay = moment().add(self.scheduleMaxDates, 'days').tz(self.park_timezone);
 
+        // edge-case! This park has no operating hours. Returned as closed forever.
+        //  usually because the park isn't open yet!
+        if (data.message && data.message == "No operating hours found for this park") {
+          var schedule = [];
+          var currentScheduleDay = today;
+          for (var i = 0; i < self.scheduleMaxDates; i++) {
+            schedule.push({
+              date: currentScheduleDay.format(self.dateFormat),
+              openingTime: null,
+              closingTime: null,
+              type: "Closed",
+            });
+            currentScheduleDay.add(1, "day");
+          }
+          return callback(null, schedule);
+        }
+
+        if (!data.operatingHours) return self.Error("No operating hours returned by park", data, callback);
+
         // convert operatingHours array into object to make day querying easier
         var hours = {};
         for (var i = 0, day; day = data.operatingHours[i++];) {
