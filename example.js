@@ -1,4 +1,4 @@
-var parks = require("./index");
+var parks = require("wdwjs");
 
 var HongKongDisney = new parks.DisneylandHongKong();
 
