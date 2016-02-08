@@ -14,6 +14,8 @@ var parks = [
   require("./Universal/UniversalStudiosFlorida"),
   // Six Flags
   require("./SixFlags/SixFlagsParks"),
+  // Alton Towers
+  require("./Misc/AltonTowers.js"),
 ];
 
 // export all parks
