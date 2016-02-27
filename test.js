@@ -4,40 +4,48 @@ var DisneyBase = require("./Disney/DisneyBase");
 var parks = require("./index");
 var moment = require("moment-timezone");
 
-describe("ParkBase", function() {
-  var parkBase = new Park();
+// optional environment variable to print out API results
+var PRINTDATA = process.env.PRINTDATA ? true : false;
 
-  it("should error attempting to fetch wait times", function(done) {
-    parkBase.GetWaitTimes(function(err, res) {
-      assert(err);
-      assert(!res);
-      done();
-    });
-  });
-});
+if (!process.env.PARKID) {
+  describe("ParkBase", function() {
+    var parkBase = new Park();
 
-describe("DisneyBase", function() {
-  var DisneyPark = new DisneyBase();
-
-  var access_token = null;
-  it("should get a valid access token", function(done) {
-    DisneyPark.GetAccessToken(function(err, token) {
-      assert(!err, "GetAccessToken returned an error: " + err);
-      assert(token && token.length, "Invalid access token returned: " + token);
-      access_token = token;
-      done();
+    it("should error attempting to fetch wait times", function(done) {
+      parkBase.GetWaitTimes(function(err, res) {
+        assert(err);
+        assert(!res);
+        done();
+      });
     });
   });
 
-  it("fetching again should have same token (from cache)", function(done) {
-    DisneyPark.GetAccessToken(function(err, token) {
-      assert(!err, "Second call to GetAccessToken returned an error: " + err);
-      assert(token && token.length, "Invalid access token returned second time: " + token);
-      assert(access_token == token, "Tokens are not identical! Caching has failed");
-      done();
+  describe("DisneyBase", function() {
+    // be super-lenient for these tests
+    this.timeout(1000 * 60 * 2);
+
+    var DisneyPark = new DisneyBase();
+
+    var access_token = null;
+    it("should get a valid access token", function(done) {
+      DisneyPark.GetAccessToken(function(err, token) {
+        assert(!err, "GetAccessToken returned an error: " + err);
+        assert(token && token.length, "Invalid access token returned: " + token);
+        access_token = token;
+        done();
+      });
+    });
+
+    it("fetching again should have same token (from cache)", function(done) {
+      DisneyPark.GetAccessToken(function(err, token) {
+        assert(!err, "Second call to GetAccessToken returned an error: " + err);
+        assert(token && token.length, "Invalid access token returned second time: " + token);
+        assert(access_token == token, "Tokens are not identical! Caching has failed");
+        done();
+      });
     });
   });
-});
+}
 
 function TestPark(park) {
   // === Test Wait Times Fetching ===
@@ -50,6 +58,7 @@ function TestPark(park) {
     it("should not return an error fetching ride times", function(done) {
       park.GetWaitTimes(function(err, _times) {
         times = _times;
+        if (PRINTDATA) console.log(JSON.stringify(times, null, 2));
         assert(!err);
         done(err);
       });
@@ -96,6 +105,8 @@ function TestPark(park) {
         assert(!err, "GetOpeningTimes returned an error: " + err);
 
         schedule = _schedule;
+
+        if (PRINTDATA) console.log(JSON.stringify(schedule, null, 2));
 
         done(err);
       });
