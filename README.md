@@ -115,6 +115,16 @@ v1.0.0
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
+            schedule: { **schedule will only be present if park.supports_ride_schedules is true**
+              openingTime: (timeFormat timestamp: opening time of ride),
+              closingTime: (timeFormat timestamp: closing time of ride),
+              type: (string: "Operating" or "Closed"),
+              special: [ (array of "special" ride times, usually Disney Extra Magic Hours or similar at other parks - field may be null)
+                openingTime: (timeFormat timestamp: opening time for ride),
+                closingTime: (timeFormat timestamp: closing time for ride),
+                type: (string: type of schedule eg. "Extra Magic Hours", but can be "Event" or "Special Ticketed Event" or other)
+              ]
+            },
         },
         ...
     ]
@@ -144,6 +154,7 @@ There are some values available on each park object that may be useful.
 |:-------|:----------|
 |name|Name of the park|
 |park_timezone|The park's local timezone|
+|supports_ride_schedules|Does this park return schedules for rides?|
 
     var DisneyAPI = require("wdwjs");
 
