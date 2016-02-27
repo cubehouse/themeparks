@@ -49,51 +49,97 @@ function DisneyBase(config) {
     if (!self.park_id) return self.Error("Park not configured correctly", "Park ID not configured", callback);
     if (!self.park_region) return self.Error("Park not configured correctly", "Park region not configured", callback);
 
-    // fetch wait times from API
-    self.FetchURL(self.ContructWaitTimesURL(), {
-        data: {
-          region: self.park_region,
+    // make sure we have schedule data cached (for ride opening and closing times)
+    self.CacheScheduleData(function(error) {
+      if (error) return self.Error("Error getting schedule data cache", error, callback);
+
+      // fetch wait times from API
+      self.FetchURL(self.ContructWaitTimesURL(), {
+          data: {
+            region: self.park_region,
+          },
         },
-      },
-      function(err, data) {
-        if (err) return self.Error("Error fetching wait times", err, callback);
-        if (!data) return self.Error("No data returned for wait times", "data is null", callback);
-        if (!data.entries) return self.Error("Invalid data returned from API (no entries)", data, callback);
+        function(err, data) {
+          if (err) return self.Error("Error fetching wait times", err, callback);
+          if (!data) return self.Error("No data returned for wait times", "data is null", callback);
+          if (!data.entries) return self.Error("Invalid data returned from API (no entries)", data, callback);
 
-        // build ride array
-        var rides = [];
-        for (var i = 0; i < data.entries.length; i++) {
-          var ride = data.entries[i];
+          // work out current time for use with schedule sorting in the for-loop
+          var timeNow = moment();
+          // get today's date
+          var dateToday = moment().tz(self.park_timezone).format("YYYY-MM-DD");
 
-          if (ride.id && ride.name && ride.type && ride.type == "Attraction") {
+          // build ride array
+          var rides = [];
+          for (var i = 0; i < data.entries.length; i++) {
+            var ride = data.entries[i];
 
-            var obj = {
-              id: self.CleanRideID(ride.id),
-              name: ride.name
-            };
+            if (ride.id && ride.name && ride.type && ride.type == "Attraction") {
 
-            // try to find wait time value
-            if (ride.waitTime && ride.waitTime && ride.waitTime.postedWaitMinutes) {
-              // report the posted wait time if present
-              obj.waitTime = ride.waitTime.postedWaitMinutes;
-            } else {
-              // zero if we cannot find a wait time
-              obj.waitTime = 0;
+              var obj = {
+                id: self.CleanRideID(ride.id),
+                name: ride.name
+              };
+
+              // try to find wait time value
+              if (ride.waitTime && ride.waitTime && ride.waitTime.postedWaitMinutes) {
+                // report the posted wait time if present
+                obj.waitTime = ride.waitTime.postedWaitMinutes;
+              } else {
+                // zero if we cannot find a wait time
+                obj.waitTime = 0;
+              }
+
+              // work out if the ride is active
+              obj.active = (ride.waitTime && ride.waitTime.status == "Operating") ? true : false;
+
+              // work out if we have fastpass
+              obj.fastPass = (ride.waitTime.fastPass && ride.waitTime.fastPass.available);
+
+              // check schedule cache for opening and closing time data
+              obj.schedule = [];
+              if (scheduleCache[self.resort_id] && scheduleCache[self.resort_id].data[obj.id] && scheduleCache[self.resort_id].data[obj.id].length) {
+                // sort through data to find the current or next opening times
+                //  if we find times we're in right now, use those
+                //  otherwise... use the current day's (in park's timezone) schedule
+                // why?? because when parks open past midnight, we don't want to
+                //  return tomorrow's data if the ride is still running
+                var todaysSchedule = null;
+
+                for (var j = 0, time; time = scheduleCache[self.resort_id].data[obj.id][j++];) {
+                  // if we find today's schedule, store it for later in case we aren't inside an existing schedule
+                  if (time.date == dateToday) todaysSchedule = time;
+
+                  // check if this schedule is currently active
+                  if (timeNow.isBetween(time.openingTime, time.closingTime)) {
+                    obj.schedule = time;
+                  }
+                }
+
+                // if we aren't already in an active schedule, see if we found
+                //  today's schedule and use that instead
+                if (!obj.schedule.openingTime || !obj.schedule.closingTime) {
+                  if (todaysSchedule) {
+                    // if we found today's schedule...
+                    obj.schedule = todaysSchedule;
+                  } else {
+                    // ... otherwise, just use the first one available
+                    obj.schedule = scheduleCache[self.resort_id].data[obj.id][0];
+                  }
+                }
+
+                // for live ride data, doesn't make sense to have today's date
+                if (obj.schedule.date) delete obj.schedule.date;
+              }
+
+              // add to our return rides array
+              rides.push(obj);
             }
-
-            // work out if the ride is active
-            obj.active = (ride.waitTime && ride.waitTime.status == "Operating") ? true : false;
-
-            // work out if we have fastpass
-            obj.fastPass = (ride.waitTime.fastPass && ride.waitTime.fastPass.available);
-
-            // add to our return rides array
-            rides.push(obj);
           }
-        }
 
-        return callback(null, rides);
-      });
+          return callback(null, rides);
+        });
+    });
   };
 
   // Create the URL for requesting wait times
@@ -103,10 +149,29 @@ function DisneyBase(config) {
 
   // get park opening times (also fetches ride times, which we'll cache)
   this.GetOpeningTimes = function(callback) {
+    // make sure we have some cached schedule data
+    self.CacheScheduleData(function(error) {
+      if (error) return self.Error("Error caching schedule data", error, callback);
+
+      // grab park schedule data from cache
+      if (scheduleCache[self.resort_id]) {
+        if (scheduleCache[self.resort_id].expires >= Date.now()) {
+          // return cached data!
+          return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
+        }
+      }
+
+      // if we didn't get any data from the cache, return error
+      return self.Error("No schedule data available for this park", scheduleCache, callback);
+    });
+  };
+
+  // Call this to ensure we have some cached schedule data for this park
+  this.CacheScheduleData = function(callback) {
     if (scheduleCache[self.resort_id]) {
       if (scheduleCache[self.resort_id].expires >= Date.now()) {
-        // return cached data!
-        return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
+        // return no error message to confirm cache successful
+        return callback(null);
       }
     }
 
@@ -124,7 +189,8 @@ function DisneyBase(config) {
       self.ParseScheduleData(data, startDate, endDate, function(err, times) {
         if (err) return callback(err);
 
-        return callback(null, times);
+        // just return no error message, as we have now cached the data
+        return callback(null);
       });
     });
   };
