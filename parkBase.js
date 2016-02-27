@@ -30,6 +30,11 @@ function Park(config) {
   // debugging is disabled by default
   this.debug = config && config.debug || process.env.DEBUG;
 
+  // custom support features
+  //  only some parks will support these
+  //  parks must mark these as true if they are using these features
+  this.supports_ride_schedules = this.supports_ride_schedules || false;
+
   // park's human-readable name
   this.name = this.name || "Default Blank Park";
 

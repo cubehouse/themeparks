@@ -17,6 +17,9 @@ function DisneyBase(config) {
 
   self.name = self.name || "Generic Disney Park";
 
+  // Disney parks support returning schedules for rides
+  self.supports_ride_schedules = true;
+
   // base API URL to use for requests
   self.APIBase = self.APIBase || "https://api.wdpro.disney.go.com/facility-service/";
 
@@ -97,8 +100,8 @@ function DisneyBase(config) {
               obj.fastPass = (ride.waitTime.fastPass && ride.waitTime.fastPass.available);
 
               // check schedule cache for opening and closing time data
-              obj.schedule = [];
-              if (scheduleCache[self.resort_id] && scheduleCache[self.resort_id].data[obj.id] && scheduleCache[self.resort_id].data[obj.id].length) {
+              obj.schedule = {};
+              if (scheduleCache[self.resort_id] && scheduleCache[self.resort_id].data[obj.id]) {
                 // sort through data to find the current or next opening times
                 //  if we find times we're in right now, use those
                 //  otherwise... use the current day's (in park's timezone) schedule
@@ -122,14 +125,17 @@ function DisneyBase(config) {
                   if (todaysSchedule) {
                     // if we found today's schedule...
                     obj.schedule = todaysSchedule;
-                  } else {
+                  } else if (scheduleCache[self.resort_id].data[obj.id].length) {
                     // ... otherwise, just use the first one available
                     obj.schedule = scheduleCache[self.resort_id].data[obj.id][0];
+                  } else {
+                    // failed to find any schedule data? return null object
+                    obj.schedule = null;
                   }
                 }
 
                 // for live ride data, doesn't make sense to have today's date
-                if (obj.schedule.date) delete obj.schedule.date;
+                if (obj.schedule && obj.schedule.date) delete obj.schedule.date;
               }
 
               // add to our return rides array
@@ -217,6 +223,10 @@ function DisneyBase(config) {
 
     var schedule = {};
 
+    // these are the non-special operating types
+    //  anything not in this array will appear under "special"
+    var openingTypes = ["Operating", "Closed", "Refurbishment"];
+
     for (var i = 0, sched; sched = data.activities[i++];) {
       // if object has no schedule data, ignore
       if (!sched.schedule || !sched.schedule.schedules) continue;
@@ -225,7 +235,8 @@ function DisneyBase(config) {
 
       // first add all the "normal" operating hours
       for (var j = 0, time; time = sched.schedule.schedules[j++];) {
-        if (time.type == "Operating") {
+        // if we treat this type as a standard operating type
+        if (openingTypes.indexOf(time.type) >= 0) {
           var day = moment.tz(time.date, self.park_timezone);
           // skip this entry if it's after the last date we are interested in
           if (day.isAfter(endDate)) continue;
@@ -235,14 +246,15 @@ function DisneyBase(config) {
           var dayObj = self.ParseScheduleEntry(time);
           dayObj.special = [];
           dayObj.date = day.format(self.dateFormat);
-          dayObj.type = "Operating"; // add this to basically state we're not "Closed"
+          // anything other than Operating is assumed to mean Closed (refurbs etc.)
+          dayObj.type = (time.type == "Operating" ? "Operating" : "Closed");
           times[dayObj.date] = dayObj;
         }
       }
 
       // now back-fill all the special hours
       for (var j = 0, time; time = sched.schedule.schedules[j++];) {
-        if (time.type != "Operating") {
+        if (openingTypes.indexOf(time.type) < 0) {
           var day = moment.tz(time.date, self.park_timezone);
           // skip this entry if it's after the last date we are interested in
           if (day.isAfter(endDate)) continue;

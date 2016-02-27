@@ -92,6 +92,17 @@ function TestPark(park) {
     it("should have a fastpass field for every ride", function() {
       for (var i = 0, ride; ride = times[i++];) ValidateType(ride, "fastPass", "boolean");
     });
+
+    // if park supports ride schedules, check they're valid
+    if (park.supports_ride_schedules) {
+      it("should have a schedule field for every ride", function() {
+        for (var i = 0, ride; ride = times[i++];) {
+          ValidateType(ride, "schedule", "object");
+
+          // TODO - validate schedule object data
+        }
+      });
+    }
   });
 
   // === Test Schedule Fetching ===
