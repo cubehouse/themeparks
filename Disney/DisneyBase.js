@@ -160,7 +160,7 @@ function DisneyBase(config) {
       // first add all the "normal" operating hours
       for (var j = 0, time; time = sched.schedule.schedules[j++];) {
         if (time.type == "Operating") {
-          var day = moment(time.date);
+          var day = moment.tz(time.date, self.park_timezone);
           // skip this entry if it's after the last date we are interested in
           if (day.isAfter(endDate)) continue;
           if (day.isBefore(startDate)) continue;
@@ -177,7 +177,7 @@ function DisneyBase(config) {
       // now back-fill all the special hours
       for (var j = 0, time; time = sched.schedule.schedules[j++];) {
         if (time.type != "Operating") {
-          var day = moment(time.date);
+          var day = moment.tz(time.date, self.park_timezone);
           // skip this entry if it's after the last date we are interested in
           if (day.isAfter(endDate)) continue;
           if (day.isBefore(startDate)) continue;
