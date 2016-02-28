@@ -104,6 +104,50 @@ v1.0.0
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
+# Supported Park Features
+
+<!-- START_PARK_FEATURES_SUPPORTED -->
+|Park|Wait Times|Park Opening Times|Ride Opening Times|
+|:---|:---------|:-----------------|:-----------------|
+|Magic Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Epcot - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Hollywood Studios - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Animal Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Magic Kingdom - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
+|California Adventure - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
+|Magic Kingdom - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
+|Walt Disney Studios - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
+|Disneyland Hong Kong|:thumbsup:|:thumbsup:|:thumbsup:|
+|Disneyland Tokyo|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|DisneySea Tokyo|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|SeaWorld Florida|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|SeaWorld San Antonio|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|SeaWorld San Diego|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Busch Gardens Williamsburg|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Busch Gardens Tampa|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Sesame Place|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Universal Studios Orlando|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Universal Island Of Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Over Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Over Georgia|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags St. Louis|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Great Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Magic Mountain|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Great America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Fiesta Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Arlington|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Los Angeles|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Discovery Kingdom|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags New England|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Jackson|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|The Great Escape|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags White Water, Atlanta|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Mexico|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|La Ronde, Montreal|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+
+<!-- END_PARK_FEATURES_SUPPORTED -->
+
 # Result Objects
 
 ## Ride Wait Times
