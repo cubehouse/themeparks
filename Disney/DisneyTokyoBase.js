@@ -27,6 +27,9 @@ function DisneylandTokyoBase(config) {
 
   self.park_timezone = "Asia/Tokyo";
 
+  // TokyoBase supports ride schedules from parsed HTML page
+  self.supports_ride_schedules = true;
+
   // Call to parent class "Park" to inherit
   ParkBase.call(self, config);
 
@@ -156,12 +159,25 @@ function DisneylandTokyoBase(config) {
             .text());
           if (time_match) {
             // parse opening and closing time
-            ride_data.openingTime = self.ParseTokyoTime(time_match[1]);
-            ride_data.closingTime = self.ParseTokyoTime(time_match[2]);
+            ride_data.schedule = {
+              openingTime: self.ParseTokyoTime(time_match[1]),
+              closingTime: self.ParseTokyoTime(time_match[2]),
+              type: "Operating",
+            };
 
             break;
           }
         }
+      }
+
+      // if no schedule data was found, this ride is probably closed
+      //  create an entry marking ride as closed for today
+      if (!ride_data.schedule) {
+        ride_data.schedule = {
+          openingTime: moment().tz(self.park_timezone).startOf("day"),
+          closingTime: moment().tz(self.park_timezone).endOf("day"),
+          type: "Closed",
+        };
       }
 
       // ride is active if we got an opening time!
