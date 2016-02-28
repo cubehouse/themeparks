@@ -45,6 +45,10 @@ function DisneyBase(config) {
   self._accessTokenURLBody = self._accessTokenURLBody || "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion";
   self._accessTokenURLMethod = self._accessTokenURLMethod || "POST";
 
+  // possible strings we expect from Disney API.
+  //  For anything other than these we will return "Closed"
+  self._expectedRideStatusStrings = ["Operating", "Closed", "Down"];
+
   // Generic implementation of GetWaitTimes
   //  can be overriden if needed
   this.GetWaitTimes = function(callback) {
@@ -95,6 +99,9 @@ function DisneyBase(config) {
 
               // work out if the ride is active
               obj.active = (ride.waitTime && ride.waitTime.status == "Operating") ? true : false;
+
+              // return a status string, forcing to "CLosed" if we get anything unexpected
+              obj.status = (ride.waitTime && self._expectedRideStatusStrings.indexOf(ride.waitTime.status) >= 0 ? ride.waitTime.status : "Closed");
 
               // work out if we have fastpass
               obj.fastPass = (ride.waitTime.fastPass && ride.waitTime.fastPass.available);

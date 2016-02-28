@@ -183,6 +183,10 @@ function DisneylandTokyoBase(config) {
       // ride is active if we got an opening time!
       ride_data.active = ride_data.openingTime ? true : false;
 
+      // return a status string based on whether we're active
+      // TODO - it's hard to determine Down status from Japanese HTMl, monitor it and figure it out
+      ride_data.status = ride_data.active ? "Operating" : "Closed";
+
       //  also check we're inside it's opening times!
       if (ride_data.active) {
         ride_data.active = moment().isBetween(ride_data.openingTime, ride_data.closingTime);

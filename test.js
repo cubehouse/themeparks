@@ -93,6 +93,23 @@ function TestPark(park) {
       for (var i = 0, ride; ride = times[i++];) ValidateType(ride, "fastPass", "boolean");
     });
 
+    it("should have a status field for every ride", function() {
+      for (var i = 0, ride; ride = times[i++];) {
+        ValidateType(ride, "status", "string");
+        // status string should only ever be one of these three options
+        assert(
+          ride.status == "Operating" || ride.status == "Down" || ride.status == "Closed",
+          "Invalid status string returned by " + ride.name + ": " + ride.status
+        );
+      }
+    });
+
+    it("should have matching status and active fields", function() {
+      // check status and active variables match up
+      if (ride.status == "Operating") assert(ride.active, "Ride cannot have Operating status and be inactive");
+      else assert(!ride.active, "Ride can't be active without Operating status");
+    });
+
     // if park supports ride schedules, check they're valid
     if (park.supports_ride_schedules) {
       it("should have a schedule field for every ride", function() {
