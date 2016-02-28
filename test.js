@@ -105,9 +105,11 @@ function TestPark(park) {
     });
 
     it("should have matching status and active fields", function() {
-      // check status and active variables match up
-      if (ride.status == "Operating") assert(ride.active, "Ride cannot have Operating status and be inactive");
-      else assert(!ride.active, "Ride can't be active without Operating status");
+      for (var i = 0, ride; ride = times[i++];) {
+        // check status and active variables match up
+        if (ride.status == "Operating") assert(ride.active, "Ride cannot have Operating status and be inactive");
+        else assert(!ride.active, "Ride can't be active without Operating status");
+      }
     });
 
     // if park supports ride schedules, check they're valid
