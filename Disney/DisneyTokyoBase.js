@@ -210,6 +210,12 @@ function DisneylandTokyoBase(config) {
           fastPass: false,
           active: false,
           name: cachedRideData[self.park_id][ride].name,
+          status: "Closed",
+          schedule: {
+            openingTime: moment().tz(self.park_timezone).startOf("day"),
+            closingTime: moment().tz(self.park_timezone).endOf("day"),
+            type: "Closed",
+          },
         };
       }
     }
