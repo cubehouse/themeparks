@@ -50,6 +50,11 @@ function UniversalBase(config) {
         // skip if this ride isn't for our current park
         if (ride.VenueId != self.park_id) continue;
 
+        // waitTimes assumed key:
+        //  -1 seems to mean "closed"
+        //  -2 means "delayed", which I guess is a nice way of saying "broken"
+        //  -3 and -50 seems to mean planned closure
+
         var active = true;
         if (ride.WaitTime < 0) {
           active = false;
@@ -62,6 +67,7 @@ function UniversalBase(config) {
           waitTime: ride.WaitTime,
           active: active,
           fastPass: ride.ExpressPassAccepted,
+          status: ride.WaitTime == -2 ? "Down" : (active ? "Operating" : "Closed"),
         });
       }
 
