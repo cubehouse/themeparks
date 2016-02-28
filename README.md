@@ -118,8 +118,8 @@ v1.0.0
 |Magic Kingdom - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
 |Walt Disney Studios - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
 |Disneyland Hong Kong|:thumbsup:|:thumbsup:|:thumbsup:|
-|Disneyland Tokyo|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|DisneySea Tokyo|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Disneyland Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
+|DisneySea Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
 |SeaWorld Florida|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
 |SeaWorld San Antonio|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
 |SeaWorld San Diego|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
