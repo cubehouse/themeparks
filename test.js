@@ -114,11 +114,15 @@ function TestPark(park) {
 
     // if park supports ride schedules, check they're valid
     if (park.supports_ride_schedules) {
-      it("should have a schedule field for every ride", function() {
+      it("should have valid schedule field for every ride", function() {
         for (var i = 0, ride; ride = times[i++];) {
           ValidateType(ride, "schedule", "object");
 
-          // TODO - validate schedule object data
+          // validate schedule object data
+          ValidateType(ride.schedule, "openingTime", "string");
+          ValidateType(ride.schedule, "closingTime", "string");
+          assert(moment(ride.schedule.openingTime).isValid(), "Ride schedule opening time should be valid: " + ride.schedule.openingTime);
+          assert(moment(ride.schedule.closingTime).isValid(), "Ride schedule closing time should be valid: " + ride.schedule.closingTime);
         }
       });
     }
