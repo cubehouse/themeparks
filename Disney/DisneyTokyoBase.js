@@ -174,8 +174,8 @@ function DisneylandTokyoBase(config) {
       //  create an entry marking ride as closed for today
       if (!ride_data.schedule) {
         ride_data.schedule = {
-          openingTime: moment().tz(self.park_timezone).startOf("day"),
-          closingTime: moment().tz(self.park_timezone).endOf("day"),
+          openingTime: moment().tz(self.park_timezone).startOf("day").format(self.timeFormat),
+          closingTime: moment().tz(self.park_timezone).endOf("day").format(self.timeFormat),
           type: "Closed",
         };
       }
@@ -212,8 +212,8 @@ function DisneylandTokyoBase(config) {
           name: cachedRideData[self.park_id][ride].name,
           status: "Closed",
           schedule: {
-            openingTime: moment().tz(self.park_timezone).startOf("day"),
-            closingTime: moment().tz(self.park_timezone).endOf("day"),
+            openingTime: moment().tz(self.park_timezone).startOf("day").format(self.timeFormat),
+            closingTime: moment().tz(self.park_timezone).endOf("day").format(self.timeFormat),
             type: "Closed",
           },
         };
