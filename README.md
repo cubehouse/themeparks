@@ -159,6 +159,7 @@ v1.0.0
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
+            status: (string: will either be "Operating", "Closed", or "Down"),
             schedule: { **schedule will only be present if park.supports_ride_schedules is true**
               openingTime: (timeFormat timestamp: opening time of ride),
               closingTime: (timeFormat timestamp: closing time of ride),
