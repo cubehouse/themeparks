@@ -143,6 +143,13 @@ function DisneyBase(config) {
 
                 // for live ride data, doesn't make sense to have today's date
                 if (obj.schedule && obj.schedule.date) delete obj.schedule.date;
+              } else {
+                // if we got no schedule data from API, this attraction is open "all day"
+                obj.schedule = {
+                  openingTime: moment().tz(self.park_timezone).startOf("day").format(self.timeFormat),
+                  closingTime: moment().tz(self.park_timezone).endOf("day").format(self.timeFormat),
+                  type: obj.active ? "Operating" : "Closed",
+                };
               }
 
               // add to our return rides array
