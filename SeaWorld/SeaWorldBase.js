@@ -102,6 +102,9 @@ function SeaworldBase(config) {
               active: poi.status.isOpen ? true : false,
               // TODO - work out which rides have fastPass
               fastPass: false,
+              // generate a status string based on active state
+              //  status only includes isOpen and hasShowsRemaining, no Down status
+              status: poi.status.isOpen ? "Operating" : "Closed",
             });
           }
         }
