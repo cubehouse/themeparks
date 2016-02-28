@@ -126,6 +126,7 @@ function SixFlagsBase(config) {
               waitTime: ride.status == "AttractionStatusOpen" ? (parseInt(ride.waitTime, 10) || 0) : 0,
               active: ride.status == "AttractionStatusOpen" ? true : false,
               fastPass: rideNames[ride.rideId] && rideNames[ride.rideId].isFlashPassEligible ? true : false,
+              status: ride.status == "AttractionStatusTemporarilyClosed" ? "Down" : (ride.status == "AttractionStatusOpen" ? "Operating" : "Closed"),
             });
           }
 
