@@ -111,16 +111,23 @@ function DisneylandTokyoBase(config) {
       ride_data.id = ride_id_match[1];
 
       // get waiting time!
-      var waitTime = el.find(".waitTime");
-      if (!waitTime || !waitTime.length) {
-        ride_data.waitTime = 0;
+      // first, check for rides under maintenance
+      if (el.text().indexOf("運営・公演中止") >= 0) {
+        // found the maintenance text, mark ride as inactive
+        ride_data.waitTime = -1;
+        ride_data.active = false;
       } else {
-        // extract number
-        ride_data.waitTime = parseInt(waitTime.remove("span")
-          .text(), 10);
-        // if we didn't get a number, time is unavailable! (but ride is still open)
-        //  this usually means you have to go to the ride to get wait times, and they're not on the app
-        if (isNaN(ride_data.waitTime)) ride_data.waitTime = -1;
+        var waitTime = el.find(".waitTime");
+        if (!waitTime || !waitTime.length) {
+          ride_data.waitTime = 0;
+        } else {
+          // extract number
+          ride_data.waitTime = parseInt(waitTime.remove("span")
+            .text(), 10);
+          // if we didn't get a number, time is unavailable! (but ride is still open)
+          //  this usually means you have to go to the ride to get wait times, and they're not on the app
+          if (isNaN(ride_data.waitTime)) ride_data.waitTime = -1;
+        }
       }
 
       // does this ride have FastPass?
@@ -180,17 +187,15 @@ function DisneylandTokyoBase(config) {
         };
       }
 
-      // ride is active if we got an opening time!
-      ride_data.active = ride_data.openingTime ? true : false;
+      // if we haven't found any reason to mark this ride as active or inactive yet...
+      if (typeof(ride_data.active) == "undefined") {
+        // ...check we're inside it's opening times to see if we're active!
+        ride_data.active = moment().isBetween(ride_data.schedule.openingTime, ride_data.schedule.closingTime);
+      }
 
       // return a status string based on whether we're active
       // TODO - it's hard to determine Down status from Japanese HTMl, monitor it and figure it out
       ride_data.status = ride_data.active ? "Operating" : "Closed";
-
-      //  also check we're inside it's opening times!
-      if (ride_data.active) {
-        ride_data.active = moment().isBetween(ride_data.openingTime, ride_data.closingTime);
-      }
 
       // get ride name from the loc data
       if (cachedRideData[self.park_id][ride_data.id]) {
