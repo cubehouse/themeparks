@@ -202,6 +202,18 @@ function DisneylandTokyoBase(config) {
         ride_data.name = cachedRideData[self.park_id][ride_data.id].name;
       }
 
+      // tell us when this data updated
+      var updateTimes = el.find(".update");
+      if (updateTimes.length) {
+        // we got the update time text in format like "(更新時間：8:00) or (更新時間：14:34)"
+        // then strip the prefix and suffix
+        var update_time_text = el.find(".update");
+
+        var update_time_match = /\s?(\d{1,2}\:\d{2})\s?/g.exec(update_time_text);
+
+        ride_data.updateTime = self.ParseTokyoTime(update_time_match);
+      }
+
       results[ride_data.id] = ride_data;
     }
 
