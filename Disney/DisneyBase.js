@@ -1,7 +1,5 @@
 // get the base Park class
 var Park = require("../parkBase");
-// request library
-var request = require("request");
 // moment library for time formatting
 var moment = require("moment-timezone");
 
@@ -367,43 +365,37 @@ function DisneyBase(config) {
 
   // Make the network request to create a new access token
   this.FetchAccessToken = function(callback) {
-    var reqObj = {
+    self.MakeNetworkRequest({
+      name: "Fetch Disney Access Token",
       url: self._accessTokenURL,
       method: self._accessTokenURLMethod,
       headers: {
         "User-Agent": self.useragent,
       },
       body: self._accessTokenURLBody,
-    };
+    }, function(err, resp, body) {
+      if (err) return self.Error("Failed to get access token", err, callback);
 
-    self.Dbg("Fetching", reqObj);
-
-    // request new access token
-    request(reqObj,
-      function(err, resp, body) {
-        if (err) return self.Error("Failed to get access token", err, callback);
-
-        if (resp.statusCode != 200) {
-          return self.Error("Unexpected status code for access token response, expected 200", "Got " + resp.statusCode, callback);
-        }
-
-        // parse JSON data from response
-        var data;
-        try {
-          data = JSON.parse(body);
-        } catch (e) {
-          return self.Error("Invalid JSON returned for access token", e, callback);
-        }
-
-        if (data && data.access_token && data.expires_in) {
-          self.Dbg("Fetched access token " + data.access_token);
-
-          return callback(null, data.access_token, (new Date().getTime()) + ((data.expires_in - 30) * 1000));
-        }
-
-        return self.Error("Invalid body response for access token", null, callback);
+      if (resp.statusCode != 200) {
+        return self.Error("Unexpected status code for access token response, expected 200", "Got " + resp.statusCode, callback);
       }
-    );
+
+      // parse JSON data from response
+      var data;
+      try {
+        data = JSON.parse(body);
+      } catch (e) {
+        return self.Error("Invalid JSON returned for access token", e, callback);
+      }
+
+      if (data && data.access_token && data.expires_in) {
+        self.Dbg("Fetched access token " + data.access_token);
+
+        return callback(null, data.access_token, (new Date().getTime()) + ((data.expires_in - 30) * 1000));
+      }
+
+      return self.Error("Invalid body response for access token", null, callback);
+    });
   };
 
   // Fetch a WDWjs API URL
@@ -446,10 +438,8 @@ function DisneyBase(config) {
         }
       }
 
-      self.Dbg("Fetching", requestBody);
-
-      // make request
-      request(requestBody, function(err, resp, body) {
+      // make the network request using our standard requster (wrapper for request())
+      self.MakeNetworkRequest(requestBody, function(err, resp, body) {
         // if we get an instance ID from the load balancer, store it
         //  (even if we get an error)
         if (resp && resp.headers && resp.headers["x-correlation-id"]) {
