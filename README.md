@@ -24,6 +24,7 @@ v3.0.0
 * (breaking change) No longer need to create a new wdwjs() object to start the API, make separate new objects for each park you wish to access
 * 3.0.3 added BETA Six Flags support. Some parks do not yet return proper wait time data, see [#12](https://github.com/cubehouse/wdwJS/issues/12)
 * 3.0.6 added ride schedules (only for Disney parks) and new status string for each ride wait time entry
+* 3.0.7 fixed Tokyo Disneyland ride active status and added updateTime to Tokyo ride outputs (see #17)
 
 v2.0.0
 
