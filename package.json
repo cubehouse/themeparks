@@ -27,7 +27,8 @@
     "url": "git://github.com/cubehouse/wdwJS.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/.bin/mocha",
+    "prepublish": "node ./Scripts/UpdateREADME.js"
   },
   "main": "index.js",
   "readmeFilename": "README.md",
