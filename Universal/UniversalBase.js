@@ -1,6 +1,5 @@
 var Park = require("../parkBase");
 
-var request = require("request");
 var moment = require("moment-timezone");
 require('moment-range');
 var crypto = require("crypto");
@@ -121,9 +120,7 @@ function UniversalBase(config) {
         }
       };
 
-      self.Dbg("Fetching...", requestObj);
-
-      request(requestObj, function(err, resp, body) {
+      self.MakeNetworkRequest(requestObj, function(err, resp, body) {
         if (err) return self.Error("Error fetching calendar page", err, callback);
 
         // parse returned HTML
@@ -288,9 +285,7 @@ function UniversalBase(config) {
       }
     }
 
-    self.Dbg("Fetching...", requestBody);
-
-    request(requestBody, function(err, resp, body) {
+    self.MakeNetworkRequest(requestBody, function(err, resp, body) {
       if (err) return self.Error("Error making Universal API request", err, callback);
 
       return callback(null, body);

@@ -1,8 +1,6 @@
 // use the standard park base, as Tokyo setup is completely different to wdw
 var ParkBase = require("../parkBase");
 
-// request http lib
-var request = require("request");
 // parse cookies returned by server
 var cookie = require('cookie');
 // date/time parsing
