@@ -13,7 +13,7 @@ module.exports = {
   EndSection: EndSection,
   RecordHTTPRequest: RecordHTTPRequest,
   Log: LogMessage,
-}
+};
 
 // list of debug assets we've stored
 var debugAssets = {
