@@ -35,7 +35,7 @@ function SeaworldBase(config) {
 
   // fetch a URL from the SeaWorld API
   this.GetAPIURL = function(page, callback) {
-    request({
+    var requestObject = {
       url: self.APIBase + self.park_id + "/" + page,
       method: "GET",
       headers: {
@@ -43,7 +43,9 @@ function SeaworldBase(config) {
         "User-Agent": self.useragent,
       },
       json: true,
-    }, function(err, resp, body) {
+    };
+
+    self.MakeNetworkRequest(requestObject, function(err, resp, body) {
       // if error, return error
       if (err) return self.Error("Error fetching " + page + " for SeaWorlds park " + park_id, err, callback);
 
