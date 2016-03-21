@@ -50,7 +50,7 @@ function DisneylandTokyoBase(config) {
       // make request to disney server with our cookie
       self.FetchURL("http://info.tokyodisneyresort.jp/rt/s/realtime/" + self.park_id + "_attraction.html", {
         headers: {
-          'Cookie': 'tdrloc=' + cachedGeoCookie.cookie
+          'Cookie': 'tdrloc=' + encodeURIComponent(cachedGeoCookie.cookie)
         }
       }, function(err, body) {
         if (err) return self.Error("Error fetching ride times", err, callback);
