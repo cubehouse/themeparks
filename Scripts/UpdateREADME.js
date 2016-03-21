@@ -37,20 +37,26 @@ for (var park in DisneyAPI) {
 fs.readFile(readmeFilePath, function(err, readmeData) {
   if (err) return console.log(err);
 
+  // convert buffer to string
+  readmeData = readmeData.toString();
+
   // find START/END comments and replace with new content
-  readmeData = readmeData.toString().replace(
+  var newReadmeData = readmeData.replace(
     new RegExp(supportedParkListStart + "[^<]*" + supportedParkListEnd, 'g'),
     supportedParkListStart + "\n" + supportedParksMarkdown + "\n" + supportedParkListEnd
   );
-  readmeData = readmeData.toString().replace(
+  newReadmeData = newReadmeData.replace(
     new RegExp(timezoneListStart + "[^<]*" + timezoneListEnd, 'g'),
     timezoneListStart + "\n" + timezoneMarkdown + "\n" + timezoneListEnd
   );
-  readmeData = readmeData.toString().replace(
+  newReadmeData = newReadmeData.replace(
     new RegExp(parkFeaturesListStart + "[^<]*" + parkFeaturesListEnd, 'g'),
     parkFeaturesListStart + "\n" + parkFeaturesMarkdown + "\n" + parkFeaturesListEnd
   );
 
-  // write back new readme file
-  fs.writeFile(readmeFilePath, readmeData);
+  // only write new README data if file contents have changed
+  if (newReadmeData.trim() != readmeData.trim()) {
+    // write back new readme file
+    fs.writeFile(readmeFilePath, newReadmeData);
+  }
 });
