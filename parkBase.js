@@ -160,7 +160,9 @@ function Park(config) {
     // make network request using request library
     request(requestObject, function(err, resp, body) {
       // debug log response
-      debugView.RecordHTTPRequest(requestObject.name || requestObject.url || "Unknown URL Request", resp);
+      if (process.env.NODE_DEBUG || self.debug || process.env.DEBUGOUT) {
+        debugView.RecordHTTPRequest(requestObject.name || requestObject.url || "Unknown URL Request", resp);
+      }
 
       // return request standard response
       return callback(err, resp, body);
