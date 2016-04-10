@@ -39,7 +39,6 @@ function SeaworldBase(config) {
       method: "GET",
       headers: {
         "Authorization": "Basic " + self.authToken,
-        "User-Agent": self.useragent,
       },
       json: true,
     };

@@ -41,9 +41,7 @@ function UniversalJapanBase(config) {
 
   // Get a URL
   this.GetURL = function(url, options, callback) {
-    var headers = {
-      "User-Agent": self.useragent,
-    };
+    var headers = {};
 
     // apply custom headers (if set)
     if (options && options.headers) {

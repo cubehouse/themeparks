@@ -42,7 +42,6 @@ function AltonTowers(config) {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         "Connection": "Keep-Alive",
-        "User-Agent": self.useragent,
       },
       json: true,
     };
@@ -63,7 +62,6 @@ function AltonTowers(config) {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           "Connection": "Keep-Alive",
-          "User-Agent": self.useragent,
         },
         json: true,
         body: "response=" + response + "&challenge=" + data.challenge,

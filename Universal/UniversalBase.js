@@ -111,9 +111,6 @@ function UniversalBase(config) {
     async.eachSeries(todo, function(calendarMonth, callback) {
       var requestObj = {
         url: self.calendar_URL,
-        headers: {
-          "User-Agent": self.useragent
-        },
         method: "POST",
         formData: {
           __EVENTTARGET: self.calendar_VStarget,
@@ -247,7 +244,6 @@ function UniversalBase(config) {
   this.MakeRequest = function(url, options, callback) {
     var headers = {
       "Content-Type": "application/json; charset=UTF-8",
-      "User-Agent": self.useragent,
       'Accept': 'application/json',
       'Accept-Language': 'en-US',
     };

@@ -475,7 +475,6 @@ function DisneylandTokyoBase(config) {
       url: url,
       headers: {
         "Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + self.park_id,
-        "User-Agent": self.useragent,
       },
     };
 

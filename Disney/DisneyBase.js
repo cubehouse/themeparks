@@ -369,9 +369,6 @@ function DisneyBase(config) {
       name: "Fetch Disney Access Token",
       url: self._accessTokenURL,
       method: self._accessTokenURLMethod,
-      headers: {
-        "User-Agent": self.useragent,
-      },
       body: self._accessTokenURLBody,
     }, function(err, resp, body) {
       if (err) return self.Error("Failed to get access token", err, callback);
@@ -409,7 +406,6 @@ function DisneyBase(config) {
         'Authorization': "BEARER " + self._accessToken.token,
         'Accept': 'application/json;apiversion=1',
         'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD',
-        "User-Agent": self.useragent,
       };
 
       // add/override headers if passed in
