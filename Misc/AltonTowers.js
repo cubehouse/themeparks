@@ -189,8 +189,8 @@ function AltonTowers(config) {
           var dayString = currentDay.format("YYYY-MM-DD");
           schedule.push({
             date: currentDay.format(self.dateFormat),
-            openingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].openingTime, "YYYY-MM-DDTHH:MM").format(self.timeFormat),
-            closingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].closingTime, "YYYY-MM-DDTHH:MM").format(self.timeFormat),
+            openingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].openingTime, "YYYY-MM-DDTHH:MM", self.timezone).format(self.timeFormat),
+            closingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].closingTime, "YYYY-MM-DDTHH:MM", self.timezone).format(self.timeFormat),
             type: "Operating",
           });
         }
