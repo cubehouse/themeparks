@@ -15,7 +15,9 @@ var parks = [
   // Six Flags
   require("./SixFlags/SixFlagsParks"),
   // Alton Towers
-  require("./Misc/AltonTowers.js"),
+  require("./Misc/AltonTowers"),
+  // Europa-Park
+  require("./Misc/EuropaPark"),
 ];
 
 // export all parks
