@@ -1,8 +1,6 @@
 // use the standard park base, as Tokyo setup is completely different to wdw
 var ParkBase = require("../parkBase");
 
-// request http lib
-var request = require("request");
 // parse cookies returned by server
 var cookie = require('cookie');
 // date/time parsing
@@ -27,6 +25,9 @@ function DisneylandTokyoBase(config) {
 
   self.park_timezone = "Asia/Tokyo";
 
+  // TokyoBase supports ride schedules from parsed HTML page
+  self.supports_ride_schedules = true;
+
   // Call to parent class "Park" to inherit
   ParkBase.call(self, config);
 
@@ -47,7 +48,7 @@ function DisneylandTokyoBase(config) {
       // make request to disney server with our cookie
       self.FetchURL("http://info.tokyodisneyresort.jp/rt/s/realtime/" + self.park_id + "_attraction.html", {
         headers: {
-          'Cookie': 'tdrloc=' + cachedGeoCookie.cookie
+          'Cookie': 'tdrloc=' + encodeURIComponent(cachedGeoCookie.cookie)
         }
       }, function(err, body) {
         if (err) return self.Error("Error fetching ride times", err, callback);
@@ -108,16 +109,23 @@ function DisneylandTokyoBase(config) {
       ride_data.id = ride_id_match[1];
 
       // get waiting time!
-      var waitTime = el.find(".waitTime");
-      if (!waitTime || !waitTime.length) {
-        ride_data.waitTime = 0;
+      // first, check for rides under maintenance
+      if (el.text().indexOf("運営・公演中止") >= 0) {
+        // found the maintenance text, mark ride as inactive
+        ride_data.waitTime = -1;
+        ride_data.active = false;
       } else {
-        // extract number
-        ride_data.waitTime = parseInt(waitTime.remove("span")
-          .text(), 10);
-        // if we didn't get a number, time is unavailable! (but ride is still open)
-        //  this usually means you have to go to the ride to get wait times, and they're not on the app
-        if (isNaN(ride_data.waitTime)) ride_data.waitTime = -1;
+        var waitTime = el.find(".waitTime");
+        if (!waitTime || !waitTime.length) {
+          ride_data.waitTime = 0;
+        } else {
+          // extract number
+          ride_data.waitTime = parseInt(waitTime.remove("span")
+            .text(), 10);
+          // if we didn't get a number, time is unavailable! (but ride is still open)
+          //  this usually means you have to go to the ride to get wait times, and they're not on the app
+          if (isNaN(ride_data.waitTime)) ride_data.waitTime = -1;
+        }
       }
 
       // does this ride have FastPass?
@@ -156,25 +164,52 @@ function DisneylandTokyoBase(config) {
             .text());
           if (time_match) {
             // parse opening and closing time
-            ride_data.openingTime = self.ParseTokyoTime(time_match[1]);
-            ride_data.closingTime = self.ParseTokyoTime(time_match[2]);
+            ride_data.schedule = {
+              openingTime: self.ParseTokyoTime(time_match[1]),
+              closingTime: self.ParseTokyoTime(time_match[2]),
+              type: "Operating",
+            };
 
             break;
           }
         }
       }
 
-      // ride is active if we got an opening time!
-      ride_data.active = ride_data.openingTime ? true : false;
-
-      //  also check we're inside it's opening times!
-      if (ride_data.active) {
-        ride_data.active = moment().isBetween(ride_data.openingTime, ride_data.closingTime);
+      // if no schedule data was found, this ride is probably closed
+      //  create an entry marking ride as closed for today
+      if (!ride_data.schedule) {
+        ride_data.schedule = {
+          openingTime: moment().tz(self.park_timezone).startOf("day").format(self.timeFormat),
+          closingTime: moment().tz(self.park_timezone).endOf("day").format(self.timeFormat),
+          type: "Closed",
+        };
       }
+
+      // if we haven't found any reason to mark this ride as active or inactive yet...
+      if (typeof(ride_data.active) == "undefined") {
+        // ...check we're inside it's opening times to see if we're active!
+        ride_data.active = moment().isBetween(ride_data.schedule.openingTime, ride_data.schedule.closingTime);
+      }
+
+      // return a status string based on whether we're active
+      // TODO - it's hard to determine Down status from Japanese HTMl, monitor it and figure it out
+      ride_data.status = ride_data.active ? "Operating" : "Closed";
 
       // get ride name from the loc data
       if (cachedRideData[self.park_id][ride_data.id]) {
         ride_data.name = cachedRideData[self.park_id][ride_data.id].name;
+      }
+
+      // tell us when this data updated
+      var updateTimes = el.find(".update");
+      if (updateTimes.length) {
+        // we got the update time text in format like "(更新時間：8:00) or (更新時間：14:34)"
+        // then strip the prefix and suffix
+        var update_time_text = el.find(".update");
+
+        var update_time_match = /\s?(\d{1,2}\:\d{2})\s?/g.exec(update_time_text);
+
+        ride_data.updateTime = self.ParseTokyoTime(update_time_match);
       }
 
       results[ride_data.id] = ride_data;
@@ -190,6 +225,12 @@ function DisneylandTokyoBase(config) {
           fastPass: false,
           active: false,
           name: cachedRideData[self.park_id][ride].name,
+          status: "Closed",
+          schedule: {
+            openingTime: moment().tz(self.park_timezone).startOf("day").format(self.timeFormat),
+            closingTime: moment().tz(self.park_timezone).endOf("day").format(self.timeFormat),
+            type: "Closed",
+          },
         };
       }
     }
@@ -456,9 +497,7 @@ function DisneylandTokyoBase(config) {
       }
     }
 
-    self.Dbg("Fetching", reqObj);
-
-    request(reqObj, function(err, resp, body) {
+    self.MakeNetworkRequest(reqObj, function(err, resp, body) {
       if (err) return this.Error("API returned an error", err, callback);
 
       return callback(null, body, resp);

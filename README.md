@@ -23,6 +23,8 @@ v3.0.0
 * (breaking change) Park object names have been renamed
 * (breaking change) No longer need to create a new wdwjs() object to start the API, make separate new objects for each park you wish to access
 * 3.0.3 added BETA Six Flags support. Some parks do not yet return proper wait time data, see [#12](https://github.com/cubehouse/wdwJS/issues/12)
+* 3.0.6 added ride schedules (only for Disney parks) and new status string for each ride wait time entry
+* 3.0.7 fixed Tokyo Disneyland ride active status and added updateTime to Tokyo ride outputs (see #17)
 
 v2.0.0
 
@@ -104,6 +106,50 @@ v1.0.0
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
+# Supported Park Features
+
+<!-- START_PARK_FEATURES_SUPPORTED -->
+|Park|Wait Times|Park Opening Times|Ride Opening Times|
+|:---|:---------|:-----------------|:-----------------|
+|Magic Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Epcot - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Hollywood Studios - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Animal Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
+|Magic Kingdom - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
+|California Adventure - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
+|Magic Kingdom - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
+|Walt Disney Studios - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
+|Disneyland Hong Kong|:thumbsup:|:thumbsup:|:thumbsup:|
+|Disneyland Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
+|DisneySea Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
+|SeaWorld Florida|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|SeaWorld San Antonio|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|SeaWorld San Diego|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Busch Gardens Williamsburg|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Busch Gardens Tampa|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Sesame Place|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Universal Studios Orlando|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Universal Island Of Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Over Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Over Georgia|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags St. Louis|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Great Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Magic Mountain|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Great America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Fiesta Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Arlington|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Los Angeles|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Discovery Kingdom|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags New England|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Hurricane Harbor, Jackson|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|The Great Escape|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags White Water, Atlanta|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Six Flags Mexico|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|La Ronde, Montreal|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+
+<!-- END_PARK_FEATURES_SUPPORTED -->
+
 # Result Objects
 
 ## Ride Wait Times
@@ -115,6 +161,17 @@ v1.0.0
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
+            status: (string: will either be "Operating", "Closed", or "Down"),
+            schedule: { **schedule will only be present if park.supports_ride_schedules is true**
+              openingTime: (timeFormat timestamp: opening time of ride),
+              closingTime: (timeFormat timestamp: closing time of ride),
+              type: (string: "Operating" or "Closed"),
+              special: [ (array of "special" ride times, usually Disney Extra Magic Hours or similar at other parks - field may be null)
+                openingTime: (timeFormat timestamp: opening time for ride),
+                closingTime: (timeFormat timestamp: closing time for ride),
+                type: (string: type of schedule eg. "Extra Magic Hours", but can be "Event" or "Special Ticketed Event" or other)
+              ]
+            },
         },
         ...
     ]
@@ -144,6 +201,7 @@ There are some values available on each park object that may be useful.
 |:-------|:----------|
 |name|Name of the park|
 |park_timezone|The park's local timezone|
+|supports_ride_schedules|Does this park return schedules for rides?|
 
     var DisneyAPI = require("wdwjs");
 

@@ -1,7 +1,7 @@
 {
   "name": "wdwjs",
   "description": "Walt Disney World API Framework",
-  "version": "3.0.5",
+  "version": "3.0.9",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
@@ -27,7 +27,8 @@
     "url": "git://github.com/cubehouse/wdwJS.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/.bin/mocha",
+    "prepublish": "node ./Scripts/UpdateREADME.js"
   },
   "main": "index.js",
   "readmeFilename": "README.md",

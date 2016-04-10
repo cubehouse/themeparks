@@ -1,6 +1,5 @@
 var Park = require("../parkBase");
 
-var request = require("request");
 var moment = require("moment-timezone");
 require('moment-range');
 var crypto = require("crypto");
@@ -43,12 +42,18 @@ function UniversalBase(config) {
     // get (possibly cached) POI data
     self.GetPOIData(function(err) {
       if (err) return self.Error("Error getting POI data", err, callback);
+      if (typeof self.poi_data === 'undefined') return self.Error("Error getting Universal POI Data", null, callback);
 
       var rides = [];
 
       for (var i = 0, ride; ride = self.poi_data.Rides[i++];) {
         // skip if this ride isn't for our current park
         if (ride.VenueId != self.park_id) continue;
+
+        // waitTimes assumed key:
+        //  -1 seems to mean "closed"
+        //  -2 means "delayed", which I guess is a nice way of saying "broken"
+        //  -3 and -50 seems to mean planned closure
 
         var active = true;
         if (ride.WaitTime < 0) {
@@ -62,6 +67,7 @@ function UniversalBase(config) {
           waitTime: ride.WaitTime,
           active: active,
           fastPass: ride.ExpressPassAccepted,
+          status: ride.WaitTime == -2 ? "Down" : (active ? "Operating" : "Closed"),
         });
       }
 
@@ -115,9 +121,7 @@ function UniversalBase(config) {
         }
       };
 
-      self.Dbg("Fetching...", requestObj);
-
-      request(requestObj, function(err, resp, body) {
+      self.MakeNetworkRequest(requestObj, function(err, resp, body) {
         if (err) return self.Error("Error fetching calendar page", err, callback);
 
         // parse returned HTML
@@ -282,9 +286,7 @@ function UniversalBase(config) {
       }
     }
 
-    self.Dbg("Fetching...", requestBody);
-
-    request(requestBody, function(err, resp, body) {
+    self.MakeNetworkRequest(requestBody, function(err, resp, body) {
       if (err) return self.Error("Error making Universal API request", err, callback);
 
       return callback(null, body);

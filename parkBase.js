@@ -4,6 +4,12 @@
 // random useragent generator
 var random_useragent = require("random-useragent");
 
+// use our debugViewer library to help debug network requests
+var debugView = require("./debugView");
+
+// request is a very flexible web request library, supports lots of things!
+var request = require("request");
+
 // use standard NodeJS debug log function
 var util = require("util");
 var debugLibName = "wdwjs";
@@ -27,8 +33,15 @@ if (util.debuglog) {
 module.exports = Park;
 
 function Park(config) {
+  var self = this;
+
   // debugging is disabled by default
   this.debug = config && config.debug || process.env.DEBUG;
+
+  // custom support features
+  //  only some parks will support these
+  //  parks must mark these as true if they are using these features
+  this.supports_ride_schedules = this.supports_ride_schedules || false;
 
   // park's human-readable name
   this.name = this.name || "Default Blank Park";
@@ -71,13 +84,22 @@ function Park(config) {
   // Debug print helper function. Calls console.log with all passed arguments
   // if we're in debug mode
   this.Dbg = function() {
-    // skip if the env DEBUG isn't set and the manual debug isn't set
-    if (!process.env.NODE_DEBUG && !this.debug) return;
+    // if no debug variables are set, early-out
+    if (!process.env.NODE_DEBUG && !this.debug && !process.env.DEBUGOUT) return;
 
-    var args = ["[Debug :: " + this.name + "]", arguments.callee.caller.name];
+    var args = ["[Debug :: " + this.name + "]"];
     for (var n in arguments) {
       if (typeof(arguments[n] != "function")) args.push(arguments[n]);
     }
+
+    // pass on debug log to debug viewer if we're in debug mode
+    if (process.env.DEBUGOUT || process.env.NODE_DEBUG || this.debug) {
+      // pass on debug message to the debug Viewer
+      debugView.Log.apply(this, args);
+    }
+
+    // skip printing message if we're not in NODE_DEBUG mode
+    if (!process.env.NODE_DEBUG && !this.debug) return;
 
     // if we've manaully requested debug, use console log
     if (this.debug) {
@@ -129,6 +151,22 @@ function Park(config) {
     // use random-useragent library to generate
     this.useragent = random_useragent.getRandom(filterFunction);
     this.Dbg("Generated random user-agent for " + this.name + ": " + this.useragent);
+  };
+
+  // make a network request, handing over debug information etc. if we need to
+  this.MakeNetworkRequest = function(requestObject, callback) {
+    self.Dbg("Fetching", requestObject.url);
+
+    // make network request using request library
+    request(requestObject, function(err, resp, body) {
+      // debug log response
+      if (process.env.NODE_DEBUG || self.debug || process.env.DEBUGOUT) {
+        debugView.RecordHTTPRequest(requestObject.name || requestObject.url || "Unknown URL Request", resp);
+      }
+
+      // return request standard response
+      return callback(err, resp, body);
+    });
   };
 
   // automatically call configure with the passed in config variable
