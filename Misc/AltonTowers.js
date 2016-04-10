@@ -80,7 +80,7 @@ function AltonTowers(config) {
           rides.push({
             id: ride.id,
             name: ride.ride,
-            waitTime: ride.time,
+            waitTime: ride.time || 0,
             active: ride.status == "open" ? true : false,
             status: ride.status == "open" ? "Operating" : "Closed",
             // Fastpass at Alton Towers is a separate paid package, so no rides are really "fastpass" enabled
