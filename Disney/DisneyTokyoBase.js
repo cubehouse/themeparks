@@ -1,8 +1,6 @@
 // use the standard park base, as Tokyo setup is completely different to wdw
 var ParkBase = require("../parkBase");
 
-// request http lib
-var request = require("request");
 // parse cookies returned by server
 var cookie = require('cookie');
 // date/time parsing
@@ -499,9 +497,7 @@ function DisneylandTokyoBase(config) {
       }
     }
 
-    self.Dbg("Fetching", reqObj);
-
-    request(reqObj, function(err, resp, body) {
+    self.MakeNetworkRequest(reqObj, function(err, resp, body) {
       if (err) return this.Error("API returned an error", err, callback);
 
       return callback(null, body, resp);
