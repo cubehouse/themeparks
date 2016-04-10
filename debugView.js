@@ -66,23 +66,3 @@ function WriteDebugFile() {
 process.on('exit', WriteDebugFile.bind());
 process.on('SIGINT', WriteDebugFile.bind());
 process.on('uncaughtException', WriteDebugFile.bind());
-
-if (!module.parent) {
-  RecordHTTPRequest("Test1", {
-    url: "fdssd"
-  }, {
-    test: true
-  });
-  RecordHTTPRequest("Test2", {
-    url: "fdssd"
-  }, {
-    test: true
-  });
-  StartSection("Test3");
-  RecordHTTPRequest("Test3.1", {}, {});
-  LogMessage("Does this work?", "I hope so...");
-  EndSection();
-  RecordHTTPRequest("Test4", {}, {});
-
-  console.log(JSON.stringify(debugAssets, null, 2));
-}
