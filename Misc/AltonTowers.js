@@ -1,14 +1,10 @@
 var Park = require("../parkBase");
 
-var request = require("request");
 var moment = require("moment-timezone");
 var crypto = require('crypto');
 var random_useragent = require("random-useragent");
 
 module.exports = [AltonTowers];
-
-// opening times RegExp
-var regexOpeningTimes = /([0-9]+[ap]m) \- ([0-9]+[ap]m)/gi;
 
 function AltonTowers(config) {
   // keep hold of 'this'
@@ -51,10 +47,8 @@ function AltonTowers(config) {
       json: true,
     };
 
-    self.Dbg("Fetching...", reqObj);
-
     // first, we get the challenge string from the API
-    request(reqObj, function(err, resp, data) {
+    self.MakeNetworkRequest(reqObj, function(err, resp, data) {
       if (err) return self.Error("Failed to fetch queue times challenge", err, callback);
       if (!data || !data.challenge) return self.Error("No challenge sent from Alton Towers API", data, callback);
 
@@ -75,10 +69,8 @@ function AltonTowers(config) {
         body: "response=" + response + "&challenge=" + data.challenge,
       };
 
-      self.Dbg("Fetching...", rideReqObj);
-
       // with the challenge string hashed with the API key, we can now request the actual queue times
-      request(rideReqObj, function(err, resp, data) {
+      self.MakeNetworkRequest(rideReqObj, function(err, resp, data) {
         if (err) return self.Error("Failed to fetch queue times data", err, callback);
         if (!data || !data.length) return self.Error("API didn't return any times", data, callback);
 
@@ -88,10 +80,9 @@ function AltonTowers(config) {
           rides.push({
             id: ride.id,
             name: ride.ride,
-            // TODO
-            waitTime: 0,
-            // TODO - which status means open?
+            waitTime: ride.time,
             active: ride.status == "open" ? true : false,
+            status: ride.status == "open" ? "Operating" : "Closed",
             // Fastpass at Alton Towers is a separate paid package, so no rides are really "fastpass" enabled
             fastPass: false,
           });
@@ -114,9 +105,7 @@ function AltonTowers(config) {
       json: true
     };
 
-    self.Dbg("Fetching...", reqObj);
-
-    request(reqObj, function(err, resp, data) {
+    self.MakeNetworkRequest(reqObj, function(err, resp, data) {
       if (err) return self.Error("Failed to fetch opening times data", err, callback);
       if (!data || !data.length) return self.Error("API didn't return any opening hours", data, callback);
 
@@ -143,18 +132,21 @@ function AltonTowers(config) {
 
         // if hours aren't set yet, just mark as open for 1 minute in the middle of the day
         var hours = {
-          openingTime: "12:00",
-          closingTime: "12:01",
+          openingTime: "12:00pm",
+          closingTime: "12:01pm",
         };
 
         // work out the opening hours from the data string
-        if (regexOpeningTimes.test(period.Open)) {
-          // extract hours
-          var result = regexOpeningTimes.exec(period.Open);
-          if (result) {
-            hours.openingTime = result[1];
-            hours.closingTime = result[2];
-          }
+        var result;
+        // long format, if they have typed "10am - 5:30pm" or the like
+        if (result = /([0-9\:]+[ap]m)\s*\-\s*([0-9\:]+[ap]m)/gi.exec(period.Open)) {
+          hours.openingTime = result[1];
+          hours.closingTime = result[2];
+        }
+        // try shorthand format too, in case someone entered the times in badly
+        else if (result = /([0-9]+)\s*\-\s*([0-9]+)/gi.exec(period.Open)) {
+          hours.openingTime = result[1] + ":00am";
+          hours.closingTime = result[2] + ":00pm";
         }
 
         // iterate through each day for the date period
@@ -189,8 +181,8 @@ function AltonTowers(config) {
           var dayString = currentDay.format("YYYY-MM-DD");
           schedule.push({
             date: currentDay.format(self.dateFormat),
-            openingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].openingTime, "YYYY-MM-DDTHH:MM", self.timezone).format(self.timeFormat),
-            closingTime: moment.tz(dayString + "T" + hoursLookups[year][month][day].closingTime, "YYYY-MM-DDTHH:MM", self.timezone).format(self.timeFormat),
+            openingTime: moment.tz(dayString + " " + hoursLookups[year][month][day].openingTime, "YYYY-MM-DD HH:mma", self.timezone).format(self.timeFormat),
+            closingTime: moment.tz(dayString + " " + hoursLookups[year][month][day].closingTime, "YYYY-MM-DD HH:mma", self.timezone).format(self.timeFormat),
             type: "Operating",
           });
         }
