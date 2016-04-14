@@ -111,58 +111,76 @@ function ChessingtonWorldOfAdventures(config) {
     self.GetSession(function(err, session_token) {
       if (err) return self.Error("Failed to get session token for wait times", err, callback);
 
-      var timeNow = Date.now();
+      // make sure we have the schedule data cached too
+      self.GetScheduleData(function(err, scheduleData) {
+        if (err) return self.Error("Failed to get schedule data for checking ride times", err, callback);
 
-      // get challenge
-      self.MakeNetworkRequest({
-        "url": self.APIBase + "queue-times",
-        "method": "POST",
-        "formData": {
-          "session": session_token,
-          "resort": self.resort_id,
-          "challenge": timeNow,
-          "response": self.ChallengeResponse(timeNow),
-        },
-        "json": true
-      }, function(err, resp, data) {
-        if (err) return self.Error("Error fetching challenge string for wait times", err, callback);
+        var timeNow = Date.now();
 
-        if (!data || !data.challenge) {
-          return self.Error("Error reading challenge string from challenge request", data, callback);
-        }
-
-        var challenge = data.challenge;
-
-        // now make actual wait times request
+        // get challenge
         self.MakeNetworkRequest({
           "url": self.APIBase + "queue-times",
           "method": "POST",
           "formData": {
             "session": session_token,
             "resort": self.resort_id,
-            "challenge": challenge,
-            "response": self.ChallengeResponse(challenge),
+            "challenge": timeNow,
+            "response": self.ChallengeResponse(timeNow),
           },
           "json": true
         }, function(err, resp, data) {
-          if (err) return self.Error("Failed to fetch wait times", err, callback);
+          if (err) return self.Error("Error fetching challenge string for wait times", err, callback);
 
-          if (!data["queue-times"]) return self.Error("No queue times returned", data, callback);
-
-          var rides = [];
-          for (var i = 0, ride; ride = data["queue-times"][i++];) {
-            rides.push({
-              "id": ride.id,
-              // grab ride names from pre-calculated object
-              "name": rideNames[ride.id] || null,
-              "active": ride.is_operational,
-              "waitTime": ride.wait_time || 0,
-              "status": ride.is_operational ? "Operating" : "Closed",
-              "fastPass": false,
-            });
+          if (!data || !data.challenge) {
+            return self.Error("Error reading challenge string from challenge request", data, callback);
           }
 
-          return callback(null, rides);
+          var challenge = data.challenge;
+
+          // now make actual wait times request
+          self.MakeNetworkRequest({
+            "url": self.APIBase + "queue-times",
+            "method": "POST",
+            "formData": {
+              "session": session_token,
+              "resort": self.resort_id,
+              "challenge": challenge,
+              "response": self.ChallengeResponse(challenge),
+            },
+            "json": true
+          }, function(err, resp, data) {
+            if (err) return self.Error("Failed to fetch wait times", err, callback);
+
+            if (!data["queue-times"]) return self.Error("No queue times returned", data, callback);
+
+            var today = moment().tz(self.park_timezone);
+            var todayString = today.format("YYYYMMDD");
+
+            var rides = [];
+            for (var i = 0, ride; ride = data["queue-times"][i++];) {
+              var isActive = ride.is_operational;
+
+              // check the park opening times to override API-returned active status
+              if (scheduleData[todayString]) {
+                // if we're not in the park's opening hours, set active to false
+                if (!today.isBetween(scheduleData[todayString].openingTime, scheduleData[todayString].closingTime)) {
+                  isActive = false;
+                }
+              }
+
+              rides.push({
+                "id": ride.id,
+                // grab ride names from pre-calculated object
+                "name": rideNames[ride.id] || null,
+                "active": isActive,
+                "waitTime": ride.wait_time || 0,
+                "status": isActive ? "Operating" : "Closed",
+                "fastPass": false,
+              });
+            }
+
+            return callback(null, rides);
+          });
         });
       });
     });
@@ -197,8 +215,8 @@ function ChessingtonWorldOfAdventures(config) {
 
           // if we have date meta data, extract opening and closing times
           if (timeStartDate && timeEndDate) {
-            var openingString = moment.tz(el.find("meta[itemprop=\"opens\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone).format(self.timeFormat);
-            var closingString = moment.tz(el.find("meta[itemprop=\"closes\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone).format(self.timeFormat);
+            var openingTime = moment.tz(el.find("meta[itemprop=\"opens\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone);
+            var closingTime = moment.tz(el.find("meta[itemprop=\"closes\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone);
 
             // work out time period to parse from this data
             var rangeStart = moment.tz(timeStartDate, "YYYY-MM-DD", self.park_timezone);
@@ -208,8 +226,8 @@ function ChessingtonWorldOfAdventures(config) {
             for (var date = rangeStart; date.isSameOrBefore(rangeEnd); date.add(1, "day")) {
               scheduleData[date.format("YYYYMMDD")] = {
                 "date": date.format(self.dateFormat),
-                "openingTime": openingString,
-                "closingTime": closingString,
+                "openingTime": openingTime,
+                "closingTime": closingTime,
                 "type": "Operating",
               };
             }
@@ -242,7 +260,12 @@ function ChessingtonWorldOfAdventures(config) {
       for (var day = today; day.isSameOrBefore(endDay); day.add(1, "day")) {
         var dayData = data[day.format("YYYYMMDD")];
         if (dayData) {
-          schedule.push(dayData);
+          schedule.push({
+            "date": dayData.date,
+            "openingTime": dayData.openingTime.format(self.timeFormat),
+            "closingTime": dayData.closingTime.format(self.timeFormat),
+            "type": dayData.type,
+          });
         } else {
           schedule.push({
             "date": day.format(self.dateFormat),
