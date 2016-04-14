@@ -105,6 +105,7 @@ v1.0.0
 * Six Flags Mexico (DisneyAPI.SixFlagsMexico)
 * La Ronde, Montreal (DisneyAPI.SixFlagsLaRondeMontreal)
 * Alton Towers (DisneyAPI.AltonTowers)
+* Chessington World Of Adventures (DisneyAPI.ChessingtonWorldOfAdventures)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -150,6 +151,7 @@ v1.0.0
 |Six Flags Mexico|&#10003;|&#10003;|&#10007;|
 |La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
 |Alton Towers|&#10003;|&#10003;|&#10007;|
+|Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -254,6 +256,7 @@ Prints:
     * Six Flags Mexico => America/Toronto
     * La Ronde, Montreal => America/Toronto
     * Alton Towers => Europe/London
+    * Chessington World Of Adventures => Europe/London
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
