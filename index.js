@@ -6,6 +6,7 @@ var parks = [
   require("./Disney/DisneylandParis"),
   require("./Disney/DisneylandHongKong"),
   require("./Disney/DisneyTokyo"),
+  require("./Disney/ShanghaiDisneyResort"),
   // SeaWorld
   require("./SeaWorld/SeaWorldParks"),
   require("./SeaWorld/BuschGardens"),
