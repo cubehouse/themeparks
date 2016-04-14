@@ -1,5 +1,7 @@
 var DisneyBase = require("./DisneyBase.js");
 
+module.exports = [ShanghaiDisneyResort];
+
 function ShanghaiDisneyResort(config) {
   var self = this;
 
