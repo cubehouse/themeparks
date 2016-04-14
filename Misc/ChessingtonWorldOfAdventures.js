@@ -46,7 +46,7 @@ function ChessingtonWorldOfAdventures(config) {
   this.GetSession = function(callback) {
     // check for cached session
     if (self._session && self._session.expires && self._session.expires > Date.now()) {
-      return callback(self._session.id);
+      return callback(null, self._session.id);
     }
 
     // fetch new session token
