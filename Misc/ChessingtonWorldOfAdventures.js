@@ -6,6 +6,33 @@ var random_useragent = require("random-useragent");
 // cheerio, a jQuery-style HTML parser
 var cheerio = require('cheerio');
 
+// grab JSON park data
+var rideNames = {};
+
+function ParseArea(obj) {
+  if (!obj) return;
+
+  if (obj.areas) {
+    for (var i in obj.areas) {
+      rideNames[obj.areas[i].id] = obj.areas[i].name;
+      ParseArea(obj.areas[i]);
+    }
+  }
+
+  if (obj.items) {
+    for (var i in obj.items) {
+      rideNames[obj.items[i].id] = obj.items[i].name;
+      ParseArea(obj.items[i]);
+    }
+  }
+
+}
+ParseArea(require(__dirname + "/ChessingtonWorldOfAdventures_Data.json").areas);
+
+// edge-case: this ride is actually missing from the app, add it manually
+if (!rideNames[3958]) {
+  rideNames[3958] = "Penguins of Madagascar Mission: Treetop Hoppers";
+}
 
 module.exports = [ChessingtonWorldOfAdventures];
 
@@ -126,8 +153,8 @@ function ChessingtonWorldOfAdventures(config) {
           for (var i = 0, ride; ride = data["queue-times"][i++];) {
             rides.push({
               "id": ride.id,
-              // TODO
-              "name": null,
+              // grab ride names from pre-calculated object
+              "name": rideNames[ride.id] || null,
               "active": ride.is_operational,
               "waitTime": ride.wait_time || 0,
               "status": ride.is_operational ? "Operating" : "Closed",
@@ -227,9 +254,4 @@ function ChessingtonWorldOfAdventures(config) {
       return callback(null, schedule);
     });
   };
-}
-
-if (!module.parent) {
-  var test = new ChessingtonWorldOfAdventures();
-  test.GetScheduleData(console.log);
 }
