@@ -1,17 +1,18 @@
-// schedule: https://www.chessington.com/plan/chessington-opening-times.aspx
-//   schedule data is inside the HTML... euch...
-
 var Park = require("../parkBase");
 
 var moment = require("moment-timezone");
 var crypto = require('crypto');
 var random_useragent = require("random-useragent");
+// cheerio, a jQuery-style HTML parser
+var cheerio = require('cheerio');
 
 
 module.exports = [ChessingtonWorldOfAdventures];
 
 // timeout session after 15 minutes
 var chessingtonSessionLength = 1000 * 60 * 15;
+// timeout for schedule cache (20 hours)
+var chessingtonScheduleDataCache = 1000 * 60 * 60 * 20;
 
 function ChessingtonWorldOfAdventures(config) {
   // keep hold of 'this'
@@ -128,7 +129,7 @@ function ChessingtonWorldOfAdventures(config) {
               // TODO
               "name": null,
               "active": ride.is_operational,
-              "waitTime": ride.wait_time,
+              "waitTime": ride.wait_time || 0,
               "status": ride.is_operational ? "Operating" : "Closed",
               "fastPass": false,
             });
@@ -139,9 +140,96 @@ function ChessingtonWorldOfAdventures(config) {
       });
     });
   };
+
+  self._scheduleCache = null;
+  this.GetScheduleData = function(callback) {
+    // check for cached schedule data
+    if (self._scheduleCache && self._scheduleCache.expires && self._scheduleCache.expires >= Date.now()) {
+      return callback(null, self._scheduleCache.data);
+    }
+
+    self.MakeNetworkRequest({
+      "url": self.CalendarAPI,
+    }, function(err, resp, html) {
+      if (err) return self.Error("Unable to request calendar", err, callback);
+
+      // load up HTML data
+      $ = cheerio.load(html);
+
+      var scheduleData = {};
+
+      // find each div with class "day"
+      var days = $(".day");
+      for (var i = 0, day; day = days[i++];) {
+        var el = $(day);
+        // ignore "inactive" days (days that have already been)
+        if (!el.hasClass("inactive")) {
+          // extract date for this entry
+          var timeStartDate = el.find("meta[itemprop=\"validFrom\"]").attr("content");
+          var timeEndDate = el.find("meta[itemprop=\"validThrough\"]").attr("content");
+
+          // if we have date meta data, extract opening and closing times
+          if (timeStartDate && timeEndDate) {
+            var openingString = moment.tz(el.find("meta[itemprop=\"opens\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone).format(self.timeFormat);
+            var closingString = moment.tz(el.find("meta[itemprop=\"closes\"]").attr("content"), "YYYY-MM-DDTHH:mm:ss", self.park_timezone).format(self.timeFormat);
+
+            // work out time period to parse from this data
+            var rangeStart = moment.tz(timeStartDate, "YYYY-MM-DD", self.park_timezone);
+            var rangeEnd = moment.tz(timeEndDate, "YYYY-MM-DD", self.park_timezone);
+
+            // add day for each date this period covers
+            for (var date = rangeStart; date.isSameOrBefore(rangeEnd); date.add(1, "day")) {
+              scheduleData[date.format("YYYYMMDD")] = {
+                "date": date.format(self.dateFormat),
+                "openingTime": openingString,
+                "closingTime": closingString,
+                "type": "Operating",
+              };
+            }
+          }
+        }
+      }
+
+      // store data in cache
+      self._scheduleCache = {
+        data: scheduleData,
+        expires: Date.now() + chessingtonScheduleDataCache,
+      }
+
+      return callback(null, scheduleData);
+    });
+  };
+
+  // get park opening times
+  this.GetOpeningTimes = function(callback) {
+    // get parsed schedule data
+    self.GetScheduleData(function(err, data) {
+      if (err) return self.Error("Error getting schedule data", err, callback);
+
+      // work out days we want to get data between
+      var today = moment().tz(self.park_timezone);
+      var endDay = moment().add(self.scheduleMaxDates, 'days').tz(self.park_timezone);
+
+      var schedule = [];
+
+      for (var day = today; day.isSameOrBefore(endDay); day.add(1, "day")) {
+        var dayData = data[day.format("YYYYMMDD")];
+        if (dayData) {
+          schedule.push(dayData);
+        } else {
+          schedule.push({
+            "date": day.format(self.dateFormat),
+            "type": "Closed",
+          });
+        }
+      }
+
+      return callback(null, schedule);
+    });
+  };
 }
 
 if (!module.parent) {
   var test = new ChessingtonWorldOfAdventures();
-  test.GetWaitTimes(console.log);
+  test.GetScheduleData(console.log);
 }
