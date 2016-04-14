@@ -26,6 +26,8 @@ v3.0.0
 * 3.0.6 added ride schedules (only for Disney parks) and new status string for each ride wait time entry
 * 3.0.7 fixed Tokyo Disneyland ride active status and added updateTime to Tokyo ride outputs (see #17)
 * 3.0.10 added Alton Towers to the supported parks
+* 3.0.11 added Chessington to the supported parks
+* 3.0.12 added Shanghai Disney Resort to the supported parks
 
 v2.0.0
 
@@ -79,6 +81,7 @@ v1.0.0
 * Disneyland Hong Kong (DisneyAPI.DisneylandHongKong)
 * Disneyland Tokyo (DisneyAPI.DisneylandTokyo)
 * DisneySea Tokyo (DisneyAPI.DisneySeaTokyo)
+* Shanghai Disney Resort (DisneyAPI.ShanghaiDisneyResort)
 * SeaWorld Florida (DisneyAPI.SeaWorldFlorida)
 * SeaWorld San Antonio (DisneyAPI.SeaWorldSanAntonio)
 * SeaWorld San Diego (DisneyAPI.SeaWorldSanDiego)
@@ -125,6 +128,7 @@ v1.0.0
 |Disneyland Hong Kong|&#10003;|&#10003;|&#10003;|
 |Disneyland Tokyo|&#10003;|&#10003;|&#10003;|
 |DisneySea Tokyo|&#10003;|&#10003;|&#10003;|
+|Shanghai Disney Resort|&#10003;|&#10003;|&#10003;|
 |SeaWorld Florida|&#10003;|&#10003;|&#10007;|
 |SeaWorld San Antonio|&#10003;|&#10003;|&#10007;|
 |SeaWorld San Diego|&#10003;|&#10003;|&#10007;|
@@ -230,6 +234,7 @@ Prints:
     * Disneyland Hong Kong => Asia/Hong_Kong
     * Disneyland Tokyo => Asia/Tokyo
     * DisneySea Tokyo => Asia/Tokyo
+    * Shanghai Disney Resort => Asia/Shanghai
     * SeaWorld Florida => America/New_York
     * SeaWorld San Antonio => America/Chicago
     * SeaWorld San Diego => America/Los_Angeles
