@@ -19,6 +19,9 @@ function EuropaPark(config) {
   // Call to parent class "Park" to inherit
   Park.call(self, config);
 
+  // unset default useragent
+  self.useragent = null;
+
   // include our EuropaData asset (cut from PhoneGap app JS)
   self.RideData = require(__dirname + "/EuropaData.json");
 
@@ -43,11 +46,6 @@ function EuropaPark(config) {
         "code": waitTimesAccessCode,
         "v": self.APIVersion
       },
-      /*headers: {
-        "X-Requested-With": "XMLHttpRequest",
-        "Accept-Language": "en-US",
-        "Accept-Encoding": "gzip,deflate",
-      }*/
     }, function(err, resp, body) {
       // check for standard network error for API response error
       if (err) return self.Error("Error fetching wait times", err, callback);
@@ -93,7 +91,9 @@ function EuropaPark(config) {
 
   // generate wait times access code
   this.GenerateWaittimesCodes = function() {
-    var hashString = "Europa-Park" + moment().tz(self.park_timezone).format("YYYYMMDDHHmm") + "SecondTry";
+    var currentParkDate = moment().tz(self.park_timezone).format("YYYYMMDDHHmm");
+    var hashString = "Europa-Park" + currentParkDate + "SecondTry";
+    self.Dbg("Generated Europa-Park hash string", hashString);
     var md5Buffer = crypto.createHash('md5').update(hashString).digest();
     var code = "";
     for (var i = 0; i < md5Buffer.length; i++) {
