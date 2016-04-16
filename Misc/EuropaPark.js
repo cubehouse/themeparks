@@ -14,7 +14,7 @@ function EuropaPark(config) {
 
   // base API URL to use for requests
   self.APIBase = self.APIBase || "https://apps.europapark.de/webservices/";
-  self.APIVersion = self.APIVersion || "4"
+  self.APIVersion = self.APIVersion || "4";
 
   // Call to parent class "Park" to inherit
   Park.call(self, config);
@@ -27,6 +27,9 @@ function EuropaPark(config) {
   for (var i = 0, ride; ride = self.RideData[i++];) {
     self.RideNames[ride.code] = ride.en || ride.de || ride.fr;
   }
+
+  // opening data cache
+  self._scheduleDataCache = null;
 
   // get park wait times
   this.GetWaitTimes = function(callback) {
@@ -100,5 +103,86 @@ function EuropaPark(config) {
     self.Dbg("Generated Europa wait times code", code);
 
     return code;
+  };
+
+  // fetch opening time raw data from API
+  this.GetOpeningData = function(callback) {
+    // check cache for existing data
+    if (self._scheduleDataCache && self._scheduleDataCache.expires && self._scheduleDataCache.expires >= Date.now()) {
+      return callback(null, self._scheduleDataCache.data);
+    }
+
+    // request opening time object
+    self.MakeNetworkRequest({
+      "url": self.APIBase + "opening.php",
+      "json": true,
+    }, function(err, resp, body) {
+      if (err) return self.Error("Error getting opening schedule data", err, callback);
+
+      if (!body || !body.length) return self.Error("No opening data returned by API", body, callback);
+
+      // convert returned object into time parsed data with moment()
+      var scheduleData = [];
+      for (var i = 0, sched; sched = body[i++];) {
+        scheduleData.push({
+          "startDate": moment.tz(sched.from, "DD.MM.YYYY", self.park_timezone),
+          "endDate": moment.tz(sched.till, "DD.MM.YYYY", self.park_timezone),
+          "openingTime": sched.start,
+          "closingTime": sched.end,
+        });
+      }
+
+      // store data in cache
+      self._scheduleDataCache = {
+        "data": scheduleData,
+        // keep cache for 7 days
+        "expires": Date.now() + 1000 * 60 * 60 * 24 * 7,
+      };
+
+      return callback(null, scheduleData);
+    });
+  };
+
+  // get opening time data
+  this.GetOpeningTimes = function(callback) {
+    // get raw schedule data first
+    self.GetOpeningData(function(err, data) {
+      if (err) return self.Error("Failed to get raw opening time data", err, callback);
+
+      var schedule = [];
+
+      // setup loop to get all the desired days
+      var today = moment().tz(self.park_timezone);
+      var endDay = moment().add(self.scheduleMaxDates, 'days').tz(self.park_timezone);
+
+      for (var day = today; day.isSameOrBefore(endDay); day.add(1, "day")) {
+        // check this day against each known opening period for the park
+        var foundValidSeason = false;
+        for (var i = 0, period; period = data[i++];) {
+          if (day.isBetween(period.startDate, period.endDate)) {
+            foundValidSeason = true;
+
+            schedule.push({
+              "date": day.format(self.dateFormat),
+              "openingTime": moment.tz(day.format("YYYY-MM-DD") + period.openingTime, "YYYY-MM-DDHH:mm", self.park_timezone).format(self.timeFormat),
+              "closingTime": moment.tz(day.format("YYYY-MM-DD") + period.closingTime, "YYYY-MM-DDHH:mm", self.park_timezone).format(self.timeFormat),
+              "type": "Operating",
+            });
+
+            break;
+          }
+        }
+
+        if (!foundValidSeason) {
+          // we have no known season for this date, so assume it's closed
+          schedule.push({
+            "date": day.format(self.dateFormat),
+            "type": "Closed",
+          });
+        }
+      }
+
+      return callback(null, schedule);
+    });
   };
 }
