@@ -214,7 +214,6 @@ function SixFlagsBase(config) {
   // make an API request
   this.MakeRequest = function(url, options, callback) {
     var headers = {
-      "User-Agent": self.useragent,
       'Accept-Language': 'en-US',
       'Connection': 'Keep-Alive',
     };

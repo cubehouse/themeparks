@@ -157,6 +157,12 @@ function Park(config) {
   this.MakeNetworkRequest = function(requestObject, callback) {
     self.Dbg("Fetching", requestObject.url);
 
+    // if no useragent has been set, and we have one defined, set it
+    if ((!requestObject.headers || !requestObject.headers['User-Agent']) && self.useragent) {
+      if (!requestObject.headers) requestObject.headers = [];
+      requestObject.headers["User-Agent"] = self.useragent;
+    }
+
     // make network request using request library
     request(requestObject, function(err, resp, body) {
       // debug log response

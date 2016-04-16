@@ -5,6 +5,7 @@ node_js:
   - "0.8"
 before_install:
   - npm -g install npm@'>=2'
-before_script:
-  - npm install -g mocha
-script: mocha
+script: node_modules/.bin/mocha
+cache:
+  directories:
+    - node_modules

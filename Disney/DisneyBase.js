@@ -175,12 +175,25 @@ function DisneyBase(config) {
       if (scheduleCache[self.resort_id]) {
         if (scheduleCache[self.resort_id].expires >= Date.now()) {
           // return cached data!
-          return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
+          if (scheduleCache[self.resort_id].data[self.park_id]) {
+            return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
+          }
         }
       }
 
-      // if we didn't get any data from the cache, return error
-      return self.Error("No schedule data available for this park", scheduleCache, callback);
+      // make forever closed schedule
+      var startDate = moment().tz(self.park_timezone).startOf('day');
+      var endDate = moment().add(self.scheduleMaxDates, "days").tz(self.park_timezone).endOf('day');
+
+      var schedule = [];
+      for (var day = startDate; day.isSameOrBefore(endDate); day.add(1, "day")) {
+        schedule.push({
+          "date": day.format(self.dateFormat),
+          "type": "Closed",
+        });
+      }
+
+      return callback(null, schedule);
     });
   };
 
@@ -369,9 +382,6 @@ function DisneyBase(config) {
       name: "Fetch Disney Access Token",
       url: self._accessTokenURL,
       method: self._accessTokenURLMethod,
-      headers: {
-        "User-Agent": self.useragent,
-      },
       body: self._accessTokenURLBody,
     }, function(err, resp, body) {
       if (err) return self.Error("Failed to get access token", err, callback);
@@ -409,7 +419,6 @@ function DisneyBase(config) {
         'Authorization': "BEARER " + self._accessToken.token,
         'Accept': 'application/json;apiversion=1',
         'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD',
-        "User-Agent": self.useragent,
       };
 
       // add/override headers if passed in

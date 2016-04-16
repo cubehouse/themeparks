@@ -20,7 +20,9 @@ var parkFeaturesListEnd = "<!-- END_PARK_FEATURES_SUPPORTED -->";
 // local path to the README file
 var readmeFilePath = path.join(__dirname, "..", "README.md");
 
-
+// symbols to use for parks supporting/not-supporting features
+var featureAvailable = "&#10003;";
+var featureUnavailable = "&#10007;";
 
 for (var park in DisneyAPI) {
   var parkObj = new DisneyAPI[park]();
@@ -30,7 +32,7 @@ for (var park in DisneyAPI) {
   timezoneMarkdown += "    * " + parkObj.name + " => " + parkObj.park_timezone + "\n";
 
   parkFeaturesMarkdown +=
-    "|" + parkObj.name + "|:thumbsup:|:thumbsup:|" + (parkObj.supports_ride_schedules ? ":thumbsup:" : ":heavy_multiplication_x:") + "|\n";
+    "|" + parkObj.name + "|" + featureAvailable + "|" + featureAvailable + "|" + (parkObj.supports_ride_schedules ? featureAvailable : featureUnavailable) + "|\n";
 }
 
 // read in README.md

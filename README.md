@@ -25,6 +25,9 @@ v3.0.0
 * 3.0.3 added BETA Six Flags support. Some parks do not yet return proper wait time data, see [#12](https://github.com/cubehouse/wdwJS/issues/12)
 * 3.0.6 added ride schedules (only for Disney parks) and new status string for each ride wait time entry
 * 3.0.7 fixed Tokyo Disneyland ride active status and added updateTime to Tokyo ride outputs (see #17)
+* 3.0.10 added Alton Towers to the supported parks
+* 3.0.11 added Chessington to the supported parks
+* 3.0.12 added Shanghai Disney Resort to the supported parks
 
 v2.0.0
 
@@ -78,6 +81,7 @@ v1.0.0
 * Disneyland Hong Kong (DisneyAPI.DisneylandHongKong)
 * Disneyland Tokyo (DisneyAPI.DisneylandTokyo)
 * DisneySea Tokyo (DisneyAPI.DisneySeaTokyo)
+* Shanghai Disney Resort (DisneyAPI.ShanghaiDisneyResort)
 * SeaWorld Florida (DisneyAPI.SeaWorldFlorida)
 * SeaWorld San Antonio (DisneyAPI.SeaWorldSanAntonio)
 * SeaWorld San Diego (DisneyAPI.SeaWorldSanDiego)
@@ -103,6 +107,8 @@ v1.0.0
 * Six Flags White Water, Atlanta (DisneyAPI.SixFlagsWhiteWaterAtlanta)
 * Six Flags Mexico (DisneyAPI.SixFlagsMexico)
 * La Ronde, Montreal (DisneyAPI.SixFlagsLaRondeMontreal)
+* Alton Towers (DisneyAPI.AltonTowers)
+* Chessington World Of Adventures (DisneyAPI.ChessingtonWorldOfAdventures)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -111,42 +117,45 @@ v1.0.0
 <!-- START_PARK_FEATURES_SUPPORTED -->
 |Park|Wait Times|Park Opening Times|Ride Opening Times|
 |:---|:---------|:-----------------|:-----------------|
-|Magic Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
-|Epcot - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
-|Hollywood Studios - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
-|Animal Kingdom - Walt Disney World Florida|:thumbsup:|:thumbsup:|:thumbsup:|
-|Magic Kingdom - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
-|California Adventure - Disneyland California|:thumbsup:|:thumbsup:|:thumbsup:|
-|Magic Kingdom - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
-|Walt Disney Studios - Disneyland Paris|:thumbsup:|:thumbsup:|:thumbsup:|
-|Disneyland Hong Kong|:thumbsup:|:thumbsup:|:thumbsup:|
-|Disneyland Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
-|DisneySea Tokyo|:thumbsup:|:thumbsup:|:thumbsup:|
-|SeaWorld Florida|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|SeaWorld San Antonio|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|SeaWorld San Diego|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Busch Gardens Williamsburg|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Busch Gardens Tampa|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Sesame Place|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Universal Studios Orlando|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Universal Island Of Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Over Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Over Georgia|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags St. Louis|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Great Adventure|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Magic Mountain|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Great America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Fiesta Texas|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Hurricane Harbor, Arlington|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Hurricane Harbor, Los Angeles|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags America|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Discovery Kingdom|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags New England|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Hurricane Harbor, Jackson|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|The Great Escape|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags White Water, Atlanta|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|Six Flags Mexico|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
-|La Ronde, Montreal|:thumbsup:|:thumbsup:|:heavy_multiplication_x:|
+|Magic Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland California|&#10003;|&#10003;|&#10003;|
+|California Adventure - Disneyland California|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Disneyland Hong Kong|&#10003;|&#10003;|&#10003;|
+|Disneyland Tokyo|&#10003;|&#10003;|&#10003;|
+|DisneySea Tokyo|&#10003;|&#10003;|&#10003;|
+|Shanghai Disney Resort|&#10003;|&#10003;|&#10003;|
+|SeaWorld Florida|&#10003;|&#10003;|&#10007;|
+|SeaWorld San Antonio|&#10003;|&#10003;|&#10007;|
+|SeaWorld San Diego|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
+|Sesame Place|&#10003;|&#10003;|&#10007;|
+|Universal Studios Orlando|&#10003;|&#10003;|&#10007;|
+|Universal Island Of Adventure|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Georgia|&#10003;|&#10003;|&#10007;|
+|Six Flags St. Louis|&#10003;|&#10003;|&#10007;|
+|Six Flags Great Adventure|&#10003;|&#10003;|&#10007;|
+|Six Flags Magic Mountain|&#10003;|&#10003;|&#10007;|
+|Six Flags Great America|&#10003;|&#10003;|&#10007;|
+|Six Flags Fiesta Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Arlington|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Los Angeles|&#10003;|&#10003;|&#10007;|
+|Six Flags America|&#10003;|&#10003;|&#10007;|
+|Six Flags Discovery Kingdom|&#10003;|&#10003;|&#10007;|
+|Six Flags New England|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Jackson|&#10003;|&#10003;|&#10007;|
+|The Great Escape|&#10003;|&#10003;|&#10007;|
+|Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
+|Six Flags Mexico|&#10003;|&#10003;|&#10007;|
+|La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
+|Alton Towers|&#10003;|&#10003;|&#10007;|
+|Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -225,6 +234,7 @@ Prints:
     * Disneyland Hong Kong => Asia/Hong_Kong
     * Disneyland Tokyo => Asia/Tokyo
     * DisneySea Tokyo => Asia/Tokyo
+    * Shanghai Disney Resort => Asia/Shanghai
     * SeaWorld Florida => America/New_York
     * SeaWorld San Antonio => America/Chicago
     * SeaWorld San Diego => America/Los_Angeles
@@ -250,6 +260,8 @@ Prints:
     * Six Flags White Water, Atlanta => America/New_York
     * Six Flags Mexico => America/Toronto
     * La Ronde, Montreal => America/Toronto
+    * Alton Towers => Europe/London
+    * Chessington World Of Adventures => Europe/London
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
