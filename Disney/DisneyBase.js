@@ -175,11 +175,13 @@ function DisneyBase(config) {
       if (scheduleCache[self.resort_id]) {
         if (scheduleCache[self.resort_id].expires >= Date.now()) {
           // return cached data!
-          if (scheduleCache[self.resort_id].data[self.park_id]) {
+          if (scheduleCache[self.resort_id].data[self.park_id] && scheduleCache[self.resort_id].data[self.park_id].length) {
             return callback(null, scheduleCache[self.resort_id].data[self.park_id]);
           }
         }
       }
+
+      self.Dbg("Found no schedule data for this park! Assuming park not open yet.");
 
       // make forever closed schedule
       var startDate = moment().tz(self.park_timezone).startOf('day');
