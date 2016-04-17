@@ -15,6 +15,8 @@ var parks = [
   require("./Universal/UniversalStudiosFlorida"),
   // Six Flags
   require("./SixFlags/SixFlagsParks"),
+  // Europa-Park
+  require("./Misc/EuropaPark"),
   // Alton Towers and Chessington
   require("./Misc/AltonTowers"),
   require("./Misc/ChessingtonWorldOfAdventures"),
