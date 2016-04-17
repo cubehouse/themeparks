@@ -16,6 +16,9 @@ function EuropaPark(config) {
   self.APIBase = self.APIBase || "https://apps.europapark.de/webservices/";
   self.APIVersion = self.APIVersion || "4";
 
+  // Europa Park is in Germany
+  self.park_timezone = "Europe/Berlin";
+
   // Call to parent class "Park" to inherit
   Park.call(self, config);
 

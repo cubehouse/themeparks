@@ -28,6 +28,7 @@ v3.0.0
 * 3.0.10 added Alton Towers to the supported parks
 * 3.0.11 added Chessington to the supported parks
 * 3.0.12 added Shanghai Disney Resort to the supported parks
+* 3.0.14 added Europa-Park to the supported parks
 
 v2.0.0
 
@@ -107,6 +108,7 @@ v1.0.0
 * Six Flags White Water, Atlanta (DisneyAPI.SixFlagsWhiteWaterAtlanta)
 * Six Flags Mexico (DisneyAPI.SixFlagsMexico)
 * La Ronde, Montreal (DisneyAPI.SixFlagsLaRondeMontreal)
+* Europa-Park (DisneyAPI.EuropaPark)
 * Alton Towers (DisneyAPI.AltonTowers)
 * Chessington World Of Adventures (DisneyAPI.ChessingtonWorldOfAdventures)
 
@@ -154,6 +156,7 @@ v1.0.0
 |Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
 |Six Flags Mexico|&#10003;|&#10003;|&#10007;|
 |La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
+|Europa-Park|&#10003;|&#10003;|&#10007;|
 |Alton Towers|&#10003;|&#10003;|&#10007;|
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 
@@ -260,6 +263,7 @@ Prints:
     * Six Flags White Water, Atlanta => America/New_York
     * Six Flags Mexico => America/Toronto
     * La Ronde, Montreal => America/Toronto
+    * Europa-Park => Europe/Berlin
     * Alton Towers => Europe/London
     * Chessington World Of Adventures => Europe/London
 
