@@ -40,7 +40,7 @@ function DisneyBase(config) {
   self._accessToken = null;
   // access token URL requester
   self._accessTokenURL = self._accessTokenURL || "https://authorization.go.com/token";
-  self._accessTokenURLBody = self._accessTokenURLBody || "assertion_type=public&client_id=WDPRO-MOBILE.CLIENT-PROD&grant_type=assertion";
+  self._accessTokenURLBody = self._accessTokenURLBody || "grant_type=assertion&assertion_type=public&client_id=WDPRO-MOBILE.MDX.WDW.ANDROID-PROD";
   self._accessTokenURLMethod = self._accessTokenURLMethod || "POST";
 
   // possible strings we expect from Disney API.
@@ -401,9 +401,15 @@ function DisneyBase(config) {
       }
 
       if (data && data.access_token && data.expires_in) {
-        self.Dbg("Fetched access token " + data.access_token);
+        var expire_time = (new Date().getTime()) + (Math.max(data.expires_in - 30, 5) * 1000);
 
-        return callback(null, data.access_token, (new Date().getTime()) + ((data.expires_in - 30) * 1000));
+        if (data.expires_in < 5) {
+          return callback("Expirey time is very low: " + data.expires_in);
+        }
+
+        self.Dbg("Fetched access token ", data.access_token, "Expires in", data.expires_in, "Expires at", expire_time);
+
+        return callback(null, data.access_token, expire_time);
       }
 
       return self.Error("Invalid body response for access token", null, callback);
