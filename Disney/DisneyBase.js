@@ -43,6 +43,8 @@ function DisneyBase(config) {
   self._accessTokenURLBody = self._accessTokenURLBody || "grant_type=assertion&assertion_type=public&client_id=WDPRO-MOBILE.MDX.WDW.ANDROID-PROD";
   self._accessTokenURLMethod = self._accessTokenURLMethod || "POST";
 
+  self._appID = self._appID || "WDW-MDX-ANDROID-3.4.1";
+
   // possible strings we expect from Disney API.
   //  For anything other than these we will return "Closed"
   self._expectedRideStatusStrings = ["Operating", "Closed", "Down"];
@@ -204,7 +206,7 @@ function DisneyBase(config) {
     if (scheduleCache[self.resort_id]) {
       if (scheduleCache[self.resort_id].expires >= Date.now()) {
         // return no error message to confirm cache successful
-        return callback(null);
+        return callback(null, scheduleCache);
       }
     }
 
@@ -223,7 +225,7 @@ function DisneyBase(config) {
         if (err) return callback(err);
 
         // just return no error message, as we have now cached the data
-        return callback(null);
+        return callback(null, scheduleCache);
       });
     });
   };
@@ -246,7 +248,7 @@ function DisneyBase(config) {
   // default schedule data parser
   //  override for any special park implementations
   this.ParseScheduleData = function(data, startDate, endDate, callback) {
-    if (!data.activities) return self.Error("No schedule data returned", data, callback);
+    if (!data.activities) return self.Error("No schedule data returned", JSON.stringify(data, null, 2), callback);
 
     var schedule = {};
 
@@ -297,6 +299,20 @@ function DisneyBase(config) {
 
           // add onto special hours array for this day
           if (times[dayFormatted]) times[dayFormatted].special.push(dayObj);
+        }
+      }
+
+      // populate any missing days with closed data
+      for (var day = startDate.clone(); day.isSameOrBefore(endDate); day.add(1, "day")) {
+        var dayFormatted = day.format(self.dateFormat);
+
+        if (!times[dayFormatted] || !times[dayFormatted].date) {
+          times[dayFormatted] = {
+            date: day.format(self.dateFormat),
+            openingTime: day.startOf().format(self.timeFormat),
+            closingTime: day.endOf().format(self.timeFormat),
+            type: "Closed",
+          };
         }
       }
 
@@ -426,17 +442,14 @@ function DisneyBase(config) {
       var headers = {
         'Authorization': "BEARER " + self._accessToken.token,
         'Accept': 'application/json;apiversion=1',
-        'X-Conversation-Id': '~WDPRO-MOBILE.CLIENT-PROD',
+        'X-Conversation-Id': 'WDPRO-MOBILE.MDX.CLIENT-PROD',
+        'X-App-Id': self._appID,
+        'X-Correlation-ID': Date.now(),
       };
 
       // add/override headers if passed in
       if (options.headers) {
         for (var name in options.headers) headers[name] = options.headers;
-      }
-
-      // add stored load balancer instance if we have one saved
-      if (self._accessToken.correlation) {
-        headers["X-Correlation-Id"] = self._accessToken.correlation;
       }
 
       // setup options for request lib
