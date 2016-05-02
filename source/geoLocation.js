@@ -14,10 +14,10 @@ export default class GeoLocation {
 
   /**
    * Return this GeoLocation safe for printing
-   * @returns {string} String formatted as: ([longitude], [latitude])
+   * @returns {string} String formatted as: ([latitude], [longitude])
    */
   toString() {
-    return "(" + this.longitude + ", " + this.latitude + ")";
+    return "(" + (this.latitude < 0 ? -this.latitude + "°S" : this.latitude + "°N") + ", " + (this.longitude < 0 ? -this.longitude + "°W" : this.longitude + "°E") + ")";
   }
 
   /**
@@ -25,6 +25,6 @@ export default class GeoLocation {
    * @returns {string} URL to this park on Google Maps
    */
   toGoogleMaps() {
-    return "http://maps.google.com/?ll=" + this.longitude + "," + this.latitude;
+    return "http://maps.google.com/?ll=" + this.latitude + "," + this.longitude;
   }
 }
