@@ -241,7 +241,7 @@ function DisneylandTokyoBase(config) {
   this.ParseTokyoTime = function(time) {
     // add the current date in Tokyo to the time to make sure it's in the right day!
     var day = moment().tz(self.park_timezone).format("YYYY-MM-DD ");
-
+        
     return moment.tz(day + time, "YYYY-MM-DD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat);
   };
 
@@ -307,9 +307,182 @@ function DisneylandTokyoBase(config) {
     }, function(err) {
       if (err) return this.Error("Failed to fetch Tokyo calendar", err, callback);
 
-      return callback(null, schedule);
+      // get special time
+      async.map(schedule, self.GetSpecialTimes, function(err, results){
+        if(err) return callback(null, schedule);
+        
+        for(var ri = 0; ri < results.length; ri++) {
+          schedule[ri].special = results[ri];
+        }
+        
+        return callback(null, schedule);
+      });
     });
   };
+
+  this.GetSpecialTimes = function(schedule, callback) {
+    
+    // Character Greeting
+    function GetGreetingTimes(callback) {
+      self.FetchURL("http://info.tokyodisneyresort.jp/s/daily_schedule/greeting/" + self.park_id + "_" + moment(schedule.date, "YYYY/MM/DD").format('YYYYMMDD') + ".html", {
+        headers: {
+          "Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + self.park_id,
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        json: true
+      }, function(err, body, resp) {
+        if (err) return callback(err, []);
+
+        var greeting_datas = [];
+
+        // make a parsed HTML object of our HTML body
+        var $ = cheerio.load(body);
+
+        // search for all greeting time list objects
+        var greetings = $(".schedule .midArw");
+        for (var i = 0, greeting; greeting = greetings[i++];) {
+          var el = $(greeting);
+
+          // extract URL (finding greeting name/id)
+          var greeting_url = el.find("a").attr("href");
+          var greeting_id_match = /greeting\/detail\/str_id\:([a-z0-9_]+)/gi.exec(greeting_url);
+
+          // if we can't get a greeting ID, just continue
+          if (!greeting_id_match) {
+            continue;
+          }
+          
+          // got the greeting ID!
+          var greetingId = greeting_id_match[1];
+
+          // get greeting time!
+          var greetingTime = el.find("a").find(".time");
+          if (!greetingTime || !greetingTime.length) {
+            continue;
+          }
+          
+          // extract time from HTML
+          var greeting_time_text = greetingTime.text();
+          var greeting_time_text_group = greeting_time_text.split("\/");
+          if(!greeting_time_text_group || !greeting_time_text_group.length) {
+            continue;
+          }
+        
+          // get time
+          for(var gi = 0; gi < greeting_time_text_group.length; gi++) {
+            var greeting_time_match = /(\d{1,2}\:\d{2})\-(\d{1,2}\:\d{2})/g.exec(greeting_time_text_group[gi].replace(" ", ""));
+            if(greeting_time_match) {
+              var openingTimeText = schedule.date + " " + (greeting_time_match[1].length == 4 ? '0' : '') + greeting_time_match[1];
+              var closingTimeText = schedule.date + " " + (greeting_time_match[2].length == 4 ? '0' : '') + greeting_time_match[2];
+            
+              greeting_datas.push({
+                id: greetingId,
+                openingTime: moment.tz(openingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                closingTime: moment.tz(closingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                type: "Greeting"
+              });
+            }
+          }
+        }
+        return callback(null, greeting_datas);
+      });
+    }
+    
+    // Parades and Shows
+    function GetShowTimes(callback) {
+      self.FetchURL("http://info.tokyodisneyresort.jp/s/daily_schedule/show/" + self.park_id + "_" + moment(schedule.date, "YYYY/MM/DD").format('YYYYMMDD') + ".html", {
+        headers: {
+          "Referer": "http://www.tokyodisneyresort.jp/en/attraction/lists/park:" + self.park_id,
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        json: true
+      }, function(err, body, resp) {
+        if (err) return callback(err, []);
+
+        var show_datas = [];
+
+        // make a parsed HTML object of our HTML body
+        var $ = cheerio.load(body);
+
+        // search for all show time list objects
+        var shows = $(".schedule .midArw");
+        for (var i = 0, show; show = shows[i++];) {
+          var el = $(show);
+
+          // extract URL (finding show name/id)
+          var show_url = el.find("a").attr("href");
+          var show_id_match = /show\/detail\/str_id\:([a-z0-9_]+)/gi.exec(show_url);
+
+          // if we can't get a show ID, just continue
+          if (!show_id_match) {
+            continue;
+          }
+          
+          // got the show ID!
+          var showId = show_id_match[1];
+
+          // get show time!
+          var showTime = el.find("a").find(".time");
+          if (!showTime || !showTime.length) {
+            continue;
+          }
+          
+          // extract time from HTML
+          var show_time_text = showTime.text();
+          var show_time_text_group = show_time_text.split("\/");
+          if(!show_time_text_group || !show_time_text_group.length) {
+            continue;
+          }
+
+          // get time
+          for(var gi = 0; gi < show_time_text_group.length; gi++) {
+            // has end time
+            var show_time_duration_match = /(\d{1,2}\:\d{2})\-(\d{1,2}\:\d{2})/g.exec(show_time_text_group[gi].replace(" ", ""));
+            if(show_time_duration_match) {
+              var openingTimeText = schedule.date + " " + (show_time_duration_match[1].length == 4 ? '0' : '') + show_time_duration_match[1];
+              var closingTimeText = schedule.date + " " + (show_time_duration_match[2].length == 4 ? '0' : '') + show_time_duration_match[2];
+
+              show_datas.push({
+                id: showId,
+                openingTime: moment.tz(openingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                closingTime: moment.tz(closingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                type: "Show"
+              });
+              
+              continue;
+            }
+            
+            // only start time
+            var show_time_match = /(\d{1,2}\:\d{2})/g.exec(show_time_text_group[gi].replace(" ", ""));
+            if(show_time_match) {
+              var openingTimeText = schedule.date + " " + (show_time_match[1].length == 4 ? '0' : '') + show_time_match[1];
+              
+              show_datas.push({
+                id: showId,
+                openingTime: moment.tz(openingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                closingTime: moment.tz(openingTimeText, "YYYYMMDD HH:mm", self.park_timezone).tz(self.timeFormatTimezone).format(self.timeFormat),
+                type: "Show"
+              });
+              
+              continue;
+            }
+          }
+        }
+        return callback(null, show_datas);
+      });
+    } 
+    
+    async.parallel([
+      GetGreetingTimes,
+      GetShowTimes
+    ],
+    function(err, results) {
+      if(err) return callback(err);
+      
+      return callback(null, results[0].concat(results[1]));
+    });
+  }
+
 
   this.GetGeoCookie = function(callback) {
     // check if we have a valid cookie still
