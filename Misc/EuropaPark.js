@@ -22,8 +22,9 @@ function EuropaPark(config) {
   // Call to parent class "Park" to inherit
   Park.call(self, config);
 
-  // unset default useragent
-  self.useragent = null;
+  // set useragent
+  // If no user agent is set, the webservice will always return "time: 1"
+  self.useragent = self.useragent || "curl/7.38.0"; // TODO : use the useragent of the official app
 
   // include our EuropaData asset (cut from PhoneGap app JS)
   self.RideData = require(__dirname + "/EuropaData.json");
@@ -45,7 +46,7 @@ function EuropaPark(config) {
     // then fetch the wait times using the access code we created
     self.MakeNetworkRequest({
       url: self.APIBase + "waittimes/index.php",
-      data: {
+      qs: {
         "code": waitTimesAccessCode,
         "v": self.APIVersion
       },
@@ -75,17 +76,23 @@ function EuropaPark(config) {
         //   2: water
         //   3: adventure
 
-        rides.push({
+        var ride = {
           id: ridetime.code,
           name: self.RideNames[ridetime.code] || "??",
-          waitTime: parseInt(ridetime.time, 10),
-          // TODO
+          waitTime: 0,
           active: false,
-          // Europa doesn't have a fastpass-like system
+          // Europa park doesn't have a fastpass-like system
           fastPass: false,
-          // TODO
-          status: "Closed",
-        });
+          // TODO : Detect the "Down" status
+          status: "Closed"
+        };
+        
+        if (ridetime.time !== "-") {
+          ride.waitTime = parseInt(ridetime.time, 10); 
+          ride.status = "Operating"; 
+          ride.active = true;        
+        }
+        rides.push(ride);
       }
 
       return callback(null, rides);
