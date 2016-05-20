@@ -104,14 +104,8 @@ function EuropaPark(config) {
     var currentParkDate = moment().tz(self.park_timezone).format("YYYYMMDDHHmm");
     var hashString = "Europa-Park" + currentParkDate + "SecondTry";
     self.Dbg("Generated Europa-Park hash string", hashString);
-    var md5Buffer = crypto.createHash('md5').update(hashString).digest();
-    var code = "";
-    for (var i = 0; i < md5Buffer.length; i++) {
-      code += ((0xF0 & md5Buffer[i]) >> 4).toString(16) + (0xF & md5Buffer[i]).toString(16);
-    }
-
+    var code = crypto.createHash('md5').update(hashString).digest('hex');
     self.Dbg("Generated Europa wait times code", code);
-
     return code;
   };
 
