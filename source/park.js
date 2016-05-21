@@ -5,6 +5,9 @@ import GeoLocation from './geoLocation.js';
 // a basic debug log wrapper
 import DebugLog from './debugPrint.js';
 
+// MomentJS time library
+var moment = require("moment-timezone");
+
 // default settings for parks
 var DefaultSettings = {
   name: "Default Park",
@@ -27,7 +30,10 @@ export default class Park {
     this[s_parkName] = options.name || DefaultSettings.name;
     this[s_parkTimezone] = options.timezone || DefaultSettings.timezone;
     
-    // TODO - validate park's timezone with momentjs.tz
+    // validate park's timezone with momentjs
+    if (!moment.tz.zone(this[s_parkTimezone])) {
+      throw new Error(`Invalid timezone ${this[s_parkTimezone]} passed to park constructor.`);
+    }
 
     // create a geolocation object if we've been passed a longitude and latitude
     if (!this[s_parkGeolocation] && options.latitude && options.longitude) {
