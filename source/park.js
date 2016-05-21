@@ -30,6 +30,8 @@ export default class Park {
     //  finally, fallback on the default settings
     this[s_parkName] = options.name || DefaultSettings.name;
     this[s_parkTimezone] = options.timezone || DefaultSettings.timezone;
+    
+    // TODO - validate park's timezone with momentjs.tz
 
     // create a geolocation object if we've been passed a longitude and latitude
     if (!this[s_parkGeolocation] && options.latitude && options.longitude) {
@@ -38,22 +40,11 @@ export default class Park {
         latitude: options.latitude
       });
     }
-  }
 
-  /**
-   * Get this park's geographical latitude
-   * @returns {number} park's latitiude
-   */
-  get Latitude() {
-    return this[s_parkGeolocation].latitude;
-  }
-
-  /**
-   * Get this park's geographical longitude
-   * @returns {number} park's longitude
-   */
-  get Longitude() {
-    return this[s_parkGeolocation].longitude;
+    // validate our geolocation object has been created
+    if (!this[s_parkGeolocation]) {
+      throw new Error(`No park GeoLocation object created for ${this.name}. Please supply longitude and latitude for this park.`);
+    }
   }
 
   /**
@@ -78,21 +69,6 @@ export default class Park {
    */
   get Timezone() {
     return this[s_parkTimezone];
-  }
-
-  /**
-   * Set this park's geo location, given a longitude and latitude
-   * @param longitude {number} Park's longitude
-   * @param latitude {number} Park's latitude
-   */
-  SetGeoLocation({
-    longitude = 0,
-    latitude = 0
-  }) {
-    this[s_parkGeolocation] = new GeoLocation({
-      longitude: longitude,
-      latitude: latitude
-    });
   }
 
   /**
