@@ -100,6 +100,6 @@ export default class Park {
    * @param objects/strings to print
    */
   Log() {
-    return DebugLog(...arguments);
+    return DebugLog(`${this.constructor.name}:`, ...arguments);
   }
 }
