@@ -1,3 +1,5 @@
+"use strict";
+
 var s_longitude = Symbol();
 var s_latitude = Symbol();
 

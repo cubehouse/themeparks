@@ -15,36 +15,13 @@ export default class WaltDisneyWorldPark extends Park {
     // inherit from base class
     super(options);
   }
-  
+
   async Test() {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        //return reject("FAILED!");
-        resolve("TEstsdgfdsgd");
-      }, 3 * 1000);
+        return reject(new Error("FAILED!"));
+        //resolve("TEstsdgfdsgd");
+      }, 3 * 100);
     });
   }
-}
-
-if (!module || !module.parent) {
-  
-  var p = new WaltDisneyWorldPark();
-
-  p.Log(p.Name);
-  p.Log(p.Location.toString());
-  
-  p.Log("Awaiting...");
-  (async function() {
-    try
-    {
-      var res = await p.Test();
-      p.Log(res);
-    }
-    catch(e)
-    {
-      p.Log("Error: " + e);
-    }
-    
-    p.Log("Continuing!");
-  }());
 }

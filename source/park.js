@@ -1,9 +1,5 @@
 "use strict";
 
-import "babel-polyfill";
-
-// source-map support for ES6 compiled code
-import 'source-map-support/register'
 // our simple geolocation object library
 import GeoLocation from './geoLocation.js';
 // a basic debug log wrapper
