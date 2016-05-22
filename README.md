@@ -285,6 +285,7 @@ v3.0.0
 * 3.0.12 added Shanghai Disney Resort to the supported parks
 * 3.0.14 added Europa-Park to the supported parks
 * 3.1.0 fixed Disney API calls with a new client ID
+* 3.1.1 fixed Europa Park API calls (thanks @jeanmatthieud PR #28)
 
 v2.0.0
 
