@@ -35,7 +35,7 @@ export default class GeoLocation {
 
   /**
    * Return the formatted longitude for this location
-   * @returns {string} Longitude formatted as XX°YY′
+   * @returns {string} Longitude formatted as XX°YY′ZZ″
    */
   get Longitude() {
     if (this[s_longitude] < 0) {
@@ -92,8 +92,13 @@ export default class GeoLocation {
 
 /**
  * Format a decimal number to [Int]\u00B0 [Remainder]\u2032
- * @returns {string} Formatted string representing this number in XX° YY′
+ * @returns {string} Formatted string representing this number in XX° YY′ ZZ″
  * */
 function formatNumberToGeoLocation(number) {
-  return `${Math.floor(number)}\u00B0${(number % 1).toFixed(2)}\u2032`;
+  // work out minutes and seconds for this input
+  var locationMinutes = Math.floor((number % 1) * 60);
+  var locationSeconds = (((number * 60) % 1) * 60).toFixed(2);
+  
+  // return formatted string
+  return `${Math.floor(number)}\u00B0${locationMinutes}\u2032${locationSeconds}\u2033`;
 }
