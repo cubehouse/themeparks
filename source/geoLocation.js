@@ -8,7 +8,7 @@ export default class GeoLocation {
    * GeoLocation class to store theme park locations and supply helper functions
    * @param longitude
    * @param latitude
-   */
+   * */
   constructor({
     longitude = 0,
     latitude = 0
@@ -36,7 +36,7 @@ export default class GeoLocation {
   /**
    * Return the formatted longitude for this location
    * @returns {string} Longitude formatted as XX°YY′ZZ″
-   */
+   * */
   get Longitude() {
     if (this[s_longitude] < 0) {
       return formatNumberToGeoLocation(-this[s_longitude]) + "W";
@@ -48,7 +48,7 @@ export default class GeoLocation {
   /**
    * Return the raw numeric value of this position's longitude
    * @return {number} This location's longitude
-   */
+   * */
   get LongitudeRaw() {
     return this[s_longitude];
   }
@@ -56,7 +56,7 @@ export default class GeoLocation {
   /**
    * Return the formatted latitude for this location
    * @returns {string} Latitude formatted as XX°YY′
-   */
+   * */
   get Latitude() {
     if (this[s_latitude] < 0) {
       return formatNumberToGeoLocation(-this[s_latitude]) + "S";
@@ -68,7 +68,7 @@ export default class GeoLocation {
   /**
    * Return the raw numeric value of this position's latitude
    * @return {number} This location's latitude
-   */
+   * */
   get LatitudeRaw() {
     return this[s_latitude];
   }
@@ -76,7 +76,7 @@ export default class GeoLocation {
   /**
    * Return this GeoLocation safe for printing
    * @returns {string} String formatted as: ([latitude], [longitude])
-   */
+   * */
   toString() {
     return `(${this.Latitude}, ${this.Longitude})`;
   }
@@ -84,7 +84,7 @@ export default class GeoLocation {
   /**
    * Return a URL to this park on Google Maps
    * @returns {string} URL to this park on Google Maps
-   */
+   * */
   toGoogleMaps() {
     return "http://maps.google.com/?ll=" + this.latitude + "," + this.longitude;
   }
