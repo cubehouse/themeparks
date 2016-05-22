@@ -78,6 +78,7 @@ An unofficial API library for accessing Disney, Universal and SeaWorld ride wait
 * Europa-Park (DisneyAPI.EuropaPark)
 * Alton Towers (DisneyAPI.AltonTowers)
 * Chessington World Of Adventures (DisneyAPI.ChessingtonWorldOfAdventures)
+* Parc-Asterix (DisneyAPI.ParcAsterix)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -126,6 +127,7 @@ An unofficial API library for accessing Disney, Universal and SeaWorld ride wait
 |Europa-Park|&#10003;|&#10003;|&#10007;|
 |Alton Towers|&#10003;|&#10003;|&#10007;|
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
+|Parc-Asterix|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -233,6 +235,7 @@ Prints:
     * Europa-Park => Europe/Berlin
     * Alton Towers => Europe/London
     * Chessington World Of Adventures => Europe/London
+    * Parc-Asterix => Europe/Paris
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
@@ -286,6 +289,7 @@ v3.0.0
 * 3.0.14 added Europa-Park to the supported parks
 * 3.1.0 fixed Disney API calls with a new client ID
 * 3.1.1 fixed Europa Park API calls (thanks @jeanmatthieud PR #28)
+* 3.1.2 added Parc Asterix to the API (thanks @jeanmatthieud PR #29)
 
 v2.0.0
 
