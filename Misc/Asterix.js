@@ -70,6 +70,8 @@ function ParcAsterix(config) {
       // RegExp for closing time
       var reClosingTime = /(\d+)h(\d+)/;
 
+      var updateMoment = moment.tz(self.park_timezone);
+
       for (var i = 0, ridetime; ridetime = body.latency.latency[i++];) {
         if (!ridetime.latency) {
           continue;
@@ -99,10 +101,17 @@ function ParcAsterix(config) {
           if (ridetime.closing_time) {
             var resultRe = reClosingTime.exec(ridetime.closing_time);
             if (resultRe) {
+              var closingMoment = moment.tz(self.park_timezone).hours(parseInt(resultRe[1])).minutes(parseInt(resultRe[2])).seconds(0);
               ride.schedule = {
                 openingTime: null,
-                closingTime: moment.tz(self.park_timezone).hours(parseInt(resultRe[1])).minutes(parseInt(resultRe[2])).seconds(0).format(self.timeFormat),
+                closingTime: closingMoment.format(self.timeFormat),
                 type: "Operating"
+              }
+
+              // - Patch status when closing time is known; unfortunatly, the ride status doesn't seems always updated after park closing time.
+              if (updateMoment.isAfter(closingMoment) && ride.active === true) {
+                ride.status = "Closed";
+                ride.active = false;
               }
             }
           }
