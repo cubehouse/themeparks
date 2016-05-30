@@ -88,6 +88,14 @@ export default class Park {
     //  format in preferred order of, manually passed in format, park's default time format, or global default time format
     return moment().tz(this.Timezone).format(timeFormat || this[s_parkTimeFormat] || DefaultTimeFormat);
   }
+  
+  /**
+   * Does this park offer fast-pass services?
+   * @returns {bool} True if park offers fast-pass services
+   */
+  get FastPass() {
+    return false;
+  }
 
   /**
    * Debug print a message

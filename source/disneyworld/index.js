@@ -24,4 +24,9 @@ export default class WaltDisneyWorldPark extends Park {
       }, 3 * 100);
     });
   }
+  
+  // override Fastpass Getter to declare support for FastPass
+  get FastPass() {
+    return true;
+  }
 }
