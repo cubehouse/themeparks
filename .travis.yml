@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - "stable"
+  - "6"
   - "4"
   - "0.8"
 before_install:
   - npm -g install npm@'>=2'
-script: node_modules/.bin/mocha
+script: npm run test
 cache:
   directories:
     - node_modules
