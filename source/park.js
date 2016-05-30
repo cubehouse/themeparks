@@ -42,7 +42,7 @@ export default class Park {
     }
 
     // create a geolocation object if we've been passed a longitude and latitude
-    if (!this[s_parkGeolocation] && options.latitude && options.longitude) {
+    if (!this[s_parkGeolocation] && typeof(options.latitude) == "number" && typeof(options.longitude) == "number") {
       this[s_parkGeolocation] = new GeoLocation({
         longitude: options.longitude,
         latitude: options.latitude
@@ -103,5 +103,16 @@ export default class Park {
    * */
   Log() {
     return DebugLog(`${this.constructor.name}:`, ...arguments);
+  }
+  
+  /**
+   * Setup park for offline tests. Each park should define URLs to intercept to provide offline unit tests.
+   * @returns {bool} Whether offline tests were successfully setup
+   */
+  SetupOfflineTests() {
+    // default park doesn't add any network overrides, implement this per-park
+    
+    // return false by default, to ensure parks actually implement this
+    return false;
   }
 }

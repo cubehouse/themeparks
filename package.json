@@ -29,7 +29,8 @@
     "url": "git://github.com/cubehouse/wdwJS.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha",
+    "pretest": "npm run build",
+    "test": "node_modules/.bin/mocha dist/",
     "prepublish": "node ./Scripts/UpdateREADME.js",
     "build": "node_modules/.bin/babel source --presets es2015,stage-0 --out-dir dist --source-maps"
   },
