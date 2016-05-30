@@ -1,7 +1,7 @@
 {
-  "name": "wdwjs",
-  "description": "Walt Disney World API Framework",
-  "version": "3.1.0",
+  "name": "themeparks",
+  "description": "Get Theme Park Wait Times and Opening Times",
+  "version": "4.0.0",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
