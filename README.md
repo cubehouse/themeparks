@@ -11,122 +11,18 @@ An unofficial API library for accessing ride wait times and park opening times f
 
 # Example Use
 
-    // Setup API
-    var DisneyAPI = require("wdwjs");
-
-    // List theme parks supported by API
-    for (var park in DisneyAPI) {
-      console.log("* " + new DisneyAPI[park]().name + " (DisneyAPI." + park + ")");
-    }
-
-    var MagicKingdom = new DisneyAPI.WaltDisneyWorldMagicKingdom();
-
-    // Get Magic Kingdom wait times
-    MagicKingdom.GetWaitTimes(function(err, data) {
-        if (err) return console.error("Error fetching Magic Kingdom wait times: " + err);
-
-        console.log(JSON.stringify(data, null, 2));
-    });
-
-    // Get Magic Kingdom opening times
-    MagicKingdom.GetOpeningTimes(function(err, data) {
-        if (err) return console.error("Error fetching Magic Kingdom schedule: " + err);
-
-        console.log(JSON.stringify(data, null, 2));
-    });
+    // TODO
 
 ## Parks available
 
 <!-- START_SUPPORTED_PARKS_LIST -->
-* Magic Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldMagicKingdom)
-* Epcot - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldEpcot)
-* Hollywood Studios - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldHollywoodStudios)
-* Animal Kingdom - Walt Disney World Florida (DisneyAPI.WaltDisneyWorldAnimalKingdom)
-* Magic Kingdom - Disneyland California (DisneyAPI.DisneylandMagicKingdom)
-* California Adventure - Disneyland California (DisneyAPI.DisneylandCaliforniaAdventure)
-* Magic Kingdom - Disneyland Paris (DisneyAPI.DisneylandParisMagicKingdom)
-* Walt Disney Studios - Disneyland Paris (DisneyAPI.DisneylandParisWaltDisneyStudios)
-* Disneyland Hong Kong (DisneyAPI.DisneylandHongKong)
-* Disneyland Tokyo (DisneyAPI.DisneylandTokyo)
-* DisneySea Tokyo (DisneyAPI.DisneySeaTokyo)
-* Shanghai Disney Resort (DisneyAPI.ShanghaiDisneyResort)
-* SeaWorld Florida (DisneyAPI.SeaWorldFlorida)
-* SeaWorld San Antonio (DisneyAPI.SeaWorldSanAntonio)
-* SeaWorld San Diego (DisneyAPI.SeaWorldSanDiego)
-* Busch Gardens Williamsburg (DisneyAPI.BuschGardensWilliamsburg)
-* Busch Gardens Tampa (DisneyAPI.BuschGardensTampa)
-* Sesame Place (DisneyAPI.SesamePlace)
-* Universal Studios Orlando (DisneyAPI.UniversalStudiosFlorida)
-* Universal Island Of Adventure (DisneyAPI.UniversalIslandOfAdventure)
-* Six Flags Over Texas (DisneyAPI.SixFlagsOverTexas)
-* Six Flags Over Georgia (DisneyAPI.SixFlagsOverGeorgia)
-* Six Flags St. Louis (DisneyAPI.SixFlagsStLouis)
-* Six Flags Great Adventure (DisneyAPI.SixFlagsGreatAdventure)
-* Six Flags Magic Mountain (DisneyAPI.SixFlagsMagicMountain)
-* Six Flags Great America (DisneyAPI.SixFlagsGreatAmerica)
-* Six Flags Fiesta Texas (DisneyAPI.SixFlagsFiestaTexas)
-* Six Flags Hurricane Harbor, Arlington (DisneyAPI.SixFlagsHurricaneHarborArlington)
-* Six Flags Hurricane Harbor, Los Angeles (DisneyAPI.SixFlagsHurricaneHarborLosAngeles)
-* Six Flags America (DisneyAPI.SixFlagsAmerica)
-* Six Flags Discovery Kingdom (DisneyAPI.SixFlagsDiscoveryKingdom)
-* Six Flags New England (DisneyAPI.SixFlagsNewEngland)
-* Six Flags Hurricane Harbor, Jackson (DisneyAPI.SixFlagsHurricaneHarborJackson)
-* The Great Escape (DisneyAPI.SixFlagsTheGreatEscape)
-* Six Flags White Water, Atlanta (DisneyAPI.SixFlagsWhiteWaterAtlanta)
-* Six Flags Mexico (DisneyAPI.SixFlagsMexico)
-* La Ronde, Montreal (DisneyAPI.SixFlagsLaRondeMontreal)
-* Europa-Park (DisneyAPI.EuropaPark)
-* Alton Towers (DisneyAPI.AltonTowers)
-* Chessington World Of Adventures (DisneyAPI.ChessingtonWorldOfAdventures)
-
+    // TODO
 <!-- END_SUPPORTED_PARKS_LIST -->
 
 # Supported Park Features
 
 <!-- START_PARK_FEATURES_SUPPORTED -->
-|Park|Wait Times|Park Opening Times|Ride Opening Times|
-|:---|:---------|:-----------------|:-----------------|
-|Magic Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
-|Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
-|Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
-|Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
-|Magic Kingdom - Disneyland California|&#10003;|&#10003;|&#10003;|
-|California Adventure - Disneyland California|&#10003;|&#10003;|&#10003;|
-|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
-|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
-|Disneyland Hong Kong|&#10003;|&#10003;|&#10003;|
-|Disneyland Tokyo|&#10003;|&#10003;|&#10003;|
-|DisneySea Tokyo|&#10003;|&#10003;|&#10003;|
-|Shanghai Disney Resort|&#10003;|&#10003;|&#10003;|
-|SeaWorld Florida|&#10003;|&#10003;|&#10007;|
-|SeaWorld San Antonio|&#10003;|&#10003;|&#10007;|
-|SeaWorld San Diego|&#10003;|&#10003;|&#10007;|
-|Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
-|Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
-|Sesame Place|&#10003;|&#10003;|&#10007;|
-|Universal Studios Orlando|&#10003;|&#10003;|&#10007;|
-|Universal Island Of Adventure|&#10003;|&#10003;|&#10007;|
-|Six Flags Over Texas|&#10003;|&#10003;|&#10007;|
-|Six Flags Over Georgia|&#10003;|&#10003;|&#10007;|
-|Six Flags St. Louis|&#10003;|&#10003;|&#10007;|
-|Six Flags Great Adventure|&#10003;|&#10003;|&#10007;|
-|Six Flags Magic Mountain|&#10003;|&#10003;|&#10007;|
-|Six Flags Great America|&#10003;|&#10003;|&#10007;|
-|Six Flags Fiesta Texas|&#10003;|&#10003;|&#10007;|
-|Six Flags Hurricane Harbor, Arlington|&#10003;|&#10003;|&#10007;|
-|Six Flags Hurricane Harbor, Los Angeles|&#10003;|&#10003;|&#10007;|
-|Six Flags America|&#10003;|&#10003;|&#10007;|
-|Six Flags Discovery Kingdom|&#10003;|&#10003;|&#10007;|
-|Six Flags New England|&#10003;|&#10003;|&#10007;|
-|Six Flags Hurricane Harbor, Jackson|&#10003;|&#10003;|&#10007;|
-|The Great Escape|&#10003;|&#10003;|&#10007;|
-|Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
-|Six Flags Mexico|&#10003;|&#10003;|&#10007;|
-|La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
-|Europa-Park|&#10003;|&#10003;|&#10007;|
-|Alton Towers|&#10003;|&#10003;|&#10007;|
-|Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
-
+    // TODO
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
 # Result Objects
@@ -193,47 +89,7 @@ There are some values available on each park object that may be useful.
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
-    * Magic Kingdom - Walt Disney World Florida => America/New_York
-    * Epcot - Walt Disney World Florida => America/New_York
-    * Hollywood Studios - Walt Disney World Florida => America/New_York
-    * Animal Kingdom - Walt Disney World Florida => America/New_York
-    * Magic Kingdom - Disneyland California => America/Los_Angeles
-    * California Adventure - Disneyland California => America/Los_Angeles
-    * Magic Kingdom - Disneyland Paris => Europe/Paris
-    * Walt Disney Studios - Disneyland Paris => Europe/Paris
-    * Disneyland Hong Kong => Asia/Hong_Kong
-    * Disneyland Tokyo => Asia/Tokyo
-    * DisneySea Tokyo => Asia/Tokyo
-    * Shanghai Disney Resort => Asia/Shanghai
-    * SeaWorld Florida => America/New_York
-    * SeaWorld San Antonio => America/Chicago
-    * SeaWorld San Diego => America/Los_Angeles
-    * Busch Gardens Williamsburg => America/New_York
-    * Busch Gardens Tampa => America/New_York
-    * Sesame Place => America/New_York
-    * Universal Studios Orlando => America/New_York
-    * Universal Island Of Adventure => America/New_York
-    * Six Flags Over Texas => America/Chicago
-    * Six Flags Over Georgia => America/New_York
-    * Six Flags St. Louis => America/Chicago
-    * Six Flags Great Adventure => America/New_York
-    * Six Flags Magic Mountain => America/Los_Angeles
-    * Six Flags Great America => America/Chicago
-    * Six Flags Fiesta Texas => America/Chicago
-    * Six Flags Hurricane Harbor, Arlington => America/Chicago
-    * Six Flags Hurricane Harbor, Los Angeles => America/Los_Angeles
-    * Six Flags America => America/New_York
-    * Six Flags Discovery Kingdom => America/Los_Angeles
-    * Six Flags New England => America/New_York
-    * Six Flags Hurricane Harbor, Jackson => America/New_York
-    * The Great Escape => America/New_York
-    * Six Flags White Water, Atlanta => America/New_York
-    * Six Flags Mexico => America/Toronto
-    * La Ronde, Montreal => America/Toronto
-    * Europa-Park => Europe/Berlin
-    * Alton Towers => Europe/London
-    * Chessington World Of Adventures => Europe/London
-
+    // TODO
 <!-- END_PARK_TIMEZONE_LIST -->
 
 # API Options
@@ -319,6 +175,12 @@ Then, for each park, a basic shell object should be implemented that just config
 Throughout the API, please make use of the Dbg function so parks are easy to maintain if APIs change.
 
 Please raise issues and make pull requests with new features :)
+
+## Code Style
+
+    // TODO - define variable naming standard etc.
+
+I recommended the [Visual Studio Code IDE](https://code.visualstudio.com/) with the [Beautify Plugin](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) for consistency. The project is configured to beautify each file on save when this plugin is present.
 
 # People using wdwJS
 
