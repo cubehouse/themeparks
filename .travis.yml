@@ -1,10 +1,7 @@
 language: node_js
 node_js:
-  - "6"
+  - "latest"
   - "4"
-  - "0.8"
-before_install:
-  - npm -g install npm@'>=2'
 script: npm run test
 cache:
   directories:
