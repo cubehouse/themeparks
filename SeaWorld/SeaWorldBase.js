@@ -64,6 +64,8 @@ function SeaworldBase(config) {
     self.GetAPIURL("poi/all", function(err, pois) {
       if (err) return self.Error("Error fetching POI data", err, callback);
 
+      if (!pois) return self.Error("Unable to fetch POI data", pois, callback);
+
       var rides = [];
       for (var i = 0, poi; poi = pois[i++];) {
         // only include POIs of configured types
