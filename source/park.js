@@ -7,6 +7,8 @@ import DebugLog from './debugPrint.js';
 
 // MomentJS time library
 var moment = require("moment-timezone");
+// random useragent generator
+var random_useragent = require("random-useragent");
 
 // default settings for parks
 var DefaultSettings = {
@@ -23,6 +25,7 @@ var s_parkName = Symbol();
 var s_parkTimezone = Symbol();
 var s_parkGeolocation = Symbol();
 var s_parkTimeFormat = Symbol();
+var s_useragent = Symbol();
 
 // base park class, all other parks should inherit from this
 export default class Park {
@@ -35,7 +38,7 @@ export default class Park {
     this[s_parkName] = options.name || DefaultSettings.name;
     this[s_parkTimezone] = options.timezone || DefaultSettings.timezone;
     this[s_parkTimeFormat] = options.timeFormat || DefaultSettings.timeFormat;
-    
+
     // validate park's timezone with momentjs
     if (!moment.tz.zone(this[s_parkTimezone])) {
       throw new Error(`Invalid timezone ${this[s_parkTimezone]} passed to park constructor.`);
@@ -53,6 +56,11 @@ export default class Park {
     if (!this[s_parkGeolocation]) {
       throw new Error(`No park GeoLocation object created for ${this.name}. Please supply longitude and latitude for this park.`);
     }
+
+    // set useragent, or if no useragent has been set, create a random Android one by default
+    this.UserAgent = options.useragent || function(ua) {
+      return (ua.osName == "Android");
+    };
   }
 
   /**
@@ -72,23 +80,54 @@ export default class Park {
   }
 
   /**
+   * Get this park's useragent string for making network requests
+   * This is usually randomly generated on object construction
+   * @returns {string} Current useragent string for making network requets 
+   */
+  get UserAgent() {
+    return this[s_useragent];
+  }
+
+  /**
+   * Set this park's useragent
+   * @param {string|function} useragent set user agent to a defined string or use a generator function (see random-useragent library)
+   */
+  set UserAgent(useragent = null) {
+    if (!useragent) throw new Error("No configuration passed to UserAgent setter");
+
+    if (typeof(useragent) == "function") {
+      // generate a useragent using a generator function
+      this[s_useragent] = random_useragent.getRandom(useragent);
+    } else if (typeof(useragent) == "string") {
+      // set useragent using supplied static string
+      this[s_useragent] = useragent;
+    } else {
+      throw new Error("Must define either static user agent string or a generator function");
+    }
+
+    this.Log("Set useragent to " + this.UserAgent);
+  }
+
+  /**
    * Get this park's Timezone
    * @returns {string} Park's timezone in TZ format (https://en.wikipedia.org/wiki/Tz_database)
    * */
   get Timezone() {
     return this[s_parkTimezone];
   }
-  
+
   /**
    * Get park's current time
    * @returns {string} Time as formatted by park's timeformat, or the default timeformat if set to null
    * */
-  TimeNow({timeFormat = null} = {}) {
+  TimeNow({
+    timeFormat = null
+  } = {}) {
     // take time right now, convert now into park's timezone and format it
     //  format in preferred order of, manually passed in format, park's default time format, or global default time format
     return moment().tz(this.Timezone).format(timeFormat || this[s_parkTimeFormat] || DefaultTimeFormat);
   }
-  
+
   /**
    * Does this park offer fast-pass services?
    * @returns {bool} True if park offers fast-pass services
@@ -104,14 +143,14 @@ export default class Park {
   Log() {
     return DebugLog(`${this.constructor.name}:`, ...arguments);
   }
-  
+
   /**
    * Setup park for offline tests. Each park should define URLs to intercept to provide offline unit tests.
    * @returns {bool} Whether offline tests were successfully setup
    */
   SetupOfflineTests() {
     // default park doesn't add any network overrides, implement this per-park
-    
+
     // return false by default, to ensure parks actually implement this
     return false;
   }

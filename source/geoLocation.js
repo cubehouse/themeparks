@@ -17,10 +17,10 @@ export default class GeoLocation {
     this[s_latitude] = latitude;
 
     // validate longitude and latitude
-    if (this[s_longitude] === undefined || typeof (this[s_longitude]) != "number") {
+    if (this[s_longitude] === undefined || typeof(this[s_longitude]) != "number") {
       throw new Error("Invalid/Undefined value for longitude: " + this[s_longitude]);
     }
-    if (this[s_latitude] === undefined || typeof (this[s_latitude]) != "number") {
+    if (this[s_latitude] === undefined || typeof(this[s_latitude]) != "number") {
       throw new Error("Invalid/Undefined value for latitude: " + this[s_latitude]);
     }
 
@@ -44,7 +44,7 @@ export default class GeoLocation {
       return formatNumberToGeoLocation(this[s_longitude]) + "E";
     }
   }
-  
+
   /**
    * Return the raw numeric value of this position's longitude
    * @return {number} This location's longitude
@@ -64,7 +64,7 @@ export default class GeoLocation {
       return formatNumberToGeoLocation(this[s_latitude]) + "N";
     }
   }
-  
+
   /**
    * Return the raw numeric value of this position's latitude
    * @return {number} This location's latitude
@@ -98,7 +98,7 @@ function formatNumberToGeoLocation(number) {
   // work out minutes and seconds for this input
   var locationMinutes = Math.floor((number % 1) * 60);
   var locationSeconds = (((number * 60) % 1) * 60).toFixed(2);
-  
+
   // return formatted string
   return `${Math.floor(number)}\u00B0${locationMinutes}\u2032${locationSeconds}\u2033`;
 }

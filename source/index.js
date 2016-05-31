@@ -6,25 +6,9 @@ import "babel-polyfill";
 import 'source-map-support/register'
 
 // boot up test file and run some basic functions on it for testing
-import WaltDisneyWorldPark from "./disneyworld/";
+import WaltDisneyWorldPark from "./disneyworld/waltdisneyworld.js";
 var p = new WaltDisneyWorldPark();
 
-p.Log(p.Name);
-p.Log(p.Location.toString());
-
-p.Log("Awaiting...");
-(async function () {
-    try {
-        try {
-            var res = await p.Test();
-            p.Log(res);
-        } catch (e) {
-            p.Log(e);
-            throw e;
-        }
-
-        p.Log("Continuing!");
-    } catch (err) {
-        p.Log(err);
-    }
-} ());
+p.Log("Name:", p.Name);
+p.Log("Location:", p.Location.toString());
+p.Log("Supports FastPass?:", p.FastPass);
