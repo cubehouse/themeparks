@@ -472,7 +472,7 @@ function DisneyBase(config) {
       self.MakeNetworkRequest(requestBody, function(err, resp, body) {
         // if we get an instance ID from the load balancer, store it
         //  (even if we get an error)
-        if (resp && resp.headers && resp.headers["x-correlation-id"]) {
+        if (resp && resp.headers && resp.headers["x-correlation-id"] && self._accessToken) {
           self._accessToken.correlation = resp.headers["x-correlation-id"];
         }
 
