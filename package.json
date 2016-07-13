@@ -1,7 +1,7 @@
 {
   "name": "wdwjs",
   "description": "Walt Disney World API Framework",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
@@ -11,13 +11,12 @@
     "async": "^1.5.0",
     "cheerio": "^0.20.0",
     "cookie": "^0.3.1",
-    "jailed": "^0.2.0",
-    "mocha": "^2.5.3",
-    "moment": "^2.13.0",
+    "jailed": "^0.3.1",
+    "moment": "^2.14.1",
     "moment-range": "^2.1.0",
     "moment-timezone": "^0.5.4",
     "random-useragent": "^0.3.0",
-    "request": "^2.72.0"
+    "request": "^2.73.0"
   },
   "engines": {
     "npm": ">=2",
