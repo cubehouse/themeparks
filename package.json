@@ -35,6 +35,6 @@
   "tonicExampleFilename": "example.js",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "mocha": "^3.0.0-1"
   }
 }
