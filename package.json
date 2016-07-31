@@ -38,7 +38,6 @@
   "devDependencies": {
     "ink-docstrap": "^1.2.1",
     "jsdoc": "^3.4.0",
-    "mocha": "^2.3.4",
-    "nock": "^8.0.0"
+    "mocha": "^2.3.4"
   }
 }
