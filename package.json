@@ -29,12 +29,15 @@
     "url": "git://github.com/cubehouse/wdwJS.git"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha lib/"
+    "test": "node_modules/.bin/mocha lib/",
+    "docs": "node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r"
   },
   "main": "./lib/index.js",
   "readmeFilename": "README.md",
   "license": "MIT",
   "devDependencies": {
+    "ink-docstrap": "^1.2.1",
+    "jsdoc": "^3.4.0",
     "mocha": "^2.3.4",
     "nock": "^8.0.0"
   }
