@@ -30,6 +30,7 @@
   },
   "scripts": {
     "test": "node_modules/.bin/mocha lib/",
+    "travislocal": "node_modules/.bin/trevor",
     "docs": "node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r"
   },
   "main": "./lib/index.js",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "ink-docstrap": "^1.2.1",
     "jsdoc": "^3.4.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "trevor": "^1.1.4"
   }
 }
