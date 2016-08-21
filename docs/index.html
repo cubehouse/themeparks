@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ThemeParks Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.Paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">ThemeParks</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="GeoLocation.html">GeoLocation</a></li><li><a href="Park.html">Park</a></li><li><a href="Ride.html">Ride</a></li><li><a href="ShanghaiDisneyResortMagicKingdom.html">ShanghaiDisneyResortMagicKingdom</a></li><li><a href="WaltDisneyWorldAnimalKingdom.html">WaltDisneyWorldAnimalKingdom</a></li><li><a href="WaltDisneyWorldEpcot.html">WaltDisneyWorldEpcot</a></li><li><a href="WaltDisneyWorldHollywoodStudios.html">WaltDisneyWorldHollywoodStudios</a></li><li><a href="WaltDisneyWorldMagicKingdom.html">WaltDisneyWorldMagicKingdom</a></li><li><a href="WaltDisneyWorldPark.html">WaltDisneyWorldPark</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html">Global</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h1>themeparks</h1><p>An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.</p>
+<p><a href="https://travis-ci.org/cubehouse/wdwJS"><img src="https://travis-ci.org/cubehouse/wdwJS.svg?branch=master" alt="Build Status"></a> <a href="https://badge.fury.io/js/wdwjs"><img src="https://badge.fury.io/js/wdwjs.svg" alt="npm version"></a> <a href="https://www.versioneye.com/nodejs/wdwjs"><img src="https://www.versioneye.com/user/projects/55858111363861001500042c/badge.svg?style=flat" alt="Dependency Status"></a>
+<a href="https://www.npmjs.com/package/wdwjs/"><img src="https://nodei.co/npm-dl/wdwjs.png" alt="npm history"></a></p>
+<h1>Install</h1><pre class="prettyprint source"><code>npm install themeparks --save</code></pre><h1>Example Use</h1><pre class="prettyprint source"><code>// TODO</code></pre><h2>Parks available</h2><!-- START_SUPPORTED_PARKS_LIST -->
+<pre class="prettyprint source"><code>// TODO</code></pre><!-- END_SUPPORTED_PARKS_LIST -->
+<h1>Supported Park Features</h1><!-- START_PARK_FEATURES_SUPPORTED -->
+<pre class="prettyprint source"><code>// TODO</code></pre><!-- END_PARK_FEATURES_SUPPORTED -->
+<h1>Result Objects</h1><h2>Ride Wait Times</h2><pre class="prettyprint source"><code>[
+    {
+        id: (string or number: uniquely identifying a ride),
+        name: (string: ride name),
+        waitTime: (number: current wait time in minutes),
+        active: (bool: is the ride currently active?),
+        fastPass: (bool: is fastpass available for this ride?),
+        status: (string: will either be &quot;Operating&quot;, &quot;Closed&quot;, or &quot;Down&quot;),
+        schedule: { **schedule will only be present if park.supports_ride_schedules is true**
+          openingTime: (timeFormat timestamp: opening time of ride),
+          closingTime: (timeFormat timestamp: closing time of ride),
+          type: (string: &quot;Operating&quot; or &quot;Closed&quot;),
+          special: [ (array of &quot;special&quot; ride times, usually Disney Extra Magic Hours or similar at other parks - field may be null)
+            openingTime: (timeFormat timestamp: opening time for ride),
+            closingTime: (timeFormat timestamp: closing time for ride),
+            type: (string: type of schedule eg. &quot;Extra Magic Hours&quot;, but can be &quot;Event&quot; or &quot;Special Ticketed Event&quot; or other)
+          ]
+        },
+    },
+    ...
+]</code></pre><h2>Schedules</h2><pre class="prettyprint source"><code>[
+    {
+        date: (dateFormat timestamp: day this schedule applies),
+        openingTime: (timeFormat timestamp: opening time for requested park - can be null if park is closed),
+        closingTime: (timeFormat timestamp: closing time for requested park - can be null if park is closed),
+        type: (string: &quot;Operating&quot; or &quot;Closed&quot;),
+        special: [ (array of &quot;special&quot; times for this day, usually Disney Extra Magic Hours or similar at other parks - field may be null)
+          openingTime: (timeFormat timestamp: opening time for requested park),
+          closingTime: (timeFormat timestamp: closing time for requested park),
+          type: (string: type of schedule eg. &quot;Extra Magic Hours&quot;, but can be &quot;Event&quot; or &quot;Special Ticketed Event&quot; or other)
+        ],
+    },
+    ...
+]</code></pre><h1>Park Object values</h1><p>There are some values available on each park object that may be useful.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">Name of the park</td>
+</tr>
+<tr>
+<td style="text-align:left">park_timezone</td>
+<td style="text-align:left">The park's local timezone</td>
+</tr>
+<tr>
+<td style="text-align:left">supports_ride_schedules</td>
+<td style="text-align:left">Does this park return schedules for rides?</td>
+</tr>
+</tbody>
+</table>
+<pre class="prettyprint source"><code>var DisneyAPI = require(&quot;wdwjs&quot;);
+
+// print each park's timezone
+for (var park in DisneyAPI) {
+  var parkObj = new DisneyAPI[park]();
+  console.log(&quot;* &quot; + parkObj.name + &quot; => &quot; + parkObj.park_timezone);
+}</code></pre><p>Prints:</p>
+<!-- START_PARK_TIMEZONE_LIST -->
+<pre class="prettyprint source"><code>// TODO</code></pre><!-- END_PARK_TIMEZONE_LIST -->
+<h1>API Options</h1><p>Each park can take a series of options to configure it's behaviour.</p>
+<p>Default options:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">debug</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Turn on debugging (can also be enabled by setting environment variable DEBUG)</td>
+</tr>
+<tr>
+<td style="text-align:left">timeFormat</td>
+<td style="text-align:left">YYYY-MM-DDTHH:mm:ssZ</td>
+<td style="text-align:left">Format to return times in (see http://momentjs.com/docs/#/displaying/format/)</td>
+</tr>
+<tr>
+<td style="text-align:left">dateFormat</td>
+<td style="text-align:left">YYYY-MM-DD</td>
+<td style="text-align:left">Format to return dates in (see http://momentjs.com/docs/#/displaying/format/)</td>
+</tr>
+<tr>
+<td style="text-align:left">timeFormatTimezone</td>
+<td style="text-align:left"><em>Park's local timezone</em></td>
+<td style="text-align:left">Control what timezone times will be returned in. Defaults to park's local timezone (see TZ values https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)</td>
+</tr>
+<tr>
+<td style="text-align:left">scheduleMaxDates</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">Maximum number of days to return opening times for (some parks may return less than requested days, but never more)</td>
+</tr>
+<tr>
+<td style="text-align:left">useragent</td>
+<td style="text-align:left"><em>Park Defined</em></td>
+<td style="text-align:left">User Agent string to use for making API requests (overrides per-park useragent settings)</td>
+</tr>
+</tbody>
+</table>
+<pre class="prettyprint source"><code>var DisneyAPI = require(&quot;wdwjs&quot;);
+
+var MagicKingdom = new DisneyAPI.WaltDisneyWorldMagicKingdom({
+  debug: true,
+  timeFormat: &quot;YYYY-MM-DDTHH:mm:ssZ&quot;,
+  dateFormat: &quot;YYYY-MM-DD&quot;,
+  timeFormatTimezone: &quot;Europe/London&quot;,
+  scheduleMaxDates: 7,
+});
+
+// You can also configure these settings after initialisation with Config(key, value)
+MagicKingdom.Config(&quot;debug&quot;, false);</code></pre><h1>Change Log</h1><p><a href="CHANGELOG.md">View themeparks Change Log</a></p>
+<h1>Development</h1><h2>Building</h2><p>This project is using ES6 features, which can't be used by legacy version of NodeJS. We're also using &quot;import&quot;, which is not available in NodeJS.</p>
+<p>So, the project needs to be built into regular JavaScript to work. This is done by running <code>npm run build</code></p>
+<p>This will compile everything in source/ into dist/.</p>
+<p>Building will also create sourcemaps, so any stacktraces will point to the original code in the source/ directory.</p>
+<h2>Running Tests</h2><p>wdwJS supports mocha unit tests. Install mocha with npm install -g mocha</p>
+<p>Run the following to test all the supported parks</p>
+<pre class="prettyprint source"><code>mocha</code></pre><p>You can also test an individual park using the PARK_ID environment variable, for example:</p>
+<pre class="prettyprint source"><code>PARKID=UniversalStudiosFlorida mocha</code></pre><p>Each pull request and commit will run these tests automatically on travis-ci.org. For test history, see https://travis-ci.org/cubehouse/wdwJS</p>
+<h2>Debug Mode</h2><p>You can enable debug mode for any individual park by passing debug: true into it's configuration object (see &quot;API Options&quot; above).</p>
+<p>You can also set the environment variable &quot;DEBUG&quot; to enable debug logs for all parks.</p>
+<p>wdwJS also supports the standard NODE_DEBUG environment variable.</p>
+<pre class="prettyprint source"><code>NODE_DEBUG=wdwjs mocha</code></pre><p>Environment variables can be combined:</p>
+<pre class="prettyprint source"><code>NODE_DEBUG=wdwjs PARKID=UniversalStudiosFlorida mocha</code></pre><h2>Contributing</h2><p>Each park inherits it's core logic from parkBase.js.</p>
+<p>For each set of parks, a base object should be made with all the core logic for that API/park group.</p>
+<p>Then, for each park, a basic shell object should be implemented that just configures the park's base object (and overrides anything in unusual setups).</p>
+<p>Throughout the API, please make use of the Dbg function so parks are easy to maintain if APIs change.</p>
+<p>Please raise issues and make pull requests with new features :)</p>
+<h2>Code Style</h2><pre class="prettyprint source"><code>// TODO - define variable naming standard etc.</code></pre><p>I recommended the <a href="https://code.visualstudio.com/">Visual Studio Code IDE</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify">Beautify Plugin</a> for consistency. The project is configured to beautify each file on save when this plugin is present.</p>
+<h1>People using wdwJS</h1><p>If you're using wdwJS for a project, please let me know! I'd love to see what people are doing!</p>
+<h2>Pebble Apps</h2><ul>
+<li><a href="https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d">Disneyland California Wait Times</a></li>
+<li><a href="https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd">Disneyland Paris Wait Times</a></li>
+<li><a href="https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb">Disney World Wait Times</a></li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	
+		on 2016-08-21T14:09:10+01:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
+
+</body>
+</html>
