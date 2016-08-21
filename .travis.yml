@@ -3,9 +3,6 @@ node_js:
   - "stable"
   - "6"
   - "5"
-  - "4"
-  - "0.12"
-script: node_modules/.bin/mocha dist/
 cache:
   directories:
     - node_modules
