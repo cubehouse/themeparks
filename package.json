@@ -9,7 +9,6 @@
   "dependencies": {
     "astify": "0.0.4",
     "async": "^1.5.0",
-    "asyncawait": "^1.0.3",
     "cache-manager": "^2.1.2",
     "cheerio": "^0.20.0",
     "cookie": "^0.2.3",
@@ -34,7 +33,8 @@
     "test": "npm run build && node_modules/.bin/mocha dist/",
     "travislocal": "node_modules/.bin/trevor",
     "docs": "node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
-    "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps"
+    "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps",
+    "prepublish": "npm run build"
   },
   "main": "./dist/index.js",
   "readmeFilename": "README.md",

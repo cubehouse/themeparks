@@ -5,4 +5,4 @@ node_js:
   - "5"
   - "4"
   - "0.12"
-script: npm run test
+script: node_modules/.bin/mocha dist/
