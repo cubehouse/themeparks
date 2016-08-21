@@ -23,7 +23,7 @@
   },
   "engines": {
     "npm": ">=2",
-    "node": ">=6"
+    "node": ">=0.12"
   },
   "repository": {
     "type": "git",
