@@ -6,6 +6,3 @@ node_js:
   - "4"
   - "0.12"
 script: npm run test
-cache:
-  directories:
-    - node_modules
