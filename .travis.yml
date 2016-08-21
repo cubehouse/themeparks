@@ -3,6 +3,8 @@ node_js:
   - "stable"
   - "6"
   - "5"
+  - "4"
+  - "0.8"
 script: npm run test
 cache:
   directories:
