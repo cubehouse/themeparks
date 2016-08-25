@@ -1,6 +1,5 @@
 var Park = require("../parkBase");
 
-var request = require("request");
 var moment = require("moment-timezone");
 var crypto = require("crypto");
 
@@ -42,6 +41,7 @@ function EuropaPark(config) {
       json: true
     }, function(err, resp, body) {
       if (err) return self.Error("Error getting ride data", err, callback);
+      if (resp.statusCode !== 200) return self.Error("Error getting ride data", "Status code: " + resp.statusCode, callback);
 
       self.RideNames = {};
       for(var i=0, poi; poi=body[i++];) {
@@ -72,6 +72,7 @@ function EuropaPark(config) {
       }, function(err, resp, body) {
         // check for standard network error for API response error
         if (err) return self.Error("Error fetching wait times", err, callback);
+        if (resp.statusCode !== 200) return self.Error("Error fetching wait times", "Status code: " + resp.statusCode, callback);
         if (!body || body.length == 0) return self.Error("No data returned from Europa API", body, callback);
 
         // build ride object
@@ -145,7 +146,7 @@ function EuropaPark(config) {
       "json": true,
     }, function(err, resp, body) {
       if (err) return self.Error("Error getting opening schedule data", err, callback);
-
+      if (resp.statusCode !== 200) return self.Error("Error getting opening schedule data", "Status code: " + resp.statusCode, callback);
       if (!body || !body.length) return self.Error("No opening data returned by API", body, callback);
 
       // convert returned object into time parsed data with moment()
