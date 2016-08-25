@@ -95,12 +95,12 @@ function EuropaPark(config) {
 
           // lowest wait time is 1 minute (according to app)
           var waittime = ridetime.time > 0 ? ridetime.time : 0;
-          var active = (ridetime.status == 0 || ridetime.status == 1);
+          var active = (ridetime.status === 0 || ridetime.status === 1);
           // copy how the app reacts to >90 minute waits
-          if (ridetime.status == 1) waittime = 91;
+          if (ridetime.status === 1) waittime = 91;
           // is status is open, and ride has zero wait time, it is marked inactive
           //  (copying how the app behaves, rides have minimum of 1 minute wait)
-          if (ridetime.status == 0 && ridetime.waittime == 0) {
+          if (ridetime.status === 0 && ridetime.waittime == 0) {
             active = false;
           }
 
@@ -111,7 +111,7 @@ function EuropaPark(config) {
             active: active,
             // Europa park doesn't have a fastpass-like system
             fastPass: false,
-            status: active ? "Operating" : "Closed"
+            status: active ? "Operating" : (ridetime.status === 3) ? "Down" : "Closed"
           };
 
           rides.push(ride);
