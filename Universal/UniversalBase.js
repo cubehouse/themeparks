@@ -43,6 +43,7 @@ function UniversalBase(config) {
     self.GetPOIData(function(err) {
       if (err) return self.Error("Error getting POI data", err, callback);
       if (typeof self.poi_data === 'undefined') return self.Error("Error getting Universal POI Data", null, callback);
+      if (typeof self.poi_data.Rides == "undefined") return self.Error("No Rides data in pot_data", self.poi_data, callback);
 
       var rides = [];
 

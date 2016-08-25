@@ -1,22 +1,22 @@
 {
   "name": "wdwjs",
   "description": "Walt Disney World API Framework",
-  "version": "3.1.1",
+  "version": "3.1.7",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
   },
   "dependencies": {
     "astify": "0.0.4",
-    "async": "^1.5.0",
+    "async": "^2.0.0",
     "cheerio": "^0.20.0",
-    "cookie": "^0.2.3",
-    "jailed": "^0.2.0",
-    "moment": "^2.11.1",
+    "cookie": "^0.3.1",
+    "jailed": "^0.3.1",
+    "moment": "^2.14.1",
     "moment-range": "^2.1.0",
-    "moment-timezone": "^0.5.0",
+    "moment-timezone": "^0.5.4",
     "random-useragent": "^0.3.0",
-    "request": "2.x.x"
+    "request": "^2.73.0"
   },
   "engines": {
     "npm": ">=2",
@@ -35,6 +35,6 @@
   "tonicExampleFilename": "example.js",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^2.3.4"
+    "mocha": "^3.0.0-1"
   }
 }

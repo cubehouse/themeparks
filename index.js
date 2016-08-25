@@ -20,6 +20,8 @@ var parks = [
   // Alton Towers and Chessington
   require("./Misc/AltonTowers"),
   require("./Misc/ChessingtonWorldOfAdventures"),
+  // Asterix
+  require("./Misc/Asterix"),
 ];
 
 // export all parks
