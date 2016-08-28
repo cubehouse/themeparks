@@ -1,6 +1,5 @@
 var Park = require("../parkBase");
 
-var request = require("request");
 var moment = require("moment-timezone");
 var crypto = require("crypto");
 
@@ -42,6 +41,7 @@ function EuropaPark(config) {
       json: true
     }, function(err, resp, body) {
       if (err) return self.Error("Error getting ride data", err, callback);
+      if (resp.statusCode !== 200) return self.Error("Error getting ride data", "Status code: " + resp.statusCode, callback);
 
       self.RideNames = {};
       for(var i=0, poi; poi=body[i++];) {
@@ -72,6 +72,7 @@ function EuropaPark(config) {
       }, function(err, resp, body) {
         // check for standard network error for API response error
         if (err) return self.Error("Error fetching wait times", err, callback);
+        if (resp.statusCode !== 200) return self.Error("Error fetching wait times", "Status code: " + resp.statusCode, callback);
         if (!body || body.length == 0) return self.Error("No data returned from Europa API", body, callback);
 
         // build ride object
@@ -94,12 +95,12 @@ function EuropaPark(config) {
 
           // lowest wait time is 1 minute (according to app)
           var waittime = ridetime.time > 0 ? ridetime.time : 0;
-          var active = (ridetime.status == 0 || ridetime.status == 1);
+          var active = (ridetime.status === 0 || ridetime.status === 1);
           // copy how the app reacts to >90 minute waits
-          if (ridetime.status == 1) waittime = 91;
+          if (ridetime.status === 1) waittime = 91;
           // is status is open, and ride has zero wait time, it is marked inactive
           //  (copying how the app behaves, rides have minimum of 1 minute wait)
-          if (ridetime.status == 0 && ridetime.waittime == 0) {
+          if (ridetime.status === 0 && ridetime.waittime == 0) {
             active = false;
           }
 
@@ -110,7 +111,7 @@ function EuropaPark(config) {
             active: active,
             // Europa park doesn't have a fastpass-like system
             fastPass: false,
-            status: active ? "Operating" : "Closed"
+            status: active ? "Operating" : (ridetime.status === 3) ? "Down" : "Closed"
           };
 
           rides.push(ride);
@@ -145,7 +146,7 @@ function EuropaPark(config) {
       "json": true,
     }, function(err, resp, body) {
       if (err) return self.Error("Error getting opening schedule data", err, callback);
-
+      if (resp.statusCode !== 200) return self.Error("Error getting opening schedule data", "Status code: " + resp.statusCode, callback);
       if (!body || !body.length) return self.Error("No opening data returned by API", body, callback);
 
       // convert returned object into time parsed data with moment()
