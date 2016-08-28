@@ -290,6 +290,7 @@ v3.0.0
 * 3.1.0 fixed Disney API calls with a new client ID
 * 3.1.1 fixed Europa Park API calls (thanks @jeanmatthieud PR #28)
 * 3.1.2 added Parc Asterix to the API (thanks @jeanmatthieud PR #29)
+* 3.1.8 Europa Park better HTTP handling and "Down" status (thanks @jeanmatthieud PR #36)
 
 v2.0.0
 
