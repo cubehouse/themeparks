@@ -62,6 +62,22 @@ try {
         });
       })(park);
     }
+
+    for (var parkName in themeparks.Parks) {
+      (function (parkName) {
+        it("park .Parks[" + parkName + "] should have a corresponding .AllParks entry", function () {
+          var foundPark = false;
+          for (var i = 0, park; park = themeparks.AllParks[i++];) {
+            if (park.name == parkName) {
+              foundPark = true;
+              break;
+            }
+          }
+
+          assert(foundPark, ".AllParks should have a reference to " + parkName);
+        });
+      })(parkName);
+    }
   });
 } catch (err) {
   console.error("Unit tests failed");

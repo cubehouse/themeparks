@@ -10,13 +10,21 @@ exports.Settings = require("./settings");
 // === Include Park Libs ===
 
 // Walt Disney World Resort
-var WaltDisneyWorldEpcot = require("./disneyworld/waltdisneyworldepcot");
-var WaltDisneyWorldMagicKingdom = require("./disneyworld/waltdisneyworldmagickingdom");
-var WaltDisneyWorldHollywoodStudios = require("./disneyworld/waltdisneyworldhollywoodstudios");
-var WaltDisneyWorldAnimalKingdom = require("./disneyworld/waltdisneyworldanimalkingdom");
+var WaltDisneyWorldEpcot = require("./disney/waltdisneyworldepcot");
+var WaltDisneyWorldMagicKingdom = require("./disney/waltdisneyworldmagickingdom");
+var WaltDisneyWorldHollywoodStudios = require("./disney/waltdisneyworldhollywoodstudios");
+var WaltDisneyWorldAnimalKingdom = require("./disney/waltdisneyworldanimalkingdom");
+
+// Disneyland Resort
+var DisneylandResortMagicKingdom = require("./disney/disneylandresortmagickingdom");
+var DisneylandResortCaliforniaAdventure = require("./disney/disneylandresortcaliforniaadventure");
+
+// Disneyland Paris
+var DisneylandParisMagicKingdom = require("./disney/disneylandparismagickingdom");
+var DisneylandParisWaltDisneyStudios = require("./disney/disneylandpariswaltdisneystudios");
 
 // Shanghai Disney Resort
-var ShanghaiDisneyResortMagicKingdom = require("./disneyworld/shanghaidisneyresort");
+var ShanghaiDisneyResortMagicKingdom = require("./disney/shanghaidisneyresort");
 
 // === Expose Parks ===
 
@@ -25,6 +33,10 @@ var ShanghaiDisneyResortMagicKingdom = require("./disneyworld/shanghaidisneyreso
 exports.AllParks = [
 // Walt Disney World Resort
 WaltDisneyWorldMagicKingdom, WaltDisneyWorldEpcot, WaltDisneyWorldHollywoodStudios, WaltDisneyWorldAnimalKingdom,
+// Disneyland Resort
+DisneylandResortMagicKingdom, DisneylandResortCaliforniaAdventure,
+// Disneyland Paris
+DisneylandParisMagicKingdom, DisneylandParisWaltDisneyStudios,
 // Shanghai Disney Resort 
 ShanghaiDisneyResortMagicKingdom];
 
@@ -35,6 +47,12 @@ exports.Parks = {
     "WaltDisneyWorldEpcot": WaltDisneyWorldEpcot,
     "WaltDisneyWorldHollywoodStudios": WaltDisneyWorldHollywoodStudios,
     "WaltDisneyWorldAnimalKingdom": WaltDisneyWorldAnimalKingdom,
+    // Disneyland Resort
+    "DisneylandResortMagicKingdom": DisneylandResortMagicKingdom,
+    "DisneylandResortCaliforniaAdventure": DisneylandResortCaliforniaAdventure,
+    // Disneyland Paris
+    "DisneylandParisMagicKingdom": DisneylandParisMagicKingdom,
+    "DisneylandParisWaltDisneyStudios": DisneylandParisWaltDisneyStudios,
     // Shanghai Disney Resort
     "ShanghaiDisneyResortMagicKingdom": ShanghaiDisneyResortMagicKingdom
 };
