@@ -46,5 +46,5 @@ var ShanghaiDisneyResortMagicKingdom = function (_DisneyBase) {
         return ShanghaiDisneyResortMagicKingdom;
 }(DisneyBase);
 
-module.exports = [ShanghaiDisneyResortMagicKingdom];
+module.exports = ShanghaiDisneyResortMagicKingdom;
 //# sourceMappingURL=shanghaidisneyresort.js.map

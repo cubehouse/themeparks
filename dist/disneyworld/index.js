@@ -105,14 +105,18 @@ var WaltDisneyWorldPark = function (_Park) {
               forceJSON: true
             }).then(function (body) {
               if (!body.access_token) {
+                this.Log("Error body", body);
                 return reject("Returned access token data missing access_token");
               }
               if (!body.expires_in) {
+                this.Log("Error body", body);
                 return reject("Returned access token data missing expires_in");
               }
 
               // parse expires_in into an int
               var expiresIn = parseInt(body.expires_in, 10);
+
+              this.Log("Fetched new WDW access_token " + body.access_token + ", expires in " + body.expires_in);
 
               // store access token in cache
               Settings.Cache.set(cacheKey + "accesstoken", body.access_token, {
@@ -121,12 +125,12 @@ var WaltDisneyWorldPark = function (_Park) {
                 // return our new access token
                 return resolve(body.access_token);
               });
-            }, reject);
+            }.bind(this), reject);
           } else {
             // found cached access token! return it
             return resolve(accessToken);
           }
-        });
+        }.bind(this));
       }.bind(this)); // this ensures that the Promise remains in the scope of this object!
     }
 

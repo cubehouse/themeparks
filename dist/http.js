@@ -3,7 +3,7 @@
 // this is a basic wrapper for making Request() requests
 //  we wrap this so we can have the same debug information for all requests
 
-var request = require("request");
+var needle = require("needle");
 
 // detect if we're in debug mode
 var Debug = require("./debug");
@@ -22,6 +22,19 @@ function MakeRequest(networkRequest) {
 
     // debug log if we're in debug mode
     Log("Making request to " + networkRequest.url);
+
+    // grab method from the request (we'll call .[method] directly using the needle library)
+    var requestMethod = networkRequest.method || "get";
+    delete networkRequest.method;
+
+    // extract the required URL
+    var requestURL = networkRequest.url;
+    if (!requestURL) return Promise.reject("No URL defined for " + requestMethod + " request");
+    delete networkRequest.url;
+
+    var requestData = networkRequest.data || networkRequest.body || {};
+    delete networkRequest.data;
+    delete networkRequest.body;
 
     // build-in retires into this wrapper (default 3)
     var retries = networkRequest.retries || 3;
@@ -46,13 +59,15 @@ function MakeRequest(networkRequest) {
 
         // make request in an anonymouse function so we can make multiple requests to it easily
         var attemptRequest = function attemptRequest() {
-            // pass all arguments after the first to request
-            request(networkRequest, function (err, resp, body) {
+            Log("Calling " + requestMethod + ":" + requestURL);
+
+            // build Needle request
+            needle.request(requestMethod, requestURL, requestData, networkRequest, function (err, resp) {
                 if (err) {
                     if (attempt < retries) {
                         // if we have retires left, try again!
                         attempt++;
-                        Log("Network request failed attempt " + attempt + "/" + retries + " for URL " + networkRequest.url);
+                        Log("Network request failed attempt " + attempt + "/" + retries + " for URL " + requestURL);
                         Log(err);
 
                         // try again after retryDelay milliseconds
@@ -65,21 +80,22 @@ function MakeRequest(networkRequest) {
 
                 // no error! return the result
                 if (returnFullResponse) {
-                    Log("Successfully fetched response for URL " + networkRequest.url);
+                    Log("Successfully fetched response for URL " + requestURL);
                     return resolve(resp);
                 } else {
-                    if (forceJSON) {
+                    // if we want to force JSON (and we're not already a JSON object!)
+                    if (forceJSON && resp.body.constructor !== {}.constructor) {
                         var JSONData;
                         try {
-                            JSONData = JSON.parse(body);
+                            JSONData = JSON.parse(resp.body);
                         } catch (e) {
-                            return reject("Unable to parse " + body + " into a JSON object: " + e);
+                            return reject("Unable to parse " + resp.body + " into a JSON object: " + e);
                         }
-                        Log("Successfully fetched and parsed JSON from response at " + networkRequest.url);
+                        Log("Successfully fetched and parsed JSON from response at " + requestURL);
                         return resolve(JSONData);
                     } else {
-                        Log("Successfully fetched body for URL " + networkRequest.url);
-                        return resolve(body);
+                        Log("Successfully fetched body for URL " + requestURL);
+                        return resolve(resp.body);
                     }
                 }
             });
