@@ -32,7 +32,7 @@
         "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps",
         "prepublish": "npm run build",
         "postinstall": "npm dedupe",
-        "lint": "./node_modules/.bin/eslint ./lib/**/*.js"
+        "lint": "./node_modules/.bin/eslint ./lib/**"
     },
     "main": "./dist/index.js",
     "readmeFilename": "README.md",
