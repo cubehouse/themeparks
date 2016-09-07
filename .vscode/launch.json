@@ -1,38 +1,35 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Launch",
-			"type": "node",
-			"request": "launch",
-			"program": "${workspaceRoot}/dist/disneyworld/index.js",
-			"stopOnEntry": false,
-			"args": [],
-			"cwd": "${workspaceRoot}",
-			"preLaunchTask": "build",
-			"runtimeExecutable": null,
-			"runtimeArgs": [
-				"--nolazy"
-			],
-			"env": {
-				"NODE_ENV": "development",
-				"NODE_DEBUG": "themeparks"
-			},
-			"externalConsole": false,
-			"sourceMaps": true,
-			"outDir": null
-		},
-		{
-			"name": "Attach",
-			"type": "node",
-			"request": "attach",
-			"port": 5858,
-			"address": "localhost",
-			"restart": false,
-			"sourceMaps": true,
-			"outDir": null,
-			"localRoot": "${workspaceRoot}",
-			"remoteRoot": null
-		}
-	]
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "Launch",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/test.js",
+        "stopOnEntry": false,
+        "args": [],
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "",
+        "runtimeExecutable": null,
+        "runtimeArgs": [
+            "--nolazy"
+        ],
+        "env": {
+            "NODE_ENV": "development",
+            "NODE_DEBUG": "themeparks"
+        },
+        "externalConsole": false,
+        "sourceMaps": true,
+        "outDir": null
+    }, {
+        "name": "Attach",
+        "type": "node",
+        "request": "attach",
+        "port": 5858,
+        "address": "localhost",
+        "restart": false,
+        "sourceMaps": true,
+        "outDir": null,
+        "localRoot": "${workspaceRoot}",
+        "remoteRoot": null
+    }]
 }
