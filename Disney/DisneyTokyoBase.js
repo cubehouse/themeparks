@@ -110,7 +110,7 @@ function DisneylandTokyoBase(config) {
 
       // get waiting time!
       // first, check for rides under maintenance
-      if (el.text().indexOf("運営・公演中止") >= 0) {
+      if (el.text().indexOf("運営・公演中止") >= 0 || el.text().indexOf("一時運営中止") >= 0 || el.text().indexOf("案内終了") >= 0) {
         // found the maintenance text, mark ride as inactive
         ride_data.waitTime = -1;
         ride_data.active = false;
