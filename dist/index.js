@@ -2,7 +2,7 @@
 
 // source-map support for ES6 compiled code
 
-require('source-map-support/register');
+require("source-map-support/register");
 
 // expose Settings object to allow overriding of some basic defaults
 exports.Settings = require("./settings");

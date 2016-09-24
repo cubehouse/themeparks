@@ -49,7 +49,7 @@ var DisneylandResortCaliforniaAdventure = function (_DisneyBase) {
         key: "FetchWaitTimesURL",
         get: function get() {
             // override the wait times URL for Disneyland Resort parks!
-            return this.APIBase + "theme-parks/" + this.WDWParkID + "/wait-times";
+            return this.APIBase + "facility-service/theme-parks/" + this.WDWParkID + "/wait-times";
         }
     }]);
 

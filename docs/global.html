@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="DisneylandParisMagicKingdom.html">DisneylandParisMagicKingdom</a></li><li><a href="DisneylandParisWaltDisneyStudios.html">DisneylandParisWaltDisneyStudios</a></li><li><a href="GeoLocation.html">GeoLocation</a></li><li><a href="Park.html">Park</a></li><li><a href="Ride.html">Ride</a></li><li><a href="ShanghaiDisneyResortMagicKingdom.html">ShanghaiDisneyResortMagicKingdom</a></li><li><a href="WaltDisneyWorldAnimalKingdom.html">WaltDisneyWorldAnimalKingdom</a></li><li><a href="WaltDisneyWorldEpcot.html">WaltDisneyWorldEpcot</a></li><li><a href="WaltDisneyWorldHollywoodStudios.html">WaltDisneyWorldHollywoodStudios</a></li><li><a href="WaltDisneyWorldMagicKingdom.html">WaltDisneyWorldMagicKingdom</a></li><li><a href="WaltDisneyWorldPark.html">WaltDisneyWorldPark</a></li>
+					<li><a href="DisneylandParisMagicKingdom.html">DisneylandParisMagicKingdom</a></li><li><a href="DisneylandParisWaltDisneyStudios.html">DisneylandParisWaltDisneyStudios</a></li><li><a href="DisneylandResortCaliforniaAdventure.html">DisneylandResortCaliforniaAdventure</a></li><li><a href="DisneylandResortMagicKingdom.html">DisneylandResortMagicKingdom</a></li><li><a href="GeoLocation.html">GeoLocation</a></li><li><a href="Park.html">Park</a></li><li><a href="Ride.html">Ride</a></li><li><a href="Schedule.html">Schedule</a></li><li><a href="ShanghaiDisneyResortMagicKingdom.html">ShanghaiDisneyResortMagicKingdom</a></li><li><a href="WaltDisneyWorldAnimalKingdom.html">WaltDisneyWorldAnimalKingdom</a></li><li><a href="WaltDisneyWorldEpcot.html">WaltDisneyWorldEpcot</a></li><li><a href="WaltDisneyWorldHollywoodStudios.html">WaltDisneyWorldHollywoodStudios</a></li><li><a href="WaltDisneyWorldMagicKingdom.html">WaltDisneyWorldMagicKingdom</a></li><li><a href="WaltDisneyWorldPark.html">WaltDisneyWorldPark</a></li>
 				</ul>
 			</li>
 			
@@ -365,6 +365,390 @@
     
 </dd>
 
+            
+                
+<hr>
+<dt class="name" id="ScheduleData">
+    <h4>ScheduleData</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Date this schedule data applies to (formatted by DateFormat)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>openingTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Opening time for this date (formatted by TimeFormat)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>closingTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Closing time for this date (formatted by TimeFormat)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Whether this schedule data refers to an "Operating", "Closed" or "Refurbishment" status</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>special</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="global.html#SpecialScheduleData">SpecialScheduleData</a>></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Won't exist if no special times exist for this date</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id="SpecialScheduleData">
+    <h4>SpecialScheduleData</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>openingTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Opening time for this special schedule data (formatted by TimeFormat)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>closingTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Closing time for this special schedule data (formatted by TimeFormat)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Type of special schedule this is (eg. "Extra Magic Hours")</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
             </dl>
     
 
@@ -411,7 +795,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-08-29T11:57:32+01:00
+		on 2016-09-24T13:50:53+01:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

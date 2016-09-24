@@ -5,9 +5,7 @@
 
 var needle = require("needle");
 
-// detect if we're in debug mode
-var Debug = require("./debug");
-var IsDebug = Debug.IsDebug;
+// get our project Log function for writing log output
 var Log = require("./debugPrint");
 
 // include our Promise library
@@ -66,18 +64,18 @@ function MakeRequest(networkRequest) {
 
             // build Needle request
             needle.request(requestMethod, requestURL, requestData, networkRequest, function (err, resp) {
-                if (err) {
+                if (err || resp.statusCode != 200) {
                     if (attempt < retries) {
                         // if we have retires left, try again!
                         attempt++;
                         Log("Network request failed attempt " + attempt + "/" + retries + " for URL " + requestURL);
-                        Log(err);
+                        Log(err || resp.statusCode + ": " + JSON.stringify(resp.body, null, 2));
 
                         // try again after retryDelay milliseconds
                         setTimeout(attemptRequest, retryDelay);
                         return;
                     } else {
-                        return reject(err);
+                        return reject(err || resp.statusCode + ": " + JSON.stringify(resp.body, null, 2));
                     }
                 }
 

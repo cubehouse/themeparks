@@ -4,14 +4,17 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+// our schedule library
+var Schedule = require("./schedule");
+var Moment = require("moment-timezone");
+
 // symbols
 var s_rideID = Symbol();
 var s_rideName = Symbol();
 var s_currentWaitTime = Symbol();
+var s_fastPassAvailable = Symbol();
 var s_lastTimeUpdate = Symbol();
-
-// debug print lib
-var DebugLog = require('./debugPrint.js');
+var s_scheduleData = Symbol();
 
 /**
  * @typedef RideData
@@ -50,6 +53,12 @@ var Ride = function () {
 
         this[s_rideID] = options.ride_id;
         this[s_rideName] = options.ride_name;
+
+        // by default, rides don't support fastpass
+        this[s_fastPassAvailable] = false;
+
+        // make our own schedule data object!
+        this[s_scheduleData] = new Schedule();
     }
 
     /**
@@ -61,13 +70,27 @@ var Ride = function () {
     _createClass(Ride, [{
         key: "toJSON",
         value: function toJSON() {
-            return {
+            // try to extract schedule data for this ride
+            var openingHours = this[s_scheduleData].GetDate({
+                date: Moment()
+            });
+
+            var jsonData = {
                 id: this[s_rideID],
                 name: this.Name,
                 active: this.Active,
-                wait_time: this.WaitTime,
-                last_update: this.LastUpdate
+                waitTime: this.WaitTime,
+                fastPass: this.FastPass,
+                lastUpdate: this.LastUpdate,
+                status: this.Status
             };
+
+            // add opening hours to ride data if we actually have any!
+            if (openingHours) {
+                jsonData.schedule = openingHours;
+            }
+
+            return jsonData;
         }
 
         /** 
@@ -82,14 +105,33 @@ var Ride = function () {
             // restore base ride data
             this[s_rideID] = rideData.id;
             this[s_rideName] = rideData.name;
-            this[s_lastTimeUpdate] = rideData.last_update;
+            this[s_lastTimeUpdate] = rideData.lastUpdate;
+            this[s_fastPassAvailable] = rideData.fastPass;
 
             // .Active is inferred by WaitTime
             if (!rideData.active) {
                 // set WaitTime to -1 if the ride isn't active
                 this[s_currentWaitTime] = -1;
             } else {
-                this[s_currentWaitTime] = rideData.wait_time;
+                this[s_currentWaitTime] = rideData.waitTime;
+            }
+
+            // import any schedule data (if we have any)
+            if (rideData.schedule) {
+                this[s_scheduleData].SetDate(rideData.schedule);
+
+                // also re-import special schedule data (if we have any)
+                if (rideData.schedule.special && rideData.schedule.special.length > 0) {
+                    for (var i, specialSchedule; specialSchedule = rideData.schedule.special[i++];) {
+                        this[s_scheduleData].SetDate({
+                            date: specialSchedule.date,
+                            openingTime: specialSchedule.openingTime,
+                            closingTime: specialSchedule.closingTime,
+                            type: specialSchedule.type,
+                            specialHours: true
+                        });
+                    }
+                }
             }
         }
 
@@ -115,9 +157,6 @@ var Ride = function () {
         set: function set(value) {
             // check for updated (or brand new) wait time for this ride
             if (this[s_currentWaitTime] === undefined || this[s_currentWaitTime] != value) {
-                // ride time has changed!
-                //DebugLog(`${this.Name}:`, `Time updated from ${this[s_currentWaitTime]} to ${value}`);
-
                 // update our last updated time to now
                 this[s_lastTimeUpdate] = Date.now();
                 // update our wait time for this ride
@@ -141,6 +180,31 @@ var Ride = function () {
         }
 
         /**
+         * Set this ride's fast pass availability
+         * @type {Boolean}
+         */
+
+    }, {
+        key: "FastPass",
+        set: function set(value) {
+            if (this[s_fastPassAvailable] != value) {
+                // update our last updated time to now
+                this[s_lastTimeUpdate] = Date.now();
+                // update fastpass status
+                this[s_fastPassAvailable] = value;
+            }
+        }
+
+        /**
+         * Get this ride's fast pass availability
+         * @type {Boolean}
+         */
+        ,
+        get: function get() {
+            return this[s_fastPassAvailable];
+        }
+
+        /**
          * Is this ride currently running?
          * @type {Boolean}
          */
@@ -155,6 +219,29 @@ var Ride = function () {
         }
 
         /**
+         * String status for this ride
+         * Can only ever be either "Operating", "Closed", or "Refurbishment"
+         * @type {String}
+         */
+
+    }, {
+        key: "Status",
+        get: function get() {
+            // first, check the schedule for non-operating types
+            //  refurbishment/closed schedule overrules all other statuses, as this is planned maintenance
+            //  i.e, rides don't usually schedule maintenance and then randomly open mid-day 
+            var todaysSchedule = this.Schedule.GetDate({
+                date: Moment()
+            });
+            if (todaysSchedule && todaysSchedule.type != "Operating") {
+                return todaysSchedule.type;
+            }
+
+            // otherwise, return a string matching current Active status
+            return this.Active ? "Operating" : "Closed";
+        }
+
+        /**
          * Get this ride's last wait time update time.
          * Note: Can be undefined
          * @type {Number}
@@ -164,6 +251,17 @@ var Ride = function () {
         key: "LastUpdate",
         get: function get() {
             return this[s_lastTimeUpdate];
+        }
+
+        /**
+         * Get this ride's schedule object
+         * @type {Schedule}
+         */
+
+    }, {
+        key: "Schedule",
+        get: function get() {
+            return this[s_scheduleData];
         }
     }]);
 
