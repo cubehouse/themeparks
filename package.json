@@ -24,6 +24,7 @@
     },
     "scripts": {
         "testdev": "node_modules/.bin/mocha lib/",
+        "testonline": "node_modules/.bin/mocha lib/testonline.js",
         "test": "npm run build && node_modules/.bin/mocha dist/",
         "travislocal": "node_modules/.bin/trevor",
         "docs": "node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
