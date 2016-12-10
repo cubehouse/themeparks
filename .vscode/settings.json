@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     // Controls if the editor should automatically format the line after typing
-    "beautify.onSave": true
+    "beautify.onSave": ["js"],
+    "editor.formatOnSave": true
 }
