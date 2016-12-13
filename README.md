@@ -1,3 +1,12 @@
+# Migration In Progress
+
+This is the documentation for version 4.0 of the library, which will be available soon.
+Please see the 3.0 branch for the currently available version of the library and documentation.
+
+A migration guide will be available once 4.0 is live.
+
+Thanks!
+
 # themeparks
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
