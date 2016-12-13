@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: Park</title>
+	<title>ThemeParks Class: SixFlagsPark</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Park</h1>
+	<h1 class="page-title">Class: SixFlagsPark</h1>
 <section>
 
 <header>
     
         <h2>
-        Park
+        SixFlagsPark
         </h2>
         
-            <div class="class-description">Park class handles all the base logic for all implemented themeparks.All parks should inherit from this base class.Any common functionality is implemented here to save endless re-implementations for each park.</div>
+            <div class="class-description">Implements the SixFlags API framework.</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Park"><span class="type-signature"></span>new Park(options)</h4>
+    <h4 class="name" id="SixFlagsPark"><span class="type-signature"></span>new SixFlagsPark(options)</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new Park object
+        Create new SixFlagsPark Object.This object should not be called directly, but rather extended for each of the individual SixFlags parks
     </div>
     
 
@@ -171,8 +171,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -183,7 +181,7 @@
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>park_id</code></td>
             
 
             <td class="type">
@@ -207,55 +205,15 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">The name of this park</td>
+            <td class="description last"></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>timezone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Park's timezone</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>timeFormat</code></td>
+                <td class="name"><code>auth_token</code></td>
             
 
             <td class="type">
@@ -281,19 +239,15 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">Format to display park times in</td>
+            <td class="description last">Auth token for logging into the SixFlags API</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>dateFormat</code></td>
+                <td class="name"><code>api_url</code></td>
             
 
             <td class="type">
@@ -319,131 +273,15 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">Format to display park dates in</td>
+            <td class="description last">URL for accessing the SixFlags API (default: https://api.sixflags.net/)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>cacheWaitTimesLength</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    300
-                
-                </td>
-            
-
-            <td class="description last">How long (in seconds) to cache wait times before fetching fresh time</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>latitude</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Park's latitude</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>longitude</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Park's longitude</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>useragent</code></td>
+                <td class="name"><code>api_version</code></td>
             
 
             <td class="type">
@@ -469,12 +307,8 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">Useragent to use when making HTTP requests</td>
+            <td class="description last">API version (default: 6)</td>
         </tr>
 
     
@@ -549,6 +383,17 @@
     </div>
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Park.html">Park</a></li>
+    </ul>
+
+
+    
 
     
 
@@ -562,6 +407,66 @@
         <h3 class="subsection-title">Members</h3>
 
         <dl>
+            
+<hr>
+<dt class="name" id="APIBase">
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get the API base URL for making API requests
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
             
 <hr>
 <dt class="name" id="Cache">
@@ -586,6 +491,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Cache">Park#Cache</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -658,7 +572,21 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#FastPass">Park#FastPass</a>
+			</li>
+		</ul>
+	</dd>
+	
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Park.html#FastPass">Park#FastPass</a>
+    </li></ul></dd>
     
 
     
@@ -728,6 +656,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Location">Park#Location</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -800,6 +737,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Name">Park#Name</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -859,6 +805,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Schedule">Park#Schedule</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -931,6 +886,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsOpeningTimes">Park#SupportsOpeningTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1001,6 +965,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsRideSchedules">Park#SupportsRideSchedules</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -1073,6 +1046,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsWaitTimes">Park#SupportsWaitTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1144,79 +1126,14 @@
 	
 
 	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="UserAgent">
-    <h4 id="UserAgent"><span class="type-signature"></span>UserAgent<span class="type-signature"> :string|function</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Set this park's useragentCan set user agent to a defined string or use a generator function (see random-useragent library)
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">function</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Timezone">Park#Timezone</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -1289,7 +1206,21 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#UserAgent">Park#UserAgent</a>
+			</li>
+		</ul>
+	</dd>
+	
 
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Park.html#UserAgent">Park#UserAgent</a>
+    </li></ul></dd>
     
 
     
@@ -1472,6 +1403,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#DateNow">Park#DateNow</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -1675,6 +1615,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#FindRideObject">Park#FindRideObject</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1749,6 +1698,84 @@
             
 <hr>
 <dt>
+    <h4 class="name" id="GetAccessToken"><span class="type-signature"></span>GetAccessToken()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get an access token for making Six Flags API requests
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="GetOpeningTimes"><span class="type-signature"></span>GetOpeningTimes()</h4>
     
     
@@ -1776,6 +1803,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetOpeningTimes">Park#GetOpeningTimes</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -1855,6 +1891,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetOpeningTimesPromise">Park#GetOpeningTimesPromise</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1909,6 +1954,108 @@
     <dd>
         
 <span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="GetRideNames"><span class="type-signature"></span>GetRideNames()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get rides names for all the rides in this parkThis is either fetched from cache or fresh from the API if not fetched for a while
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Object of Ride IDs => Ride Names
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Object></span>
 
 
 
@@ -2077,6 +2224,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetRideObject">Park#GetRideObject</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -2179,6 +2335,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetWaitTimes">Park#GetWaitTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -2256,6 +2421,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetWaitTimesPromise">Park#GetWaitTimesPromise</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -2354,6 +2528,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#HTTP">Park#HTTP</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -2494,6 +2677,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Log">Park#Log</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -2685,6 +2877,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#TimeNow">Park#TimeNow</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -2805,7 +3006,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2016-12-13T22:47:23+00:00
+		on 2016-12-13T22:47:24+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
