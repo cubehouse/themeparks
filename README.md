@@ -87,7 +87,7 @@ There are some values available on each park object that may be useful.
 |park_timezone|The park's local timezone|
 |supports_ride_schedules|Does this park return schedules for rides?|
 
-    var DisneyAPI = require("wdwjs");
+    var DisneyAPI = require("themeparks");
 
     // print each park's timezone
     for (var park in DisneyAPI) {
@@ -116,7 +116,7 @@ Default options:
 |scheduleMaxDates|30|Maximum number of days to return opening times for (some parks may return less than requested days, but never more)|
 |useragent|*Park Defined*|User Agent string to use for making API requests (overrides per-park useragent settings)|
 
-    var DisneyAPI = require("wdwjs");
+    var DisneyAPI = require("themeparks");
 
     var MagicKingdom = new DisneyAPI.WaltDisneyWorldMagicKingdom({
       debug: true,
@@ -147,7 +147,7 @@ Building will also create sourcemaps, so any stacktraces will point to the origi
 
 ## Running Tests
 
-wdwJS supports mocha unit tests. Install mocha with npm install -g mocha
+themeparks supports mocha unit tests. Install mocha with npm install -g mocha
 
 Run the following to test all the supported parks
 
@@ -157,7 +157,7 @@ You can also test an individual park using the PARK_ID environment variable, for
 
     PARKID=UniversalStudiosFlorida mocha
 
-Each pull request and commit will run these tests automatically on travis-ci.org. For test history, see https://travis-ci.org/cubehouse/wdwJS
+Each pull request and commit will run these tests automatically on travis-ci.org. For test history, see https://travis-ci.org/cubehouse/themeparks
 
 ## Debug Mode
 
@@ -165,13 +165,13 @@ You can enable debug mode for any individual park by passing debug: true into it
 
 You can also set the environment variable "DEBUG" to enable debug logs for all parks.
 
-wdwJS also supports the standard NODE_DEBUG environment variable.
+Themeparks also supports the standard NODE_DEBUG environment variable.
 
-    NODE_DEBUG=wdwjs mocha
+    NODE_DEBUG=themeparks mocha
 
 Environment variables can be combined:
 
-    NODE_DEBUG=wdwjs PARKID=UniversalStudiosFlorida mocha
+    NODE_DEBUG=themeparks PARKID=UniversalStudiosFlorida mocha
 
 ## Contributing
 
@@ -191,9 +191,9 @@ Please raise issues and make pull requests with new features :)
 
 I recommended the [Visual Studio Code IDE](https://code.visualstudio.com/) with the [Beautify Plugin](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) for consistency. The project is configured to beautify each file on save when this plugin is present.
 
-# People using wdwJS
+# People using themeparks
 
-If you're using wdwJS for a project, please let me know! I'd love to see what people are doing!
+If you're using themeparks for a project, please let me know! I'd love to see what people are doing!
 
 ## Pebble Apps
 

@@ -3,10 +3,20 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
-### Changes
+### Core Changes
 
 * Project refactor - now written in ES6
 * Renamed to themeparks
+  * Compiled down to "vanilla normal" JavaScript for compatibility with older NodeJS versions (will be removed when official NodeJS support for older NodeJS versions is dropped)
+* New caching built into the framework to reduce network requests
+  * Supports multiple caching systems, including memory, file or various caching servers
+* Common park logic grouped into single object to keep park-specific implementations as clean as possible
+* Use of Promises throughout Project
+  * Old callback-style will still work when using the module if desired, but Promises are used throughout internals
+* Split unit tests into functional and network testing
+* API documented significantly with JSDoc, see [themeparks Documentation](https://cubehouse.github.io/themeparks/)
+* Now using needle HTTP request module, for it's significantly less dependancies compared to request
+  * HTTP wrapper available that attempts network requests on failure to aid network issues we've seen before
 
 ## v3.0.0
 
@@ -19,7 +29,7 @@ Key changes to themeparks NPM module.
 * (breaking change) Schedules now return a maximum of one element per day, with "special" opening hours as a sub-object called "special" (eg. Extra Magic Hours)
 * (breaking change) Park object names have been renamed
 * (breaking change) No longer need to create a new wdwjs() object to start the API, make separate new objects for each park you wish to access
-* 3.0.3 added BETA Six Flags support. Some parks do not yet return proper wait time data, see [#12](https://github.com/cubehouse/wdwJS/issues/12)
+* 3.0.3 added BETA Six Flags support. Some parks do not yet return proper wait time data, see [#12](https://github.com/cubehouse/themeparks/issues/12)
 * 3.0.6 added ride schedules (only for Disney parks) and new status string for each ride wait time entry
 * 3.0.7 fixed Tokyo Disneyland ride active status and added updateTime to Tokyo ride outputs (see #17)
 * 3.0.10 added Alton Towers to the supported parks
