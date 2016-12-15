@@ -1,4 +1,5 @@
-.git
-node_modules
-source
-out
+lib
+docs
+.*
+docs.conf.json
+dev
