@@ -1,7 +1,7 @@
 {
     "name": "themeparks",
     "description": "Get Theme Park Wait Times and Opening Times",
-    "version": "4.0.0",
+    "version": "4.0.0-alpha",
     "author": {
         "name": "Jamie Holding",
         "email": "me@jamie.holdings"
@@ -22,7 +22,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/cubehouse/wdwJS.git"
+        "url": "git://github.com/cubehouse/themeparks.git"
     },
     "scripts": {
         "testdev": "node_modules/.bin/mocha lib/test.js",
