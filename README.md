@@ -1,42 +1,160 @@
-# Migration In Progress
-
-This is the documentation for version 4.0 of the library, which will be available soon.
-Please see the 3.0 branch for the currently available version of the library and documentation.
-
-A migration guide will be available once 4.0 is live.
-
-Thanks!
-
-# themeparks
+# themeparks (previously wdwJS)
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
 
-[![Build Status](https://travis-ci.org/cubehouse/wdwJS.svg?branch=master)](https://travis-ci.org/cubehouse/wdwJS) [![npm version](https://badge.fury.io/js/wdwjs.svg)](https://badge.fury.io/js/wdwjs) [![Dependency Status](https://www.versioneye.com/user/projects/55858111363861001500042c/badge.svg?style=flat)](https://www.versioneye.com/nodejs/wdwjs)
-[![npm history](https://nodei.co/npm-dl/wdwjs.png)](https://www.npmjs.com/package/wdwjs/)
+[![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) [![Dependency Status](https://www.versioneye.com/user/projects/5852b45c4d64660032bc3686/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5852b45c4d64660032bc3686)
+[![npm history](https://nodei.co/npm-dl/themeparks.png)](https://www.npmjs.com/package/themeparks/)
 
-# Install
+## Install
 
     npm install themeparks --save
 
-# Example Use
+## Migrate from wdwJS 3.0
 
-    // TODO
+If you were using wdwJS previously, please follow this guide to [migrate from wdwJS 3.0 to themeparks 4.0](https://github.com/cubehouse/themeparks/wiki/Migrating-from-3.0-to-4.0)
+
+## Example Use
+
+    // include the Themeparks library
+    var Themeparks = require("themeparks");
+
+    // list all the parks supported by the library
+    for (var park in Themeparks.Parks) {
+        console.log("* " + new Themeparks.Parks[park]().Name + " (DisneyAPI." + park + ")");
+    }
+
+    // access a specific park
+    var disneyMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom();
+
+    // access wait times by Promise
+    disneyMagicKingdom.GetWaitTimes().then(function(rides) {
+        // print each wait time
+        for(var i=0, ride; ride=rides[i++];) {
+            console.log(ride.name + ": " + ride.waitTime + " minutes wait");
+        }
+    }, console.error);
+
+    // get park opening times
+    disneyMagicKingdom.GetOpeningTimes().then(function(times) {
+        // print opening times
+        for(var i=0, time; time=times[i++];) {
+            if (time.type == "Operating") {
+                console.log("[" + time.date + "] Open from " + time.openingTime + " until " + time.closingTime);
+            }
+        }
+    }, console.error);
+
+### Using Promises or callbacks
+
+Both GetWaitTimes and GetOpeningTimes work either through callback or Promises.
+
+This is the same as the above example, but using a callback instead of a Promise.
+
+    // access wait times via callback
+    disneyMagicKingdom.GetWaitTimes(function(err, rides) {
+        if (err) reutrn console.error(err);
+
+        // print each wait time
+        for(var i=0, ride; ride=rides[i++];) {
+            console.log(ride.name + ": " + ride.waitTime + " minutes wait");
+        }
+    });
+
+## Change Log
+
+[View themeparks Change Log](CHANGELOG.md)
 
 ## Parks available
 
 <!-- START_SUPPORTED_PARKS_LIST -->
-    // TODO
+* Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
+* Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
+* Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
+* Animal Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldAnimalKingdom)
+* Magic Kingdom - Disneyland Resort (ThemeParks.Parks.DisneylandResortMagicKingdom)
+* California Adventure - Disneyland Resort (ThemeParks.Parks.DisneylandResortCaliforniaAdventure)
+* Magic Kingdom - Disneyland Paris (ThemeParks.Parks.DisneylandParisMagicKingdom)
+* Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
+* Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
+* Tokyo Disney Resort - Magic Kingdom (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
+* Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
+* Universal Studios Florida (ThemeParks.Parks.UniversalStudiosFlorida)
+* Universal's Islands Of Adventure (ThemeParks.Parks.UniversalIslandsOfAdventure)
+* Seaworld Orlando (ThemeParks.Parks.SeaworldOrlando)
+* Seaworld San Antonio (ThemeParks.Parks.SeaworldSanAntonio)
+* Seaworld San Diego (ThemeParks.Parks.SeaworldSanDiego)
+* Busch Gardens - Tampa Bay (ThemeParks.Parks.BuschGardensTampaBay)
+* Busch Gardens - Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
+* Sesame Place (ThemeParks.Parks.SesamePlace)
+* Europa Park (ThemeParks.Parks.EuropaPark)
+* Six Flags Over Texas (ThemeParks.Parks.SixFlagsOverTexas)
+* Six Flags Over Georgia (ThemeParks.Parks.SixFlagsOverGeorgia)
+* Six Flags St. Louis (ThemeParks.Parks.SixFlagsStLouis)
+* Six Flags Great Adventure (ThemeParks.Parks.SixFlagsGreatAdventure)
+* Six Flags Magic Mountain (ThemeParks.Parks.SixFlagsMagicMountain)
+* Six Flags Great America (ThemeParks.Parks.SixFlagsGreatAmerica)
+* Six Flags Fiesta Texas (ThemeParks.Parks.SixFlagsFiestaTexas)
+* Six Flags Hurricane Harbor, Arlington (ThemeParks.Parks.SixFlagsHurricaneHarborArlington)
+* Six Flags Hurricane Harbor, Los Angeles (ThemeParks.Parks.SixFlagsHurricaneHarborLosAngeles)
+* Six Flags America (ThemeParks.Parks.SixFlagsAmerica)
+* Six Flags Discovery Kingdom (ThemeParks.Parks.SixFlagsDiscoveryKingdom)
+* Six Flags New England (ThemeParks.Parks.SixFlagsNewEngland)
+* Six Flags Hurricane Harbor, Jackson (ThemeParks.Parks.SixFlagsHurricaneHarborJackson)
+* The Great Escape (ThemeParks.Parks.TheGreatEscape)
+* Six Flags White Water, Atlanta (ThemeParks.Parks.SixFlagsWhiteWaterAtlanta)
+* Six Flags México (ThemeParks.Parks.SixFlagsMxico)
+* La Ronde, Montreal (ThemeParks.Parks.LaRondeMontreal)
+
 <!-- END_SUPPORTED_PARKS_LIST -->
 
-# Supported Park Features
+## Supported Park Features
 
 <!-- START_PARK_FEATURES_SUPPORTED -->
-    // TODO
+|Park|Wait Times|Park Opening Times|Ride Opening Times|
+|:---|:---------|:-----------------|:-----------------|
+|Magic Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10003;|
+|California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10003;|
+|Tokyo Disney Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
+|Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
+|Universal Studios Florida|&#10003;|&#10003;|&#10007;|
+|Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
+|Seaworld Orlando|&#10003;|&#10003;|&#10007;|
+|Seaworld San Antonio|&#10003;|&#10003;|&#10007;|
+|Seaworld San Diego|&#10003;|&#10003;|&#10007;|
+|Busch Gardens - Tampa Bay|&#10003;|&#10003;|&#10007;|
+|Busch Gardens - Williamsburg|&#10003;|&#10003;|&#10007;|
+|Sesame Place|&#10003;|&#10003;|&#10007;|
+|Europa Park|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Georgia|&#10003;|&#10003;|&#10007;|
+|Six Flags St. Louis|&#10003;|&#10003;|&#10007;|
+|Six Flags Great Adventure|&#10003;|&#10003;|&#10007;|
+|Six Flags Magic Mountain|&#10003;|&#10003;|&#10007;|
+|Six Flags Great America|&#10003;|&#10003;|&#10007;|
+|Six Flags Fiesta Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Arlington|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Los Angeles|&#10003;|&#10003;|&#10007;|
+|Six Flags America|&#10003;|&#10003;|&#10007;|
+|Six Flags Discovery Kingdom|&#10003;|&#10003;|&#10007;|
+|Six Flags New England|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Jackson|&#10003;|&#10003;|&#10007;|
+|The Great Escape|&#10003;|&#10003;|&#10007;|
+|Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
+|Six Flags México|&#10003;|&#10003;|&#10007;|
+|La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
+
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
-# Result Objects
+## Result Objects
 
-## Ride Wait Times
+### Ride Wait Times
 
     [
         {
@@ -46,7 +164,8 @@ An unofficial API library for accessing ride wait times and park opening times f
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
             status: (string: will either be "Operating", "Closed", or "Down"),
-            schedule: { **schedule will only be present if park.supports_ride_schedules is true**
+            lastUpdate: (JavaScript Date object: last time this ride had new data),
+            schedule: { **schedule will only be present if park.SupportsRideSchedules is true**
               openingTime: (timeFormat timestamp: opening time of ride),
               closingTime: (timeFormat timestamp: closing time of ride),
               type: (string: "Operating" or "Closed"),
@@ -60,7 +179,7 @@ An unofficial API library for accessing ride wait times and park opening times f
         ...
     ]
 
-## Schedules
+### Schedules
 
     [
         {
@@ -77,31 +196,75 @@ An unofficial API library for accessing ride wait times and park opening times f
         ...
     ]
 
-# Park Object values
+## Park Object values
 
 There are some values available on each park object that may be useful.
 
 |Variable|Description|
 |:-------|:----------|
-|name|Name of the park|
-|park_timezone|The park's local timezone|
-|supports_ride_schedules|Does this park return schedules for rides?|
+|Name|Name of the park|
+|Timezone|The park's local timezone|
+|Location|This park's location (as a "GeoLocation" object, see [GeoLocation Docs](https://cubehouse.github.io/themeparks/GeoLocation.html) for available methods/properties)|
+|SupportsWaitTimes|Does this park's API support ride wait times?|
+|SupportsOpeningTimes|Does this park's API support opening hours?|
+|SupportsRideSchedules|Does this park return schedules for rides?|
+|FastPass|Does this park have FastPass (or a FastPass-style service)?|
+|TimeNow([momentjs date format])|Current time at this park (optional momentjs date format to return time in)|
+|DateNow([momentjs date format])|Current date at this park (optional momentjs date format to return date in)|
+|UserAgent|The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime)|
 
-    var DisneyAPI = require("themeparks");
+    var ThemeParks = require("themeparks");
 
-    // print each park's timezone
-    for (var park in DisneyAPI) {
-      var parkObj = new DisneyAPI[park]();
-      console.log("* " + parkObj.name + " => " + parkObj.park_timezone);
+    // print each park's name, current location, and timezone
+    for (var park in ThemeParks.Parks) {
+      var parkObj = new ThemeParks.Parks[park]();
+      console.log("* " + parkObj.Name + " [" + parkObj.Location.toString() + "]: (" + parkObj.Timezone + ")");
     }
 
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
-    // TODO
+* Magic Kingdom - Walt Disney World Florida [(28°23′6.72″N, 81°33′50.04″W)]: (America/New_York)
+* Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
+* Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)
+* Animal Kingdom - Walt Disney World Florida [(28°21′19.08″N, 81°35′24.36″W)]: (America/New_York)
+* Magic Kingdom - Disneyland Resort [(33°48′36.39″N, 117°55′8.30″W)]: (America/Los_Angeles)
+* California Adventure - Disneyland Resort [(33°48′31.39″N, 117°55′8.36″W)]: (America/Los_Angeles)
+* Magic Kingdom - Disneyland Paris [(48°52′13.16″N, 2°46′46.82″E)]: (Europe/Paris)
+* Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
+* Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
+* Tokyo Disney Resort - Magic Kingdom [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
+* Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
+* Universal Studios Florida [(28°28′29.94″N, 81°27′59.39″W)]: (America/New_York)
+* Universal's Islands Of Adventure [(28°28′20.07″N, 81°28′4.28″W)]: (America/New_York)
+* Seaworld Orlando [(35°37′37.40″N, 139°53′20.75″E)]: (America/New_York)
+* Seaworld San Antonio [(29°27′30.56″N, 98°41′59.45″W)]: (America/Chicago)
+* Seaworld San Diego [(32°45′51.49″N, 117°13′35.19″W)]: (America/Los_Angeles)
+* Busch Gardens - Tampa Bay [(28°2′0.94″N, 82°25′14.52″W)]: (America/New_York)
+* Busch Gardens - Williamsburg [(37°14′14.01″N, 76°38′42.46″W)]: (America/New_York)
+* Sesame Place [(40°11′8.40″N, 74°52′17.26″W)]: (America/New_York)
+* Europa Park [(48°16′8.15″N, 7°43′17.61″E)]: (Europe/London)
+* Six Flags Over Texas [(32°45′17.95″N, 97°4′13.33″W)]: (America/Chicago)
+* Six Flags Over Georgia [(33°46′14.08″N, 84°33′5.36″W)]: (America/New_York)
+* Six Flags St. Louis [(38°30′47.61″N, 90°40′30.69″W)]: (America/Chicago)
+* Six Flags Great Adventure [(40°8′55.18″N, 74°26′27.69″W)]: (America/New_York)
+* Six Flags Magic Mountain [(34°25′24.46″N, 118°35′42.90″W)]: (America/Los_Angeles)
+* Six Flags Great America [(42°22′12.88″N, 87°56′9.30″W)]: (America/Chicago)
+* Six Flags Fiesta Texas [(29°35′59.28″N, 98°36′32.50″W)]: (America/Chicago)
+* Six Flags Hurricane Harbor, Arlington [(32°45′39.83″N, 97°4′58.44″W)]: (America/Chicago)
+* Six Flags Hurricane Harbor, Los Angeles [(34°25′25.86″N, 118°35′42.05″W)]: (America/Los_Angeles)
+* Six Flags America [(38°54′4.46″N, 76°46′16.59″W)]: (America/New_York)
+* Six Flags Discovery Kingdom [(38°8′19.43″N, 122°13′59.70″W)]: (America/Los_Angeles)
+* Six Flags New England [(42°2′16.54″N, 72°36′55.92″W)]: (America/New_York)
+* Six Flags Hurricane Harbor, Jackson [(40°8′49.57″N, 74°26′13.56″W)]: (America/New_York)
+* The Great Escape [(43°21′1.80″N, 73°41′32.10″W)]: (America/New_York)
+* Six Flags White Water, Atlanta [(33°57′32.86″N, 84°31′10.37″W)]: (America/New_York)
+* Six Flags México [(19°17′43.40″N, 99°12′41.19″W)]: (America/Mexico_City)
+* La Ronde, Montreal [(45°31′19.18″N, 73°32′4.48″W)]: (America/Toronto)
+
 <!-- END_PARK_TIMEZONE_LIST -->
 
-# API Options
+## API Options
 
 Each park can take a series of options to configure it's behaviour.
 
@@ -129,37 +292,37 @@ Default options:
     // You can also configure these settings after initialisation with Config(key, value)
     MagicKingdom.Config("debug", false);
 
-# Change Log
+## Development
 
-[View themeparks Change Log](CHANGELOG.md)
-
-# Development
-
-## Building
+### Building
 
 This project is using ES6 features, which can't be used by legacy version of NodeJS. We're also using "import", which is not available in NodeJS.
 
-So, the project needs to be built into regular JavaScript to work. This is done by running ``npm run build``
+So, the project needs to be built into regular JavaScript to work with the older NodeJS versions. This is done by running ``npm run build``
 
 This will compile everything in source/ into dist/.
 
 Building will also create sourcemaps, so any stacktraces will point to the original code in the source/ directory.
 
-## Running Tests
+### Running Tests
 
 themeparks supports mocha unit tests. Install mocha with npm install -g mocha
 
-Run the following to test all the supported parks
+Run the following to test the library's unit tests (this will build the library and then run functional offline unit tests):
 
-    mocha
+    npm test
+
+You can also run unit tests against the source js files using ```npm run testdev```.
+
+There is a separate test for checking the library still connects to park APIs correctly. This is the "online test".
+
+    npm run testonline
 
 You can also test an individual park using the PARK_ID environment variable, for example:
 
-    PARKID=UniversalStudiosFlorida mocha
+    PARKID=UniversalStudiosFlorida npm run testonline
 
-Each pull request and commit will run these tests automatically on travis-ci.org. For test history, see https://travis-ci.org/cubehouse/themeparks
-
-## Debug Mode
+### Debug Mode
 
 You can enable debug mode for any individual park by passing debug: true into it's configuration object (see "API Options" above).
 
@@ -167,31 +330,29 @@ You can also set the environment variable "DEBUG" to enable debug logs for all p
 
 Themeparks also supports the standard NODE_DEBUG environment variable.
 
-    NODE_DEBUG=themeparks mocha
+    NODE_DEBUG=themeparks npm run testonline
 
 Environment variables can be combined:
 
-    NODE_DEBUG=themeparks PARKID=UniversalStudiosFlorida mocha
+    NODE_DEBUG=themeparks PARKID=UniversalStudiosFlorida npm run testonline
 
-## Contributing
+### Contributing
 
-Each park inherits it's core logic from parkBase.js.
+Each park inherits it's core logic from lib/Park.js.
 
 For each set of parks, a base object should be made with all the core logic for that API/park group.
 
 Then, for each park, a basic shell object should be implemented that just configures the park's base object (and overrides anything in unusual setups).
 
-Throughout the API, please make use of the Dbg function so parks are easy to maintain if APIs change.
+Throughout the API, please make use of the this.Log() function so debugging parks when things break is easier.
 
 Please raise issues and make pull requests with new features :)
 
-## Code Style
+See full contribution guide at [Themeparks Contribution Guide](https://github.com/cubehouse/themeparks/wiki/Contributing).
 
-    // TODO - define variable naming standard etc.
+A rough guide for adding new parks is also available at [Adding New Parks to the ThemeParks API](https://github.com/cubehouse/themeparks/wiki/Adding-New-Parks).
 
-I recommended the [Visual Studio Code IDE](https://code.visualstudio.com/) with the [Beautify Plugin](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) for consistency. The project is configured to beautify each file on save when this plugin is present.
-
-# People using themeparks
+## People using themeparks
 
 If you're using themeparks for a project, please let me know! I'd love to see what people are doing!
 
