@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: EuropaPark</title>
+	<title>ThemeParks Class: MerlinPark</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: EuropaPark</h1>
+	<h1 class="page-title">Class: MerlinPark</h1>
 <section>
 
 <header>
     
         <h2>
-        EuropaPark
+        MerlinPark
         </h2>
         
-            <div class="class-description">Implements the Europa Park API framework.</div>
+            <div class="class-description">Implements the Merlin Park API framework. Thorpe Park, Alton Towers, Chessington etc. use this API framework</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="EuropaPark"><span class="type-signature"></span>new EuropaPark( [options])</h4>
+    <h4 class="name" id="MerlinPark"><span class="type-signature"></span>new MerlinPark(options)</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create new EuropaPark Object.
+        Create new Merlin Object.This object should not be called directly, but rather extended for each of the individual Merlin parks
     </div>
     
 
@@ -123,8 +123,6 @@
 
         <th>Type</th>
 
-        
-        <th>Argument</th>
         
 
         
@@ -152,16 +150,6 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
@@ -178,8 +166,6 @@
 
         <th>Type</th>
 
-        
-        <th>Argument</th>
         
 
         
@@ -207,27 +193,17 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">Optional base URL for API requests</td>
+            <td class="description last">Base URL to access the API</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>api_version</code></td>
+                <td class="name"><code>api_key</code></td>
             
 
             <td class="type">
@@ -241,54 +217,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">API Version to make requests to (default: 'api-5.2')</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>secret_token</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Secret token to use to generate the wait times API access token</td>
+            <td class="description last">API key to access this park's API</td>
         </tr>
 
     
@@ -387,6 +319,126 @@
         <h3 class="subsection-title">Members</h3>
 
         <dl>
+            
+<hr>
+<dt class="name" id="APIBase">
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The API Base URL for this park
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="APIKey">
+    <h4 id="APIKey"><span class="type-signature"></span>APIKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        API Key for this park
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
             
 <hr>
 <dt class="name" id="Cache">
@@ -1402,206 +1454,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchOpeningTimes"><span class="type-signature"></span>FetchOpeningTimes()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Fetch Europa Park opening time data
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="FetchRideData"><span class="type-signature"></span>FetchRideData()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Fetches fresh or cached ride data from the park API
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Object of Ride ID => Ride Name in English (or German if no English name is available)
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
     
     
@@ -1610,7 +1462,7 @@
 
     
     <div class="description">
-        Fetch Wait times
+        Fetch Wait Times for Merlin Park
     </div>
     
 
@@ -1891,7 +1743,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="GenerateAccessToken"><span class="type-signature"></span>GenerateAccessToken()</h4>
+    <h4 class="name" id="GenerateAPIResponse"><span class="type-signature"></span>GenerateAPIResponse()</h4>
     
     
 </dt>
@@ -1899,7 +1751,7 @@
 
     
     <div class="description">
-        Generate an access token for accessing wait times
+        Generate a response to a challenge for this park
     </div>
     
 
@@ -1965,7 +1817,7 @@
     
             
 <div class="param-desc">
-    Current Access Token
+    Promise resolving with the challenge response for this park
 </div>
 
 
@@ -1976,7 +1828,7 @@
     </dt>
     <dd>
         
-<span class="param-type">String</span>
+<span class="param-type">Promise.&lt;String></span>
 
 
 
