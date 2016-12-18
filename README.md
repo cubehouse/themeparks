@@ -111,6 +111,7 @@ This is the same as the above example, but using a callback instead of a Promise
 * Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
 * Universal Studios Florida (ThemeParks.Parks.UniversalStudiosFlorida)
 * Universal's Islands Of Adventure (ThemeParks.Parks.UniversalIslandsOfAdventure)
+* Universal Studios Hollywood (ThemeParks.Parks.UniversalStudiosHollywood)
 * Seaworld Orlando (ThemeParks.Parks.SeaworldOrlando)
 * Seaworld San Antonio (ThemeParks.Parks.SeaworldSanAntonio)
 * Seaworld San Diego (ThemeParks.Parks.SeaworldSanDiego)
@@ -158,6 +159,7 @@ This is the same as the above example, but using a callback instead of a Promise
 |Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
 |Universal Studios Florida|&#10003;|&#10003;|&#10007;|
 |Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
+|Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
 |Seaworld Orlando|&#10003;|&#10003;|&#10007;|
 |Seaworld San Antonio|&#10003;|&#10003;|&#10007;|
 |Seaworld San Diego|&#10003;|&#10003;|&#10007;|
@@ -272,6 +274,7 @@ Prints:
 * Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
 * Universal Studios Florida [(28°28′29.94″N, 81°27′59.39″W)]: (America/New_York)
 * Universal's Islands Of Adventure [(28°28′20.07″N, 81°28′4.28″W)]: (America/New_York)
+* Universal Studios Hollywood [(34°8′14.14″N, 118°21′19.86″W)]: (America/Los_Angeles)
 * Seaworld Orlando [(35°37′37.40″N, 139°53′20.75″E)]: (America/New_York)
 * Seaworld San Antonio [(29°27′30.56″N, 98°41′59.45″W)]: (America/Chicago)
 * Seaworld San Diego [(32°45′51.49″N, 117°13′35.19″W)]: (America/Los_Angeles)
