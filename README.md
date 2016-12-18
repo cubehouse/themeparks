@@ -44,6 +44,35 @@ If you were using wdwJS previously, please follow this guide to [migrate from wd
         }
     }, console.error);
 
+### Caching
+
+It is possible to speed up the library by passing on a caching module.
+
+This is highly recommended. Using caching allows various data to persist between executions of the library, which will speed up initialisation after any application restarts.
+
+First, install the caching system you wish to use with node-cache-manager. For example, the below uses file-system caching (Redis/Mongo or the alike recommended). For this example, you can install the filesystem cacher with ```npm install cache-manager-fs-binary --save```.
+
+To do so, populate the Themeparks.Settings.Cache variables before using the library.
+
+    // include the Themeparks library
+    var Themeparks = require("themeparks");
+
+    // initialise caching (see https://github.com/BryanDonovan/node-cache-manager)
+    var cacheManager = require('cache-manager');
+    Themeparks.Settings.Cache = cacheManager.caching({
+        store: require('cache-manager-fs-binary'),
+        options: {
+            reviveBuffers: false,
+            binaryAsStream: true,
+            ttl: 60 * 60,
+            maxsize: 1000 * 1000 * 1000,
+            path: 'diskcache',
+            preventfill: false
+        }
+    });
+
+See [https://github.com/BryanDonovan/node-cache-manager](https://github.com/BryanDonovan/node-cache-manager) for other caching systems available.
+
 ### Using Promises or callbacks
 
 Both GetWaitTimes and GetOpeningTimes work either through callback or Promises.
