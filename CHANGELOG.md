@@ -3,6 +3,8 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.0.1 Added Universal Studios Hollywood
+
 ### Core Changes
 
 * Project refactor - now written in ES6
