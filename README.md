@@ -5,6 +5,8 @@ An unofficial API library for accessing ride wait times and park opening times f
 [![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) [![Dependency Status](https://www.versioneye.com/user/projects/5852b45c4d64660032bc3686/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5852b45c4d64660032bc3686)
 [![npm history](https://nodei.co/npm-dl/themeparks.png)](https://www.npmjs.com/package/themeparks/)
 
+[Documentation](https://cubehouse.github.io/themeparks/) | [Change Log](CHANGELOG.md) | [Supported Parks](#supported-park-features)
+
 ## Install
 
     npm install themeparks --save
