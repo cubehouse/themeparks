@@ -104,6 +104,8 @@ This is the same as the above example, but using a callback instead of a Promise
 * Six Flags White Water, Atlanta (ThemeParks.Parks.SixFlagsWhiteWaterAtlanta)
 * Six Flags México (ThemeParks.Parks.SixFlagsMxico)
 * La Ronde, Montreal (ThemeParks.Parks.LaRondeMontreal)
+* Alton Towers (ThemeParks.Parks.AltonTowers)
+* Parc-Asterix (ThemeParks.Parks.AsterixPark)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -149,6 +151,8 @@ This is the same as the above example, but using a callback instead of a Promise
 |Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
 |Six Flags México|&#10003;|&#10003;|&#10007;|
 |La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
+|Alton Towers|&#10003;|&#10003;|&#10007;|
+|Parc-Asterix|&#10003;|&#10003;|&#10003;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -261,6 +265,8 @@ Prints:
 * Six Flags White Water, Atlanta [(33°57′32.86″N, 84°31′10.37″W)]: (America/New_York)
 * Six Flags México [(19°17′43.40″N, 99°12′41.19″W)]: (America/Mexico_City)
 * La Ronde, Montreal [(45°31′19.18″N, 73°32′4.48″W)]: (America/Toronto)
+* Alton Towers [(52°59′27.83″N, 1°53′32.25″W)]: (Europe/London)
+* Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
