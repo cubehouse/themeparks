@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: TokyoDisneyResortMagicKingdom</title>
+	<title>ThemeParks Class: HersheyPark</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: TokyoDisneyResortMagicKingdom</h1>
+	<h1 class="page-title">Class: HersheyPark</h1>
 <section>
 
 <header>
     
         <h2>
-        TokyoDisneyResortMagicKingdom
+        HersheyPark
         </h2>
         
-            <div class="class-description">Tokyo Disney Resort - Magic Kingdom</div>
+            <div class="class-description">Implements the Hershey Park API framework.</div>
         
     
 </header>
@@ -93,16 +93,12 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="TokyoDisneyResortMagicKingdom"><span class="type-signature"></span>new TokyoDisneyResortMagicKingdom()</h4>
+    <h4 class="name" id="HersheyPark"><span class="type-signature"></span>new HersheyPark()</h4>
     
     
 </dt>
 <dd>
 
-    
-    <div class="description">
-        Create a new TokyoDisneyResortMagicKingdom object
-    </div>
     
 
     
@@ -177,7 +173,7 @@
 
 
     <ul>
-        <li><a href="DisneyTokyoPark.html">DisneyTokyoPark</a></li>
+        <li><a href="Park.html">Park</a></li>
     </ul>
 
 
@@ -940,6 +936,11 @@
 	
 
     
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Park.html#UserAgent">Park#UserAgent</a>
+    </li></ul></dd>
+    
 
     
 
@@ -1205,7 +1206,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
+    <h4 class="name" id="FetchDayOpeningHours"><span class="type-signature"></span>FetchDayOpeningHours(date)</h4>
     
     
 </dt>
@@ -1213,7 +1214,7 @@
 
     
     <div class="description">
-        Refresh/Fetch new Wait Times for this Tokyo Disney Resort park
+        Fetch the opening hours for a specific day.
     </div>
     
 
@@ -1222,6 +1223,56 @@
     
 
     
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">MomentJS</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Date to request opening hours for (should be in correct timezone)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -1233,15 +1284,6 @@
 	
 
 	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="DisneyTokyoPark.html#FetchWaitTimes">DisneyTokyoPark#FetchWaitTimes</a>
-			</li>
-		</ul>
-	</dd>
-	
 
     
 
@@ -1284,26 +1326,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -1523,117 +1545,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="GetAcccessToken"><span class="type-signature"></span>GetAcccessToken()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get the Geo-Locked access token for accessing Tokyo Disneyland wait times
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="DisneyTokyoPark.html#GetAcccessToken">DisneyTokyoPark#GetAcccessToken</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    tdrloc cookie needed for accessing wait time pages
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;String></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="GetOpeningTimes"><span class="type-signature"></span>GetOpeningTimes()</h4>
     
     
@@ -1812,117 +1723,6 @@
     <dd>
         
 <span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="GetRideNames"><span class="type-signature"></span>GetRideNames()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Fetch English ride names from the API
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="DisneyTokyoPark.html#GetRideNames">DisneyTokyoPark#GetRideNames</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    `rideID` to English names
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
 
 
 
@@ -2873,7 +2673,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2016-12-19T23:30:25+00:00
+		on 2016-12-19T23:30:23+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

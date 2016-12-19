@@ -29,7 +29,7 @@
         "testonline": "node_modules/.bin/mocha lib/testonline.js",
         "test": "npm run build && node_modules/.bin/mocha dist/test.js",
         "travislocal": "node_modules/.bin/trevor",
-        "docs": "node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
+        "docs": "node dev/UpdateREADME.js && node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
         "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps",
         "prepublish": "npm run build",
         "postinstall": "npm dedupe",
