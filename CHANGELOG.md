@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.0.3 Attempt fix for #42 for Disney parks not injected ride schedule data when opening times requested before ride data
 * 4.0.2 Added Hershey Park and fixed parks returning all dates as "Closed" in 4.0.1
 * 4.0.1 Added Universal Studios Hollywood
 
