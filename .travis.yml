@@ -5,6 +5,7 @@ node_js:
   - "5"
 before_install:
   - npm -g install npm@'>=3'
+# this is from the below libxmljs test, just to confirm it's installed correctly
   - $CXX --version
 cache:
   directories:
