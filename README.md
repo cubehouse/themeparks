@@ -333,17 +333,13 @@ There is a separate test for checking the library still connects to park APIs co
 
     npm run testonline
 
-You can also test an individual park using the PARK_ID environment variable, for example:
+You can also test an individual park using the PARKID environment variable, for example:
 
     PARKID=UniversalStudiosFlorida npm run testonline
 
 ### Debug Mode
 
-You can enable debug mode for any individual park by passing debug: true into it's configuration object (see "API Options" above).
-
-You can also set the environment variable "DEBUG" to enable debug logs for all parks.
-
-Themeparks also supports the standard NODE_DEBUG environment variable.
+Themeparks supports the standard NODE_DEBUG environment variable. Pass the name of the library into NODE_DEBUG to turn on debug mode:
 
     NODE_DEBUG=themeparks npm run testonline
 
@@ -353,7 +349,7 @@ Environment variables can be combined:
 
 ### Contributing
 
-Each park inherits it's core logic from lib/Park.js.
+Each park inherits it's core logic from lib/park.js.
 
 For each set of parks, a base object should be made with all the core logic for that API/park group.
 
