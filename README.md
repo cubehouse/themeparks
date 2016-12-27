@@ -83,7 +83,7 @@ This is the same as the above example, but using a callback instead of a Promise
 
     // access wait times via callback
     disneyMagicKingdom.GetWaitTimes(function(err, rides) {
-        if (err) reutrn console.error(err);
+        if (err) return console.error(err);
 
         // print each wait time
         for(var i=0, ride; ride=rides[i++];) {
@@ -306,34 +306,6 @@ Prints:
 * Hershey Park [(40°17′15.65″N, 76°39′30.88″W)]: (America/New_York)
 
 <!-- END_PARK_TIMEZONE_LIST -->
-
-## API Options
-
-Each park can take a series of options to configure it's behaviour.
-
-Default options:
-
-|Variable|Default|Description|
-|:-------|:------|:----------|
-|debug|false|Turn on debugging (can also be enabled by setting environment variable DEBUG)|
-|timeFormat|YYYY-MM-DDTHH:mm:ssZ|Format to return times in (see http://momentjs.com/docs/#/displaying/format/)|
-|dateFormat|YYYY-MM-DD|Format to return dates in (see http://momentjs.com/docs/#/displaying/format/)|
-|timeFormatTimezone|*Park's local timezone*|Control what timezone times will be returned in. Defaults to park's local timezone (see TZ values https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)|
-|scheduleMaxDates|30|Maximum number of days to return opening times for (some parks may return less than requested days, but never more)|
-|useragent|*Park Defined*|User Agent string to use for making API requests (overrides per-park useragent settings)|
-
-    var DisneyAPI = require("themeparks");
-
-    var MagicKingdom = new DisneyAPI.WaltDisneyWorldMagicKingdom({
-      debug: true,
-      timeFormat: "YYYY-MM-DDTHH:mm:ssZ",
-      dateFormat: "YYYY-MM-DD",
-      timeFormatTimezone: "Europe/London",
-      scheduleMaxDates: 7,
-    });
-
-    // You can also configure these settings after initialisation with Config(key, value)
-    MagicKingdom.Config("debug", false);
 
 ## Development
 
