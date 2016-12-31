@@ -3,6 +3,8 @@ node_js:
   - "stable"
   - "6"
   - "5"
+  - "4"
+  - "0.12"
 before_install:
   - npm -g install npm@'>=3'
 # this is from the below libxmljs test, just to confirm it's installed correctly
