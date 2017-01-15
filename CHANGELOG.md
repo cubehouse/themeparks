@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.0.5 Minor bugfix with http module to not attempt to access non-existing statusCode on network error
 * 4.0.4 Improve backwards compatibility with older versions of NodeJS (thanks @andrewmunsell with #45)
 * 4.0.3 Attempt fix for #42 for Disney parks not injected ride schedule data when opening times requested before ride data
 * 4.0.2 Added Hershey Park and fixed parks returning all dates as "Closed" in 4.0.1
