@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.0.7 Add Chessington World Of Adventures to the library
 * 4.0.6 Added missing park Hong Kong Disneyland (thanks @elstringer with #47)
 * 4.0.5 Minor bugfix with http module to not attempt to access non-existing statusCode on network error
 * 4.0.4 Improve backwards compatibility with older versions of NodeJS (thanks @andrewmunsell with #45)
