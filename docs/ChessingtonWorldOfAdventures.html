@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: BuschGardensWilliamsburg</title>
+	<title>ThemeParks Class: ChessingtonWorldOfAdventures</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: BuschGardensWilliamsburg</h1>
+	<h1 class="page-title">Class: ChessingtonWorldOfAdventures</h1>
 <section>
 
 <header>
     
         <h2>
-        BuschGardensWilliamsburg
+        ChessingtonWorldOfAdventures
         </h2>
         
-            <div class="class-description">Busch Gardens - Williamsburg</div>
+            <div class="class-description">Chessington World Of Adventures</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="BuschGardensWilliamsburg"><span class="type-signature"></span>new BuschGardensWilliamsburg()</h4>
+    <h4 class="name" id="ChessingtonWorldOfAdventures"><span class="type-signature"></span>new ChessingtonWorldOfAdventures()</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new BuschGardensWilliamsburg object
+        Create a new ChessingtonWorldOfAdventures object
     </div>
     
 
@@ -177,7 +177,7 @@
 
 
     <ul>
-        <li><a href="SeaworldPark.html">SeaworldPark</a></li>
+        <li><a href="MerlinPark.html">MerlinPark</a></li>
     </ul>
 
 
@@ -192,6 +192,148 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="APIBase">
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        The API Base URL for this park
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="MerlinPark.html#APIBase">MerlinPark#APIBase</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="APIKey">
+    <h4 id="APIKey"><span class="type-signature"></span>APIKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        API Key for this park
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="MerlinPark.html#APIKey">MerlinPark#APIKey</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -200,7 +342,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchRideNames"><span class="type-signature"></span>FetchRideNames()</h4>
+    <h4 class="name" id="_APIRespond"><span class="type-signature"></span>_APIRespond()</h4>
     
     
 </dt>
@@ -208,7 +350,7 @@
 
     
     <div class="description">
-        Fetch all the rides and ride names for this park from the API (skip the cache)
+        Response to challenge request for Chessington World Of Adventures API
     </div>
     
 
@@ -228,15 +370,6 @@
 	
 
 	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#FetchRideNames">SeaworldPark#FetchRideNames</a>
-			</li>
-		</ul>
-	</dd>
-	
 
     
 
@@ -279,30 +412,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Object of RideID => Ride name in English
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -311,7 +420,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="GetRideNames"><span class="type-signature"></span>GetRideNames()</h4>
+    <h4 class="name" id="_GetRideName"><span class="type-signature"></span>_GetRideName()</h4>
     
     
 </dt>
@@ -319,7 +428,85 @@
 
     
     <div class="description">
-        Get cached (or fresh fetch) of ride names
+        Given a ride object, return the ride's name
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Fetch Wait Times for Merlin Park
     </div>
     
 
@@ -343,7 +530,94 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="SeaworldPark.html#GetRideNames">SeaworldPark#GetRideNames</a>
+				<a href="MerlinPark.html#FetchWaitTimes">MerlinPark#FetchWaitTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="GenerateAPIResponse"><span class="type-signature"></span>GenerateAPIResponse()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Generate a response to a challenge for this park
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="MerlinPark.html#GenerateAPIResponse">MerlinPark#GenerateAPIResponse</a>
 			</li>
 		</ul>
 	</dd>
@@ -394,7 +668,7 @@
     
             
 <div class="param-desc">
-    Object of RideID => Ride name in English
+    Promise resolving with the challenge response for this park
 </div>
 
 
@@ -405,7 +679,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;Object></span>
+<span class="param-type">Promise.&lt;String></span>
 
 
 
