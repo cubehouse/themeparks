@@ -141,6 +141,11 @@ This is the same as the above example, but using a callback instead of a Promise
 * Parc-Asterix (ThemeParks.Parks.AsterixPark)
 * Hershey Park (ThemeParks.Parks.HersheyPark)
 * Chessington World Of Adventures (ThemeParks.Parks.ChessingtonWorldOfAdventures)
+* Knott's Berry Farm (ThemeParks.Parks.KnottsBerryFarm)
+* Cedar Point (ThemeParks.Parks.CedarPoint)
+* Carowinds (ThemeParks.Parks.Carowinds)
+* Canada's Wonderland (ThemeParks.Parks.CanadasWonderland)
+* Kings Island (ThemeParks.Parks.KingsIsland)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -192,6 +197,11 @@ This is the same as the above example, but using a callback instead of a Promise
 |Parc-Asterix|&#10003;|&#10003;|&#10003;|
 |Hershey Park|&#10003;|&#10003;|&#10007;|
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
+|Knott's Berry Farm|&#10003;|&#10003;|&#10007;|
+|Cedar Point|&#10003;|&#10003;|&#10007;|
+|Carowinds|&#10003;|&#10003;|&#10007;|
+|Canada's Wonderland|&#10003;|&#10003;|&#10007;|
+|Kings Island|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -309,7 +319,12 @@ Prints:
 * Alton Towers [(52°59′27.83″N, 1°53′32.25″W)]: (Europe/London)
 * Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
 * Hershey Park [(40°17′15.65″N, 76°39′30.88″W)]: (America/New_York)
-* Chessington World Of Adventures [(52°59′27.83″N, 1°53′32.25″W)]: (Europe/London)
+* Chessington World Of Adventures [(51°20′58.56″N, 0°18′52.45″W)]: (Europe/London)
+* Knott's Berry Farm [(33°50′39.12″N, 117°59′54.96″W)]: (America/Los_Angeles)
+* Cedar Point [(41°28′42.24″N, 82°40′45.48″W)]: (America/New_York)
+* Carowinds [(35°6′16.20″N, 80°56′21.84″W)]: (America/New_York)
+* Canada's Wonderland [(43°50′34.80″N, 79°32′20.40″W)]: (America/Toronto)
+* Kings Island [(39°20′40.92″N, 84°16′6.96″W)]: (America/New_York)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
