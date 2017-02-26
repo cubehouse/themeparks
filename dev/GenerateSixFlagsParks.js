@@ -6,7 +6,7 @@ console.log("# There are so many parks by SixFlags, this is a far more convenien
 console.log("");
 
 // ADD THIS - get an API key from timezoned, and put it here to run this script
-var timezonedbapikey = "";
+var timezonedbapikey = process.env.APIKEY || "";
 
 if (!timezonedbapikey) {
     console.error("Missing Timezoned API key, this is needed for figuring out each park's timezone from it's geo location");
@@ -74,7 +74,7 @@ function CreateParkString(park) {
         var lat = park.entranceLocation ? park.entranceLocation.latitude : park.location.latitude;
 
         GetTimeZone(lat, long).then(function(timezone) {
-            var parkID = park.name.replace(/[^a-zA-Z0-9]/g, "");
+            var parkID = park.name.replace(/é/g, "e").replace(/[^a-zA-Z0-9]/g, "");
 
             console.log("Filling in " + parkID);
 
@@ -115,7 +115,7 @@ module.exports = ${parkID};
             // write file
             var filename = parkID.toLowerCase();
             console.log(`Writing file ${filename}.js`);
-            fs.writeFile(__dirname + `/${filename}.js`, parkString, function(err) {
+            fs.writeFile(__dirname + `/../lib/sixflags/${filename}.js`, parkString, function(err) {
                 if (err) return reject(err);
 
                 resolve(parkID);
@@ -126,7 +126,7 @@ module.exports = ${parkID};
 
 function GetTimeZone(lat, long) {
     return new Promise(function(resolve, reject) {
-        require("../http")({
+        require("../lib/http")({
             url: "http://api.timezonedb.com/v2/get-time-zone",
             data: {
                 key: timezonedbapikey,
