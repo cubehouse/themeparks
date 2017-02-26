@@ -135,7 +135,7 @@ This is the same as the above example, but using a callback instead of a Promise
 * Six Flags Hurricane Harbor, Jackson (ThemeParks.Parks.SixFlagsHurricaneHarborJackson)
 * The Great Escape (ThemeParks.Parks.TheGreatEscape)
 * Six Flags White Water, Atlanta (ThemeParks.Parks.SixFlagsWhiteWaterAtlanta)
-* Six Flags México (ThemeParks.Parks.SixFlagsMxico)
+* Six Flags México (ThemeParks.Parks.SixFlagsMexico)
 * La Ronde, Montreal (ThemeParks.Parks.LaRondeMontreal)
 * Alton Towers (ThemeParks.Parks.AltonTowers)
 * Parc-Asterix (ThemeParks.Parks.AsterixPark)
