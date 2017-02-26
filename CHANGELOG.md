@@ -3,6 +3,16 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.1.0
+  * Added 5 Cedar Fair parks to the library
+    * Cedar Point
+    * Knott's Berry Farm
+    * Carowinds
+    * Canada's Wonderland
+    * Kings Island
+  * Fixed SixFlagsMexico park ID (was SixFlagsMxico)
+  * Fixed SeaWorld Orlando Latitude & Longitude
+  * Fixed EuropaPark Timezone
 * 4.0.7 Add Chessington World Of Adventures to the library
 * 4.0.6 Added missing park Hong Kong Disneyland (thanks @elstringer with #47)
 * 4.0.5 Minor bugfix with http module to not attempt to access non-existing statusCode on network error
