@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: SeaworldSanDiego</title>
+	<title>ThemeParks Class: SixFlagsMexico</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SeaworldSanDiego</h1>
+	<h1 class="page-title">Class: SixFlagsMexico</h1>
 <section>
 
 <header>
     
         <h2>
-        SeaworldSanDiego
+        SixFlagsMexico
         </h2>
         
-            <div class="class-description">Seaworld San Diego</div>
+            <div class="class-description">Six Flags México</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SeaworldSanDiego"><span class="type-signature"></span>new SeaworldSanDiego()</h4>
+    <h4 class="name" id="SixFlagsMexico"><span class="type-signature"></span>new SixFlagsMexico()</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new SeaworldSanDiego object
+        Create a new SixFlagsMexico object
     </div>
     
 
@@ -177,7 +177,7 @@
 
 
     <ul>
-        <li><a href="SeaworldPark.html">SeaworldPark</a></li>
+        <li><a href="SixFlagsPark.html">SixFlagsPark</a></li>
     </ul>
 
 
@@ -198,28 +198,17 @@
             
 <hr>
 <dt class="name" id="APIBase">
-    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"> :String</span></h4>
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        Get this park's API Base URL
+        Get the API base URL for making API requests
     </div>
     
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-
-            </li>
-        </ul>
     
 
     
@@ -235,87 +224,7 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="SeaworldPark.html#APIBase">SeaworldPark#APIBase</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="ParkID">
-    <h4 id="ParkID"><span class="type-signature"></span>ParkID<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get the park ID used by the SeaWorld/Cedar Fair API
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#ParkID">SeaworldPark#ParkID</a>
+				<a href="SixFlagsPark.html#APIBase">SixFlagsPark#APIBase</a>
 			</li>
 		</ul>
 	</dd>
@@ -364,7 +273,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchRideNames"><span class="type-signature"></span>FetchRideNames()</h4>
+    <h4 class="name" id="GetAccessToken"><span class="type-signature"></span>GetAccessToken()</h4>
     
     
 </dt>
@@ -372,7 +281,7 @@
 
     
     <div class="description">
-        Fetch all the rides and ride names for this park from the API (skip the cache)
+        Get an access token for making Six Flags API requests
     </div>
     
 
@@ -396,7 +305,7 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="SeaworldPark.html#FetchRideNames">SeaworldPark#FetchRideNames</a>
+				<a href="SixFlagsPark.html#GetAccessToken">SixFlagsPark#GetAccessToken</a>
 			</li>
 		</ul>
 	</dd>
@@ -443,30 +352,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Object of RideID => Ride name in English
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -483,7 +368,7 @@
 
     
     <div class="description">
-        Get cached (or fresh fetch) of ride names
+        Get rides names for all the rides in this parkThis is either fetched from cache or fresh from the API if not fetched for a while
     </div>
     
 
@@ -507,7 +392,7 @@
 	<dd class="inherited-from">
 		<ul class="dummy">
 			<li>
-				<a href="SeaworldPark.html#GetRideNames">SeaworldPark#GetRideNames</a>
+				<a href="SixFlagsPark.html#GetRideNames">SixFlagsPark#GetRideNames</a>
 			</li>
 		</ul>
 	</dd>
@@ -558,7 +443,7 @@
     
             
 <div class="param-desc">
-    Object of RideID => Ride name in English
+    Object of Ride IDs => Ride Names
 </div>
 
 

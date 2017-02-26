@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: SeaworldSanDiego</title>
+	<title>ThemeParks Class: KingsIsland</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: SeaworldSanDiego</h1>
+	<h1 class="page-title">Class: KingsIsland</h1>
 <section>
 
 <header>
     
         <h2>
-        SeaworldSanDiego
+        KingsIsland
         </h2>
         
-            <div class="class-description">Seaworld San Diego</div>
+            <div class="class-description">KingsIsland</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="SeaworldSanDiego"><span class="type-signature"></span>new SeaworldSanDiego()</h4>
+    <h4 class="name" id="KingsIsland"><span class="type-signature"></span>new KingsIsland()</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new SeaworldSanDiego object
+        Create new KingsIsland Object.
     </div>
     
 
@@ -177,7 +177,7 @@
 
 
     <ul>
-        <li><a href="SeaworldPark.html">SeaworldPark</a></li>
+        <li><a href="CedarFairPark.html">CedarFairPark</a></li>
     </ul>
 
 
@@ -192,397 +192,7 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
 
-        <dl>
-            
-<hr>
-<dt class="name" id="APIBase">
-    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get this park's API Base URL
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#APIBase">SeaworldPark#APIBase</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="ParkID">
-    <h4 id="ParkID"><span class="type-signature"></span>ParkID<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get the park ID used by the SeaWorld/Cedar Fair API
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#ParkID">SeaworldPark#ParkID</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="FetchRideNames"><span class="type-signature"></span>FetchRideNames()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Fetch all the rides and ride names for this park from the API (skip the cache)
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#FetchRideNames">SeaworldPark#FetchRideNames</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Object of RideID => Ride name in English
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="GetRideNames"><span class="type-signature"></span>GetRideNames()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get cached (or fresh fetch) of ride names
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
-	<dd class="inherited-from">
-		<ul class="dummy">
-			<li>
-				<a href="SeaworldPark.html#GetRideNames">SeaworldPark#GetRideNames</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    Object of RideID => Ride name in English
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -632,7 +242,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2017-02-26T15:56:45+00:00
+		on 2017-02-26T15:56:44+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
