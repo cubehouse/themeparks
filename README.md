@@ -388,7 +388,12 @@ A rough guide for adding new parks is also available at [Adding New Parks to the
 
 If you're using themeparks for a project, please let me know! I'd love to see what people are doing!
 
-## Pebble Apps
+### Websites and Mobile Apps
+
+* [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
+* [ChronoPass](https://play.google.com/store/apps/details?id=fr.dechriste.android.attractions&hl=en_GB) - Walt Disney World, Disneyland Paris, Parc Asterix, EuropaPark
+
+### Pebble Apps
 
 * [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
 * [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
