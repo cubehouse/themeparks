@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.1.2 Disney parks no longer return Entertainment by default for wait times (revert to old behaviour by passing ride_types: ["Attraction", "Entertainment"] when creating the park object)
 * 4.1.1 Fixed issue where wait-time-less rides (like Tiki room) were appearing as Closed (thanks @DougSisk with #52)
 * 4.1.0
   * Added 5 Cedar Fair parks to the library
