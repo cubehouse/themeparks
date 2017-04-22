@@ -3,7 +3,8 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
-* 4.1.3 Minor release to improve Disney fastPass detection (#54 thanks @christopherkade) and extend Universal opening hours stored (#55 thanks @georgereason)
+* 4.1.4 Minor release to extend Universal opening hours stored (#55 thanks @georgereason)
+* 4.1.3 Minor release to improve Disney fastPass detection (#54 thanks @christopherkade)
 * 4.1.2 Disney parks no longer return Entertainment by default for wait times (revert to old behaviour by passing ride_types: ["Attraction", "Entertainment"] when creating the park object)
 * 4.1.1 Fixed issue where wait-time-less rides (like Tiki room) were appearing as Closed (thanks @DougSisk with #52)
 * 4.1.0
