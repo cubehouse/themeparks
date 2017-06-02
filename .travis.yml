@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "stable"
+  - "8"
   - "6"
   - "5"
   - "4"
@@ -8,9 +9,10 @@ before_install:
   - npm -g install npm@'>=3'
 # this is from the below libxmljs test, just to confirm it's installed correctly
   - $CXX --version
-cache:
-  directories:
-    - node_modules
+# cached node_modules seem to be breaking node 8 tests
+#cache:
+#  directories:
+#    - node_modules
 # ensure libxmljs can get compiled
 env:
     - CXX=g++-4.8
