@@ -1,7 +1,7 @@
 {
   "name": "themeparks",
   "description": "Get Theme Park Wait Times and Opening Times",
-  "version": "4.1.4",
+  "version": "4.1.5",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
@@ -15,7 +15,7 @@
     "osmosis": "^1.1.4",
     "random-useragent": "^0.3.0",
     "relaxed-json": "^1.0.0",
-    "source-map-support": "^0.4.2"
+    "source-map-support": "^0.4.15"
   },
   "engines": {
     "npm": ">=2",
