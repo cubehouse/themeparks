@@ -112,6 +112,7 @@ This is the same as the above example, but using a callback instead of a Promise
 * Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
 * Universal Studios Florida (ThemeParks.Parks.UniversalStudiosFlorida)
 * Universal's Islands Of Adventure (ThemeParks.Parks.UniversalIslandsOfAdventure)
+* Universal Volcano Bay (ThemeParks.Parks.UniversalVolcanoBay)
 * Universal Studios Hollywood (ThemeParks.Parks.UniversalStudiosHollywood)
 * Seaworld Orlando (ThemeParks.Parks.SeaworldOrlando)
 * Seaworld San Antonio (ThemeParks.Parks.SeaworldSanAntonio)
@@ -168,6 +169,7 @@ This is the same as the above example, but using a callback instead of a Promise
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10003;|
 |Universal Studios Florida|&#10003;|&#10003;|&#10007;|
 |Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
+|Universal Volcano Bay|&#10003;|&#10003;|&#10007;|
 |Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
 |Seaworld Orlando|&#10003;|&#10003;|&#10007;|
 |Seaworld San Antonio|&#10003;|&#10003;|&#10007;|
@@ -291,6 +293,7 @@ Prints:
 * Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
 * Universal Studios Florida [(28°28′29.94″N, 81°27′59.39″W)]: (America/New_York)
 * Universal's Islands Of Adventure [(28°28′20.07″N, 81°28′4.28″W)]: (America/New_York)
+* Universal Volcano Bay [(28°27′44.28″N, 81°28′14.52″W)]: (America/New_York)
 * Universal Studios Hollywood [(34°8′14.14″N, 118°21′19.86″W)]: (America/Los_Angeles)
 * Seaworld Orlando [(28°24′41.04″N, 81°27′47.88″W)]: (America/New_York)
 * Seaworld San Antonio [(29°27′30.56″N, 98°41′59.45″W)]: (America/Chicago)
