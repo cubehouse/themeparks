@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.1.6 Fixed Chessington and Alton Towers, also added Thorpe Park to the library
 * 4.1.5 Added Universal Studios Volcano Bay to library
 * 4.1.4 Minor release to extend Universal opening hours stored (#55 thanks @georgereason)
 * 4.1.3 Minor release to improve Disney fastPass detection (#54 thanks @christopherkade)
