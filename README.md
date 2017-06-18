@@ -91,6 +91,16 @@ This is the same as the above example, but using a callback instead of a Promise
         }
     });
 
+### Proxy
+
+If you wish to use themeparks with a proxy, you can set a proxy in the library settings.
+
+    // include the Themeparks library
+    var Themeparks = require("themeparks");
+
+    // setup proxy (this is a library-wide setting, all further HTTP requests will use this proxy)
+    Themeparks.Settings.ProxyURL = "socks://127.0.0.1:9050";
+
 ## Change Log
 
 [View themeparks Change Log](CHANGELOG.md)
