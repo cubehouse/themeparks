@@ -3,9 +3,6 @@
         "es6": true,
         "node": true
     },
-    "options": {
-        "boss": true
-    },
     "extends": "eslint:recommended",
     "rules": {
         "indent": [
