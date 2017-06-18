@@ -13,7 +13,6 @@
         "cookie": "^0.3.1",
         "moment-timezone": "^0.5.13",
         "needle": "^1.6.0",
-        "osmosis": "^1.1.4",
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
         "socks-proxy-agent": "^3.0.0",
