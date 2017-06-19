@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.3.0 Removed Osmosis as a dependancy, returning to Cheerio. Makes installation easier for some users and slims our dependancies down
 * 4.2.1 Allow overriding of how many days are returned for GetOpeningTimes() (thanks @georgereason)
 * 4.2.0 Added Proxy support for HTTP requests (#65 thanks @mledford)
 * 4.1.7 Minor fix for Knott's Berry Farm opening hours not being downloaded correctly
