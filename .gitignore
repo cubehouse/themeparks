@@ -2,3 +2,5 @@ node_modules
 out
 *.log
 dist
+temp.js
+test.js
