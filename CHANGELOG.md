@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.3.4 Resolves FastPass issues at DLP (#54 thanks @christopherkade)
 * 4.3.3 Fix for Disney token expiring times introduced in 4.3.2 (#74 thanks @mledford)
 * 4.3.2 Fix for Disney rides not returning as "down", and improve Disney token expirey (#71 and #72 thanks @mledford)
 * 4.3.1 Fix for ride data not returned correctly for Asterix Parc, Europa Park, and Sesame Place (#68 and #69 thanks @lightswitchr)
