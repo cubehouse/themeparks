@@ -20,9 +20,7 @@
             "NODE_DEBUG": "themeparks",
             "PARKID": "DisneylandResortMagicKingdom"
         },
-        "externalConsole": false,
-        "sourceMaps": true,
-        "outDir": null
+        "sourceMaps": true
     }, {
         "name": "Attach",
         "type": "node",
@@ -31,7 +29,6 @@
         "address": "localhost",
         "restart": false,
         "sourceMaps": true,
-        "outDir": null,
         "localRoot": "${workspaceRoot}",
         "remoteRoot": null
     }]

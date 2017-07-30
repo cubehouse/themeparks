@@ -108,6 +108,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 ## Parks available
 
 <!-- START_SUPPORTED_PARKS_LIST -->
+
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
 * Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
@@ -297,6 +298,7 @@ There are some values available on each park object that may be useful.
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
+
 * Magic Kingdom - Walt Disney World Florida [(28°23′6.72″N, 81°33′50.04″W)]: (America/New_York)
 * Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
 * Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)
