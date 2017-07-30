@@ -230,6 +230,11 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
+            fastPassReturnTime: { (object containing current return times - entire field may be null)
+                startTime: (string return time formatted as "HH:mm": start of the current return time period),
+                endTime: (string return time formatted as "HH:mm": end of the current return time period),
+                lastUpdate: (JavaScript Date object: last time the fastPass return time changed),
+            },
             status: (string: will either be "Operating", "Closed", or "Down"),
             lastUpdate: (JavaScript Date object: last time this ride had new data),
             schedule: { **schedule will only be present if park.SupportsRideSchedules is true**
