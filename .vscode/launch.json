@@ -1,12 +1,14 @@
 {
     "version": "0.2.0",
     "configurations": [{
-        "name": "Launch",
+        "name": "Online Test",
         "type": "node",
         "request": "launch",
-        "program": "${workspaceRoot}/test.js",
+        "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
         "stopOnEntry": false,
-        "args": [],
+        "args": [
+            "lib/testonline.js"
+        ],
         "cwd": "${workspaceRoot}",
         "preLaunchTask": "",
         "runtimeExecutable": null,
@@ -15,7 +17,8 @@
         ],
         "env": {
             "NODE_ENV": "development",
-            "NODE_DEBUG": "themeparks"
+            "NODE_DEBUG": "themeparks",
+            "PARKID": "DisneylandResortMagicKingdom"
         },
         "externalConsole": false,
         "sourceMaps": true,
