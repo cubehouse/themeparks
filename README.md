@@ -108,6 +108,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 ## Parks available
 
 <!-- START_SUPPORTED_PARKS_LIST -->
+
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
 * Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
@@ -230,6 +231,11 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
+            fastPassReturnTime: { (object containing current return times, parks supporting this will set FastPassReturnTimes to true - entire field may be null for unsupported rides or when fastPass has ran out for the day)
+                startTime: (string return time formatted as "HH:mm": start of the current return time period),
+                endTime: (string return time formatted as "HH:mm": end of the current return time period),
+                lastUpdate: (JavaScript Date object: last time the fastPass return time changed),
+            },
             status: (string: will either be "Operating", "Closed", or "Down"),
             lastUpdate: (JavaScript Date object: last time this ride had new data),
             schedule: { **schedule will only be present if park.SupportsRideSchedules is true**
@@ -276,6 +282,7 @@ There are some values available on each park object that may be useful.
 |SupportsOpeningTimes|Does this park's API support opening hours?|
 |SupportsRideSchedules|Does this park return schedules for rides?|
 |FastPass|Does this park have FastPass (or a FastPass-style service)?|
+|FastPassReturnTimes|Does this park tell you the FastPass return times?|
 |TimeNow([momentjs date format])|Current time at this park (optional momentjs date format to return time in)|
 |DateNow([momentjs date format])|Current date at this park (optional momentjs date format to return date in)|
 |UserAgent|The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime)|
@@ -291,6 +298,7 @@ There are some values available on each park object that may be useful.
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
+
 * Magic Kingdom - Walt Disney World Florida [(28°23′6.72″N, 81°33′50.04″W)]: (America/New_York)
 * Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
 * Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)

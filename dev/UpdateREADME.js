@@ -3,11 +3,11 @@ var fs = require("fs");
 var path = require("path");
 var ThemeParks = require("../lib/index");
 
-var timezoneMarkdown = "";
-var supportedParksMarkdown = "";
-var parkFeaturesMarkdown =
-    "|Park|Wait Times|Park Opening Times|Ride Opening Times|\n" +
-    "|:---|:---------|:-----------------|:-----------------|\n";
+var timezoneMarkdown = "\n";
+var supportedParksMarkdown = "\n";
+var parkFeaturesMarkdown = `|Park|Wait Times|Park Opening Times|Ride Opening Times|
+|:---|:---------|:-----------------|:-----------------|
+`;
 
 // search for these tags to inject our new content
 var supportedParkListStart = "<!-- START_SUPPORTED_PARKS_LIST -->";
@@ -44,22 +44,20 @@ for (var park in ThemeParks.Parks) {
 
 // read in README.md
 fs.readFile(readmeFilePath, function(err, readmeData) {
-    if (err) return console.log(err);
-
     // convert buffer to string
     readmeData = readmeData.toString();
 
     // find START/END comments and replace with new content
     var newReadmeData = readmeData.replace(
-        new RegExp(supportedParkListStart + "[^<]*" + supportedParkListEnd, 'g'),
+        new RegExp(supportedParkListStart + "[^<]*" + supportedParkListEnd, "g"),
         supportedParkListStart + "\n" + supportedParksMarkdown + "\n" + supportedParkListEnd
     );
     newReadmeData = newReadmeData.replace(
-        new RegExp(timezoneListStart + "[^<]*" + timezoneListEnd, 'g'),
+        new RegExp(timezoneListStart + "[^<]*" + timezoneListEnd, "g"),
         timezoneListStart + "\n" + timezoneMarkdown + "\n" + timezoneListEnd
     );
     newReadmeData = newReadmeData.replace(
-        new RegExp(parkFeaturesListStart + "[^<]*" + parkFeaturesListEnd, 'g'),
+        new RegExp(parkFeaturesListStart + "[^<]*" + parkFeaturesListEnd, "g"),
         parkFeaturesListStart + "\n" + parkFeaturesMarkdown + "\n" + parkFeaturesListEnd
     );
 
