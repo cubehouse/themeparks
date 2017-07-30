@@ -230,7 +230,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
-            fastPassReturnTime: { (object containing current return times - entire field may be null)
+            fastPassReturnTime: { (object containing current return times, parks supporting this will set FastPassReturnTimes to true - entire field may be null for unsupported rides or when fastPass has ran out for the day)
                 startTime: (string return time formatted as "HH:mm": start of the current return time period),
                 endTime: (string return time formatted as "HH:mm": end of the current return time period),
                 lastUpdate: (JavaScript Date object: last time the fastPass return time changed),
@@ -281,6 +281,7 @@ There are some values available on each park object that may be useful.
 |SupportsOpeningTimes|Does this park's API support opening hours?|
 |SupportsRideSchedules|Does this park return schedules for rides?|
 |FastPass|Does this park have FastPass (or a FastPass-style service)?|
+|FastPassReturnTimes|Does this park tell you the FastPass return times?|
 |TimeNow([momentjs date format])|Current time at this park (optional momentjs date format to return time in)|
 |DateNow([momentjs date format])|Current date at this park (optional momentjs date format to return date in)|
 |UserAgent|The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime)|
