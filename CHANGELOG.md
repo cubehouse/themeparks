@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.5.0 Added Efteling to supported parks
 * 4.4.0 Disneyland Resort now returns fastpass return times (#75 thanks @DougSisk)
 * 4.3.4 Resolves FastPass issues at DLP (#54 thanks @christopherkade)
 * 4.3.3 Fix for Disney token expiring times introduced in 4.3.2 (#74 thanks @mledford)
