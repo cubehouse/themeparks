@@ -159,6 +159,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Carowinds (ThemeParks.Parks.Carowinds)
 * Canada's Wonderland (ThemeParks.Parks.CanadasWonderland)
 * Kings Island (ThemeParks.Parks.KingsIsland)
+* Efteling (ThemeParks.Parks.Efteling)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -217,6 +218,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Carowinds|&#10003;|&#10003;|&#10007;|
 |Canada's Wonderland|&#10003;|&#10003;|&#10007;|
 |Kings Island|&#10003;|&#10003;|&#10007;|
+|Efteling|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -349,6 +351,7 @@ Prints:
 * Carowinds [(35°6′16.20″N, 80°56′21.84″W)]: (America/New_York)
 * Canada's Wonderland [(43°50′34.80″N, 79°32′20.40″W)]: (America/Toronto)
 * Kings Island [(39°20′40.92″N, 84°16′6.96″W)]: (America/New_York)
+* Efteling [(51°38′59.67″N, 5°2′36.82″E)]: (Europe/Amsterdam)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 

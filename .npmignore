@@ -3,3 +3,4 @@ docs
 .*
 docs.conf.json
 dev
+*.mock
