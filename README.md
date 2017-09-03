@@ -125,6 +125,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Universal's Islands Of Adventure (ThemeParks.Parks.UniversalIslandsOfAdventure)
 * Universal Volcano Bay (ThemeParks.Parks.UniversalVolcanoBay)
 * Universal Studios Hollywood (ThemeParks.Parks.UniversalStudiosHollywood)
+* Universal Studios Singapore (ThemeParks.Parks.UniversalStudiosSingapore)
 * Seaworld Orlando (ThemeParks.Parks.SeaworldOrlando)
 * Seaworld San Antonio (ThemeParks.Parks.SeaworldSanAntonio)
 * Seaworld San Diego (ThemeParks.Parks.SeaworldSanDiego)
@@ -184,6 +185,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
 |Universal Volcano Bay|&#10003;|&#10003;|&#10007;|
 |Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
+|Universal Studios Singapore|&#10003;|&#10003;|&#10007;|
 |Seaworld Orlando|&#10003;|&#10003;|&#10007;|
 |Seaworld San Antonio|&#10003;|&#10003;|&#10007;|
 |Seaworld San Diego|&#10003;|&#10003;|&#10007;|
@@ -317,6 +319,7 @@ Prints:
 * Universal's Islands Of Adventure [(28°28′20.07″N, 81°28′4.28″W)]: (America/New_York)
 * Universal Volcano Bay [(28°27′44.28″N, 81°28′14.52″W)]: (America/New_York)
 * Universal Studios Hollywood [(34°8′14.14″N, 118°21′19.86″W)]: (America/Los_Angeles)
+* Universal Studios Singapore [(1°15′15.30″N, 103°49′25.67″E)]: (Asia/Singapore)
 * Seaworld Orlando [(28°24′41.04″N, 81°27′47.88″W)]: (America/New_York)
 * Seaworld San Antonio [(29°27′30.56″N, 98°41′59.45″W)]: (America/Chicago)
 * Seaworld San Diego [(32°45′51.49″N, 117°13′35.19″W)]: (America/Los_Angeles)
