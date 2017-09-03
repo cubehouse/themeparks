@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.5.1 Hotfix to resolve issue parsing Cedar Fair schedule times
 * 4.5.0 Added Efteling to supported parks
 * 4.4.0 Disneyland Resort now returns fastpass return times (#75 thanks @DougSisk)
 * 4.3.4 Resolves FastPass issues at DLP (#54 thanks @christopherkade)
