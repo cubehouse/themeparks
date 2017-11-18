@@ -6,7 +6,7 @@ node_js:
   - "5"
   - "4"
 before_install:
-  - npm -g install npm@'>=3'
+#  - npm -g install npm@'>=3'
 # this is from the below libxmljs test, just to confirm it's installed correctly
   - $CXX --version
 # cached node_modules seem to be breaking node 8 tests
