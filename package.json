@@ -7,19 +7,19 @@
         "email": "me@jamie.holdings"
     },
     "dependencies": {
-        "bluebird": "^3.5.0",
-        "cache-manager": "^2.4.0",
+        "bluebird": "^3.5.1",
+        "cache-manager": "^2.6.0",
         "cheerio": "^1.0.0-rc.2",
         "cookie": "^0.3.1",
-        "moment-timezone": "^0.5.13",
-        "needle": "^2.0.0",
+        "moment-timezone": "^0.5.14",
+        "needle": "^2.1.0",
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
-        "socks-proxy-agent": "^3.0.0",
-        "source-map-support": "^0.4.17",
+        "socks-proxy-agent": "^3.0.1",
+        "source-map-support": "^0.4.18",
         "uuid": "^3.1.0",
         "xml2js": "^0.4.19",
-        "yauzl": "^2.8.0"
+        "yauzl": "^2.9.1"
     },
     "engines": {
         "npm": ">=2",
@@ -45,13 +45,14 @@
     "license": "MIT",
     "devDependencies": {
         "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
         "babel-polyfill": "^6.26.0",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
-        "eslint": "^4.6.0",
-        "ink-docstrap": "^1.3.0",
-        "jsdoc": "^3.5.4",
-        "mocha": "^3.5.0",
+        "eslint": "^4.14.0",
+        "ink-docstrap": "^1.3.2",
+        "jsdoc": "^3.5.5",
+        "mocha": "^3.5.3",
         "trevor": "^2.3.0",
         "tz-lookup": "^6.1.3"
     }
