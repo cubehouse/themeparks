@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.6.4 Hotfix for Tokyo Disneyland servers rejecting all HTTP requests from the library
 * 4.6.3 Minor API change to allow fetching of non theme-park entity opening hours in WDW (see #84)
 * 4.6.2 Hotfix for missing coasters in Knott's Berry Farm following attraction category change
 * 4.6.1 Hotfix for Disney rides returning no status
