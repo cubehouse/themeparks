@@ -2,10 +2,23 @@
     "name": "themeparks",
     "description": "Get Theme Park Wait Times and Opening Times",
     "version": "4.6.4",
+    "homepage": "https://github.com/cubehouse/themeparks",
+    "bugs": "https://github.com/cubehouse/themeparks/issues",
     "author": {
         "name": "Jamie Holding",
         "email": "me@jamie.holdings"
     },
+    "contributors": [{
+        "name": "Jamie Holding",
+        "email": "me@jamie.holdings"
+    }],
+    "keywords": [
+        "themeparks",
+        "waittimes",
+        "queues",
+        "disney",
+        "universal"
+    ],
     "dependencies": {
         "bluebird": "^3.5.1",
         "cache-manager": "^2.6.0",
@@ -17,39 +30,29 @@
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
         "socks-proxy-agent": "^3.0.1",
-        "source-map-support": "^0.4.18",
         "uuid": "^3.1.0",
         "xml2js": "^0.4.19",
         "yauzl": "^2.9.1"
     },
     "engines": {
-        "npm": ">=2",
-        "node": ">=0.12"
+        "npm": ">=5",
+        "node": ">=6"
     },
     "repository": {
         "type": "git",
         "url": "git://github.com/cubehouse/themeparks.git"
     },
     "scripts": {
-        "testdev": "node_modules/.bin/mocha lib/test.js",
+        "test": "node_modules/.bin/mocha lib/test.js",
         "testonline": "node_modules/.bin/mocha lib/testonline.js",
-        "test": "npm run build && node_modules/.bin/mocha dist/test.js",
         "travislocal": "node_modules/.bin/trevor",
         "docs": "node dev/UpdateREADME.js && node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
-        "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps",
-        "prepare": "npm run build",
-        "postinstall": "npm dedupe",
         "lint": "./node_modules/.bin/eslint ./lib/**"
     },
-    "main": "./dist/index.js",
+    "main": "./lib/index.js",
     "readmeFilename": "README.md",
     "license": "MIT",
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
-        "babel-polyfill": "^6.26.0",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1",
         "eslint": "^4.14.0",
         "ink-docstrap": "^1.3.2",
         "jsdoc": "^3.5.5",

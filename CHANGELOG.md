@@ -43,7 +43,12 @@ Key changes to themeparks NPM module.
 * 4.0.2 Added Hershey Park and fixed parks returning all dates as "Closed" in 4.0.1
 * 4.0.1 Added Universal Studios Hollywood
 
-### Core Changes
+### Core Changes from 4.x to 5.x
+
+* Dropped support for unsupported NodeJS versions
+  * Now only supporting NodeJS 6.x and above - see [Official NodeJS Release Schedule](https://github.com/nodejs/Release)
+
+### Core Changes from 3.x to 4.x
 
 * Project refactor - now written in ES6
 * Renamed to themeparks
