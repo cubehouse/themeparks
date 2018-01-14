@@ -4,7 +4,7 @@ An unofficial API library for accessing ride wait times and park opening times f
 
 [![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/cubehouse/themeparks.svg)](https://beta.gemnasium.com/projects/github.com/cubehouse/themeparks)
 
-[![GitHub stars](https://img.shields.io/github/stars/cubehouse/themeparks.svg)](https://github.com/cubehouse/themeparks/stargazers)[![Downloads](https://img.shields.io/npm/dt/themeparks.svg)][![Monthly Downloads](https://img.shields.io/npm/dm/themeparks.svg)]
+[![GitHub stars](https://img.shields.io/github/stars/cubehouse/themeparks.svg)](https://github.com/cubehouse/themeparks/stargazers)![Downloads](https://img.shields.io/npm/dt/themeparks.svg)![Monthly Downloads](https://img.shields.io/npm/dm/themeparks.svg)
 
 [Roadmap](https://github.com/cubehouse/themeparks/projects/1) | [Documentation](https://cubehouse.github.io/themeparks/) | [Change Log](CHANGELOG.md) | [Supported Parks](#supported-park-features)
 
