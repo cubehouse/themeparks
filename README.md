@@ -19,33 +19,28 @@ If you were using wdwJS previously, please follow this guide to [migrate from wd
 ## Example Use
 
     // include the Themeparks library
-    var Themeparks = require("themeparks");
-
-    // list all the parks supported by the library
-    for (var park in Themeparks.Parks) {
-        console.log("* " + new Themeparks.Parks[park]().Name + " (DisneyAPI." + park + ")");
-    }
+    const Themeparks = require("themeparks");
 
     // access a specific park
-    var disneyMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom();
+    //  Create this *ONCE* and re-use this object for the lifetime of your application
+    //  re-creating this every time you require access is very slow, and will fetch data repeatedly for no purpose
+    const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom();
 
-    // access wait times by Promise
-    disneyMagicKingdom.GetWaitTimes().then(function(rides) {
-        // print each wait time
-        for(var i=0, ride; ride=rides[i++];) {
+    // Access wait times by Promise
+    DisneyWorldMagicKingdom.GetWaitTimes().then((rideTimes) => {
+        for(var i=0, ride; ride=rideTimes[i++];) {
             console.log(ride.name + ": " + ride.waitTime + " minutes wait");
         }
-    }, console.error);
+    }, console.error /** Handle any errors */);
 
-    // get park opening times
-    disneyMagicKingdom.GetOpeningTimes().then(function(times) {
-        // print opening times
+    // Get park opening times
+    DisneyWorldMagicKingdom.GetOpeningTimes().then((times) => {
         for(var i=0, time; time=times[i++];) {
             if (time.type == "Operating") {
                 console.log("[" + time.date + "] Open from " + time.openingTime + " until " + time.closingTime);
             }
         }
-    }, console.error);
+    }, console.error /** Handle any errors */);
 
 ### Caching
 
