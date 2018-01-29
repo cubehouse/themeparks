@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.6.6 Hotfix for bad npm upload, rolling back to earlier version of themeparks unexpectedly (see #97)
 * 4.6.5 Hotfix for Walt Disney World parks failing to access facilities data (see #96)
 * 4.6.4 Hotfix for Tokyo Disneyland servers rejecting all HTTP requests from the library
 * 4.6.3 Minor API change to allow fetching of non theme-park entity opening hours in WDW (see #84)
