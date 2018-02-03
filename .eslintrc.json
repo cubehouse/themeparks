@@ -22,6 +22,10 @@
             "always"
         ],
         "no-cond-assign": 0,
-        "no-var": 1
+        "no-var": 1,
+        "no-template-curly-in-string": 2,
+        "no-eval": 2,
+        "strict": 1,
+        "global-require": 1
     }
 }
