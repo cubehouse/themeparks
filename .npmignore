@@ -3,3 +3,7 @@ docs
 docs.conf.json
 dev
 *.mock
+cache.db
+temp.js
+test.js
+*.log

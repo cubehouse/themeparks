@@ -3,3 +3,4 @@ out
 *.log
 temp.js
 test.js
+cache.db
