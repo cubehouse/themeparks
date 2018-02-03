@@ -1,7 +1,7 @@
 {
     "name": "themeparks",
     "description": "Get Theme Park Wait Times and Opening Times",
-    "version": "4.6.4",
+    "version": "5.0.0",
     "homepage": "https://github.com/cubehouse/themeparks",
     "bugs": "https://github.com/cubehouse/themeparks/issues",
     "author": {
@@ -20,8 +20,6 @@
         "universal"
     ],
     "dependencies": {
-        "bluebird": "^3.5.1",
-        "cache-manager": "^2.6.0",
         "cheerio": "^1.0.0-rc.2",
         "cookie": "^0.3.1",
         "moment": "^2.20.1",
@@ -30,6 +28,7 @@
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
         "socks-proxy-agent": "^3.0.1",
+        "sqlite3": "^3.1.13",
         "uuid": "^3.1.0",
         "xml2js": "^0.4.19",
         "yauzl": "^2.9.1"
