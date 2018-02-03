@@ -21,6 +21,7 @@
             "error",
             "always"
         ],
-        "no-cond-assign": 0
+        "no-cond-assign": 0,
+        "no-var": 1
     }
 }
