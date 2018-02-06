@@ -8,10 +8,12 @@
         "name": "Jamie Holding",
         "email": "me@jamie.holdings"
     },
-    "contributors": [{
-        "name": "Jamie Holding",
-        "email": "me@jamie.holdings"
-    }],
+    "contributors": [
+        {
+            "name": "Jamie Holding",
+            "email": "me@jamie.holdings"
+        }
+    ],
     "keywords": [
         "themeparks",
         "waittimes",
