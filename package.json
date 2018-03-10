@@ -17,6 +17,7 @@
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
         "socks-proxy-agent": "^3.0.1",
+        "https-proxy-agent": "^2.2.0",
         "source-map-support": "^0.4.18",
         "uuid": "^3.1.0",
         "xml2js": "^0.4.19",
