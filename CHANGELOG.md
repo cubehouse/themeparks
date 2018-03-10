@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.6.9 Minor update adding HTTPS proxy support (as well as SOCKS support)
 * 4.6.8 Optional Minor Hotfix to re-attempt JSON decodes if HTTP request fails
 * 4.6.7 Hotfix for Tokyo Disneyland geo-location check URL changing (see #100)
 * 4.6.6 Hotfix for bad npm upload, rolling back to earlier version of themeparks unexpectedly (see #97)
