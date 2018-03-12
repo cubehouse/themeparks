@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.9.11 Hotfix for SixFlags parks - use correct timezone for operating hours (see #101)
 * 4.9.10 Updated Disneyland Tokyo Resort API to use their new JSON API method
 * 4.6.9 Minor update adding HTTPS proxy support (as well as SOCKS support)
 * 4.6.8 Optional Minor Hotfix to re-attempt JSON decodes if HTTP request fails
