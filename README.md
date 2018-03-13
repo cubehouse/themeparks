@@ -1,4 +1,4 @@
-# themeparks (previously wdwJS)
+# themeparks
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
 
@@ -12,9 +12,9 @@ An unofficial API library for accessing ride wait times and park opening times f
 
     npm install themeparks --save
 
-## Migrate from wdwJS 3.0
+## Migrate from themeparks 4.x
 
-If you were using wdwJS previously, please follow this guide to [migrate from wdwJS 3.0 to themeparks 4.0](https://github.com/cubehouse/themeparks/wiki/Migrating-from-3.0-to-4.0)
+If you have been using themeparks 4.x, please follow this guide to [migrate from themeparks 4.x to themeparks 5.x](https://github.com/cubehouse/themeparks/wiki/Migrating-from-4.x-to-5.x)
 
 ## Example Use
 
@@ -32,18 +32,22 @@ If you were using wdwJS previously, please follow this guide to [migrate from wd
     // Access wait times by Promise
     DisneyWorldMagicKingdom.GetWaitTimes().then((rideTimes) => {
         for(var i=0, ride; ride=rideTimes[i++];) {
-            console.log(ride.name + ": " + ride.waitTime + " minutes wait");
+            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
         }
-    }, console.error /** Handle any errors */);
+    }).catch((error) => {
+        console.error(error);
+    });
 
     // Get park opening times
     DisneyWorldMagicKingdom.GetOpeningTimes().then((times) => {
         for(var i=0, time; time=times[i++];) {
             if (time.type == "Operating") {
-                console.log("[" + time.date + "] Open from " + time.openingTime + " until " + time.closingTime);
+                console.log(`[${time.date}] Open from ${time.openingTime} until ${time.closingTime}`);
             }
         }
-    }, console.error /** Handle any errors */);
+    }).catch((error) => {
+        console.error(error);
+    });
 
 ### Using Promises or callbacks
 
@@ -52,24 +56,32 @@ Both GetWaitTimes and GetOpeningTimes work either through callback or Promises.
 This is the same as the above example, but using a callback instead of a Promise.
 
     // access wait times via callback
-    disneyMagicKingdom.GetWaitTimes(function(err, rides) {
+    disneyMagicKingdom.GetWaitTimes((err, rides) => {
         if (err) return console.error(err);
 
         // print each wait time
         for(var i=0, ride; ride=rides[i++];) {
-            console.log(ride.name + ": " + ride.waitTime + " minutes wait");
+            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
         }
     });
 
 ### Proxy
 
-If you wish to use themeparks with a proxy, you can set a proxy in the library settings.
+If you wish to use themeparks with a proxy, you can pass a proxy agent when you construct the park object.
 
     // include the Themeparks library
-    var Themeparks = require("themeparks");
+    const Themeparks = require("themeparks");
 
-    // setup proxy (this is a library-wide setting, all further HTTP requests will use this proxy)
-    Themeparks.Settings.ProxyURL = "socks://127.0.0.1:9050";
+    // include whichever proxy library you want to use (must provide an http.Agent object)
+    const SocksProxyAgent = require('socks-proxy-agent');
+
+    // create your proxy agent object
+    const MyProxy = new SocksProxyAgent("socks://socks-proxy-host", true);
+
+    // create your park object, passing in proxyAgent as an option
+    const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom({
+        proxyAgent: MyProxy
+    });
 
 ## Change Log
 
@@ -153,16 +165,15 @@ There are some values available on each park object that may be useful.
 |SupportsRideSchedules|Does this park return schedules for rides?|
 |FastPass|Does this park have FastPass (or a FastPass-style service)?|
 |FastPassReturnTimes|Does this park tell you the FastPass return times?|
-|TimeNow([momentjs date format])|Current time at this park (optional momentjs date format to return time in)|
-|DateNow([momentjs date format])|Current date at this park (optional momentjs date format to return date in)|
+|Now|Current date/time at this park (returned as a Moment object)|
 |UserAgent|The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime)|
 
-    var ThemeParks = require("themeparks");
+    const ThemeParks = require("themeparks");
 
     // print each park's name, current location, and timezone
-    for (var park in ThemeParks.Parks) {
-      var parkObj = new ThemeParks.Parks[park]();
-      console.log("* " + parkObj.Name + " [" + parkObj.Location.toString() + "]: (" + parkObj.Timezone + ")");
+    for (const park in ThemeParks.Parks) {
+      const parkObj = new ThemeParks.Parks[park]();
+      console.log(`* ${parkObj.Name} [${parkObj.Location.toString()}]: (${parkObj.Timezone})`);
     }
 
 Prints:
@@ -173,16 +184,6 @@ Prints:
 <!-- END_PARK_TIMEZONE_LIST -->
 
 ## Development
-
-### Building
-
-This project is using ES6 features, which can't be used by legacy version of NodeJS. We're also using "import", which is not available in NodeJS.
-
-So, the project needs to be built into regular JavaScript to work with the older NodeJS versions. This is done by running ``npm run build``
-
-This will compile everything in source/ into dist/.
-
-Building will also create sourcemaps, so any stacktraces will point to the original code in the source/ directory.
 
 ### Running Tests
 
