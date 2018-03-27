@@ -58,6 +58,7 @@
         "ink-docstrap": "^1.3.2",
         "jsdoc": "^3.5.5",
         "mocha": "^3.5.3",
+        "restify": "^6.3.4",
         "trevor": "^2.3.0",
         "tz-lookup": "^6.1.3"
     }
