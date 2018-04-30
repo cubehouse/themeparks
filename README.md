@@ -155,6 +155,8 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Chessington World Of Adventures (ThemeParks.Parks.ChessingtonWorldOfAdventures)
 * Parc-Asterix (ThemeParks.Parks.AsterixPark)
 * Hershey Park (ThemeParks.Parks.HersheyPark)
+* Silver Dollar City (ThemeParks.Parks.SilverDollarCity)
+* Dollywood (ThemeParks.Parks.Dollywood)
 * Knott's Berry Farm (ThemeParks.Parks.KnottsBerryFarm)
 * Cedar Point (ThemeParks.Parks.CedarPoint)
 * Carowinds (ThemeParks.Parks.Carowinds)
@@ -215,14 +217,14 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 |Parc-Asterix|&#10003;|&#10003;|&#10003;|
 |Hershey Park|&#10003;|&#10003;|&#10007;|
+|Silver Dollar City|&#10003;|&#10003;|&#10007;|
+|Dollywood|&#10003;|&#10003;|&#10007;|
 |Knott's Berry Farm|&#10003;|&#10003;|&#10007;|
 |Cedar Point|&#10003;|&#10003;|&#10007;|
 |Carowinds|&#10003;|&#10003;|&#10007;|
 |Canada's Wonderland|&#10003;|&#10003;|&#10007;|
 |Kings Island|&#10003;|&#10003;|&#10007;|
 |Efteling|&#10003;|&#10003;|&#10007;|
-|Dollywood|&#10003;|&#10003;|&#10007;|
-|Silver Dollar City|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -351,6 +353,8 @@ Prints:
 * Chessington World Of Adventures [(51°20′58.56″N, 0°18′52.45″W)]: (Europe/London)
 * Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
 * Hershey Park [(40°17′15.65″N, 76°39′30.88″W)]: (America/New_York)
+* Silver Dollar City [(36°40′5.44″N, 93°20′18.84″W)]: (America/Chicago)
+* Dollywood [(35°47′43.18″N, 83°31′51.19″W)]: (America/New_York)
 * Knott's Berry Farm [(33°50′39.12″N, 117°59′54.96″W)]: (America/Los_Angeles)
 * Cedar Point [(41°28′42.24″N, 82°40′45.48″W)]: (America/New_York)
 * Carowinds [(35°6′16.20″N, 80°56′21.84″W)]: (America/New_York)
