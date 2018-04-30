@@ -221,6 +221,8 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Canada's Wonderland|&#10003;|&#10003;|&#10007;|
 |Kings Island|&#10003;|&#10003;|&#10007;|
 |Efteling|&#10003;|&#10003;|&#10007;|
+|Dollywood|&#10003;|&#10003;|&#10007;|
+|Silver Dollar City|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
