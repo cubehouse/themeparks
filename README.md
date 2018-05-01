@@ -126,6 +126,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Universal Volcano Bay (ThemeParks.Parks.UniversalVolcanoBay)
 * Universal Studios Hollywood (ThemeParks.Parks.UniversalStudiosHollywood)
 * Universal Studios Singapore (ThemeParks.Parks.UniversalStudiosSingapore)
+* Universal Studios Japan (ThemeParks.Parks.UniversalStudiosJapan)
 * Seaworld Orlando (ThemeParks.Parks.SeaworldOrlando)
 * Seaworld San Antonio (ThemeParks.Parks.SeaworldSanAntonio)
 * Seaworld San Diego (ThemeParks.Parks.SeaworldSanDiego)
@@ -188,6 +189,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Universal Volcano Bay|&#10003;|&#10003;|&#10007;|
 |Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
 |Universal Studios Singapore|&#10003;|&#10003;|&#10007;|
+|Universal Studios Japan|&#10003;|&#10007;|&#10007;|
 |Seaworld Orlando|&#10003;|&#10003;|&#10007;|
 |Seaworld San Antonio|&#10003;|&#10003;|&#10007;|
 |Seaworld San Diego|&#10003;|&#10003;|&#10007;|
