@@ -47,14 +47,14 @@
     "license": "MIT",
     "devDependencies": {
         "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-polyfill": "^6.26.0",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
-        "eslint": "^4.14.0",
+        "eslint": "^4.19.1",
         "ink-docstrap": "^1.3.2",
         "jsdoc": "^3.5.5",
-        "mocha": "^3.5.3",
+        "mocha": "^5.2.0",
         "trevor": "^2.3.0",
         "tz-lookup": "^6.1.3"
     }
