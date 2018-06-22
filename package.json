@@ -30,7 +30,7 @@
         "random-useragent": "^0.3.1",
         "relaxed-json": "^1.0.1",
         "socks-proxy-agent": "^3.0.1",
-        "sqlite3": "^3.1.13",
+        "sqlite3": "^4.0.0",
         "uuid": "^3.1.0",
         "xml2js": "^0.4.19",
         "yauzl": "^2.9.1"
@@ -57,7 +57,7 @@
         "eslint": "^4.14.0",
         "ink-docstrap": "^1.3.2",
         "jsdoc": "^3.5.5",
-        "mocha": "^3.5.3",
+        "mocha": "^5.2.0",
         "restify": "^6.3.4",
         "trevor": "^2.3.0",
         "tz-lookup": "^6.1.3"
