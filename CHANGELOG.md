@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.6.16 Hotfix for Tokyo Disney Resort parks (see #110)
 * 4.6.15 Add California's Great America to supported parks (thanks @jkap #112)
 * 4.6.14 Add Dollywood and Silver Dollar City to supported parks (thanks @rambleraptor #107)
 * 4.6.13 Minor update to update Chessington ride data (thanks @OkoWsc #103)
