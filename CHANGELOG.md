@@ -3,10 +3,12 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
-* 4.9.13 Minor update to update Chessington ride data (thanks @OkoWsc #103)
-* 4.9.12 Minor update added Wicker Man to Alton Towers park (thanks @OkoWsc #102)
-* 4.9.11 Hotfix for SixFlags parks - use correct timezone for operating hours (see #101)
-* 4.9.10 Updated Disneyland Tokyo Resort API to use their new JSON API method
+* 4.6.15 Add California's Great America to supported parks (thanks @jkap #112)
+* 4.6.14 Add Dollywood and Silver Dollar City to supported parks (thanks @rambleraptor #107)
+* 4.6.13 Minor update to update Chessington ride data (thanks @OkoWsc #103)
+* 4.6.12 Minor update added Wicker Man to Alton Towers park (thanks @OkoWsc #102)
+* 4.6.11 Hotfix for SixFlags parks - use correct timezone for operating hours (see #101)
+* 4.6.10 Updated Disneyland Tokyo Resort API to use their new JSON API method
 * 4.6.9 Minor update adding HTTPS proxy support (as well as SOCKS support)
 * 4.6.8 Optional Minor Hotfix to re-attempt JSON decodes if HTTP request fails
 * 4.6.7 Hotfix for Tokyo Disneyland geo-location check URL changing (see #100)
