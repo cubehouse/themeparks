@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.6.17 Hotfix for Parc Asterix not returning valid wait times for rides (see #113)
 * 4.6.16 Hotfix for Tokyo Disney Resort parks (see #110)
 * 4.6.15 Add California's Great America to supported parks (thanks @jkap #112)
 * 4.6.14 Add Dollywood and Silver Dollar City to supported parks (thanks @rambleraptor #107)
