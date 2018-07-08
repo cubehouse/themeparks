@@ -4,3 +4,4 @@ out
 temp.js
 test.js
 *.db
+*.db-journal
