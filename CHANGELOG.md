@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.2 ! Fix Efteling API update (see #119)
 * 4.7.1 Minor update for Tokyo Disney Resort parks. Now using their new app API (see #115)
 * 4.7.0 ! Removed SeaWorld Parks from the API, as they no longer offer wait times outside of the park !
 * 4.6.17 Hotfix for Parc Asterix not returning valid wait times for rides (see #113)
