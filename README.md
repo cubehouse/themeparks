@@ -419,3 +419,7 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
 * [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
 * [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
+
+## Canary
+
+This project is unofficial, and is not endorsed and approved by any of the supported theme parks. No theme park operator has approved, nor requested removal of their parks from this project. Support for parks may stop working at any moment.
