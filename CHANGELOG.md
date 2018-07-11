@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.4 ! Fix for Tokyo Disney Resort API version bump (see #121)
 * 4.7.3 Minor hotfix for missing attraction name for Astrix Parc (thanks @skyforce77 #120)
 * 4.7.2 ! Fix Efteling API update (see #119)
 * 4.7.1 Minor update for Tokyo Disney Resort parks. Now using their new app API (see #115)
