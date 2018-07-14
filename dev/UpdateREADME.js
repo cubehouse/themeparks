@@ -1,35 +1,43 @@
-// this script generates the timezone and supported parks lists found in the README.md
-var fs = require("fs");
-var path = require("path");
-var ThemeParks = require("../lib/index");
+"use strict";
 
-var timezoneMarkdown = "\n";
-var supportedParksMarkdown = "\n";
-var parkFeaturesMarkdown = `|Park|Wait Times|Park Opening Times|Ride Opening Times|
+// this script generates the timezone and supported parks lists found in the README.md
+const fs = require("fs");
+const path = require("path");
+const ThemeParks = require("../lib/index");
+
+let timezoneMarkdown = "\n";
+let supportedParksMarkdown = "\n";
+let parkFeaturesMarkdown = `|Park|Wait Times|Park Opening Times|Ride Opening Times|
 |:---|:---------|:-----------------|:-----------------|
 `;
 
 // search for these tags to inject our new content
-var supportedParkListStart = "<!-- START_SUPPORTED_PARKS_LIST -->";
-var supportedParkListEnd = "<!-- END_SUPPORTED_PARKS_LIST -->";
-var timezoneListStart = "<!-- START_PARK_TIMEZONE_LIST -->";
-var timezoneListEnd = "<!-- END_PARK_TIMEZONE_LIST -->";
-var parkFeaturesListStart = "<!-- START_PARK_FEATURES_SUPPORTED -->";
-var parkFeaturesListEnd = "<!-- END_PARK_FEATURES_SUPPORTED -->";
+const supportedParkListStart = "<!-- START_SUPPORTED_PARKS_LIST -->";
+const supportedParkListEnd = "<!-- END_SUPPORTED_PARKS_LIST -->";
+const timezoneListStart = "<!-- START_PARK_TIMEZONE_LIST -->";
+const timezoneListEnd = "<!-- END_PARK_TIMEZONE_LIST -->";
+const parkFeaturesListStart = "<!-- START_PARK_FEATURES_SUPPORTED -->";
+const parkFeaturesListEnd = "<!-- END_PARK_FEATURES_SUPPORTED -->";
 
 // local path to the README file
-var readmeFilePath = path.join(__dirname, "..", "README.md");
+const readmeFilePath = path.join(__dirname, "..", "README.md");
 
 // symbols to use for parks supporting/not-supporting features
-var featureAvailable = "&#10003;";
-var featureUnavailable = "&#10007;";
+const featureAvailable = "&#10003;";
+const featureUnavailable = "&#10007;";
 
-for (var park in ThemeParks.Parks) {
-    var parkObj = new ThemeParks.Parks[park]();
+// construct our park objects and keep them in memory for fast access later
+const Parks = {};
+for (const park in ThemeParks.Parks) {
+    Parks[park] = new ThemeParks.Parks[park]();
+}
+
+for (const park in Parks) {
+    const parkObj = Parks[park];
     // print out each supported park object name and "pretty name"
     supportedParksMarkdown += "* " + parkObj.Name + " (ThemeParks.Parks." + park + ")\n";
     // print each park's timezone into timezoneMarkdown
-    timezoneMarkdown += "* " + parkObj.Name + " [" + parkObj.Location.toString() + "]: (" + parkObj.Timezone + ")\n";
+    timezoneMarkdown += "* " + parkObj.Name + " [" + parkObj.LocationString + "]: (" + parkObj.Timezone + ")\n";
 
     parkFeaturesMarkdown +=
         "|" + parkObj.Name + "|" +
@@ -48,7 +56,7 @@ fs.readFile(readmeFilePath, function(err, readmeData) {
     readmeData = readmeData.toString();
 
     // find START/END comments and replace with new content
-    var newReadmeData = readmeData.replace(
+    let newReadmeData = readmeData.replace(
         new RegExp(supportedParkListStart + "[^<]*" + supportedParkListEnd, "g"),
         supportedParkListStart + "\n" + supportedParksMarkdown + "\n" + supportedParkListEnd
     );
@@ -64,6 +72,8 @@ fs.readFile(readmeFilePath, function(err, readmeData) {
     // only write new README data if file contents have changed
     if (newReadmeData.trim() != readmeData.trim()) {
         // write back new readme file
-        fs.writeFile(readmeFilePath, newReadmeData);
+        fs.writeFile(readmeFilePath, newReadmeData, () => {
+            process.exit(0);
+        });
     }
 });

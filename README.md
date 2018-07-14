@@ -21,8 +21,9 @@ If you have been using themeparks 4.x, please follow this guide to [migrate from
     // include the Themeparks library
     const Themeparks = require("themeparks");
 
-    // configure where SQLite DB sits (will be created in working directory if not set)
-    Themeparks.Settings.Cache = __dirname + "/themeparks.db";
+    // configure where SQLite DB sits
+    // optional - will be created in node working directory if not configured
+    // Themeparks.Settings.Cache = __dirname + "/themeparks.db";
 
     // access a specific park
     //  Create this *ONCE* and re-use this object for the lifetime of your application
@@ -91,6 +92,10 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
+* Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
+* Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
+* Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
+* Animal Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldAnimalKingdom)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -99,6 +104,10 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 <!-- START_PARK_FEATURES_SUPPORTED -->
 |Park|Wait Times|Park Opening Times|Ride Opening Times|
 |:---|:---------|:-----------------|:-----------------|
+|Magic Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -159,7 +168,7 @@ There are some values available on each park object that may be useful.
 |:-------|:----------|
 |Name|Name of the park|
 |Timezone|The park's local timezone|
-|Location|This park's location (as a "GeoLocation" object, see [GeoLocation Docs](https://cubehouse.github.io/themeparks/GeoLocation.html) for available methods/properties)|
+|LocationString|This park's location as a geolocation string|
 |SupportsWaitTimes|Does this park's API support ride wait times?|
 |SupportsOpeningTimes|Does this park's API support opening hours?|
 |SupportsRideSchedules|Does this park return schedules for rides?|
@@ -170,16 +179,25 @@ There are some values available on each park object that may be useful.
 
     const ThemeParks = require("themeparks");
 
-    // print each park's name, current location, and timezone
+    // construct our park objects and keep them in memory for fast access later
+    const Parks = {};
     for (const park in ThemeParks.Parks) {
-      const parkObj = new ThemeParks.Parks[park]();
-      console.log(`* ${parkObj.Name} [${parkObj.Location.toString()}]: (${parkObj.Timezone})`);
+      Parks[park] = new ThemeParks.Parks[park]();
+    }
+
+    // print each park's name, current location, and timezone
+    for (const park in Parks) {
+      console.log(`* ${Parks[park].Name} [${Parks[park].LocationString}]: (${Parks[park].Timezone})`);
     }
 
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
 
+* Magic Kingdom - Walt Disney World Florida [(28°23′6.72″N, 81°33′50.04″W)]: (America/New_York)
+* Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
+* Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)
+* Animal Kingdom - Walt Disney World Florida [(28°21′19.08″N, 81°35′24.36″W)]: (America/New_York)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
