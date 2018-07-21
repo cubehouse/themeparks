@@ -1,4 +1,8 @@
 {
-    "indent_size": 4,
-    "indent_char": " "
+  "indent_size": 2,
+  "indent_char": " ",
+  "js": {
+    "end_with_newline": true,
+    "operator_position": "after-newline"
+  }
 }
