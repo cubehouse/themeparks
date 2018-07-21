@@ -1,27 +1,11 @@
 {
-    "env": {
-        "es6": true,
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-cond-assign": 0,
-        "no-var": 1,
-        "no-template-curly-in-string": 2,
-        "no-eval": 2,
-        "strict": 1,
-        "global-require": 1
-    }
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "linebreak-style": 0,
+    "max-len": 0
+  }
 }
