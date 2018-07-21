@@ -10,7 +10,7 @@
     "no-param-reassign": ["error", {
       "props": false
     }],
-    "comma-dangle": ["error", "always", {
+    "comma-dangle": ["error", "always-multiline", {
       "functions": "never"
     }]
   }
