@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.6 Add support for Down rides at Efteling (thanks @janvankampen #124)
 * 4.7.5 ! Fix for Tokyo Disney Resort API version bump (thanks @dotaguro #123)
 * 4.7.4 ! Fix for Tokyo Disney Resort API version bump (see #121)
 * 4.7.3 Minor hotfix for missing attraction name for Astrix Parc (thanks @skyforce77 #120)
