@@ -92,10 +92,30 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
+**22** Parks Supported
+
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
 * Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
 * Animal Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldAnimalKingdom)
+* Disneyland Resort - Magic Kingdom (ThemeParks.Parks.DisneylandResortMagicKingdom)
+* Disneyland Resort - California Adventure (ThemeParks.Parks.DisneylandResortCaliforniaAdventure)
+* Disneyland Paris - Magic Kingdom (ThemeParks.Parks.DisneylandParisMagicKingdom)
+* Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
+* Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
+* Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
+* Tokyo Disney Resort - Magic Kingdom (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
+* Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
+* Europa Park (ThemeParks.Parks.EuropaPark)
+* Parc-Asterix (ThemeParks.Parks.AsterixPark)
+* California's Great America (ThemeParks.Parks.CaliforniasGreatAmerica)
+* Canada's Wonderland (ThemeParks.Parks.CanadasWonderland)
+* Carowinds (ThemeParks.Parks.Carowinds)
+* Cedar Point (ThemeParks.Parks.CedarPoint)
+* Kings Island (ThemeParks.Parks.KingsIsland)
+* Knott's Berry Farm (ThemeParks.Parks.KnottsBerryFarm)
+* Dollywood (ThemeParks.Parks.Dollywood)
+* Silver Dollar City (ThemeParks.Parks.SilverDollarCity)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -108,6 +128,24 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Disneyland Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
+|Disneyland Resort - California Adventure|&#10003;|&#10003;|&#10007;|
+|Disneyland Paris - Magic Kingdom|&#10003;|&#10003;|&#10007;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
+|Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
+|Tokyo Disney Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
+|Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
+|Europa Park|&#10003;|&#10003;|&#10007;|
+|Parc-Asterix|&#10003;|&#10003;|&#10003;|
+|California's Great America|&#10003;|&#10003;|&#10007;|
+|Canada's Wonderland|&#10003;|&#10003;|&#10007;|
+|Carowinds|&#10003;|&#10003;|&#10007;|
+|Cedar Point|&#10003;|&#10003;|&#10007;|
+|Kings Island|&#10003;|&#10003;|&#10007;|
+|Knott's Berry Farm|&#10003;|&#10003;|&#10007;|
+|Dollywood|&#10003;|&#10003;|&#10007;|
+|Silver Dollar City|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -198,6 +236,24 @@ Prints:
 * Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
 * Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)
 * Animal Kingdom - Walt Disney World Florida [(28°21′19.08″N, 81°35′24.36″W)]: (America/New_York)
+* Disneyland Resort - Magic Kingdom [(33°48′36.39″N, 117°55′8.30″W)]: (America/Los_Angeles)
+* Disneyland Resort - California Adventure [(33°48′31.39″N, 117°55′8.36″W)]: (America/Los_Angeles)
+* Disneyland Paris - Magic Kingdom [(48°52′13.16″N, 2°46′46.82″E)]: (Europe/Paris)
+* Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
+* Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
+* Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
+* Tokyo Disney Resort - Magic Kingdom [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
+* Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
+* Europa Park [(48°16′8.15″N, 7°43′17.61″E)]: (Europe/Berlin)
+* Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
+* California's Great America [(37°23′52.08″N, 121°58′28.98″W)]: (America/Los_Angeles)
+* Canada's Wonderland [(43°50′34.80″N, 79°32′20.40″W)]: (America/Toronto)
+* Carowinds [(35°6′16.20″N, 80°56′21.84″W)]: (America/New_York)
+* Cedar Point [(41°28′42.24″N, 82°40′45.48″W)]: (America/New_York)
+* Kings Island [(39°20′40.92″N, 84°16′6.96″W)]: (America/New_York)
+* Knott's Berry Farm [(33°50′39.12″N, 117°59′54.96″W)]: (America/Los_Angeles)
+* Dollywood [(35°47′43.18″N, 83°31′51.19″W)]: (America/New_York)
+* Silver Dollar City [(36°40′5.44″N, 93°20′18.84″W)]: (America/Chicago)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
