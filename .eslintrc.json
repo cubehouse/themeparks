@@ -12,6 +12,7 @@
     }],
     "comma-dangle": ["error", "always-multiline", {
       "functions": "never"
-    }]
+    }],
+    "class-methods-use-this": 0
   }
 }
