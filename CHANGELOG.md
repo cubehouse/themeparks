@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.8 ! Fix for Efteling POI data (thanks @renssies #130)
 * 4.7.7 Add support for rides under refurbishment for Efteling (thanks @janvankampen #126)
 * 4.7.6 Add support for Down rides at Efteling (thanks @janvankampen #124)
 * 4.7.5 ! Fix for Tokyo Disney Resort API version bump (thanks @dotaguro #123)
