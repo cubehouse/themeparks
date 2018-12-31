@@ -32,8 +32,7 @@
     "socks-proxy-agent": "^3.0.1",
     "sqlite3": "^4.0.2",
     "uuid": "^3.1.0",
-    "xml2js": "^0.4.19",
-    "yauzl": "^2.9.1"
+    "xml2js": "^0.4.19"
   },
   "engines": {
     "npm": ">=5",
