@@ -422,4 +422,4 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 
 ## Canary
 
-This project is unofficial, and is not endorsed and approved by any of the supported theme parks. No theme park operator has approved, nor requested removal of their parks from this project. Support for parks may stop working at any moment.
+This project is unofficial, and is not endorsed and approved by any of the supported theme parks. Support for parks may stop working at any moment.
