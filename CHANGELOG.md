@@ -3,6 +3,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.12 ! Fix Tokyo and Shanghai Disney Resorts with latest API changes (thanks @dozer47528 #141 and @nicectrl #142)
 * 4.7.11 ! Remove TE2 auth token at request of park technology representative
 * 4.7.10 ! Minor fix for Tokyo Disney Resort API version bump (see #138)
 * 4.7.9 ! Minor fix for Tokyo Disney Resort API version bump
