@@ -1,4 +1,4 @@
-# themeparks (previously wdwJS)
+# themeparks
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal, and many other parks!
 
