@@ -1,4 +1,5 @@
 # Change Log
+
 Key changes to themeparks NPM module.
 
 ## v4.0.0
