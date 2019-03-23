@@ -2,9 +2,9 @@
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
 
-[![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) [![Dependency Status](https://beta.gemnasium.com/badges/github.com/cubehouse/themeparks.svg)](https://beta.gemnasium.com/projects/github.com/cubehouse/themeparks)
+[![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cubehouse/themeparks.svg)
 
-[![GitHub stars](https://img.shields.io/github/stars/cubehouse/themeparks.svg)](https://github.com/cubehouse/themeparks/stargazers) ![Downloads](https://img.shields.io/npm/dt/themeparks.svg) ![Monthly Downloads](https://img.shields.io/npm/dm/themeparks.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/cubehouse/themeparks.svg) ![npm](https://img.shields.io/npm/dt/themeparks.svg) ![node](https://img.shields.io/node/v/themeparks.svg) ![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/npm/themeparks.svg)
 
 [Roadmap](https://github.com/cubehouse/themeparks/projects/1) | [Documentation](https://cubehouse.github.io/themeparks/) | [Change Log](CHANGELOG.md) | [Supported Parks](#supported-park-features)
 
