@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.14 ! Fix Tokyo Disneyland Device ID generation (thanks @SomethingWithComputers #146)
 * 4.7.13 ! Fix Disneyland Paris URLs (thanks @midiland #145)
 * 4.7.12 ! Fix Tokyo and Shanghai Disney Resorts with latest API changes (thanks @dozer47528 #141 and @nicectrl #142)
 * 4.7.11 ! Remove TE2 auth token at request of park technology representative
