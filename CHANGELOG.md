@@ -1,8 +1,15 @@
 # Change Log
+
 Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.14 ! Fix Tokyo Disneyland Device ID generation (thanks @SomethingWithComputers #146)
+* 4.7.13 ! Fix Disneyland Paris URLs (thanks @midiland #145)
+* 4.7.12 ! Fix Tokyo and Shanghai Disney Resorts with latest API changes (thanks @dozer47528 #141 and @nicectrl #142)
+* 4.7.11 ! Remove TE2 auth token at request of park technology representative
+* 4.7.10 ! Minor fix for Tokyo Disney Resort API version bump (see #138)
+* 4.7.9 ! Minor fix for Tokyo Disney Resort API version bump
 * 4.7.8 ! Fix for Efteling POI data (thanks @renssies #130)
 * 4.7.7 Add support for rides under refurbishment for Efteling (thanks @janvankampen #126)
 * 4.7.6 Add support for Down rides at Efteling (thanks @janvankampen #124)
