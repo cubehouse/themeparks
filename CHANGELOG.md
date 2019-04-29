@@ -4,6 +4,8 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.17 ! Merge Parc Asterix fixes from 5.0 (thanks @BenediktCleff #150)
+* 4.7.16 ! Fix Europa API (thanks @BenediktCleff #149)
 * 4.7.15 ! Fix Europa API (thanks @LouisForaux #148)
 * 4.7.14 ! Fix Tokyo Disneyland Device ID generation (thanks @SomethingWithComputers #146)
 * 4.7.13 ! Fix Disneyland Paris URLs (thanks @midiland #145)
