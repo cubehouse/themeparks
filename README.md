@@ -159,6 +159,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Kings Island (ThemeParks.Parks.KingsIsland)
 * California's Great America (ThemeParks.Parks.CaliforniasGreatAmerica)
 * Efteling (ThemeParks.Parks.Efteling)
+* Bellewaerde (ThemeParks.Parks.Bellewaerde)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -216,6 +217,7 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Kings Island|&#10003;|&#10003;|&#10007;|
 |California's Great America|&#10003;|&#10003;|&#10007;|
 |Efteling|&#10003;|&#10003;|&#10007;|
+|Bellewaerde|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -347,6 +349,7 @@ Prints:
 * Kings Island [(39°20′40.92″N, 84°16′6.96″W)]: (America/New_York)
 * California's Great America [(37°23′52.08″N, 121°58′28.98″W)]: (America/Los_Angeles)
 * Efteling [(51°38′59.67″N, 5°2′36.82″E)]: (Europe/Amsterdam)
+* Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 

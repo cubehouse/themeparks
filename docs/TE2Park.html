@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: UniversalStudiosSingapore</title>
+	<title>ThemeParks Class: TE2Park</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UniversalStudiosSingapore</h1>
+	<h1 class="page-title">Class: TE2Park</h1>
 <section>
 
 <header>
     
         <h2>
-        UniversalStudiosSingapore
+        TE2Park
         </h2>
         
-            <div class="class-description">Implements the Universal Singapore API.</div>
+            <div class="class-description">Implements the The Experience Engine API framework.</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="UniversalStudiosSingapore"><span class="type-signature"></span>new UniversalStudiosSingapore(options)</h4>
+    <h4 class="name" id="TE2Park"><span class="type-signature"></span>new TE2Park(options)</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create new UniversalStudiosSingapore Object.
+        Create new TE2Park Object.This object should not be called directly, but rather extended for each of the individual TE2 parks
     </div>
     
 
@@ -181,6 +181,72 @@
 
         <tr>
             
+                <td class="name"><code>park_id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">ID of the park to access the API for</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>auth_token</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Auth token to use to connect to the API</td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>api_base</code></td>
             
 
@@ -208,20 +274,20 @@
 
             
 
-            <td class="description last">API URL base for accessing API</td>
+            <td class="description last">Base URL to access the API</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>api_langauge</code></td>
+                <td class="name"><code>ride_types</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Array.&lt;String></span>
 
 
 
@@ -242,7 +308,7 @@
 
             
 
-            <td class="description last">Language ID for API results (default: 1)</td>
+            <td class="description last">Array of types that denote rides at the park (to avoid listing restaurants/toilets etc. as rides)</td>
         </tr>
 
     
@@ -341,6 +407,77 @@
         <h3 class="subsection-title">Members</h3>
 
         <dl>
+            
+<hr>
+<dt class="name" id="APIBase">
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"> :String</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get this park's API Base URL
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">String</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
             
 <hr>
 <dt class="name" id="Cache">
@@ -694,6 +831,77 @@
 			</li>
 		</ul>
 	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="ParkID">
+    <h4 id="ParkID"><span class="type-signature"></span>ParkID<span class="type-signature"> :String</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get the park ID used by the SeaWorld/Cedar Fair API
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">String</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
 	
 
     
@@ -1505,7 +1713,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
+    <h4 class="name" id="FetchRideNames"><span class="type-signature"></span>FetchRideNames()</h4>
     
     
 </dt>
@@ -1513,7 +1721,7 @@
 
     
     <div class="description">
-        Fetch Universal Singapore's waiting times
+        Fetch all the rides and ride names for this park from the API (skip the cache)
     </div>
     
 
@@ -1578,6 +1786,10 @@
     <h5>Returns:</h5>
     
             
+<div class="param-desc">
+    Object of RideID => Ride name in English
+</div>
+
 
 
 <dl>
@@ -1586,7 +1798,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise</span>
+<span class="param-type">Promise.&lt;Object></span>
 
 
 
@@ -1992,6 +2204,108 @@
     <dd>
         
 <span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="GetRideNames"><span class="type-signature"></span>GetRideNames()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get cached (or fresh fetch) of ride names
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    Object of RideID => Ride name in English
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Object></span>
 
 
 
@@ -2942,7 +3256,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-05-04T15:26:38+00:00
+		on 2019-05-04T15:26:37+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

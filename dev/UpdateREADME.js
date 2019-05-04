@@ -64,6 +64,6 @@ fs.readFile(readmeFilePath, function(err, readmeData) {
     // only write new README data if file contents have changed
     if (newReadmeData.trim() != readmeData.trim()) {
         // write back new readme file
-        fs.writeFile(readmeFilePath, newReadmeData);
+        fs.writeFileSync(readmeFilePath, newReadmeData);
     }
 });

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: UniversalStudiosSingapore</title>
+	<title>ThemeParks Class: Bellewaerde</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UniversalStudiosSingapore</h1>
+	<h1 class="page-title">Class: Bellewaerde</h1>
 <section>
 
 <header>
     
         <h2>
-        UniversalStudiosSingapore
+        Bellewaerde
         </h2>
         
-            <div class="class-description">Implements the Universal Singapore API.</div>
+            <div class="class-description">Implements the Bellewaerde Park API</div>
         
     
 </header>
@@ -93,169 +93,19 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="UniversalStudiosSingapore"><span class="type-signature"></span>new UniversalStudiosSingapore(options)</h4>
+    <h4 class="name" id="Bellewaerde"><span class="type-signature"></span>new Bellewaerde()</h4>
     
     
 </dt>
 <dd>
 
     
-    <div class="description">
-        Create new UniversalStudiosSingapore Object.
-    </div>
-    
 
     
 
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <h6 class="method-params-label method-subparams-label">Properties</h6>
-                
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>api_base</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">API URL base for accessing API</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>api_langauge</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Language ID for API results (default: 1)</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1505,7 +1355,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
+    <h4 class="name" id="FetchOpeningTimes"><span class="type-signature"></span>FetchOpeningTimes()</h4>
     
     
 </dt>
@@ -1513,7 +1363,7 @@
 
     
     <div class="description">
-        Fetch Universal Singapore's waiting times
+        Request park opening times.
     </div>
     
 
@@ -1595,6 +1445,146 @@
 
 
         
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="FetchYearOpeningTimes"><span class="type-signature"></span>FetchYearOpeningTimes( [year])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Fetch park opening times for a specific year and add to park's opening times
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>year</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
@@ -2942,7 +2932,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-05-04T15:26:38+00:00
+		on 2019-05-04T15:26:37+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
