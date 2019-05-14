@@ -119,8 +119,8 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 * Magic Kingdom - Disneyland Paris (ThemeParks.Parks.DisneylandParisMagicKingdom)
 * Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
 * Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Magic Kingdom (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
+* Magic Kingdom - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
+* Disney Sea - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortDisneySea)
 * Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
 * Universal Studios Florida (ThemeParks.Parks.UniversalStudiosFlorida)
 * Universal's Islands Of Adventure (ThemeParks.Parks.UniversalIslandsOfAdventure)
@@ -177,8 +177,8 @@ If you wish to use themeparks with a proxy, you can set a proxy in the library s
 |Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
 |Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10003;|
-|Tokyo Disney Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
-|Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
+|Disney Sea - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10003;|
 |Universal Studios Florida|&#10003;|&#10003;|&#10007;|
 |Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
@@ -309,8 +309,8 @@ Prints:
 * Magic Kingdom - Disneyland Paris [(48°52′13.16″N, 2°46′46.82″E)]: (Europe/Paris)
 * Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
 * Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
-* Tokyo Disney Resort - Magic Kingdom [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
-* Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
+* Magic Kingdom - Tokyo Disney Resort [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
+* Disney Sea - Tokyo Disney Resort [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
 * Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
 * Universal Studios Florida [(28°28′29.94″N, 81°27′59.39″W)]: (America/New_York)
 * Universal's Islands Of Adventure [(28°28′20.07″N, 81°28′4.28″W)]: (America/New_York)
