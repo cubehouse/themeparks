@@ -37,7 +37,7 @@
         "test": "npm run build && node_modules/.bin/mocha dist/test.js",
         "travislocal": "node_modules/.bin/trevor",
         "docs": "node dev/UpdateREADME.js && node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
-        "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps",
+        "build": "node_modules/.bin/babel lib --presets es2015,stage-0 --out-dir dist --source-maps --plugins=inline-json-import",
         "prepare": "npm run build",
         "postinstall": "npm dedupe",
         "lint": "./node_modules/.bin/eslint ./lib/**"
@@ -48,6 +48,7 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
+        "babel-plugin-inline-json-import": "^0.3.2",
         "babel-polyfill": "^6.26.0",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
