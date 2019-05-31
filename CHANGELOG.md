@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## v4.0.0
 
+* 4.7.20 ! Disney park (Shanghai/Tokyo) fixes from @jeanmatthieud (#170)
 * 4.7.19 ! Various fixes from @jeanmatthieud (#167 #162 #161 #160)
 * 4.7.18 ! Various fixes from @jeanmatthieud (#154 #155 #156 #157)
 * 4.7.17 ! Merge Parc Asterix fixes from 5.0 (thanks @BenediktCleff #150)
