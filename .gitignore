@@ -4,3 +4,5 @@ out
 dist
 temp.js
 test.js
+_mocks
+*.db
