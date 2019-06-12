@@ -1,8 +1,48 @@
 # Change Log
+
 Key changes to themeparks NPM module.
+
+## 5.0.0
+
+* 5.0.0 ! (breaking change) you must now allow for a small SQLite database to cache data to use the library
+  * Library rewritten in more modern JS for easier development and maintenance
 
 ## v4.0.0
 
+* 4.7.20 ! Disney park (Shanghai/Tokyo) fixes from @jeanmatthieud (#170)
+* 4.7.19 ! Various fixes from @jeanmatthieud (#167 #162 #161 #160)
+* 4.7.18 ! Various fixes from @jeanmatthieud (#154 #155 #156 #157)
+* 4.7.17 ! Merge Parc Asterix fixes from 5.0 (thanks @BenediktCleff #150)
+* 4.7.16 ! Fix Europa API (thanks @BenediktCleff #149)
+* 4.7.15 ! Fix Europa API (thanks @LouisForaux #148)
+* 4.7.14 ! Fix Tokyo Disneyland Device ID generation (thanks @SomethingWithComputers #146)
+* 4.7.13 ! Fix Disneyland Paris URLs (thanks @midiland #145)
+* 4.7.12 ! Fix Tokyo and Shanghai Disney Resorts with latest API changes (thanks @dozer47528 #141 and @nicectrl #142)
+* 4.7.11 ! Remove TE2 auth token at request of park technology representative
+* 4.7.10 ! Minor fix for Tokyo Disney Resort API version bump (see #138)
+* 4.7.9 ! Minor fix for Tokyo Disney Resort API version bump
+* 4.7.8 ! Fix for Efteling POI data (thanks @renssies #130)
+* 4.7.7 Add support for rides under refurbishment for Efteling (thanks @janvankampen #126)
+* 4.7.6 Add support for Down rides at Efteling (thanks @janvankampen #124)
+* 4.7.5 ! Fix for Tokyo Disney Resort API version bump (thanks @dotaguro #123)
+* 4.7.4 ! Fix for Tokyo Disney Resort API version bump (see #121)
+* 4.7.3 Minor hotfix for missing attraction name for Astrix Parc (thanks @skyforce77 #120)
+* 4.7.2 ! Fix Efteling API update (see #119)
+* 4.7.1 Minor update for Tokyo Disney Resort parks. Now using their new app API (see #115)
+* 4.7.0 ! Removed SeaWorld Parks from the API, as they no longer offer wait times outside of the park !
+* 4.6.17 Hotfix for Parc Asterix not returning valid wait times for rides (see #113)
+* 4.6.16 Hotfix for Tokyo Disney Resort parks (see #110)
+* 4.6.15 Add California's Great America to supported parks (thanks @jkap #112)
+* 4.6.14 Add Dollywood and Silver Dollar City to supported parks (thanks @rambleraptor #107)
+* 4.6.13 Minor update to update Chessington ride data (thanks @OkoWsc #103)
+* 4.6.12 Minor update added Wicker Man to Alton Towers park (thanks @OkoWsc #102)
+* 4.6.11 Hotfix for SixFlags parks - use correct timezone for operating hours (see #101)
+* 4.6.10 Updated Disneyland Tokyo Resort API to use their new JSON API method
+* 4.6.9 Minor update adding HTTPS proxy support (as well as SOCKS support)
+* 4.6.8 Optional Minor Hotfix to re-attempt JSON decodes if HTTP request fails
+* 4.6.7 Hotfix for Tokyo Disneyland geo-location check URL changing (see #100)
+* 4.6.6 Hotfix for bad npm upload, rolling back to earlier version of themeparks unexpectedly (see #97)
+* 4.6.5 Hotfix for Walt Disney World parks failing to access facilities data (see #96)
 * 4.6.4 Hotfix for Tokyo Disneyland servers rejecting all HTTP requests from the library
 * 4.6.3 Minor API change to allow fetching of non theme-park entity opening hours in WDW (see #84)
 * 4.6.2 Hotfix for missing coasters in Knott's Berry Farm following attraction category change
@@ -43,12 +83,7 @@ Key changes to themeparks NPM module.
 * 4.0.2 Added Hershey Park and fixed parks returning all dates as "Closed" in 4.0.1
 * 4.0.1 Added Universal Studios Hollywood
 
-### Core Changes from 4.x to 5.x
-
-* Dropped support for unsupported NodeJS versions
-  * Now only supporting NodeJS 6.x and above - see [Official NodeJS Release Schedule](https://github.com/nodejs/Release)
-
-### Core Changes from 3.x to 4.x
+### Core Changes
 
 * Project refactor - now written in ES6
 * Renamed to themeparks
