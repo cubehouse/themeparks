@@ -30,7 +30,7 @@
     "random-useragent": "^0.3.1",
     "relaxed-json": "^1.0.1",
     "socks-proxy-agent": "^3.0.1",
-    "sqlite3": "^4.0.2",
+    "sqlite3": "^4.0.8",
     "uuid": "^3.1.0",
     "xml2js": "^0.4.19",
     "yauzl": "^2.10.0"
