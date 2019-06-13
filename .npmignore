@@ -7,3 +7,5 @@ dev
 temp.js
 test.js
 *.log
+mocks
+lib/mocks
