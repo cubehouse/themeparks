@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: Park</title>
+	<title>ThemeParks Class: MerlinPark</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Park</h1>
+	<h1 class="page-title">Class: MerlinPark</h1>
 <section>
 
 <header>
     
         <h2>
-        Park
+        MerlinPark
         </h2>
         
-            <div class="class-description">Park class handles all the base logic for all implemented themeparks.All parks should inherit from this base class.Any common functionality is implemented here to save endless re-implementations for each park.</div>
+            <div class="class-description">Implements the Merlin Park API framework.</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Park"><span class="type-signature"></span>new Park(options)</h4>
+    <h4 class="name" id="MerlinPark"><span class="type-signature"></span>new MerlinPark( [options])</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new Park object
+        Create new MerlinPark Object.
     </div>
     
 
@@ -123,6 +123,8 @@
 
         <th>Type</th>
 
+        
+        <th>Argument</th>
         
 
         
@@ -150,6 +152,16 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -171,8 +183,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -183,87 +193,7 @@
 
         <tr>
             
-                <td class="name"><code>cacheWaitTimesLength</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    300
-                
-                </td>
-            
-
-            <td class="description last">How long (in seconds) to cache wait timesbefore fetching fresh data</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>cacheOpeningTimesLength</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    3600
-                
-                </td>
-            
-
-            <td class="description last">How long (in seconds) to cache openingtimes before fetching fresh data</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>useragent</code></td>
+                <td class="name"><code>apiBase</code></td>
             
 
             <td class="type">
@@ -289,25 +219,21 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">Useragent to use when making HTTP requests</td>
+            <td class="description last">Optional base URL for API requests</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>proxyAgent</code></td>
+                <td class="name"><code>apiKey</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">http.Agent</span>
+<span class="param-type">String</span>
 
 
 
@@ -327,12 +253,110 @@
             
 
             
-                <td class="default">
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>appBuild</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
                 
                 </td>
             
 
-            <td class="description last">A http.Agent object to use as a proxy when makingHTTP requests for this park. Eg. https-proxy-agent, or socks-proxy-agent</td>
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>appVersion</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deviceID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
         </tr>
 
     
@@ -407,6 +431,17 @@
     </div>
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Park.html">Park</a></li>
+    </ul>
+
+
+    
 
     
 
@@ -422,6 +457,66 @@
         <dl>
             
 <hr>
+<dt class="name" id="APIBase">
+    <h4 id="APIBase"><span class="type-signature"></span>APIBase<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get the API Base URL
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
 <dt class="name" id="Cache">
     <h4 id="Cache"><span class="type-signature"></span>Cache<span class="type-signature"></span></h4>
 
@@ -431,6 +526,135 @@
     
     <div class="description">
         Get the cache object for this park
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Cache">Park#Cache</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="DataVersion">
+    <h4 id="DataVersion"><span class="type-signature"></span>DataVersion<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get the latest data version timestamp
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="FallbackData">
+    <h4 id="FallbackData"><span class="type-signature"></span>FallbackData<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Get default fallback data for this Merlin Park
     </div>
     
 
@@ -516,6 +740,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#FastPass">Park#FastPass</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -587,6 +820,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#FastPassReturnTimes">Park#FastPassReturnTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -646,6 +888,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetNumScheduleDays">Park#GetNumScheduleDays</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -718,6 +969,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#Schedule">Park#Schedule</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -788,6 +1048,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsOpeningTimes">Park#SupportsOpeningTimes</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -860,6 +1129,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsRideSchedules">Park#SupportsRideSchedules</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -930,6 +1208,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#SupportsWaitTimes">Park#SupportsWaitTimes</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     
@@ -1002,81 +1289,21 @@
 	
 
 	
-
-    
-
-    
-
-    
-
-    
-
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#UserAgent">Park#UserAgent</a>
+			</li>
+		</ul>
+	</dd>
 	
 
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
     
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="UserAgent">
-    <h4 id="UserAgent"><span class="type-signature"></span>UserAgent<span class="type-signature"> :string|function</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Set this park's useragentCan set user agent to a defined string or use a generator function (see random-useragent library)
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">function</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Park.html#UserAgent">Park#UserAgent</a>
+    </li></ul></dd>
     
 
     
@@ -1129,6 +1356,367 @@
     
     <div class="description">
         Build the Wait Times response from JSON dataThis will create/fetch Ride objects based on the supplied JSON data
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#BuildWaitTimesResponse">Park#BuildWaitTimesResponse</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="FetchOpeningTimes"><span class="type-signature"></span>FetchOpeningTimes()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Fetch Merlin Park opening time data
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="FetchParkData"><span class="type-signature"></span>FetchParkData()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Fetch/Sync park dataWarning: full sync is ~30MB
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="FetchWaitTimes"><span class="type-signature"></span>FetchWaitTimes()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Fetch Wait times
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="GenerateUserID"><span class="type-signature"></span>GenerateUserID()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Generate (or fetch a cached) user ID
     </div>
     
 
@@ -1207,6 +1795,93 @@
     
     <div class="description">
         Get opening times for this park
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetOpeningTimes">Park#GetOpeningTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="GetParkData"><span class="type-signature"></span>GetParkData()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get (or fetch new) park data
     </div>
     
 
@@ -1354,6 +2029,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetRideObject">Park#GetRideObject</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1432,6 +2116,15 @@
 	
 
 	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#GetWaitTimes">Park#GetWaitTimes</a>
+			</li>
+		</ul>
+	</dd>
+	
 
     
 
@@ -1491,6 +2184,367 @@
     
     <div class="description">
         Make an HTTP request using this park's user agent and HTTP settings
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#HTTP">Park#HTTP</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="MakeAPICall"><span class="type-signature"></span>MakeAPICall(options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Generic API request function, will sort out API token and send auth headers
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">URL to access</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>method</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    GET
+                
+                </td>
+            
+
+            <td class="description last">method to use</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last">data/query string to use</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="RegisterDevice"><span class="type-signature"></span>RegisterDevice()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get an API token from cache or through registering a new device
     </div>
     
 
@@ -1661,6 +2715,15 @@
 
 	
 
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Park.html#UpdateRide">Park#UpdateRide</a>
+			</li>
+		</ul>
+	</dd>
 	
 
     

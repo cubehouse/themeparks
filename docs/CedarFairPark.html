@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>ThemeParks Class: Park</title>
+	<title>ThemeParks Class: CedarFairPark</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,16 +72,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Park</h1>
+	<h1 class="page-title">Class: CedarFairPark</h1>
 <section>
 
 <header>
     
         <h2>
-        Park
+        CedarFairPark
         </h2>
         
-            <div class="class-description">Park class handles all the base logic for all implemented themeparks.All parks should inherit from this base class.Any common functionality is implemented here to save endless re-implementations for each park.</div>
+            <div class="class-description">Implements the CedarFairPark API framework.</div>
         
     
 </header>
@@ -93,7 +93,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Park"><span class="type-signature"></span>new Park(options)</h4>
+    <h4 class="name" id="CedarFairPark"><span class="type-signature"></span>new CedarFairPark(options)</h4>
     
     
 </dt>
@@ -101,7 +101,7 @@
 
     
     <div class="description">
-        Create a new Park object
+        Create new CedarFairPark Object.This object should not be called directly, but rather extended for each of the individual Cedar Fair parks
     </div>
     
 
@@ -171,8 +171,6 @@
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -183,13 +181,13 @@
 
         <tr>
             
-                <td class="name"><code>cacheWaitTimesLength</code></td>
+                <td class="name"><code>park_id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">String</span>
 
 
 
@@ -199,8 +197,6 @@
             
                 <td class="attributes">
                 
-                    &lt;optional><br>
-                
 
                 
 
@@ -209,61 +205,15 @@
             
 
             
-                <td class="default">
-                
-                    300
-                
-                </td>
-            
 
-            <td class="description last">How long (in seconds) to cache wait timesbefore fetching fresh data</td>
+            <td class="description last">ID of the park to access the API for</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>cacheOpeningTimesLength</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Number</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    3600
-                
-                </td>
-            
-
-            <td class="description last">How long (in seconds) to cache openingtimes before fetching fresh data</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>useragent</code></td>
+                <td class="name"><code>auth_token</code></td>
             
 
             <td class="type">
@@ -289,25 +239,21 @@
             
 
             
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">Useragent to use when making HTTP requests</td>
+            <td class="description last">Auth token to use to connect to the API</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>proxyAgent</code></td>
+                <td class="name"><code>api_base</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">http.Agent</span>
+<span class="param-type">String</span>
 
 
 
@@ -327,1313 +273,55 @@
             
 
             
-                <td class="default">
+
+            <td class="description last">Base URL to access the API</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ride_types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
                 
                 </td>
             
 
-            <td class="description last">A http.Agent object to use as a proxy when makingHTTP requests for this park. Eg. https-proxy-agent, or socks-proxy-agent</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="Cache">
-    <h4 id="Cache"><span class="type-signature"></span>Cache<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get the cache object for this park
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="FastPass">
-    <h4 id="FastPass"><span class="type-signature"></span>FastPass<span class="type-signature"> :Boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Does this park offer fast-pass services?
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="FastPassReturnTimes">
-    <h4 id="FastPassReturnTimes"><span class="type-signature"></span>FastPassReturnTimes<span class="type-signature"> :Boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Does this park tell you the fast-pass return times?
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="GetNumScheduleDays">
-    <h4 id="GetNumScheduleDays"><span class="type-signature"></span>GetNumScheduleDays<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        How many days are returned by this park's schedule?
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="Schedule">
-    <h4 id="Schedule"><span class="type-signature"></span>Schedule<span class="type-signature"> :<a href="Schedule.html">Schedule</a></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get this park's raw schedule object
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type"><a href="Schedule.html">Schedule</a></span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="SupportsOpeningTimes">
-    <h4 id="SupportsOpeningTimes"><span class="type-signature"></span>SupportsOpeningTimes<span class="type-signature"> :Boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Does this park offer opening time information?
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="SupportsRideSchedules">
-    <h4 id="SupportsRideSchedules"><span class="type-signature"></span>SupportsRideSchedules<span class="type-signature"> :Boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Does this park offer opening times for rides?
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="SupportsWaitTimes">
-    <h4 id="SupportsWaitTimes"><span class="type-signature"></span>SupportsWaitTimes<span class="type-signature"> :Boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Does this park offer wait time information?
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Boolean</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="UserAgent">
-    <h4 id="UserAgent"><span class="type-signature"></span>UserAgent<span class="type-signature"> :String</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Get this park's useragent string for making network requestsThis is usually randomly generated on object construction
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">String</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="UserAgent">
-    <h4 id="UserAgent"><span class="type-signature"></span>UserAgent<span class="type-signature"> :string|function</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Set this park's useragentCan set user agent to a defined string or use a generator function (see random-useragent library)
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">string</span>
-|
-
-<span class="param-type">function</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="BuildWaitTimesResponse"><span class="type-signature"></span>BuildWaitTimesResponse()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Build the Wait Times response from JSON dataThis will create/fetch Ride objects based on the supplied JSON data
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="GetOpeningTimes"><span class="type-signature"></span>GetOpeningTimes()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get opening times for this park
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="GetRideObject"><span class="type-signature"></span>GetRideObject(rideId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Find (or create) a ride object with the given ID
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>rideId</code></td>
             
 
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">ID to search for/create ride</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="GetWaitTimes"><span class="type-signature"></span>GetWaitTimes()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get waiting times for rides from this parkIf the last argument is a function, this will act as a callback. Callback will call with callback(error, data) Data will be null if error is presentIf the last argument is not a function, this will return a Promise.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="HTTP"><span class="type-signature"></span>HTTP()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Make an HTTP request using this park's user agent and HTTP settings
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UpdateRide"><span class="type-signature"></span>UpdateRide(id, options)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Update a ride state
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The ride ID to update</td>
+            <td class="description last">Array of types that denote rides at the park (to avoid listing restaurants/toilets etc. as rides)</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>special_hours</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">Array.&lt;String></span>
 
 
 
@@ -1641,10 +329,27 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">Ride options to update</td>
+            <td class="description last">Array of park IDs to combine with main park for special hours (eg. scaryfarm)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -1708,7 +413,32 @@
     
 </dd>
 
-        </dl>
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>SeaWorld</li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1758,7 +488,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2019-06-13T17:11:52+00:00
+		on 2019-06-13T17:11:51+00:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
