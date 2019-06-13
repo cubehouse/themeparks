@@ -222,10 +222,14 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
             waitTime: (number: current wait time in minutes),
             active: (bool: is the ride currently active?),
             fastPass: (bool: is fastpass available for this ride?),
-            fastPassReturnTime: { (object containing current return times, parks supporting this will set FastPassReturnTimes to true - entire field may be null for unsupported rides or when fastPass has ran out for the day)
-                startTime: (string return time formatted as "HH:mm": start of the current return time period),
-                endTime: (string return time formatted as "HH:mm": end of the current return time period),
-                lastUpdate: (JavaScript Date object: last time the fastPass return time changed),
+            meta: { (object: can contain various park-specific information about this ride - field may be null)
+                // examples of potential meta fields
+                fastPassStartTime: (string: current fastPass window start time),
+                fastPassEndTime: (string: current fastPass window start time),
+                singleRider: (boolean: does this ride have a single rider line?),
+                longitude: (number: ride's longitude),
+                latitude: (number: ride's latitude),
+                area: (string: section of the park this ride is located within),
             },
             status: (string: will either be "Operating", "Closed", or "Down"),
             lastUpdate: (JavaScript Date object: last time this ride had new data),
