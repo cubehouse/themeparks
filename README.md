@@ -16,6 +16,18 @@ An unofficial API library for accessing ride wait times and park opening times f
 
 If you have been using themeparks 4.x, please follow this guide to [migrate from themeparks 4.x to themeparks 5.x](https://github.com/cubehouse/themeparks/wiki/Migrating-from-4.x-to-5.x)
 
+## Settings
+You can change some settings of the library by editing the properties of the `Themeparks.Settings` object.
+
+|Property|Default value|Description|
+|:-------|:------------|:----------|
+|Cache|`${process.cwd()}/themeparks.db`|Location of Sqlite DB file|
+|OpenTimeout|10 seconds|Open request timeout value (in milliseconds)|
+|ReadTimeout|0 seconds|Read request timeout value (in milliseconds)|
+|DefaultCacheLength|6 hours|Time to cache any data (in seconds)|
+|CacheWaitTimesLength|5 minutes|Time to cache waiting times (in seconds)|
+|CacheOpeningTimesLength|1 hour|Time to cache opening times (in seconds)|
+
 ## Example Use
 
     // include the Themeparks library
@@ -409,7 +421,7 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 ### Websites and Mobile Apps
 
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
-* [ChronoPass](https://play.google.com/store/apps/details?id=fr.dechriste.android.attractions&hl=en_GB) - Walt Disney World, Disneyland Paris, Parc Asterix, EuropaPark
+* [ChronoPass](https://play.google.com/store/apps/details?id=fr.dechriste.android.attractions) - All parks
 
 ### Pebble Apps
 
