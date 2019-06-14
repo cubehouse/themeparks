@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.2 ! Fix HTTP error returning after failing (thanks @jeanmatthieud #177)
 * 5.1.1 Add meta data to some Disney ride results (fastpass return times, single ride, photopass etc.)
 * 5.1.0 First non-beta release of 5.x
 * 5.0.0 ! (breaking change) you must now allow for a small SQLite database to cache data to use the library
