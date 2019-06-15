@@ -6,4 +6,3 @@ test.js
 *.db
 *.db-journal
 _mocks
-lib/mocks
