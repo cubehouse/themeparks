@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.6 Minor fix for #183, fallback on offline data if we fail to fetch the English HTML correctly
 * 5.1.5
   * ! Fix "legacy" Disney Park opening hour timezones
   * \+ Added Universal Studios Japan to supported parks
