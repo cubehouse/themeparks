@@ -4,6 +4,9 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.5
+  * ! Fix "legacy" Disney Park opening hour timezones
+  * \+ Added Universal Studios Japan to supported parks
 * 5.1.4 Add thrill data and other metadata to Europa Park (see 386126c86b3c2fecfadf31b34c309b50e6d36f45)
 * 5.1.3 ! Fix Tokyo Disney parks failing to query API after caching latest API version (#179)
 * 5.1.2 ! Fix HTTP error returning after failing (thanks @jeanmatthieud #177)

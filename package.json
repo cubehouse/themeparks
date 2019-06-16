@@ -1,19 +1,17 @@
 {
   "name": "themeparks",
   "description": "Get Theme Park Wait Times and Opening Times",
-  "version": "5.1.4",
+  "version": "5.1.5",
   "homepage": "https://github.com/cubehouse/themeparks",
   "bugs": "https://github.com/cubehouse/themeparks/issues",
   "author": {
     "name": "Jamie Holding",
     "email": "me@jamie.holdings"
   },
-  "contributors": [
-    {
-      "name": "Jamie Holding",
-      "email": "me@jamie.holdings"
-    }
-  ],
+  "contributors": [{
+    "name": "Jamie Holding",
+    "email": "me@jamie.holdings"
+  }],
   "keywords": [
     "themeparks",
     "waittimes",
