@@ -100,15 +100,15 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**55** Parks Supported
+**56** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
 * Hollywood Studios - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldHollywoodStudios)
 * Animal Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldAnimalKingdom)
-* Disneyland Resort - Magic Kingdom (ThemeParks.Parks.DisneylandResortMagicKingdom)
-* Disneyland Resort - California Adventure (ThemeParks.Parks.DisneylandResortCaliforniaAdventure)
-* Disneyland Paris - Magic Kingdom (ThemeParks.Parks.DisneylandParisMagicKingdom)
+* Magic Kingdom - Disneyland Resort (ThemeParks.Parks.DisneylandResortMagicKingdom)
+* California Adventure - Disneyland Resort (ThemeParks.Parks.DisneylandResortCaliforniaAdventure)
+* Magic Kingdom - Disneyland Paris (ThemeParks.Parks.DisneylandParisMagicKingdom)
 * Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
 * Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
 * Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
@@ -132,6 +132,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Universal Volcano Bay (ThemeParks.Parks.UniversalVolcanoBay)
 * Universal Studios Hollywood (ThemeParks.Parks.UniversalStudiosHollywood)
 * Universal Studios Singapore (ThemeParks.Parks.UniversalStudiosSingapore)
+* Universal Studios Japan (ThemeParks.Parks.UniversalStudiosJapan)
 * Six Flags Over Texas (ThemeParks.Parks.SixFlagsOverTexas)
 * Six Flags Over Georgia (ThemeParks.Parks.SixFlagsOverGeorgia)
 * Six Flags St. Louis (ThemeParks.Parks.SixFlagsStLouis)
@@ -169,9 +170,9 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
-|Disneyland Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
-|Disneyland Resort - California Adventure|&#10003;|&#10003;|&#10007;|
-|Disneyland Paris - Magic Kingdom|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10007;|
+|California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
@@ -195,6 +196,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Universal Volcano Bay|&#10003;|&#10003;|&#10007;|
 |Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
 |Universal Studios Singapore|&#10003;|&#10003;|&#10007;|
+|Universal Studios Japan|&#10003;|&#10003;|&#10007;|
 |Six Flags Over Texas|&#10003;|&#10003;|&#10007;|
 |Six Flags Over Georgia|&#10003;|&#10003;|&#10007;|
 |Six Flags St. Louis|&#10003;|&#10003;|&#10007;|
@@ -314,9 +316,9 @@ Prints:
 * Epcot - Walt Disney World Florida [(28°22′28.92″N, 81°32′57.84″W)]: (America/New_York)
 * Hollywood Studios - Walt Disney World Florida [(28°21′27.00″N, 81°33′29.52″W)]: (America/New_York)
 * Animal Kingdom - Walt Disney World Florida [(28°21′19.08″N, 81°35′24.36″W)]: (America/New_York)
-* Disneyland Resort - Magic Kingdom [(33°48′36.39″N, 117°55′8.30″W)]: (America/Los_Angeles)
-* Disneyland Resort - California Adventure [(33°48′31.39″N, 117°55′8.36″W)]: (America/Los_Angeles)
-* Disneyland Paris - Magic Kingdom [(48°52′13.16″N, 2°46′46.82″E)]: (Europe/Paris)
+* Magic Kingdom - Disneyland Resort [(33°48′36.39″N, 117°55′8.30″W)]: (America/Los_Angeles)
+* California Adventure - Disneyland Resort [(33°48′31.39″N, 117°55′8.36″W)]: (America/Los_Angeles)
+* Magic Kingdom - Disneyland Paris [(48°52′13.16″N, 2°46′46.82″E)]: (Europe/Paris)
 * Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
 * Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
 * Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
@@ -340,6 +342,7 @@ Prints:
 * Universal Volcano Bay [(28°27′44.28″N, 81°28′14.52″W)]: (America/New_York)
 * Universal Studios Hollywood [(34°8′14.14″N, 118°21′19.86″W)]: (America/Los_Angeles)
 * Universal Studios Singapore [(1°15′15.30″N, 103°49′25.67″E)]: (Asia/Singapore)
+* Universal Studios Japan [(34°39′55.74″N, 135°25′56.50″E)]: (Asia/Tokyo)
 * Six Flags Over Texas [(32°45′17.95″N, 97°4′13.33″W)]: (America/Chicago)
 * Six Flags Over Georgia [(33°46′14.08″N, 84°33′5.36″W)]: (America/New_York)
 * Six Flags St. Louis [(38°30′47.61″N, 90°40′30.69″W)]: (America/Chicago)
