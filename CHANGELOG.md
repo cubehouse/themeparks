@@ -4,6 +4,11 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.8
+  * ! Fix lastUpdate not updating when meta data changes
+  * ~ Tidy up some park names for consistency (thanks @jeanmatthieud #187)
+  * ~ Tidy up SixFlags ride times (thanks @jeanmatthieud #188)
+  * ~ Tidy up Universal ride times so they can't return an invalid status
 * 5.1.7 Improve PortAventura opening hours loading
 * 5.1.6 Minor fix for #183, fallback on offline data if we fail to fetch the English HTML correctly
 * 5.1.5
