@@ -100,7 +100,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**56** Parks Supported
+**57** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -158,6 +158,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Thorpe Park (ThemeParks.Parks.ThorpePark)
 * Chessington World Of Adventures (ThemeParks.Parks.ChessingtonWorldOfAdventures)
 * Bellewaerde (ThemeParks.Parks.Bellewaerde)
+* Phantasialand (ThemeParks.Parks.Phantasialand)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -222,6 +223,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Thorpe Park|&#10003;|&#10003;|&#10007;|
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 |Bellewaerde|&#10003;|&#10003;|&#10007;|
+|Phantasialand|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -368,6 +370,7 @@ Prints:
 * Thorpe Park [(51°24′19.80″N, 0°30′37.80″W)]: (Europe/London)
 * Chessington World Of Adventures [(51°20′58.56″N, 0°18′52.45″W)]: (Europe/London)
 * Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
+* Phantasialand [(50°47′56.23″N, 6°52′45.53″E)]: (Europe/Berlin)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
