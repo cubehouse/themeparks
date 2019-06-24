@@ -245,7 +245,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
                 latitude: (number: ride's latitude),
                 area: (string: section of the park this ride is located within),
             },
-            status: (string: will either be "Operating", "Closed", or "Down"),
+            status: (string: will either be "Operating", "Closed", "Refurbishment", or "Down"),
             lastUpdate: (JavaScript Date object: last time this ride had new data),
             schedule: { **schedule will only be present if park.SupportsRideSchedules is true**
               openingTime: (timeFormat timestamp: opening time of ride),
