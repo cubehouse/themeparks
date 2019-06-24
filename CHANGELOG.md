@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.9 Add Phantasialand to supported parks
 * 5.1.8
   * ! Fix lastUpdate not updating when meta data changes
   * ~ Tidy up some park names for consistency (thanks @jeanmatthieud #187)
