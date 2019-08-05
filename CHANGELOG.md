@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.13 Clear out fastpass availability metadata when unavailable (thanks @webdeck #121)
 * 5.1.11 Improve Universal and Portaventura wait time status reporting
 * 5.1.10 Improve Universal wait time statuses to reflect actual status correctly
 * 5.1.9 Add Phantasialand to supported parks
