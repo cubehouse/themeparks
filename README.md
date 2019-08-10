@@ -112,8 +112,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
 * Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
 * Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Magic Kingdom (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
+* Magic Kingdom - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
+* Disney Sea - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortDisneySea)
 * Europa Park (ThemeParks.Parks.EuropaPark)
 * Hershey Park (ThemeParks.Parks.HersheyPark)
 * Parc-Asterix (ThemeParks.Parks.AsterixPark)
@@ -177,8 +177,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
-|Tokyo Disney Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
-|Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
+|Disney Sea - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
 |Europa Park|&#10003;|&#10003;|&#10007;|
 |Hershey Park|&#10003;|&#10003;|&#10007;|
 |Parc-Asterix|&#10003;|&#10003;|&#10003;|
@@ -324,8 +324,8 @@ Prints:
 * Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
 * Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
 * Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
-* Tokyo Disney Resort - Magic Kingdom [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
-* Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
+* Magic Kingdom - Tokyo Disney Resort [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
+* Disney Sea - Tokyo Disney Resort [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
 * Europa Park [(48°16′8.15″N, 7°43′17.61″E)]: (Europe/Berlin)
 * Hershey Park [(40°17′15.65″N, 76°39′30.88″W)]: (America/New_York)
 * Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
@@ -427,7 +427,7 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 ### Websites and Mobile Apps
 
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
-* [ChronoPass](https://play.google.com/store/apps/details?id=fr.dechriste.android.attractions) - All parks
+* [ChronoPass](https://www.chronopass.app) - All parks
 
 ### Pebble Apps
 
