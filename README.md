@@ -58,22 +58,6 @@ You can change some settings of the library by editing the properties of the `Th
 
     // you can also call GetOpeningTimes on themeparks objects to get park opening hours
 
-### Using Promises or callbacks
-
-Both GetWaitTimes and GetOpeningTimes work either through callback or Promises.
-
-This is the same as the above example, but using a callback instead of a Promise.
-
-    // access wait times via callback
-    disneyMagicKingdom.GetWaitTimes((err, rides) => {
-        if (err) return console.error(err);
-
-        // print each wait time
-        for(var i=0, ride; ride=rides[i++];) {
-            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
-        }
-    });
-
 ### Proxy
 
 If you wish to use themeparks with a proxy, you can pass a proxy agent when you construct the park object.
