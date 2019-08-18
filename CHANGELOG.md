@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.15 Fix PortAventura opening hours
 * 5.1.14 Tidy up Tokyo DisneySea ride names
 * 5.1.13 Clear out fastpass availability metadata when unavailable (thanks @webdeck #121)
 * 5.1.12 Improve Seaworld ride names (thanks @jeanmatthieud #207)
