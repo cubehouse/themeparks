@@ -58,22 +58,6 @@ You can change some settings of the library by editing the properties of the `Th
 
     // you can also call GetOpeningTimes on themeparks objects to get park opening hours
 
-### Using Promises or callbacks
-
-Both GetWaitTimes and GetOpeningTimes work either through callback or Promises.
-
-This is the same as the above example, but using a callback instead of a Promise.
-
-    // access wait times via callback
-    disneyMagicKingdom.GetWaitTimes((err, rides) => {
-        if (err) return console.error(err);
-
-        // print each wait time
-        for(var i=0, ride; ride=rides[i++];) {
-            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
-        }
-    });
-
 ### Proxy
 
 If you wish to use themeparks with a proxy, you can pass a proxy agent when you construct the park object.
@@ -100,7 +84,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**56** Parks Supported
+**57** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -112,8 +96,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Walt Disney Studios - Disneyland Paris (ThemeParks.Parks.DisneylandParisWaltDisneyStudios)
 * Hong Kong Disneyland (ThemeParks.Parks.HongKongDisneyland)
 * Magic Kingdom - Shanghai Disney Resort (ThemeParks.Parks.ShanghaiDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Magic Kingdom (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
-* Tokyo Disney Resort - Disney Sea (ThemeParks.Parks.TokyoDisneyResortDisneySea)
+* Magic Kingdom - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortMagicKingdom)
+* Disney Sea - Tokyo Disney Resort (ThemeParks.Parks.TokyoDisneyResortDisneySea)
 * Europa Park (ThemeParks.Parks.EuropaPark)
 * Hershey Park (ThemeParks.Parks.HersheyPark)
 * Parc-Asterix (ThemeParks.Parks.AsterixPark)
@@ -158,6 +142,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Thorpe Park (ThemeParks.Parks.ThorpePark)
 * Chessington World Of Adventures (ThemeParks.Parks.ChessingtonWorldOfAdventures)
 * Bellewaerde (ThemeParks.Parks.Bellewaerde)
+* Phantasialand (ThemeParks.Parks.Phantasialand)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -176,8 +161,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
-|Tokyo Disney Resort - Magic Kingdom|&#10003;|&#10003;|&#10007;|
-|Tokyo Disney Resort - Disney Sea|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
+|Disney Sea - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
 |Europa Park|&#10003;|&#10003;|&#10007;|
 |Hershey Park|&#10003;|&#10003;|&#10007;|
 |Parc-Asterix|&#10003;|&#10003;|&#10003;|
@@ -222,6 +207,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Thorpe Park|&#10003;|&#10003;|&#10007;|
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 |Bellewaerde|&#10003;|&#10003;|&#10007;|
+|Phantasialand|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -245,7 +231,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
                 latitude: (number: ride's latitude),
                 area: (string: section of the park this ride is located within),
             },
-            status: (string: will either be "Operating", "Closed", or "Down"),
+            status: (string: will either be "Operating", "Closed", "Refurbishment", or "Down"),
             lastUpdate: (JavaScript Date object: last time this ride had new data),
             schedule: { **schedule will only be present if park.SupportsRideSchedules is true**
               openingTime: (timeFormat timestamp: opening time of ride),
@@ -322,8 +308,8 @@ Prints:
 * Walt Disney Studios - Disneyland Paris [(48°52′5.78″N, 2°46′50.59″E)]: (Europe/Paris)
 * Hong Kong Disneyland [(22°18′47.52″N, 114°2′40.20″E)]: (Asia/Hong_Kong)
 * Magic Kingdom - Shanghai Disney Resort [(31°8′35.88″N, 121°39′28.80″E)]: (Asia/Shanghai)
-* Tokyo Disney Resort - Magic Kingdom [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
-* Tokyo Disney Resort - Disney Sea [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
+* Magic Kingdom - Tokyo Disney Resort [(35°38′5.45″N, 139°52′45.46″E)]: (Asia/Tokyo)
+* Disney Sea - Tokyo Disney Resort [(35°37′37.40″N, 139°53′20.75″E)]: (Asia/Tokyo)
 * Europa Park [(48°16′8.15″N, 7°43′17.61″E)]: (Europe/Berlin)
 * Hershey Park [(40°17′15.65″N, 76°39′30.88″W)]: (America/New_York)
 * Parc-Asterix [(49°8′9.75″N, 2°34′21.96″E)]: (Europe/Paris)
@@ -368,6 +354,7 @@ Prints:
 * Thorpe Park [(51°24′19.80″N, 0°30′37.80″W)]: (Europe/London)
 * Chessington World Of Adventures [(51°20′58.56″N, 0°18′52.45″W)]: (Europe/London)
 * Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
+* Phantasialand [(50°47′56.23″N, 6°52′45.53″E)]: (Europe/Berlin)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
@@ -424,7 +411,7 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 ### Websites and Mobile Apps
 
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
-* [ChronoPass](https://play.google.com/store/apps/details?id=fr.dechriste.android.attractions) - All parks
+* [ChronoPass](https://www.chronopass.app) - All parks
 
 ### Pebble Apps
 
