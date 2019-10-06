@@ -414,8 +414,9 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 
 ### Websites and Mobile Apps
 
-- [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
-- [ChronoPass](https://www.chronopass.app) - All parks
+* [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
+* [ChronoPass](https://www.chronopass.app) - All parks
+* [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
 
 ### Pebble Apps
 
