@@ -17,16 +17,17 @@ An unofficial API library for accessing ride wait times and park opening times f
 If you have been using themeparks 4.x, please follow this guide to [migrate from themeparks 4.x to themeparks 5.x](https://github.com/cubehouse/themeparks/wiki/Migrating-from-4.x-to-5.x)
 
 ## Settings
+
 You can change some settings of the library by editing the properties of the `Themeparks.Settings` object.
 
-|Property|Default value|Description|
-|:-------|:------------|:----------|
-|Cache|`${process.cwd()}/themeparks.db`|Location of Sqlite DB file|
-|OpenTimeout|10 seconds|Open request timeout value (in milliseconds)|
-|ReadTimeout|0 seconds|Read request timeout value (in milliseconds)|
-|DefaultCacheLength|6 hours|Time to cache any data (in seconds)|
-|CacheWaitTimesLength|5 minutes|Time to cache waiting times (in seconds)|
-|CacheOpeningTimesLength|1 hour|Time to cache opening times (in seconds)|
+| Property                | Default value                    | Description                                  |
+| :---------------------- | :------------------------------- | :------------------------------------------- |
+| Cache                   | `${process.cwd()}/themeparks.db` | Location of Sqlite DB file                   |
+| OpenTimeout             | 10 seconds                       | Open request timeout value (in milliseconds) |
+| ReadTimeout             | 0 seconds                        | Read request timeout value (in milliseconds) |
+| DefaultCacheLength      | 6 hours                          | Time to cache any data (in seconds)          |
+| CacheWaitTimesLength    | 5 minutes                        | Time to cache waiting times (in seconds)     |
+| CacheOpeningTimesLength | 1 hour                           | Time to cache opening times (in seconds)     |
 
 ## Example Use
 
@@ -84,7 +85,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**57** Parks Supported
+**58** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -143,6 +144,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Chessington World Of Adventures (ThemeParks.Parks.ChessingtonWorldOfAdventures)
 * Bellewaerde (ThemeParks.Parks.Bellewaerde)
 * Phantasialand (ThemeParks.Parks.Phantasialand)
+* Heide Park (ThemeParks.Parks.HeidePark)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -208,6 +210,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
 |Bellewaerde|&#10003;|&#10003;|&#10007;|
 |Phantasialand|&#10003;|&#10003;|&#10007;|
+|Heide Park|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -268,18 +271,18 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 There are some values available on each park object that may be useful.
 
-|Variable|Description|
-|:-------|:----------|
-|Name|Name of the park|
-|Timezone|The park's local timezone|
-|LocationString|This park's location as a geolocation string|
-|SupportsWaitTimes|Does this park's API support ride wait times?|
-|SupportsOpeningTimes|Does this park's API support opening hours?|
-|SupportsRideSchedules|Does this park return schedules for rides?|
-|FastPass|Does this park have FastPass (or a FastPass-style service)?|
-|FastPassReturnTimes|Does this park tell you the FastPass return times?|
-|Now|Current date/time at this park (returned as a Moment object)|
-|UserAgent|The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime)|
+| Variable              | Description                                                                                                 |
+| :-------------------- | :---------------------------------------------------------------------------------------------------------- |
+| Name                  | Name of the park                                                                                            |
+| Timezone              | The park's local timezone                                                                                   |
+| LocationString        | This park's location as a geolocation string                                                                |
+| SupportsWaitTimes     | Does this park's API support ride wait times?                                                               |
+| SupportsOpeningTimes  | Does this park's API support opening hours?                                                                 |
+| SupportsRideSchedules | Does this park return schedules for rides?                                                                  |
+| FastPass              | Does this park have FastPass (or a FastPass-style service)?                                                 |
+| FastPassReturnTimes   | Does this park tell you the FastPass return times?                                                          |
+| Now                   | Current date/time at this park (returned as a Moment object)                                                |
+| UserAgent             | The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime) |
 
     const ThemeParks = require("themeparks");
 
@@ -355,6 +358,7 @@ Prints:
 * Chessington World Of Adventures [(51°20′58.56″N, 0°18′52.45″W)]: (Europe/London)
 * Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
 * Phantasialand [(50°47′56.23″N, 6°52′45.53″E)]: (Europe/Berlin)
+* Heide Park [(53°1′28.72″N, 9°52′17.78″E)]: (Europe/Berlin)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
@@ -368,7 +372,7 @@ Run the following to test the library's unit tests (this will build the library 
 
     npm test
 
-You can also run unit tests against the source js files using ```npm run testdev```.
+You can also run unit tests against the source js files using `npm run testdev`.
 
 There is a separate test for checking the library still connects to park APIs correctly. This is the "online test".
 
@@ -416,6 +420,6 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 
 ### Pebble Apps
 
-* [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
-* [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
-* [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
+- [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
+- [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
+- [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
