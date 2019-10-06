@@ -1,0 +1,279 @@
+{
+   "attractions":{
+      "ridetimes_online":"true",
+      "time_entries":[
+         {
+            "alias":"wildwasserbahn",
+            "msg":"45 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"indy_blitz",
+            "msg":"20 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"western_riesenrad",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"mountain_rafting",
+            "msg":"20 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"panorama_turm",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"monorail",
+            "msg":"20 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"grottenblitz",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"ghostbusters",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"wasserflieger",
+            "msg":"20 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"himmelstuermer",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"wolkenspringer",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"drachengrotte",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"desert_race",
+            "msg":"20 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"magic",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"huracan",
+            "msg":"Geschlossen",
+            "type":"red"
+         },
+         {
+            "alias":"colossos",
+            "msg":"90 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"breakdance",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"la_ola",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"limit",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"bobbahn",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"screamie",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"scream",
+            "msg":"Geschlossen",
+            "type":"red"
+         },
+         {
+            "alias":"flug_der_daemonen",
+            "msg":"30 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"krake",
+            "msg":"45 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"panoramabahn",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"kaeptns_toern",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"topilaula_schlacht",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"bounty",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"flossfahrt",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"oldtimer_rundkurs",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         },
+         {
+            "alias":"big_loop",
+            "msg":"10 <small>Min.<\/small>",
+            "type":"time"
+         }
+      ],
+      "message_entries":[
+         {
+            "alias":"piraten_arena",
+            "app_msg":"Besucht unser neues Aktionspektakel \u201eIm Auge des Drachens\u201c!"
+         },
+         {
+            "alias":"lady_moon",
+            "app_msg":"Wirbelnder Fahrspa\u00df f\u00fcr nervenstarke Abenteurer"
+         },
+         {
+            "alias":"huracan",
+            "app_msg":"Aufgrund eines notwendigen Teiletauschs ist unser Huracan derzeit leider au\u00dfer Betrieb. Wir bedauern dies sehr, werden unsere Attraktion aber nat\u00fcrlich so schnell wie m\u00f6glich wieder f\u00fcr Euch \u00f6ffnen, sobald das Ersatzteil geliefert und verbaut wurde. Unser Tipp f\u00fcr Familien: Erlebt eine wilde Fahrt durch den Wilden Westen mit Indy-Blitz oder eine spritzige Abk\u00fchlung im Mountain-Rafting."
+         },
+         {
+            "alias":"bobbahn",
+            "app_msg":"Das Fahrgesch\u00e4ft Bobbahn startet im April und Oktober witterungsbedingt ggf. etwas sp\u00e4ter."
+         }
+      ],
+      "static_msg":"<p><strong>Informationen zu unseren Attraktionen<\/strong><br><p>Die Fahrgesch\u00e4fte Bobbahn & Limit starten witterungsbedingt ggf. etwas sp\u00e4ter.<\/p>\n"
+   },
+   "catering":{
+      "ridetimes_online":"true",
+      "time_entries":[
+         {
+            "alias":"coffee_lounge",
+            "msg":"Von 09-19 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"colossos_snack",
+            "msg":"Von 11-18 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"heide_park_grill",
+            "msg":"Von 12-19 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"piratenburger",
+            "msg":"Von 11-18 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"mummels_kiosk",
+            "msg":"Von 11-18 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"pizza_scream",
+            "msg":"Von 11-17 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"wirtshaus_des_admirals",
+            "msg":"Von 10-17 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"pizza_pasta",
+            "msg":"Von 12-17 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"mucho_pollo",
+            "msg":"Von 11-18 Uhr",
+            "type":"yellow"
+         },
+         {
+            "alias":"hot_dog",
+            "msg":"Von 11-17 Uhr",
+            "type":"yellow"
+         }
+      ]
+   },
+   "todaybox":{
+      "hours":"<p>\n <strong>Park<\/strong>\n <br>10:00 Uhr bis 19:00 Uhr<\/p>\n <hr>\n <p>\n <strong>Attraktionen<\/strong>\n <br>10:00 Uhr bis 18:00 Uhr<\/p>\n \n <p>\n <a href=\"https:\/\/www.heide-park.de\/infos\/oeffnungszeiten-anreise.html\">weitere \u00d6ffnungszeiten<\/a>\n <\/p>",
+      "catering":"<p><strong>Abenteurer Coffee Lounge<\/strong><br>09:00 Uhr bis 19:00 Uhr<\/p><hr><p><strong>Colossos Snack<\/strong><br>11:00 Uhr bis 18:00 Uhr<\/p><hr><p><strong>Heide Park Grill<\/strong><br>12:00 Uhr bis 19:00 Uhr<\/p><hr><p><strong>Piratenburger<\/strong><br>11:00 Uhr bis 18:00 Uhr<\/p><hr><p><strong>Frau M\u00fcmmels Kiosk<\/strong><br>11:00 Uhr bis 18:00 Uhr<\/p><hr><p><strong>Pizza Scream<\/strong><br>11:00 Uhr bis 17:00 Uhr<\/p><hr><p><strong>Wirtshaus d. Admirals<\/strong><br>10:00 Uhr bis 17:00 Uhr<\/p><hr><p><strong>Pizza & Pasta<\/strong><br>12:00 Uhr bis 17:00 Uhr<\/p><hr><p><strong>Mucho Pollo<\/strong><br>11:00 Uhr bis 18:00 Uhr<\/p><hr><p><strong>Hot Dog Freestyle<\/strong><br>11:00 Uhr bis 17:00 Uhr<\/p>",
+      "shows":"<p><strong>Im Auge des Drachens (Piraten-Arena)<\/strong><br>17:00 Uhr<\/p><hr><p><strong>Sandmaler (Show-Zelt)<\/strong><br>13:30 Uhr<\/p><hr><p><strong>Triff Peppa & Schorsch<\/strong><br>12:00 und 12:45 Uhr<\/p><hr><p><strong>Triff Ohnezahn<\/strong><br>13:00 Uhr<\/p><hr><p><strong>Die Traumf\u00e4nger (Show-Zelt)<\/strong><br>15:00 Uhr<\/p>",
+      "events":[
+         {
+            "event_title":"Zombie Escape",
+            "event_body":"<p>Versehentlich wurde ein Virus freigesetzt, der alle zu Zombies mutieren l\u00e4sst. Es werden immer mehr! Nur ein Code kann den Virus neutralisieren. Eure Mission, wenn Ihr euch traut: In Teams von 6 bis 8 Personen werdet Ihr in die Sperrzone eingeschleust. Aber Achtung, \u00fcberall lauern die Zombies, die alles daran setzen werden Euch daran zu hindern. Seid Ihr bereit?&nbsp;(ab 16 Jahren)<\/p><br \/>\n<br \/>\n<p>Event-Tage \u2013 jetzt planen und nichts verpassen: 8. &amp; 15. Juni, 31. August, sowie am 07. September<\/p>",
+            "event_link":"",
+            "event_teaser_img":"https:\/\/www.heide-park.de\/fileadmin\/_processed_\/b\/5\/csm_Vorlage_Events-Banner-zombie_Neu_1c9f6fef03.jpg",
+            "event_images":[
+               "https:\/\/www.heide-park.de\/fileadmin\/_processed_\/b\/1\/csm_Zombie_Escape_Logo_RGB_d246982b5f.jpg"
+            ]
+         },
+         {
+            "event_title":"XXL-Sommertage",
+            "event_body":"<p>Im Sommer hei\u00dft es f\u00fcr Dich und Deine Liebsten: Extra lange \u00d6ffnungszeiten = extra lange Achterbahn fahren<br\/> An den folgenden Samstagen haben wir bis 21 Uhr (Fahrgesch\u00e4fte bis 20 Uhr) f\u00fcr Euch ge\u00f6ffnet: <strong>20. Juli, 27. Juli, 03. August<\/strong><\/p><br \/>\n<br \/>\n<p><br\/> Freu' Dich auf extra langen Freizeitpark-Spa\u00df bei uns im Heide Park Resort!<\/p>",
+            "event_link":"",
+            "event_teaser_img":"https:\/\/www.heide-park.de\/fileadmin\/_processed_\/8\/0\/csm_Banner_XXL-Sommer_3_791f128dec.jpg",
+            "event_images":[
+               "https:\/\/www.heide-park.de\/fileadmin\/_processed_\/4\/1\/csm_Heide_Park_Resort_Colossos_001_cc23fed356.jpg"
+            ]
+         },
+         {
+            "event_title":"Pyro Games",
+            "event_body":"<p>Auch in diesem Jahr wird das Team der \"Pyro Games\" den Abendhimmel \u00fcber dem Heide Park Resort am <strong>31.08.<\/strong> mit Feuerwerk und farbenfrohen Laserstrahlen zum Leuchten bringen.<br\/> Die Kombination von Musik und Feuerwerk geht unter die Haut. Die eigens f\u00fcr diesen Abend gestalteten, musiksynchronen Feuerwerke beeindrucken durch Farbenpracht und Vielseitigkeit. Goldregen wird vom Abendhimmel herab regnen, lodernde Flammen und Feuerkreise den Sternenhimmel mit eindrucksvollen Bildern verzieren.&nbsp;<\/p>",
+            "event_link":"",
+            "event_teaser_img":"https:\/\/www.heide-park.de\/fileadmin\/_processed_\/e\/b\/csm_Vorlage_Events-Banner-pyrogames_43d5f1d824.jpg",
+            "event_images":[
+               "https:\/\/www.heide-park.de\/fileadmin\/_processed_\/a\/0\/csm_Pyro10_b19d37985c.jpg"
+            ]
+         },
+         {
+            "event_title":"Halloween 2019",
+            "event_body":"<p>2019 feiert das Heide Park Resort im gesamten Oktober Halloween!<br\/> An 6 Terminen (alle Samstage sowie der <strong>3. und 31.10.<\/strong>) erlebt Ihr Halloween-Spa\u00df bis 22 Uhr (Fahrgesch\u00e4fte bis 21 Uhr), u.a. mit 3 Horror-Attraktionen, Achterbahn-Fahren im Dunkeln und gro\u00dfem Feuerwerk.<br\/> An 22 weiteren Tagen gibt es ein Halloween-Programm f\u00fcr Familien mit Kindern und alle, die in den Ferien schaurig-sch\u00f6ne Halloween-Atmosph\u00e4re erleben m\u00f6chten. Der Park bleibt bis 18 bzw. 19 Uhr ge\u00f6ffnet, die Fahrgesch\u00e4fte schlie\u00dfen jeweils eine Stunde fr\u00fcher.<\/p>",
+            "event_link":"",
+            "event_teaser_img":"https:\/\/www.heide-park.de\/fileadmin\/_processed_\/e\/2\/csm_Vorlage_Events-Banner-halloween_eafb4332db.jpg",
+            "event_images":[
+               "https:\/\/www.heide-park.de\/fileadmin\/_processed_\/1\/b\/csm_NSF_1754_0e874103e1.jpg"
+            ]
+         }
+      ]
+   }
+}
