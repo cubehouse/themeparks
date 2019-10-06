@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.20 Hotfix for Tokyo Disney Resort wait times
 * 5.1.19 Hotfix for Disney Paris parks rejecting language headers
 * 5.1.18 Add Heide Park (thanks @hemi1986), clean up Six Flags park statuses, Shanghai Disney Resort now returns English names (see #190)
 * 5.1.17 Fix Cedar Park (#235), Universal Studios Japan (#234), Alton Towers, Chessington, and Thorpe Park (#233)
