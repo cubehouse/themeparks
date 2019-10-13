@@ -159,8 +159,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10007;|
 |California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10007;|
-|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10007;|
-|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
