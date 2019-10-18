@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.22 Disneyland Paris reports ride opening times consistently with Park Asterix style (thanks @LouisForaux)
 * 5.1.21 Hotfix for Disneyland Paris' new API (see #239)
 * 5.1.20 Hotfix for Tokyo Disney Resort wait times
 * 5.1.19 Hotfix for Disney Paris parks rejecting language headers
