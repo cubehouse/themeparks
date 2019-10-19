@@ -85,7 +85,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**58** Parks Supported
+**60** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -145,74 +145,76 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Bellewaerde (ThemeParks.Parks.Bellewaerde)
 * Phantasialand (ThemeParks.Parks.Phantasialand)
 * Heide Park (ThemeParks.Parks.HeidePark)
+* Busch Gardens Tampa (ThemeParks.Parks.BuschGardensTampa)
+* Busch Gardens Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
 ## Supported Park Features
 
 <!-- START_PARK_FEATURES_SUPPORTED -->
-| Park                                          | Wait Times | Park Opening Times | Ride Opening Times |
-| :-------------------------------------------- | :--------- | :----------------- | :----------------- |
-| Magic Kingdom - Walt Disney World Florida     | &#10003;   | &#10003;           | &#10007;           |
-| Epcot - Walt Disney World Florida             | &#10003;   | &#10003;           | &#10007;           |
-| Hollywood Studios - Walt Disney World Florida | &#10003;   | &#10003;           | &#10007;           |
-| Animal Kingdom - Walt Disney World Florida    | &#10003;   | &#10003;           | &#10007;           |
-| Magic Kingdom - Disneyland Resort             | &#10003;   | &#10003;           | &#10007;           |
-| California Adventure - Disneyland Resort      | &#10003;   | &#10003;           | &#10007;           |
-| Magic Kingdom - Disneyland Paris              | &#10003;   | &#10003;           | &#10003;           |
-| Walt Disney Studios - Disneyland Paris        | &#10003;   | &#10003;           | &#10003;           |
-| Hong Kong Disneyland                          | &#10003;   | &#10003;           | &#10007;           |
-| Magic Kingdom - Shanghai Disney Resort        | &#10003;   | &#10003;           | &#10007;           |
-| Magic Kingdom - Tokyo Disney Resort           | &#10003;   | &#10003;           | &#10007;           |
-| Disney Sea - Tokyo Disney Resort              | &#10003;   | &#10003;           | &#10007;           |
-| Europa Park                                   | &#10003;   | &#10003;           | &#10007;           |
-| Hershey Park                                  | &#10003;   | &#10003;           | &#10007;           |
-| Parc-Asterix                                  | &#10003;   | &#10003;           | &#10003;           |
-| California's Great America                    | &#10003;   | &#10003;           | &#10007;           |
-| Canada's Wonderland                           | &#10003;   | &#10003;           | &#10007;           |
-| Carowinds                                     | &#10003;   | &#10003;           | &#10007;           |
-| Cedar Point                                   | &#10003;   | &#10003;           | &#10007;           |
-| Kings Island                                  | &#10003;   | &#10003;           | &#10007;           |
-| Knott's Berry Farm                            | &#10003;   | &#10003;           | &#10007;           |
-| Dollywood                                     | &#10003;   | &#10003;           | &#10007;           |
-| Silver Dollar City                            | &#10003;   | &#10003;           | &#10007;           |
-| Seaworld Orlando                              | &#10003;   | &#10003;           | &#10007;           |
-| Efteling                                      | &#10003;   | &#10003;           | &#10007;           |
-| Universal Studios Florida                     | &#10003;   | &#10003;           | &#10007;           |
-| Universal's Islands Of Adventure              | &#10003;   | &#10003;           | &#10007;           |
-| Universal Volcano Bay                         | &#10003;   | &#10003;           | &#10007;           |
-| Universal Studios Hollywood                   | &#10003;   | &#10003;           | &#10007;           |
-| Universal Studios Singapore                   | &#10003;   | &#10003;           | &#10007;           |
-| Universal Studios Japan                       | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Over Texas                          | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Over Georgia                        | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags St. Louis                           | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Great Adventure                     | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Magic Mountain                      | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Great America                       | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Fiesta Texas                        | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Hurricane Harbor, Arlington         | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Hurricane Harbor, Los Angeles       | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags America                             | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Discovery Kingdom                   | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags New England                         | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Hurricane Harbor, Jackson           | &#10003;   | &#10003;           | &#10007;           |
-| The Great Escape                              | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags White Water, Atlanta                | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags México                              | &#10003;   | &#10003;           | &#10007;           |
-| La Ronde, Montreal                            | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Hurricane Harbor, Oaxtepec          | &#10003;   | &#10003;           | &#10007;           |
-| Six Flags Hurricane Harbor, Concord           | &#10003;   | &#10003;           | &#10007;           |
-| PortAventura                                  | &#10003;   | &#10003;           | &#10007;           |
-| Ferrari Land                                  | &#10003;   | &#10003;           | &#10007;           |
-| Alton Towers                                  | &#10003;   | &#10003;           | &#10007;           |
-| Thorpe Park                                   | &#10003;   | &#10003;           | &#10007;           |
-| Chessington World Of Adventures               | &#10003;   | &#10003;           | &#10007;           |
-| Bellewaerde                                   | &#10003;   | &#10003;           | &#10007;           |
-| Phantasialand                                 | &#10003;   | &#10003;           | &#10007;           |
-| Heide Park                                    | &#10003;   | &#10003;           | &#10007;           |
-| Busch Gardens Tampa                           | &#10003;   | &#10003;           | &#10007;           |
-| Busch Gardens Williamsburg                    | &#10007;   | &#10003;           | &#10007;           |
+|Park|Wait Times|Park Opening Times|Ride Opening Times|
+|:---|:---------|:-----------------|:-----------------|
+|Magic Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Epcot - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Hollywood Studios - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10007;|
+|California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
+|Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
+|Disney Sea - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
+|Europa Park|&#10003;|&#10003;|&#10007;|
+|Hershey Park|&#10003;|&#10003;|&#10007;|
+|Parc-Asterix|&#10003;|&#10003;|&#10003;|
+|California's Great America|&#10003;|&#10003;|&#10007;|
+|Canada's Wonderland|&#10003;|&#10003;|&#10007;|
+|Carowinds|&#10003;|&#10003;|&#10007;|
+|Cedar Point|&#10003;|&#10003;|&#10007;|
+|Kings Island|&#10003;|&#10003;|&#10007;|
+|Knott's Berry Farm|&#10003;|&#10003;|&#10007;|
+|Dollywood|&#10003;|&#10003;|&#10007;|
+|Silver Dollar City|&#10003;|&#10003;|&#10007;|
+|Seaworld Orlando|&#10003;|&#10003;|&#10007;|
+|Efteling|&#10003;|&#10003;|&#10007;|
+|Universal Studios Florida|&#10003;|&#10003;|&#10007;|
+|Universal's Islands Of Adventure|&#10003;|&#10003;|&#10007;|
+|Universal Volcano Bay|&#10003;|&#10003;|&#10007;|
+|Universal Studios Hollywood|&#10003;|&#10003;|&#10007;|
+|Universal Studios Singapore|&#10003;|&#10003;|&#10007;|
+|Universal Studios Japan|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Over Georgia|&#10003;|&#10003;|&#10007;|
+|Six Flags St. Louis|&#10003;|&#10003;|&#10007;|
+|Six Flags Great Adventure|&#10003;|&#10003;|&#10007;|
+|Six Flags Magic Mountain|&#10003;|&#10003;|&#10007;|
+|Six Flags Great America|&#10003;|&#10003;|&#10007;|
+|Six Flags Fiesta Texas|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Arlington|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Los Angeles|&#10003;|&#10003;|&#10007;|
+|Six Flags America|&#10003;|&#10003;|&#10007;|
+|Six Flags Discovery Kingdom|&#10003;|&#10003;|&#10007;|
+|Six Flags New England|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Jackson|&#10003;|&#10003;|&#10007;|
+|The Great Escape|&#10003;|&#10003;|&#10007;|
+|Six Flags White Water, Atlanta|&#10003;|&#10003;|&#10007;|
+|Six Flags México|&#10003;|&#10003;|&#10007;|
+|La Ronde, Montreal|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Oaxtepec|&#10003;|&#10003;|&#10007;|
+|Six Flags Hurricane Harbor, Concord|&#10003;|&#10003;|&#10007;|
+|PortAventura|&#10003;|&#10003;|&#10007;|
+|Ferrari Land|&#10003;|&#10003;|&#10007;|
+|Alton Towers|&#10003;|&#10003;|&#10007;|
+|Thorpe Park|&#10003;|&#10003;|&#10007;|
+|Chessington World Of Adventures|&#10003;|&#10003;|&#10007;|
+|Bellewaerde|&#10003;|&#10003;|&#10007;|
+|Phantasialand|&#10003;|&#10003;|&#10007;|
+|Heide Park|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -361,6 +363,8 @@ Prints:
 * Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
 * Phantasialand [(50°47′56.23″N, 6°52′45.53″E)]: (Europe/Berlin)
 * Heide Park [(53°1′28.72″N, 9°52′17.78″E)]: (Europe/Berlin)
+* Busch Gardens Tampa [(28°2′13.60″N, 82°25′10.57″W)]: (America/New_York)
+* Busch Gardens Williamsburg [(37°18′10.15″N, 76°59′16.96″W)]: (America/New_York)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
