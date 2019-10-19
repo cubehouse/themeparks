@@ -85,7 +85,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**58** Parks Supported
+**60** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -145,6 +145,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Bellewaerde (ThemeParks.Parks.Bellewaerde)
 * Phantasialand (ThemeParks.Parks.Phantasialand)
 * Heide Park (ThemeParks.Parks.HeidePark)
+* Busch Gardens Tampa (ThemeParks.Parks.BuschGardensTampa)
+* Busch Gardens Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -211,6 +213,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Bellewaerde|&#10003;|&#10003;|&#10007;|
 |Phantasialand|&#10003;|&#10003;|&#10007;|
 |Heide Park|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
+|Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -359,6 +363,8 @@ Prints:
 * Bellewaerde [(50°50′49.19″N, 2°56′52.61″E)]: (Europe/Brussels)
 * Phantasialand [(50°47′56.23″N, 6°52′45.53″E)]: (Europe/Berlin)
 * Heide Park [(53°1′28.72″N, 9°52′17.78″E)]: (Europe/Berlin)
+* Busch Gardens Tampa [(28°2′13.60″N, 82°25′10.57″W)]: (America/New_York)
+* Busch Gardens Williamsburg [(37°18′10.15″N, 76°59′16.96″W)]: (America/New_York)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
