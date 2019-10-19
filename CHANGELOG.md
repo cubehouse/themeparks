@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.26 Allow ride name language override for Disney Paris parks (@LouisForaux #249)
 * 5.1.25 Fix Portaventura opening hours (thanks @jeanmatthieud #248)
 * 5.1.24 Ignore invalid Disney Paris rides and return facility code for Tokyo Disneyland rides (thanks @rorpage #245)
 * 5.1.23 Add Busch Gardens Tampa & Willamsburg (thanks @thomasstoeckert PR #243)
