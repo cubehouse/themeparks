@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.28 Additional hotfix for previous release when Disney Paris parks returns no data outside of operating hours
 * 5.1.27 Minor hotfix for Disney Paris parks when closed sometimes returning no data and some environments not parsing JSON correctly (#250 #252)
 * 5.1.26 Allow ride name language override for Disney Paris parks (@LouisForaux #249)
 * 5.1.25 Fix Portaventura opening hours (thanks @jeanmatthieud #248)
