@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.31 Fix Phantasialand and Alton Towers Calendars (@hemi1986 #265 and #262)
 * 5.1.30 Add Fastpass support to Disneyland Paris (see #254)
 * 5.1.29 Add Fastpass metadata to Tokyo Disney parks (@nearprosmith #258)
 * 5.1.28 Additional hotfix for previous release when Disney Paris parks returns no data outside of operating hours
