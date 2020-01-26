@@ -1,0 +1,27 @@
+{
+  "id": 531,
+  "title": "Balder",
+  "description": null,
+  "type": "attraction",
+  "lat": 57.693345,
+  "lng": 11.995625,
+  "link": "https://www.liseberg.com/rides-attractions/balder/",
+  "images": {
+    "original": "https://www.liseberg.com/155bf834/globalassets/attraktioner/balder/balder_forlangd.jpg",
+    "small": "https://www.liseberg.com/optimized/poi/155bf834/globalassets/attraktioner/balder/balder_forlangd.jpg"
+  },
+  "additionalInformation": [
+    {
+      "icon": "clock",
+      "label": "Queue: 0-10 min, closing 21:00"
+    },
+    {
+      "icon": "ticket",
+      "label": "Included in Christmas Ride Pass"
+    },
+    {
+      "icon": "ruler",
+      "label": "At least 130 cm and 7 years old"
+    }
+  ]
+}
