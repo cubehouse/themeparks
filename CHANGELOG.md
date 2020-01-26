@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.32 Fux Phantasialand Calendar (again) and add Liseberg Park (@hemi1986 #266 and #270)
 * 5.1.31 Fix Phantasialand and Alton Towers Calendars (@hemi1986 #265 and #262)
 * 5.1.30 Add Fastpass support to Disneyland Paris (see #254)
 * 5.1.29 Add Fastpass metadata to Tokyo Disney parks (@nearprosmith #258)
