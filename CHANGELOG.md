@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.34 Fix for Tokyo Disney Resort (thanks @nearprosmith #279)
 * 5.1.33 Fix for Dollywood Calendar API (#273)
 * 5.1.32 Fux Phantasialand Calendar (again) and add Liseberg Park (@hemi1986 #266 and #270)
 * 5.1.31 Fix Phantasialand and Alton Towers Calendars (@hemi1986 #265 and #262)
