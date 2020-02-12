@@ -1,0 +1,242 @@
+[
+  {
+    "id": 532,
+    "title": "Barnens paradis",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.694033,
+    "lng": 11.992025
+  },
+  {
+    "id": 7163,
+    "title": "Skridskoåkning",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69618,
+    "lng": 11.99263
+  },
+  {
+    "id": 7152,
+    "title": "Tomtehuset",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69398,
+    "lng": 11.99637
+  },
+  {
+    "id": 537,
+    "title": "Cyklonen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695586,
+    "lng": 11.994144
+  },
+  {
+    "id": 536,
+    "title": "Bushållplatsen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69574,
+    "lng": 11.99438
+  },
+  {
+    "id": 553,
+    "title": "Hoppalång",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695948,
+    "lng": 11.993514
+  },
+  {
+    "id": 554,
+    "title": "Mechanica",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.692901,
+    "lng": 11.994041
+  },
+  {
+    "id": 535,
+    "title": "Tuta & Kör",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695683,
+    "lng": 11.993883
+  },
+  {
+    "id": 542,
+    "title": "Fisketuren",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.694394,
+    "lng": 11.994466
+  },
+  {
+    "id": 550,
+    "title": "Radiobilarna",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.694376,
+    "lng": 11.993709
+  },
+  {
+    "id": 538,
+    "title": "Stampbanan",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695938,
+    "lng": 11.99378
+  },
+  {
+    "id": 528,
+    "title": "Rabalder",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695357,
+    "lng": 11.993449
+  },
+  {
+    "id": 530,
+    "title": "Virvelvinden",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.693496,
+    "lng": 11.991934
+  },
+  {
+    "id": 543,
+    "title": "Slänggungan",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69309,
+    "lng": 11.993337
+  },
+  {
+    "id": 4834,
+    "title": "Valkyria",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.693425,
+    "lng": 11.995291
+  },
+  {
+    "id": 527,
+    "title": "AeroSpin",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.693668,
+    "lng": 11.992621
+  },
+  {
+    "id": 534,
+    "title": "Blomsterkarusellen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.693851,
+    "lng": 11.991843
+  },
+  {
+    "id": 531,
+    "title": "Balder",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.693345,
+    "lng": 11.995625
+  },
+  {
+    "id": 541,
+    "title": "Farfars Bil",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69471,
+    "lng": 11.99457
+  },
+  {
+    "id": 552,
+    "title": "Hissningen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69509,
+    "lng": 11.9946
+  },
+  {
+    "id": 548,
+    "title": "Flygis",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695798,
+    "lng": 11.994114
+  },
+  {
+    "id": 555,
+    "title": "Högspänningen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695522,
+    "lng": 11.993589
+  },
+  {
+    "id": 558,
+    "title": "Kaffekoppen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69544,
+    "lng": 11.994127
+  },
+  {
+    "id": 556,
+    "title": "JukeBox",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69379,
+    "lng": 11.99429
+  },
+  {
+    "id": 561,
+    "title": "Kaninresan",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.695613,
+    "lng": 11.993405
+  },
+  {
+    "id": 557,
+    "title": "Lisebergshjulet",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69597,
+    "lng": 11.98984
+  },
+  {
+    "id": 560,
+    "title": "Kaninlandsbanan",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69516,
+    "lng": 11.993489
+  },
+  {
+    "id": 565,
+    "title": "Kristallsalongen",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69413,
+    "lng": 11.99437
+  },
+  {
+    "id": 1149,
+    "title": "Loke",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69381,
+    "lng": 11.99507
+  },
+  {
+    "id": 562,
+    "title": "Lilla Lots",
+    "description": null,
+    "type": "attraction",
+    "lat": 57.69537,
+    "lng": 11.99382
+  }
+]
