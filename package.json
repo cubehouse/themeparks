@@ -48,8 +48,7 @@
     "travislocal": "node_modules/.bin/trevor",
     "docs": "node dev/UpdateREADME.js && node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
     "lint": "./node_modules/.bin/eslint ./lib/**",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "snyk-protect": "snyk protect"
   },
   "main": "./lib/index.js",
   "readmeFilename": "README.md",
