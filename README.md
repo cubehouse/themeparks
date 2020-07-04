@@ -427,8 +427,4 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [ChronoPass](https://www.chronopass.app) - All parks
 * [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
 
-### Pebble Apps
-
-- [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
-- [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
-- [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
+Make a pull request to add your project to the list.
