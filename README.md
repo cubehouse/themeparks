@@ -2,7 +2,7 @@
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
 
-[![Build Status](https://travis-ci.org/cubehouse/themeparks.svg?branch=master)](https://travis-ci.org/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cubehouse/themeparks.svg)
+[![Build Status](https://travis-ci.com/cubehouse/themeparks.svg?branch=master)](https://travis-ci.com/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cubehouse/themeparks.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/cubehouse/themeparks.svg) ![npm](https://img.shields.io/npm/dt/themeparks.svg) ![node](https://img.shields.io/node/v/themeparks.svg) ![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/npm/themeparks.svg)
 
@@ -427,8 +427,4 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [ChronoPass](https://www.chronopass.app) - All parks
 * [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
 
-### Pebble Apps
-
-- [Disneyland California Wait Times](https://apps.getpebble.com/en_US/application/5656424b4431a2ce6c00008d)
-- [Disneyland Paris Wait Times](https://apps.getpebble.com/en_US/application/55e25e8d3ea1fb6fa30000bd)
-- [Disney World Wait Times](https://apps.getpebble.com/en_US/application/54bdb77b54845b1bf40000bb)
+Make a pull request to add your project to the list.

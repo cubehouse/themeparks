@@ -1,10 +1,11 @@
 language: node_js
 node_js:
   - "stable"
+  - "14"
   - "12"
   - "10"
-  - "8"
-sudo: false
+os: linux
+dist: xenial
 env:
   - CXX=g++-4.9
 addons:

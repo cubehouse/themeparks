@@ -1,7 +1,7 @@
 {
   "name": "themeparks",
   "description": "Get Theme Park Wait Times and Opening Times",
-  "version": "5.1.35",
+  "version": "5.1.38",
   "homepage": "https://github.com/cubehouse/themeparks",
   "bugs": "https://github.com/cubehouse/themeparks/issues",
   "author": {
