@@ -4,6 +4,8 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.39 Fix Phantasialand (4ee8b4d), Tokyo Disneyland (see #302 thanks @nearprosmith), improved Bellewaerde data (see #301 thanks @LouisForaux)
+* 5.1.38 Add virtual lines to Universal Parks (see #292 thanks @DougSisk)
 * 5.1.37 Updated Efteling API (see #290)
 * 5.1.36 Fix for new Shanghai Disney Resort API changes (thanks @zacharyedwardbull @nearprosmith #287)
 * 5.1.35 Fix for WDW live access (thanks @cmlara #283)
