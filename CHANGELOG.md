@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.41 Fix for Universal data being cached for incorrect time period (thanks @evanlanglais #316)
 * 5.1.40 Fix WDW database connection issues (see #314)
 * 5.1.39 Fix Phantasialand (4ee8b4d), Tokyo Disneyland (see #302 thanks @nearprosmith), improved Bellewaerde data (see #301 thanks @LouisForaux)
 * 5.1.38 Add virtual lines to Universal Parks (see #292 thanks @DougSisk)
