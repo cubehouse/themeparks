@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.42 Fix for WDW parks not updated in some cloud environments (see #314). Fix for old Alton Towers data not being refreshed
 * 5.1.41 Fix for Universal data being cached for incorrect time period (thanks @evanlanglais #316)
 * 5.1.40 Fix WDW database connection issues (see #314)
 * 5.1.39 Fix Phantasialand (4ee8b4d), Tokyo Disneyland (see #302 thanks @nearprosmith), improved Bellewaerde data (see #301 thanks @LouisForaux)
