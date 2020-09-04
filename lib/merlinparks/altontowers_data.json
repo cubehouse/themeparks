@@ -1,16 +1,22 @@
 {
-  "Resort": [{
-    "_id": 49,
-    "Name": "Alton Towers Resort",
-    "FeedbackURL": "http://www.smartsurvey.co.uk/s/ATRApp/",
-    "TripAdvisorURL": "https://www.tripadvisor.co.uk/Attraction_Review-g504148-d285167-Reviews-Alton_Towers-Alton_Staffordshire_England.html",
-    "Region": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.986806148208998,\"longitude\":-1.8841128253784001,\"radius\":1093}]}",
-    "TimeZone": "Europe/London",
-    "Country": "GB",
-    "DirectionsLocation": "52.993137,-1.894724",
-    "DefaultMapFocalRegion": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.990808000000001,\"longitude\":-1.89235,\"radius\":60}]}"
-  }],
-  "Item": [{
+  "Resort": [
+    {
+      "_id": 49,
+      "Name": "Alton Towers Resort",
+      "FeedbackURL": "http://www.smartsurvey.co.uk/s/ATRApp/",
+      "TripAdvisorURL": "https://www.tripadvisor.co.uk/Attraction_Review-g504148-d285167-Reviews-Alton_Towers-Alton_Staffordshire_England.html",
+      "TicketsURL": null,
+      "PrivacyPolicyURL": null,
+      "OptInMessage": null,
+      "Region": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.986806148208998,\"longitude\":-1.8841128253784001,\"radius\":1093}]}",
+      "TimeZone": "Europe/London",
+      "Country": "GB",
+      "DirectionsLocation": "52.993137,-1.894724",
+      "DefaultMapFocalRegion": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.990808000000001,\"longitude\":-1.89235,\"radius\":60}]}"
+    }
+  ],
+  "Item": [
+    {
       "_id": 4255,
       "Name": "Alton Towers Hotel",
       "Summary": "This unique hotel is themed around the incredible explorer Sir Algenon, who has made the Alton Towers Hotel his home. There are plenty of fun and quirky features to discover, including his amazing flying ship which has crash-landed right in the middle of the hotel.",
@@ -18,12 +24,11 @@
       "DefaultImage": 9046,
       "Location": "52.984780986051,-1.8741936329752",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4664,
@@ -33,12 +38,13 @@
       "DefaultImage": 9008,
       "Location": "52.984109536897,-1.8737058544007",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 504,
+      "Category": 1109,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        162
+      ]
     },
     {
       "_id": 4317,
@@ -48,52 +54,95 @@
       "DefaultImage": 9007,
       "Location": "52.985033185594,-1.8758945369568",
       "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1109,
+      "Parent": null,
+      "Classifications": [
+        162
+      ],
+      "WebPageURL": "https://www.altontowers.com/activities/waterpark/"
+    },
+    {
+      "_id": 8134,
+      "Name": "Bandstand",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13086,
+      "Location": "52.987006368922,-1.8884472751465",
+      "Featured": false,
       "WayfindingEnabled": false,
       "VisibleOnMap": true,
-      "Category": 506,
+      "Category": 1223,
       "Parent": null,
-      "Classifications": [],
-      "WebPageURL": "https://www.altontowers.com/activities/waterpark/",
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4231,
       "Name": "Battle Galleons",
-      "Summary": "Sail amidst shark infested waters to the pirate cove!\n\nA marvellous spectacle for land lubbers and pirate crew, Battle Galleons is an interactive water ride which swashes the buckle for all ages.",
+      "Summary": "Sail amidst shark infested waters to the pirate cove!\n\nA marvellous spectacle for land lubbers and pirate crew, Battle Galleons is an interactive water ride which swashes the buckle for all ages.\n\nPlease be aware this ride closes at dusk.",
       "Keywords": "battle galleons, pirates, splash, ships, water, water guns",
       "DefaultImage": 9009,
       "Location": "52.988640096313,-1.8905041459948",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        156,
         120
       ],
       "WebPageURL": null,
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-03-23 00:00:00\",\"end\":\"2019-04-13 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 12:00:00\",\"period_length\":{\"day\":1}}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-03-23 00:00:00\",\"end\":\"2019-04-13 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 14:00:00\",\"period_length\":{\"day\":1}}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-04-13 00:00:00\",\"end\":\"2019-08-02 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 12:30:00\",\"period_length\":{\"day\":1}}]}]}",
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 10:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 13:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:30:00\",\"period_length\":{\"day\":1}}]}",
       "_id": 6208,
       "Name": "Bing's Picnic",
-      "Summary": "Bing and Flop are having an exciting day out at Alton Towers Resort!  Join them as they stop off in Big Fun Showtime to have their picnic, play games and make some new friends.\nAn interactive show where children get to meet and play with Bing and Flop. Join in the fun and bring along your own picnic too!",
+      "Summary": "Bing and Flop are having an exciting day out at Alton Towers Resort!  Join them as they stop off in Big Fun Showtime to have their picnic, play games and make some new friends.\nAn interactive show where children get to meet and play with Bing and Flop.",
       "Keywords": "bing, flop, show, cbeebies land, picnic",
       "DefaultImage": 9561,
       "Location": "52.989922381542,-1.8942140245285",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 810,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
+    },
+    {
+      "_id": 4217,
+      "Name": "Bugbie-Go-Round",
+      "Summary": "Are you ready to go on an adventure with the friendly Bugbies? Then hop aboard your own Bugbie cart and take control of the steering wheel as you whizz around, what will you be exploring today?",
+      "Keywords": "carousel, numbers, bugbie, cbeebies land",
+      "DefaultImage": 11714,
+      "Location": "52.990787485349,-1.8938139919192",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 749,
+      "Parent": null,
+      "Classifications": [
+        151,
+        120
+      ],
+      "WebPageURL": "https://www.altontowers.com/theme-park/the-numtums-number-go-round/",
+      "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": 1,
+      "MaximumHeightRequirement": null,
+      "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
+      "MaximumAgeRequirement": null,
+      "RestrictionSummary": "If your height is less than 1 m, then you must be accompanied by an adult."
     },
     {
       "_id": 6004,
@@ -103,12 +152,13 @@
       "DefaultImage": 9096,
       "Location": "52.99014842081,-1.8946163558808",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 5990,
@@ -118,12 +168,13 @@
       "DefaultImage": 9097,
       "Location": "52.989944985522,-1.8859420919266",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        155
+      ]
     },
     {
       "_id": 6005,
@@ -133,12 +184,13 @@
       "DefaultImage": 9099,
       "Location": "52.989216195122,-1.8942465091899",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 6002,
@@ -148,12 +200,13 @@
       "DefaultImage": 9100,
       "Location": "52.989974047764,-1.8937902355042",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 6007,
@@ -163,12 +216,13 @@
       "DefaultImage": 9101,
       "Location": "52.989890090121,-1.8861405753937",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        155
+      ]
     },
     {
       "_id": 6006,
@@ -178,72 +232,29 @@
       "DefaultImage": 9102,
       "Location": "52.986127974382,-1.8827341699448",
       "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 502,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 4309,
-      "Name": "Buggy Park (Sharkbait Reef)",
-      "Summary": "",
-      "Keywords": "pushchair, pram, stroller",
-      "DefaultImage": 9103,
-      "Location": "52.989809361464,-1.8892680311051",
-      "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 4272,
       "Name": "Buy The Smiler",
-      "Summary": "A collection of Smiler related merchandise.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nA collection of Smiler related merchandise.",
       "Keywords": "x sector, shop",
       "DefaultImage": 9172,
       "Location": "52.987400348906,-1.89592527388",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 6023,
-      "Name": "Car Parking Tickets",
-      "Summary": "",
-      "Keywords": "",
-      "DefaultImage": 9108,
-      "Location": "52.99100735924,-1.8922613763657",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 502,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 5987,
-      "Name": "Cash Point (Entrance Plaza)",
-      "Summary": "",
-      "Keywords": "ATM, card, credit, bank",
-      "DefaultImage": 9110,
-      "Location": "52.991288286523,-1.8916122817841",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 502,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        159
+      ]
     },
     {
       "_id": 5988,
@@ -253,12 +264,13 @@
       "DefaultImage": 9111,
       "Location": "52.987545668486,-1.8939833545533",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 510,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4269,
@@ -268,12 +280,13 @@
       "DefaultImage": 9112,
       "Location": "52.990849135022,-1.8918858671036",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 510,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 5991,
@@ -283,28 +296,11 @@
       "DefaultImage": 9045,
       "Location": "52.983925450706,-1.8738131427613",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 4273,
-      "Name": "CBeebies Land Photo Studio",
-      "Summary": "Get your photo taken with your favourite CBeebies characters.",
-      "Keywords": "cbeebies, cbeebies land, photo, photo studio",
-      "DefaultImage": 9010,
-      "Location": "52.98981904891,-1.8937419557419",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 508,
-      "Parent": null,
-      "Classifications": [],
-      "WebPageURL": null,
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4216,
@@ -314,92 +310,227 @@
       "DefaultImage": 6105,
       "Location": "52.990868212178,-1.893604779616",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
-        120
+        151
       ],
-      "WebPageURL": "https://www.altontowers.com/theme-park/charlie-and-lolas-moonsquirters-greendrops/",
-      "ShareMessage": null
+      "WebPageURL": "https://www.altontowers.com/theme-park/charlie-and-lolas-moonsquirters-greendrops/"
+    },
+    {
+      "_id": 8138,
+      "Name": "Choragic Monument",
+      "Summary": "Erected by the 16th Earl of Shrewsbury in memory of his uncle, Charles Talbot, the 15th Earl, who transformed the gardens from a barren wasteland, inhabited only by rabbits, into the magnificent gardens we see today and “made the desert smile”.  \n\nThe box hedge at the foot of the monument is in the shape of the letter “S”. Originally, the area surrounding the “S”, now covered in gravel, would have been filled with “grog” – a by-product of the pottery industry.",
+      "Keywords": "",
+      "DefaultImage": 13090,
+      "Location": "52.986980534044,-1.8911563062515",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "_id": 8375,
+      "Name": "Coca Cola Freestyle (Dark Forest)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13524,
+      "Location": "52.985107464177,-1.8911348485794",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        153
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
+    },
+    {
+      "_id": 8336,
+      "Name": "Coca Cola Freestyle (Forbidden Valley)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13478,
+      "Location": "52.986363721729,-1.8823747539367",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        160
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
+    },
+    {
+      "_id": 8335,
+      "Name": "Coca Cola Freestyle (Katanga Canyon)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13477,
+      "Location": "52.990051546983,-1.8872671031799",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        155
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
+    },
+    {
+      "_id": 8334,
+      "Name": "Coca Cola Freestyle (Mutiny Bay)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13476,
+      "Location": "52.989425090987,-1.8895523452606",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        156
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
+    },
+    {
+      "_id": 8332,
+      "Name": "Coca Cola Freestyle (Towers Street)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13468,
+      "Location": "52.990306647593,-1.8921111726608",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        158
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
+    },
+    {
+      "_id": 8333,
+      "Name": "Coca Cola Freestyle (X-Sector)",
+      "Summary": "Refresh and Refill at the Coca-Cola Freestyle location",
+      "Keywords": "freestyle, quencher, refill",
+      "DefaultImage": 13470,
+      "Location": "52.986917238506,-1.8950616025772",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1238,
+      "Parent": null,
+      "Classifications": [
+        159
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": null,
+      "PreorderURL": null
     },
     {
       "_id": 4275,
       "Name": "Coffee Lounge",
-      "Summary": "The perfect place to stop for a coffee between thrills. Proud to serve Costa Coffee.",
+      "Summary": "Limited seating is available. Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe perfect place to stop for a coffee between thrills. Proud to serve Costa Coffee.",
       "Keywords": "costa coffee, hot drinks, breakfast, snacks, cakes, tea, hot chocolate",
       "DefaultImage": 9058,
       "Location": "52.986589779621,-1.8829648399201",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        160
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
-      "_id": 6026,
-      "Name": "Coffee Shack",
-      "Summary": "The perfect place to stop for a coffee between thrills. Proud to serve Costa Coffee.",
-      "Keywords": "costa coffee, hot drinks, breakfast, snacks, cakes, tea, hot chocolate, ice cream",
-      "DefaultImage": 9173,
-      "Location": "52.989305611235,-1.8893216752854",
+      "_id": 8133,
+      "Name": "Colonnade",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13085,
+      "Location": "52.987232423451,-1.8882863426056",
       "Featured": false,
       "WayfindingEnabled": false,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 1223,
       "Parent": null,
-      "Classifications": [],
-      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ReservationsURL": null,
-      "MenuURL": null,
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4225,
       "Name": "Congo River Rapids",
-      "Summary": "Let the rapids take you away! With rushing waters surging under you, sending you into a spin, as you navigate through waterfalls.",
+      "Summary": "Let the rapids take you away! With rushing waters surging under you, sending you into a spin, as you navigate through waterfalls.\n\nPlease be aware this ride will close at dusk.",
       "Keywords": "boats, waterfalls, rubber dingy",
       "DefaultImage": 6114,
       "Location": "52.989318230701,-1.886765146628",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        155,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/congo-river-rapids/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
     {
       "_id": 4233,
       "Name": "Corner Coffee",
-      "Summary": "Take a seat inside Corner Coffee, located on Towers Street, and treat yourself to a cappuccino, latte or something refreshing from the bar. There is also a large selection of sandwiches, baked pastries and delicious cakes for you to indulge into. Corner Coffee is the perfect place to refuel whilst taking a comforting break from our thrilling rides and attractions.",
+      "Summary": "Limited seating is available. Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, \n\nVisit Corner Coffee, located on Towers Street, and treat yourself to a cappuccino, latte or something refreshing from the bar. There is also a large selection of sandwiches, baked pastries and delicious cakes for you to indulge into. Corner Coffee is the perfect place to refuel whilst taking a comforting break from our thrilling rides and attractions.",
       "Keywords": "costa coffee, hot drinks, breakfast, snacks, cakes, tea, hot chocolate, breakfast",
       "DefaultImage": 6122,
       "Location": "52.990080311878,-1.8930281046778",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        158
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4524,
@@ -409,41 +540,45 @@
       "DefaultImage": 9011,
       "Location": "52.985391659314,-1.8932967090454",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 505,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        152,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/driving-school/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": 1.3999999999999999,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1 m, then you cannot ride. If your height is greater than 1.4 m, then you cannot ride."
     },
     {
       "_id": 4208,
       "Name": "Duel - The Haunted House Strikes Back",
-      "Summary": "When the ghosts and ghouls attack, this is your chance to fight back. Load your laser guns and have your wits about you.\n\nA legion of zombies have been drawn to the home of their creator, Dr Nicholas Roodyn, Prepare to Duel!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nWhen the ghosts and ghouls attack, this is your chance to fight back. Load your laser guns and have your wits about you.\n\nA legion of zombies have been drawn to the home of their creator, Dr Nicholas Roodyn, Prepare to Duel!",
       "Keywords": "duel, haunted house, lazer gun, laser gun, shooting",
       "DefaultImage": 6096,
       "Location": "52.988918107061,-1.8837748670426",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        154,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/duel/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
@@ -455,15 +590,17 @@
       "DefaultImage": 9059,
       "Location": "52.989796444864,-1.8895523452607",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 804,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        156
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 6025,
@@ -473,33 +610,36 @@
       "DefaultImage": 9166,
       "Location": "52.985401347752,-1.8935863876191",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 502,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        152
+      ]
     },
     {
       "_id": 4227,
       "Name": "Enterprise",
-      "Summary": "A Ministry of Joy installation to totally disorientate you. Only the circular force of Enterprise keeps you in place, as the monstrous steel wheel drags you upwards until you are hanging upside down, and round and round.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nA Ministry of Joy installation to totally disorientate you. Only the circular force of The Enterprise keeps you in place, as the monstrous steel wheel drags you upwards until you are upside down",
       "Keywords": "spinning wheel, upside down, x sector",
       "DefaultImage": 9015,
       "Location": "52.987319318302,-1.8966356758028",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        159,
         119
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/enterprise/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.3999999999999999,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.4 m, then you must be accompanied by an adult."
     },
@@ -511,30 +651,33 @@
       "DefaultImage": 9179,
       "Location": "52.99108162755,-1.8922399186936",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 502,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4235,
-      "Name": "Explorers Pizza Pasta Buffet",
-      "Summary": "Enter the Explorers restaurant and indulge in a buffet-style feast of mouth-watering Italian pizza and pasta dishes, accompanied by a lovely fresh side salad of your choice from our 'help yourself' salad bar. Located in Katanga Canyon, our delicious dishes are sure to fill any rumbling tummies, plus go up as many times as you like in this great value for money restaurant! Gluten free Pizza's available upon request.",
+      "Name": "Explorers Pizza Pasta",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nEnter the Explorers restaurant and indulge in a feast of mouth-watering Italian pizza and pasta dishes. Located in Katanga Canyon, our delicious dishes are sure to fill any rumbling tummies! Gluten free Pizza's available upon request.",
       "Keywords": "all you can eat, italian, pizza, pasta, vegetarian, soft drinks",
       "DefaultImage": 9068,
       "Location": "52.98998989617,-1.8856573943049",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 805,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        155
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4316,
@@ -544,13 +687,34 @@
       "DefaultImage": 6176,
       "Location": "52.985214037572,-1.878093948349",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 506,
+      "Category": 1109,
       "Parent": null,
-      "Classifications": [],
-      "WebPageURL": "https://www.altontowers.com/activities/extraordinary-golf/",
-      "ShareMessage": null
+      "Classifications": [
+        162
+      ],
+      "WebPageURL": "https://www.altontowers.com/activities/extraordinary-golf/"
+    },
+    {
+      "_id": 6575,
+      "Name": "Flambo's Jambo",
+      "Summary": "Refuel after a busy day in the Theme Park at Flambo’s Jambo, whilst enjoying wonderful views over our wacky Waterpark. With a delicious all you can eat Pizzaria for lunch and a taste from around the World all you can eat buffet for dinner! Enjoy classics such as Margarita and Meat Feast, or try some of our chefs unusual offerings inspired by flavours from around the world. Fill up at the salad bar with a wide range of accompaniments to your meal, but don't forget to save room for your dessert!",
+      "Keywords": "",
+      "DefaultImage": 10076,
+      "Location": "52.985294774818,-1.8756692313996",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 808,
+      "Parent": null,
+      "Classifications": [
+        163
+      ],
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "PreorderURL": null
     },
     {
       "_id": 4279,
@@ -560,123 +724,68 @@
       "DefaultImage": 9060,
       "Location": "52.985188201622,-1.890871992096",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 804,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        153
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
-    },
-    {
-      "_id": 4221,
-      "Name": "Frog Hopper",
-      "Summary": "Take a giant leap, then up, down, up, down, up, down to the ground. Being a frog is foolishly fun.",
-      "Keywords": "hopper, bouncy, frog",
-      "DefaultImage": 9016,
-      "Location": "52.984816510814,-1.8940339330584",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 505,
-      "Parent": null,
-      "Classifications": [
-        120
-      ],
-      "WebPageURL": "https://www.altontowers.com/theme-park/frog-hopper/",
-      "ShareMessage": null,
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": null,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "PreorderURL": null
     },
     {
       "_id": 4189,
       "Name": "Galactica",
-      "Summary": "Blast through an advanced launch portal to a dimension beyond your imagination. Soar,  spiral and glide in our iconic flying rollercoaster on an exhilarating expedition that frees you from the bounds of your earth forces.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nBlast through an advanced launch portal to a dimension beyond your imagination. Soar,  spiral and glide in our iconic flying rollercoaster on an exhilarating expedition.",
       "Keywords": "air, flying, rollercoaster, roller coaster, coaster",
-      "DefaultImage": 9698,
+      "DefaultImage": 13516,
       "Location": "52.985827636856,-1.8824230336991",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        160,
         119
       ],
       "Inversions": 2,
       "Length": 840,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/galactica/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
     {
-      "_id": 4271,
-      "Name": "Galactica Store",
-      "Summary": "A selection of Galactica themed merchandise.",
-      "Keywords": "air, shop, hoodies, t-shirts, VR, space, key rings, pens, mugs, virtual reality",
-      "DefaultImage": 6172,
-      "Location": "52.985930979037,-1.8824552202072",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 500,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 4224,
-      "Name": "Gallopers Carousel",
-      "Summary": "Hold tight everyone, here we go… Travel round and round on the Horses or Carriages on the Gallopers Carousel.",
-      "Keywords": "horses, carriage",
-      "DefaultImage": 9021,
-      "Location": "52.984997363699,-1.8938890937716",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 505,
-      "Parent": null,
-      "Classifications": [
-        120
-      ],
-      "WebPageURL": "https://www.altontowers.com/theme-park/gallopers-carousel/",
-      "ShareMessage": null,
-      "MinimumHeightRequirement": null,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": null,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.3 m, then you must be accompanied by an adult."
-    },
-    {
       "_id": 4219,
       "Name": "Get Set Go Tree Top Adventure",
-      "Summary": "The Get Set Go Tree Top Adventure is a great place for families to begin their day at CBeebies Land. Wake up the sleeping bugs in the CBeebies bedroom and Get Set Go on this fun ride offering plenty of imaginative play.",
+      "Summary": "The Get Set Go Tree Top Adventure is a great place for families to begin their day at CBeebies Land. Wake up the sleeping bugs in the CBeebies bedroom and Get Set Go on this fun ride offering plenty of imaginative play.\n\nPlease be aware this ride will close at dusk.",
       "Keywords": "cbeebies land, monorail",
       "DefaultImage": 9022,
       "Location": "52.989305313955,-1.8938730005175",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/get-set-go-tree-top-adventure/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
@@ -688,35 +797,22 @@
       "DefaultImage": 9023,
       "Location": "52.99001279739,-1.8946431779709",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/go-jetters-vroomster-zoom-ride/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.25,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.25 m, then you must be accompanied by an adult."
-    },
-    {
-      "_id": 4232,
-      "Name": "Haunted Hollow",
-      "Summary": "Dare you walk through the Haunted Hollow down to the Gloomy Wood? Meet a few of our more ancient ancestors that still call it home.",
-      "Keywords": "",
-      "DefaultImage": 6121,
-      "Location": "52.988407590643,-1.8875000718981",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 506,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
     },
     {
       "_id": 4223,
@@ -726,46 +822,50 @@
       "DefaultImage": 9024,
       "Location": "52.989744481152,-1.8905738834292",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 505,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        156,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/heave-ho/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
     {
       "_id": 4505,
       "Name": "Hex - The Legend of the Towers",
-      "Summary": "A beggar woman spurned by the arrogant Earl of Shrewsbury, as he returned home to Alton Towers one dark night, cast a curse that would last for centuries. How will the discovery of a sealed vault, hidden behind an old bookcase, give us any more insight to the tales?",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nA beggar woman spurned by the arrogant Earl of Shrewsbury, as he returned home to Alton Towers one dark night, cast a curse that would last for centuries. How will the discovery of a sealed vault, hidden behind an old bookcase, give us any more insight to the tales?",
       "Keywords": "spinning room, history, heritage",
       "DefaultImage": 6420,
       "Location": "52.985585427654,-1.8929158353653",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        157,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/hex/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-03-23 00:00:00\",\"end\":\"2019-04-13 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 13:00:00\",\"period_length\":{\"day\":1}}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-04-13 00:00:00\",\"end\":\"2019-08-02 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 14:30:00\",\"period_length\":{\"day\":1}}]}]}",
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 12:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 15:30:00\",\"period_length\":{\"day\":1}}]}",
       "_id": 6209,
       "Name": "Hey Duggee Live: The Big Day Out Badge",
       "Summary": "Duggee, Happy and their new Squirrel friend Jo need your help to plan the best day out ever for all the Squirrels.  If you can help them with the list of things they’d each like to do in CBeebies Land, you can earn a Big Day Out badge!",
@@ -773,53 +873,58 @@
       "DefaultImage": 9562,
       "Location": "52.989809361464,-1.8941764736023",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 810,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 4209,
       "Name": "In The Night Garden Magical Boat Ride",
-      "Summary": "Set sail on the magical In The Night Garden Boat Ride where you’ll be able to journey through a real Night Garden and spot all your favourite characters – whether it’s Upsy Daisy waving and blowing kisses or the Tombliboos playing peek-a-boo, everyone is there to find... even Igglepiggle!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nSet sail on the magical In The Night Garden Boat Ride where you’ll be able to journey through a real Night Garden and spot all your favourite characters – whether it’s Upsy Daisy waving and blowing kisses or the Tombliboos playing peek-a-boo, everyone is there to find... even Igglepiggle!",
       "Keywords": "upsy daisy, iggle piggle, cbeebies land",
       "DefaultImage": 9025,
       "Location": "52.990510893907,-1.8944445624948",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/in-the-night-garden-magical-boat-ride/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": 1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1 m, then you must be accompanied by an adult."
     },
     {
       "_id": 4241,
-      "Name": "Just Chicken",
-      "Summary": "Enjoy our luscious Chicken coated in our very own unique seasoning recipe plus take on our ultimate donut burger.",
+      "Name": "Just Chicken (Takeaway)",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nEnjoy our luscious Chicken coated in our very own unique seasoning recipe plus take on our ultimate donut burger.\n\nMerlin Passholder discount is only available when ordering from the counter as usual, the discount cannot be used with mobile food orders.",
       "Keywords": "kfc, fried chicken, chicken burgers, fries, soft drinks",
-      "DefaultImage": 6130,
+      "DefaultImage": 13511,
       "Location": "52.986851062122,-1.8952382449061",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 804,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        159
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": "https://menus.preoday.com/merlin-entertainments/ATR-Just-Chicken#/main/venue/menu"
     },
     {
       "_id": 4211,
@@ -829,35 +934,50 @@
       "DefaultImage": 9026,
       "Location": "52.991003832911,-1.8940285686404",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/justins-house-pie-o-matic-factory/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": 16,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your age is less than 16 years, then you must be accompanied by an adult."
     },
     {
-      "_id": 4250,
-      "Name": "Katanga Cargo",
-      "Summary": "Venture inside this amazing emporium and marvel at the huge selection of products and gifts on offer. Whether you’re buying something for yourself or a gift for someone else, you’re bound to find something you’ll love inside this jungle-themed store.",
-      "Keywords": "shop, rapids, mine train, runaway train, toys, plush, teddy, bears, t-shirts, mugs, medals",
-      "DefaultImage": 6139,
-      "Location": "52.989770314377,-1.8861884716898",
+      "_id": 8132,
+      "Name": "Le Refuge & Bath Fountain",
+      "Summary": "In the mid-1800s it was considered beneficial to the health to take cold baths throughout the year. \n\nA Coadstone statue of a triton blowing into a conch shell originally topped the fountain.  \n\nTo the right of the Bath Fountain is Le Refuge – with a chimney vent on one side of the door and an air-vent on the other – which was used before and after the bath.",
+      "Keywords": "",
+      "DefaultImage": 13084,
+      "Location": "52.987238882135,-1.8879430198517",
       "Featured": false,
       "WayfindingEnabled": false,
       "VisibleOnMap": true,
-      "Category": 500,
+      "Category": 1223,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
+    },
+    {
+      "_id": 8127,
+      "Name": "Lion Fountain",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13078,
+      "Location": "52.987552127122,-1.8900673293915",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
     },
     {
       "_id": 4234,
@@ -867,28 +987,33 @@
       "DefaultImage": 6123,
       "Location": "52.990791291496,-1.8934377551341",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        151
+      ],
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "ReservationsURL": null,
+      "MenuURL": null,
+      "PreorderURL": null
     },
     {
       "_id": 4244,
       "Name": "Little Explorers Toy Box",
-      "Summary": "You can find a wide range of souvenirs featuring your favourite CBeebies friends, the CBeebies bugs and exclusive CBeebies Land items!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nYou can find a wide range of souvenirs featuring your favourite CBeebies friends, the CBeebies bugs and exclusive CBeebies Land items!",
       "Keywords": "cbeebies, characters, in the night garden, postman pat, octonauts, toys, games, bing",
       "DefaultImage": 6133,
       "Location": "52.990603724886,-1.8939887189713",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 6010,
@@ -898,12 +1023,13 @@
       "DefaultImage": 9114,
       "Location": "52.985304463278,-1.8902926349488",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 511,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        153
+      ]
     },
     {
       "_id": 6011,
@@ -913,12 +1039,13 @@
       "DefaultImage": 9115,
       "Location": "52.98637986876,-1.8823586606827",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 511,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 6008,
@@ -928,12 +1055,13 @@
       "DefaultImage": 9116,
       "Location": "52.991059024165,-1.8925295972672",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 511,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 6009,
@@ -943,12 +1071,13 @@
       "DefaultImage": 9117,
       "Location": "52.986867506268,-1.8961988591996",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 511,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        159
+      ]
     },
     {
       "_id": 5992,
@@ -958,33 +1087,34 @@
       "DefaultImage": 9049,
       "Location": "52.983699378871,-1.871962418541",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4214,
       "Name": "Marauder's Mayhem",
-      "Summary": "Swirl and twirl with the gunpowder barrels which make up Marauder's Mayhem. Beware the actions of your crewmates, who can make the barrel spin faster.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nSwirl and twirl with the gunpowder barrels which make up Marauder's Mayhem. Beware the actions of your crewmates, who can make the barrel spin faster.",
       "Keywords": "tea cups, barrels, pirates",
       "DefaultImage": 9030,
       "Location": "52.989748007583,-1.8902014398423",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        156,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/marauders-mayhem/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you cannot ride. If your height is less than 1.3 m, then you must be accompanied by an adult."
     },
@@ -996,42 +1126,13 @@
       "DefaultImage": 9104,
       "Location": "52.989996651717,-1.8915425443497",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 509,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 6033,
-      "Name": "Monorail - Entrance Plaza",
-      "Summary": "Hop on-board the Monorail back to the Hotels & Car Parks",
-      "Keywords": "monorail, car park, train",
-      "DefaultImage": 9178,
-      "Location": "52.991582128048,-1.8920199775544",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 498,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 6032,
-      "Name": "Monorail - Hotels & Car Parks",
-      "Summary": "Begin your escape to the Theme Park by climbing aboard the Monorail for a short journey to the Theme Park entrance.",
-      "Keywords": "monorail, car park, train",
-      "DefaultImage": 9177,
-      "Location": "52.985688770413,-1.8774609470215",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 498,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4210,
@@ -1041,14 +1142,13 @@
       "DefaultImage": 9127,
       "Location": "52.990645703034,-1.8949650430527",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 810,
       "Parent": null,
       "Classifications": [
-        120
-      ],
-      "ShareMessage": null
+        151
+      ]
     },
     {
       "_id": 4281,
@@ -1058,15 +1158,17 @@
       "DefaultImage": 9063,
       "Location": "52.989625299561,-1.8893753194657",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        156
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 6024,
@@ -1076,39 +1178,43 @@
       "DefaultImage": 9171,
       "Location": "52.989118317985,-1.8898098373261",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        156
+      ],
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
       "ReservationsURL": null,
       "MenuURL": null,
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4188,
       "Name": "Nemesis",
-      "Summary": "Ride the twists and turns of Nemesis, as it races past the rocks and rivers of Forbidden Valley. Inverted on the track, it corkscrews, spins and races over the twisted steel track, making it one of the most heart-pounding, exciting and exhilarating rides!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nRide the twists and turns of Nemesis, as it races past the rocks and rivers of Forbidden Valley. Inverted on the track, it corkscrews, spins and races over the twisted steel track.",
       "Keywords": "rollercoaster, roller coaster, coaster",
       "DefaultImage": 9031,
       "Location": "52.986974075322,-1.8828200006333",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        160,
         119
       ],
       "Inversions": 4,
       "Length": 716,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/nemesis/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
@@ -1120,57 +1226,43 @@
       "DefaultImage": 9064,
       "Location": "52.98691594678,-1.8847619199601",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        160
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
-    },
-    {
-      "_id": 4242,
-      "Name": "Nitrogenie",
-      "Summary": "Ice cream from magic.",
-      "Keywords": "liquid nitrogen, nitrogen, ice cream, milkshakes",
-      "DefaultImage": 9061,
-      "Location": "52.988933955855,-1.8845362309366",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 499,
-      "Parent": null,
-      "Classifications": [],
-      "ReservationsURL": null,
-      "MenuURL": null,
-      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4192,
       "Name": "Oblivion",
-      "Summary": "Oblivion beckons you to face your fears, and as you’re held, overhanging the edge of the world’s first vertical drop rollercoaster, you get a moment to savour what is to come. Prepare yourself - the drop into Oblivion is imminent.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nOblivion beckons you to face your fears, and as you’re held, overhanging the edge of the world’s first vertical drop rollercoaster, you get a moment to savour what is to come.",
       "Keywords": "vertical drop, rollercoaster, roller coaster, coaster",
       "DefaultImage": 9027,
       "Location": "52.98658009145,-1.8964992666092",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        159,
         119
       ],
       "Inversions": 0,
       "Length": 372,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/oblivion/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
@@ -1182,40 +1274,58 @@
       "DefaultImage": 6091,
       "Location": "52.989321757166,-1.8945948982087",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/octonauts-rollercoaster-adventure/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+    },
+    {
+      "_id": 8135,
+      "Name": "Pagoda Fountain",
+      "Summary": "The recently completed restoration of the Grade II* Listed (Chinese) Pagoda Fountain at Alton Towers Resort, Staffordshire. The 3-month restoration involved specialist surface blasting, iron work restoration and painting. \nThe (Chinese) Pagoda Fountain was completed c. 1832, designed by Robert Abraham. The cast-iron structure was modelled on the To-ho pagoda in Canton, Southern China and made by the Coalbrookedale Iron Company.",
+      "Keywords": "",
+      "DefaultImage": 13087,
+      "Location": "52.986360492322,-1.8873046541061",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
     },
     {
       "_id": 6235,
       "Name": "Peter Rabbit Hippity Hop",
       "Summary": "Playful Benjamin Bunny has hidden from his friends in Mr McGregor’s garden – join Peter Rabbit and Lily Bobtail as they explore the garden and solve puzzles to try to uncover his hiding place!  Unleash your inner bunny on the Peter RabbitTM Hippity Hop ride and hop high into the sky to see if you can find Benjamin from the top!",
       "Keywords": "peter rabbit, bunny rabbit, cbeebies land",
-      "DefaultImage": 9623,
+      "DefaultImage": 13434,
       "Location": "52.990629557598,-1.8949113988724",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 498,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
@@ -1227,20 +1337,50 @@
       "DefaultImage": 9028,
       "Location": "52.990519768467,-1.8935327434388",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
       "Classifications": [
+        151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/postman-pat-parcel-post/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult."
+    },
+    {
+      "_id": 8130,
+      "Name": "Prospect Tower",
+      "Summary": "At the prospect tower you will be able to take in some of the most breath-taking views on offer within the gardens.",
+      "Keywords": "",
+      "DefaultImage": 13083,
+      "Location": "52.987238882135,-1.8861459398117",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "_id": 8125,
+      "Name": "Quarry Green House/Orangery",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13077,
+      "Location": "52.987784637397,-1.8900244140472",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
     },
     {
       "_id": 4278,
@@ -1250,15 +1390,17 @@
       "DefaultImage": 9067,
       "Location": "52.986738331305,-1.8843381309357",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        160
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 6016,
@@ -1268,15 +1410,17 @@
       "DefaultImage": 9073,
       "Location": "52.986228086427,-1.8922077321854",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        157
+      ],
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
       "ReservationsURL": null,
       "MenuURL": null,
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 6015,
@@ -1286,15 +1430,17 @@
       "DefaultImage": 9072,
       "Location": "52.987400348907,-1.8940799140778",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        159
+      ],
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
       "ReservationsURL": null,
       "MenuURL": null,
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4308,
@@ -1304,110 +1450,181 @@
       "DefaultImage": 9106,
       "Location": "52.990264669115,-1.8928460979309",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 513,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4195,
       "Name": "Rita",
-      "Summary": "Brace yourself – as the lights turn green, Rita powers you straight to 100kph in just 2.5 seconds, putting your body through 4.5G. At lightning pace, Rita navigates every twist and turn of the track, as you break free from the clutches of the Dark Forest.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nBrace yourself – as the lights turn green, Rita powers you straight to 100kph in just 2.5 seconds. At lightning pace, Rita navigates the track, as you break free from the clutches of Dark Forest",
       "Keywords": "coaster, rollercoaster, roller coaster, launch",
       "DefaultImage": 6081,
       "Location": "52.984926611752,-1.890877356514",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        153,
         119
       ],
       "Inversions": 0,
       "Length": 640,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/rita/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
     {
+      "_id": 8137,
+      "Name": "Rock Garden",
+      "Summary": "Note the Royal Ferns along the water’s edge.",
+      "Keywords": "",
+      "DefaultImage": 13089,
+      "Location": "52.987032203786,-1.8907164239731",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
       "_id": 4270,
       "Name": "Rollercoaster Restaurant",
-      "Summary": "Located at Alton Towers Resort the Rollercoaster Restaurant is set below a vast rollercoaster track, where you can watch as orders tackle two gravity defying loop-the-loops before dropping 8 metres - the equivalent of two double decker buses - down the tornado spiral to the table.\n\nLunch time booking is not essential, visit the restaurant on the day for the next available table. Booking for dinner time is essential. During Scarefest & Fireworks Theme Park Admission is required at all times.",
+      "Summary": "Available for walk-ins only from 11am until 3:30pm.\n\nLocated at Alton Towers Resort the Rollercoaster Restaurant is set below a vast rollercoaster track, where you can watch as orders tackle two gravity defying loop-the-loops before dropping 8 metres - the equivalent of two double decker buses - down the tornado spiral to the table.",
       "Keywords": "coaster, steak, grills, vegetarian, burgers, curry, salad, pasta, ribs",
       "DefaultImage": 6151,
       "Location": "52.986005256076,-1.882589330658",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 805,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        160
+      ],
       "ReservationsURL": "https://bda.bookatable.com/?cid=UK-ALTONTOWERSWEB:72250&rid=291700&disableRememberMe=true",
       "MenuURL": "https://www.altontowers.com/media/5671/rcr-menu-march-2018.pdf",
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4197,
       "Name": "Runaway Mine Train",
-      "Summary": "The Runaway Mine Train twists and turns, getting faster and faster.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Runaway Mine Train twists and turns, getting faster and faster.",
       "Keywords": "runaway train, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9029,
       "Location": "52.989518737048,-1.8856094980088",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        155,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/runaway-mine-train/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult. If your height is less than 0.9 m, then you cannot ride."
     },
     {
+      "_id": 8131,
+      "Name": "Screw Fountain",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13082,
+      "Location": "52.987487540713,-1.8868969583359",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "_id": 8331,
+      "Name": "Seating Area (Games Bunker)",
+      "Summary": null,
+      "Keywords": null,
+      "DefaultImage": null,
+      "Location": "52.986806148209,-1.8841128253784",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 502,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "_id": 6572,
+      "Name": "Secret Garden Restaurant",
+      "Summary": "Located on the ground floor of Alton Towers Hotel, Secret Garden Restaurant provides an eclectic mix of British and international dishes served in the beautiful surroundings of our brasserie-style restaurant. A healthy children’s menu is also available",
+      "Keywords": "",
+      "DefaultImage": 10074,
+      "Location": "52.98463918402,-1.8745802545395",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 805,
+      "Parent": null,
+      "Classifications": [
+        164
+      ],
+      "ReservationsURL": "https://bda.bookatable.com/?cid=UK-ALTONTOWERSWEB:72250&rid=287787&disableRememberMe=true",
+      "MenuURL": "https://www.altontowers.com/media/6372/secret-garden-menu-june-2019.pdf",
+      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "PreorderURL": null
+    },
+    {
       "_id": 4213,
       "Name": "Sharkbait Reef by SEA LIFE",
-      "Summary": "Under the wreckage of the galleon in Mutiny Bay, Captain Black and his crew open up Sharkbait Reef. Brimming with blacktip sharks and chocolate chip starfish, spotted rays, seahorses and the UK’s first Tropical Interactive Pool with shrimp that will manicure the tips of your fingers if you dip them into the touch pool.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask in this attraction. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUnder the wreckage of the galleon in Mutiny Bay, Captain Black and his crew open up Sharkbait Reef. Brimming with blacktip sharks and chocolate chip starfish, spotted rays, seahorses and a Tropical Interactive Pool with shrimp that will manicure the tips of your fingers if you dip them into the touch pool.",
       "Keywords": "fish, aquarium, sealife",
       "DefaultImage": 6102,
       "Location": "52.98994821466,-1.8893753194657",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 505,
+      "Category": 749,
       "Parent": null,
-      "Classifications": [],
-      "WebPageURL": "https://www.altontowers.com/theme-park/sharkbait-reef/",
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ],
+      "WebPageURL": "https://www.altontowers.com/theme-park/sharkbait-reef/"
     },
     {
       "_id": 4246,
       "Name": "Sharkbait Reef Shoppe",
-      "Summary": "Take home some Pirate treasure or a memory from your underwater adventure in Sharkbait Reef!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nTake home some Pirate treasure or a memory from your underwater adventure in Sharkbait Reef!",
       "Keywords": "sea life shop, toys, plush bears, fish toys, sweets, drinks, under the sea, t-shirts, clothes",
       "DefaultImage": 6135,
       "Location": "52.98986395969,-1.8891710881144",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ]
     },
     {
       "_id": 6018,
@@ -1417,12 +1634,13 @@
       "DefaultImage": 9077,
       "Location": "52.986095680124,-1.8922130966034",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 6019,
@@ -1432,12 +1650,13 @@
       "DefaultImage": 9078,
       "Location": "52.988317468721,-1.8905930423584",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ]
     },
     {
       "_id": 4304,
@@ -1447,12 +1666,13 @@
       "DefaultImage": 9080,
       "Location": "52.991430363993,-1.8915532731858",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4297,
@@ -1462,12 +1682,13 @@
       "DefaultImage": 9081,
       "Location": "52.986383098166,-1.8823693895188",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 4302,
@@ -1477,12 +1698,29 @@
       "DefaultImage": 9082,
       "Location": "52.985378741394,-1.8918965959397",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
+    },
+    {
+      "_id": 4303,
+      "Name": "Smoking Area (Games Bunker)",
+      "Summary": "A designated smoking area which we ask smokers to use in order to provide a clean and safe environment for all our guests. This applies to the whole Resort and includes e-cigarettes.",
+      "Keywords": "vape, e-cig, smoke,",
+      "DefaultImage": 9084,
+      "Location": "52.987506916645,-1.8934790992585",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 514,
+      "Parent": null,
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4296,
@@ -1492,27 +1730,27 @@
       "DefaultImage": 9083,
       "Location": "52.988960086848,-1.8848209285584",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        154
+      ]
     },
     {
-      "_id": 4303,
-      "Name": "Smoking Area (Golf Challenge)",
+      "_id": 4298,
+      "Name": "Smoking Area (Katanga Canyon)",
       "Summary": "A designated smoking area which we ask smokers to use in order to provide a clean and safe environment for all our guests. This applies to the whole Resort and includes e-cigarettes.",
       "Keywords": "vape, e-cig, smoke,",
-      "DefaultImage": 9084,
-      "Location": "52.987506916645,-1.8934790992585",
+      "DefaultImage": 9085,
+      "Location": "52.989628528724,-1.8859313630905",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 4293,
@@ -1522,12 +1760,13 @@
       "DefaultImage": 9086,
       "Location": "52.988217361519,-1.8937151336518",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4290,
@@ -1537,12 +1776,11 @@
       "DefaultImage": 9087,
       "Location": "52.985814719067,-1.8778686427918",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 6022,
@@ -1552,12 +1790,13 @@
       "DefaultImage": 9088,
       "Location": "52.989851340384,-1.8889247083512",
       "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ]
     },
     {
       "_id": 6021,
@@ -1567,12 +1806,13 @@
       "DefaultImage": 9089,
       "Location": "52.98691594678,-1.8835710191574",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 4300,
@@ -1582,12 +1822,13 @@
       "DefaultImage": 9090,
       "Location": "52.989735090966,-1.8916981124726",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 6020,
@@ -1597,12 +1838,13 @@
       "DefaultImage": 9091,
       "Location": "52.986699578741,-1.8841128253785",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 4295,
@@ -1612,12 +1854,13 @@
       "DefaultImage": 9092,
       "Location": "52.984303310987,-1.8924759530869",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        152
+      ]
     },
     {
       "_id": 4289,
@@ -1627,12 +1870,13 @@
       "DefaultImage": 9093,
       "Location": "52.986499356606,-1.8936078452912",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4301,
@@ -1642,12 +1886,13 @@
       "DefaultImage": 9094,
       "Location": "52.990400291743,-1.8927549028244",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4294,
@@ -1657,12 +1902,13 @@
       "DefaultImage": 9095,
       "Location": "52.987235652793,-1.8966923856583",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        159
+      ]
     },
     {
       "_id": 4215,
@@ -1672,13 +1918,14 @@
       "DefaultImage": 9038,
       "Location": "52.989554257915,-1.8935649299469",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
-      "Classifications": [],
-      "WebPageURL": "https://www.altontowers.com/theme-park/something-special-sensory-garden/",
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ],
+      "WebPageURL": "https://www.altontowers.com/theme-park/something-special-sensory-garden/"
     },
     {
       "_id": 4194,
@@ -1688,18 +1935,20 @@
       "DefaultImage": 9039,
       "Location": "52.988940711567,-1.8945573472824",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        157,
         119
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/spinball-whizzer/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": 1.95,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride. If your height is greater than 1.95 m, then you cannot ride."
     },
@@ -1711,27 +1960,11 @@
       "DefaultImage": 9048,
       "Location": "52.985300936483,-1.8757117632776",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 4249,
-      "Name": "Spooks R Us",
-      "Summary": "Enter the Spooks R Us store and be amazed by all the ghostly tricks & treats. Pick out a ghoulish gift for your friends or family or simply choose a spooky gift for yourself.",
-      "Keywords": "duel shop, posters, glow in the dark, t-shirts, hats",
-      "DefaultImage": 6138,
-      "Location": "52.988817703968,-1.8842197302729",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 500,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
       "_id": 5993,
@@ -1741,117 +1974,152 @@
       "DefaultImage": 9050,
       "Location": "52.985042874112,-1.8716566467133",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-04-13 00:00:00\",\"end\":\"2019-08-02 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 11:00:00\",\"period_length\":{\"day\":1}}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-04-13 00:00:00\",\"end\":\"2019-08-02 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2017-01-01 13:30:00\",\"period_length\":{\"day\":1}}]}]}",
+      "_id": 8126,
+      "Name": "Stonehenge",
+      "Summary": "Stonehenge is so called because of the large stones used to build it. It bears no resemblance to its namesake!",
+      "Keywords": "",
+      "DefaultImage": 13076,
+      "Location": "52.988110795534,-1.8903033637848",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "_id": 8136,
+      "Name": "Swiss Cottage",
+      "Summary": "The Swiss Cottage was originally built to house the Earl’s blind harpist, Edward Jervis who was commissioned to entertain his guests who took leisurely strolls in the gardens. \n\nThe Swiss Cottage is worth the trip should you wish to take in some stunning panoramic views of the gardens allowing you to see the majority of main features within the Gardens.",
+      "Keywords": "",
+      "DefaultImage": 13088,
+      "Location": "52.985953585105,-1.8896489047851",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
+    },
+    {
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 11:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 14:30:00\",\"period_length\":{\"day\":1}}]}",
       "_id": 6276,
       "Name": "Teletubbies Big Band Live Show",
       "Summary": "Tinky-Winky, Dipsy, Laa-Laa and Po will transport you over the hills and far away to the iconic Teletubbyland, where you’ll get to play-along as you enjoy a delightfully interactive music and dance-filled performance.  You can also ‘meet and greet’ the Teletubbies each day following the twice-daily performances in Big Fun Showtime, before waving Tubby Bye Bye!",
       "Keywords": "tinky winky, dipsy, la la, po, telletubbies, teletubies",
-      "DefaultImage": 9708,
+      "DefaultImage": 13500,
       "Location": "52.989728632656,-1.8941013717499",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 810,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 4196,
       "Name": "TH13TEEN",
-      "Summary": "If you go down to the woods today you'd better not go alone... Dip and dive through the Dark Forest, enter the ancient crypt and face the horror that lies within.\n\nThe dark and mysterious TH13TEEN is the world’s first freefall drop rollercoaster.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nIf you go down to the woods today you'd better not go alone... Dip and dive through the Dark Forest, enter the ancient crypt and face the horror that lies within.",
       "Keywords": "13, thirteen, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9040,
       "Location": "52.98471346328,-1.8905340337601",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        153,
         119
       ],
       "Inversions": 0,
       "Length": 756,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/th13teen/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": 1.96,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride. If your height is greater than 1.96 m, then you cannot ride."
     },
     {
       "_id": 6240,
       "Name": "The Alton Towers Dungeon",
-      "Summary": "The Alton Towers Dungeon, a hilariously hideous journey through Staffordshire’s darkest history. Uncover secrets from the past, hidden deep beneath the Towers.  Buy your tickets at www.altontowers.com/traitor",
+      "Summary": "Guests are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Alton Towers Dungeon, a hilariously hideous journey through Staffordshire’s darkest history. Uncover secrets from the past, hidden deep beneath the Towers.  Buy your tickets at www.altontowers.com/traitors",
       "Keywords": "towers, dungeon, scare maze",
       "DefaultImage": 9634,
       "Location": "52.9840514045,-1.8938921594468",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 506,
       "Parent": null,
       "Classifications": [
-        119
+        157
       ],
-      "ShareMessage": null,
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": 10,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your age is less than 10 years, then you cannot ride."
     },
     {
       "_id": 4190,
       "Name": "The Blade",
-      "Summary": "In a few swings of The Blade, you'll be zero gravity, near vertical.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nIn a few swings of The Blade, you'll be zero gravity, near vertical.",
       "Keywords": "pirate ship, swinging ship",
       "DefaultImage": 6170,
-      "Location": "52.986835212564,-1.8839626216736",
+      "Location": "52.986831983193,-1.8839733505097",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
       "Classifications": [
+        160,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/the-blade/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1,
+      "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.3 m, then you must be accompanied by an adult. If your height is less than 1 m, then you cannot ride."
     },
     {
       "_id": 4239,
       "Name": "The Burger Kitchen (Mutiny Bay)",
-      "Summary": "The Burger Kitchen offers succulent burgers combining premium ingredients to create the best burgers possible! With a menu that provides great variety, The Burger Kitchen restaurants are perfect for all visitors, whether it's for a great dining experience or a 'grab and go' the choice is yours.",
+      "Summary": "The Burger Kitchen offers succulent burgers combining premium ingredients to create the best burgers possible!\n\nMerlin Passholder discount is only available when ordering from the counter as usual, the discount cannot be used with mobile food orders.",
       "Keywords": "burger king, mcdonalds, mc donalds, chicken nuggets",
       "DefaultImage": 9070,
       "Location": "52.989644377257,-1.8890906218439",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 804,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        156
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": "https://menus.preoday.com/merlin-entertainments/ATR-The-Burger-Kitchen-Mutiny-Bay#/main"
     },
     {
       "_id": 4238,
@@ -1861,92 +2129,126 @@
       "DefaultImage": 9071,
       "Location": "52.984151521357,-1.892856826767",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 804,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        152
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
-      "_id": 4533,
-      "Name": "The Furchester Hotel Live Show",
-      "Summary": "A brand new live and interactive show, where you can join Phoebe, Funella, Furgus, Elmo and Cookie Monster at The Furchester Hotel.\nMake your way through the famous revolving doors before being welcomed with furry arms into the hotel.\n\nThe show sees the hotel prepare for the exciting arrival of Chick Swagger, you can sing and dance along to the rock-a-doodle-do hit, Tail Feather Shake.",
+      "_id": 8128,
+      "Name": "The Conservatories",
+      "Summary": "The Conservatories were completed in 1824, the garden Conservatory has seven glazed domes, and pineapple finials.  The central dome is topped by an earl’s coronet.   \n\nIn 1834 the 16th Earl managed to grow bananas (in those days considered an exotic fruit) at Alton and sent one to the Duke of Devonshire at Chatsworth together with detailed instructions on how to eat it!",
       "Keywords": "",
-      "DefaultImage": 9129,
-      "Location": "52.99001279739,-1.8943481349793",
+      "DefaultImage": 13079,
+      "Location": "52.987477852743,-1.8890641832199",
       "Featured": false,
       "WayfindingEnabled": false,
       "VisibleOnMap": true,
-      "Category": 523,
+      "Category": 1223,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
     },
     {
-      "_id": 4228,
-      "Name": "The Gardens",
-      "Summary": "Take a break from the twists and turns of the Alton Towers Theme Park's rollercoasters and enjoy a stroll through the elegant gardens.",
-      "Keywords": "flowers, walk",
-      "DefaultImage": 6117,
-      "Location": "52.987270171825,-1.8890531547368",
+      "_id": 6573,
+      "Name": "The Crooked Spoon",
+      "Summary": "Breakfast, lunch and dinner are served in this quirky restaurant with a delicious yet unusual menu on offer. Keep an eye out for the mischievous little folk, as rare glimpses have been caught on camera and displayed on the gallery walls… Watch very carefully as they may not be quite as they seem! In the evening, sit back and enjoy the relaxed atmosphere.",
+      "Keywords": "",
+      "DefaultImage": 10075,
+      "Location": "52.984432493232,-1.8706427717057",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 504,
-      "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
-    },
-    {
-      "_id": 4217,
-      "Name": "The Numtums Number-Go-Round",
-      "Summary": "Time to get counting with the Numtums on their Number-Go-Round – hop aboard your own Numtum cart and take control at the steering wheel as you whizz around.",
-      "Keywords": "carousel, numbers, cbeebies land",
-      "DefaultImage": 9041,
-      "Location": "52.990787485349,-1.8938139919192",
-      "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 805,
       "Parent": null,
       "Classifications": [
-        120
+        165
       ],
-      "WebPageURL": "https://www.altontowers.com/theme-park/the-numtums-number-go-round/",
-      "ShareMessage": null,
-      "MinimumHeightRequirement": null,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": null,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1 m, then you must be accompanied by an adult."
+      "ReservationsURL": "https://bda.bookatable.com/?cid=UK-ALTONTOWERSWEB:72250&rid=287789&disableRememberMe=true",
+      "MenuURL": "https://altontowers-secondary.azurewebsites.net/media/6224/crookedspoon-march2019.pdf",
+      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "PreorderURL": null
+    },
+    {
+      "_id": 6864,
+      "Name": "The Skyride (Forbidden Valley)",
+      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Keywords": "cable car, sky ride, skyride",
+      "DefaultImage": 10377,
+      "Location": "52.986961157875,-1.8851213359681",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 498,
+      "Parent": null,
+      "Classifications": [
+        160,
+        120
+      ]
+    },
+    {
+      "_id": 6865,
+      "Name": "The Skyride (Cloud Cuckoo Land)",
+      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Keywords": "cable car, sky ride, skyride",
+      "DefaultImage": 10378,
+      "Location": "52.98456167509,-1.8922881984558",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 498,
+      "Parent": null,
+      "Classifications": [
+        152
+      ]
+    },
+    {
+      "_id": 6866,
+      "Name": "The Skyride (Towers Street)",
+      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Keywords": "cable car, sky ride, skyride",
+      "DefaultImage": 10379,
+      "Location": "52.989890090121,-1.8913118743744",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 498,
+      "Parent": null,
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4193,
       "Name": "The Smiler",
-      "Summary": "The Smiler is the world’s first 14-loop rollercoaster. Its twisting track combines the world beating 14 loops with a speed of 85 km/h and a track length 3x longer than Oblivion!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Smiler is the world’s first 14-loop rollercoaster. Its twisting track combines the world beating 14 loops with a speed of 85 km/h and a track length 3x longer than Oblivion!",
       "Keywords": "coaster, rollercoaster, roller coaster, 14 loops",
       "DefaultImage": 9042,
       "Location": "52.987280863553,-1.8953566455689",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        159,
         119
       ],
       "Inversions": 14,
       "Length": 1170,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/the-smiler/",
-      "ShareMessage": null,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
@@ -1960,10 +2262,11 @@
       "Featured": false,
       "WayfindingEnabled": false,
       "VisibleOnMap": true,
-      "Category": 504,
+      "Category": 1223,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4277,
@@ -1973,15 +2276,37 @@
       "DefaultImage": 9065,
       "Location": "52.98929915286,-1.8897561931458",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        156
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
+    },
+    {
+      "_id": 6576,
+      "Name": "The Windmill Restaurant",
+      "Summary": "CBeebies Land Hotel guests only - Enjoy a family meal in The Windmill Restaurant. Choose from a range of delicious dishes, such as our fish finger dog, healthy pastas or a classic burger. Your little ones can even challenge our chefs to make them their very own pizza creation!",
+      "Keywords": "",
+      "DefaultImage": 10077,
+      "Location": "52.984099848169,-1.87430666922",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 805,
+      "Parent": null,
+      "Classifications": [
+        166
+      ],
+      "ReservationsURL": null,
+      "MenuURL": "https://www.altontowers.com/media/6288/windmill-menu-2019.pdf",
+      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "PreorderURL": null
     },
     {
       "_id": 6013,
@@ -1991,12 +2316,13 @@
       "DefaultImage": 9107,
       "Location": "52.991062253221,-1.8918161296692",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 502,
+      "Category": 513,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4267,
@@ -2006,12 +2332,13 @@
       "DefaultImage": 9118,
       "Location": "52.989764153349,-1.8939136171189",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 4258,
@@ -2021,12 +2348,13 @@
       "DefaultImage": 9119,
       "Location": "52.991168811924,-1.8927066230622",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4265,
@@ -2036,12 +2364,13 @@
       "DefaultImage": 9120,
       "Location": "52.986957928512,-1.8850140476075",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 4263,
@@ -2051,12 +2380,13 @@
       "DefaultImage": 9121,
       "Location": "52.984942759321,-1.8919287824478",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        157
+      ]
     },
     {
       "_id": 4260,
@@ -2066,12 +2396,13 @@
       "DefaultImage": 9122,
       "Location": "52.988653310543,-1.8841503763047",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        154
+      ]
     },
     {
       "_id": 4266,
@@ -2081,12 +2412,13 @@
       "DefaultImage": 9123,
       "Location": "52.990978297692,-1.8942462110367",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 4264,
@@ -2096,12 +2428,13 @@
       "DefaultImage": 9124,
       "Location": "52.989596237084,-1.8899600410309",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ]
     },
     {
       "_id": 4259,
@@ -2111,12 +2444,13 @@
       "DefaultImage": 9125,
       "Location": "52.991096545554,-1.8926704739915",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4262,
@@ -2126,12 +2460,13 @@
       "DefaultImage": 9126,
       "Location": "52.987309927589,-1.8944876098481",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        159
+      ]
     },
     {
       "_id": 4287,
@@ -2141,15 +2476,17 @@
       "DefaultImage": 9066,
       "Location": "52.98497505444,-1.8913118743744",
       "Featured": false,
-      "WayfindingEnabled": false,
-      "VisibleOnMap": false,
-      "Category": 499,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        153
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4288,
@@ -2159,102 +2496,111 @@
       "DefaultImage": 6546,
       "Location": "52.990171024671,-1.8921219014969",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 806,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        158
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4245,
       "Name": "Towers Trading Company",
-      "Summary": "This is the ideal place to pick up that perfect souvenir to commemorate your visit to Alton Towers Resort or a gift for a friend or family member. It has a huge variety of keepsakes for you to purchase, ensuring your trip to Alton Towers Resort is unforgettable!",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThis is the ideal place to pick up that perfect souvenir to commemorate your visit to Alton Towers Resort or a gift for a friend or family member. It has a huge variety of keepsakes for you to purchase, ensuring your trip to Alton Towers Resort is unforgettable!",
       "Keywords": "main shop, big shop, entrance shop, store, hoodies, t-shirts, hats, stationary, ride merchandise,",
       "DefaultImage": 6134,
       "Location": "52.990616343973,-1.8919176701456",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        158
+      ]
     },
     {
       "_id": 4220,
       "Name": "Tree Fu Tom Training Camp",
-      "Summary": "At the Tree Fu Tom Training Camp, join Tom and friends on an amazing new adventure where play can help transform you into a Tree Fu master.",
+      "Summary": "At the Tree Fu Tom Training Camp, join Tom and friends on an amazing new adventure where play can help transform you into a Tree Fu master.\n\nPlease be aware this attraction will close at dusk.",
       "Keywords": "playground, cbeebies land, play area",
       "DefaultImage": 9044,
       "Location": "52.990219164204,-1.8948171380907",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 508,
+      "Category": 749,
       "Parent": null,
-      "Classifications": [],
-      "WebPageURL": "https://www.altontowers.com/theme-park/tree-fu-tom-training-camp/",
-      "ShareMessage": null
+      "Classifications": [
+        151
+      ],
+      "WebPageURL": "https://www.altontowers.com/theme-park/tree-fu-tom-training-camp/"
     },
     {
       "_id": 4773,
       "Name": "Wicker Man",
-      "Summary": "Join the chosen ones on the world’s most immersive rollercoaster experience to date, unifying cutting edge special effects with classic wooden coaster technology for the first time!\n\nBe Chosen.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nJoin the chosen ones on the world’s most immersive rollercoaster experience to date, unifying cutting edge special effects with classic wooden coaster technology for the first time! Be Chosen.",
       "Keywords": "wickerman, wooden, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9006,
       "Location": "52.98958332042,-1.8883829021302",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
       "Classifications": [
+        156,
         119
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/wicker-man/",
-      "ShareMessage": "Be Chosen on Wicker Man at Alton Towers Resort #wickermanride",
       "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
     },
     {
       "_id": 4916,
       "Name": "Wicker Man Shop",
-      "Summary": "You have been chosen, ride the ride and now visit the shop, for exclusive souvenirs,  from mugs and clothing through to specially created bespoke items for the ride.",
+      "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nYou have been chosen, ride the ride and now visit the shop, for exclusive souvenirs,  from mugs and clothing through to specially created bespoke items for the ride.",
       "Keywords": "wickerman shop, mugs, clothing, wicker, bags, hats, runes, ride wood, t-shirts, hoodies",
       "DefaultImage": 9174,
       "Location": "52.989561439976,-1.8887990524904",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": [
+        156
+      ]
     },
     {
       "_id": 4236,
       "Name": "Woodcutters Bar & Grill",
-      "Summary": "Freshly prepared meals, delivered straight to your table, from mouth-watering steaks to succulent grilled chicken breast for you to sink your teeth into! Vegetarian, gluten free and children’s meals are also available, plus you will receive a FREE fruit bag with every child’s meal that you purchase.",
+      "Summary": "Open from 11am - 4pm. Orders will be taken through mobile order.\n\nFreshly prepared meals, delivered straight to your table, from mouth-watering steaks to succulent grilled chicken breast for you to sink your teeth into!",
       "Keywords": "steak, grill",
       "DefaultImage": 6125,
       "Location": "52.985210510771,-1.8920786026865",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 499,
+      "Category": 805,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        153
+      ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "ShareMessage": null
+      "PreorderURL": null
     },
     {
       "_id": 4257,
@@ -2264,15 +2610,29 @@
       "DefaultImage": 9047,
       "Location": "52.984147994469,-1.8709964398295",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
-      "Classifications": [],
-      "ShareMessage": null
+      "Classifications": []
+    },
+    {
+      "_id": 8129,
+      "Name": "Yew Arches",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 13080,
+      "Location": "52.987338991604,-1.8878947400894",
+      "Featured": false,
+      "WayfindingEnabled": false,
+      "VisibleOnMap": true,
+      "Category": 1223,
+      "Parent": null,
+      "Classifications": []
     }
   ],
-  "Entrance": [{
+  "Entrance": [
+    {
       "_id": 2546,
       "Location": "52.984947629251,-1.8741994335141",
       "Item": 4255
@@ -2286,6 +2646,11 @@
       "_id": 1779,
       "Location": "52.988485092672,-1.8903298024088",
       "Item": 4231
+    },
+    {
+      "_id": 2543,
+      "Location": "52.990753902963,-1.8938788010564",
+      "Item": 4217
     },
     {
       "_id": 2544,
@@ -2323,19 +2688,9 @@
       "Item": 4316
     },
     {
-      "_id": 1784,
-      "Location": "52.984848806027,-1.8939776066691",
-      "Item": 4221
-    },
-    {
       "_id": 1785,
       "Location": "52.985682014193,-1.8818003777415",
       "Item": 4189
-    },
-    {
-      "_id": 1786,
-      "Location": "52.984952150549,-1.8938381318003",
-      "Item": 4224
     },
     {
       "_id": 1787,
@@ -2346,16 +2701,6 @@
       "_id": 1877,
       "Location": "52.99006416623,-1.8945220950991",
       "Item": 4525
-    },
-    {
-      "_id": 1788,
-      "Location": "52.988632931444,-1.8895520456135",
-      "Item": 4232
-    },
-    {
-      "_id": 1789,
-      "Location": "52.98834875763,-1.8850727565587",
-      "Item": 4232
     },
     {
       "_id": 1790,
@@ -2398,16 +2743,6 @@
       "Item": 4268
     },
     {
-      "_id": 2549,
-      "Location": "52.99154854628,-1.8922993634128",
-      "Item": 6033
-    },
-    {
-      "_id": 2548,
-      "Location": "52.985787591715,-1.8773326371097",
-      "Item": 6032
-    },
-    {
       "_id": 1795,
       "Location": "52.987164309922,-1.8834579829127",
       "Item": 4188
@@ -2431,6 +2766,11 @@
       "_id": 1800,
       "Location": "52.985013511242,-1.8899757508188",
       "Item": 4195
+    },
+    {
+      "_id": 2822,
+      "Location": "52.986070490577,-1.8826996700641",
+      "Item": 4270
     },
     {
       "_id": 1801,
@@ -2458,69 +2798,19 @@
       "Item": 6240
     },
     {
-      "_id": 1805,
-      "Location": "52.986863979602,-1.8835974577814",
-      "Item": 4190
-    },
-    {
       "_id": 1813,
       "Location": "52.984286865865,-1.8929154518992",
       "Item": 4238
     },
     {
-      "_id": 1878,
-      "Location": "52.990077082749,-1.8942538741976",
-      "Item": 4533
+      "_id": 2670,
+      "Location": "52.98452485832,-1.8924817536258",
+      "Item": 6865
     },
     {
-      "_id": 1815,
-      "Location": "52.986989924829,-1.8916333559901",
-      "Item": 4228
-    },
-    {
-      "_id": 1816,
-      "Location": "52.98627300094,-1.8918211106211",
-      "Item": 4228
-    },
-    {
-      "_id": 1818,
-      "Location": "52.987606728202,-1.8906784895808",
-      "Item": 4228
-    },
-    {
-      "_id": 1819,
-      "Location": "52.987280566259,-1.8865371588618",
-      "Item": 4228
-    },
-    {
-      "_id": 1820,
-      "Location": "52.988414049151,-1.8893159274012",
-      "Item": 4228
-    },
-    {
-      "_id": 1821,
-      "Location": "52.985849945675,-1.8899328354746",
-      "Item": 4228
-    },
-    {
-      "_id": 1822,
-      "Location": "52.988029766262,-1.8901474121958",
-      "Item": 4228
-    },
-    {
-      "_id": 1823,
-      "Location": "52.98823321057,-1.8899328354746",
-      "Item": 4228
-    },
-    {
-      "_id": 1824,
-      "Location": "52.987710066126,-1.88621529378",
-      "Item": 4228
-    },
-    {
-      "_id": 2543,
-      "Location": "52.990753902963,-1.8938788010564",
-      "Item": 4217
+      "_id": 2671,
+      "Location": "52.989811298973,-1.8914035056018",
+      "Item": 6866
     },
     {
       "_id": 1807,
@@ -2548,7 +2838,1176 @@
       "Item": 4916
     }
   ],
-  "Image": [{
+  "QueueLine": [
+    {
+      "_id": 7,
+      "Item": 4188,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 6,
+      "Item": 4189,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 28,
+      "Item": 4190,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 5,
+      "Item": 4192,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4,
+      "Item": 4193,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1,
+      "Item": 4194,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 3,
+      "Item": 4195,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2,
+      "Item": 4196,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 27,
+      "Item": 4197,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 25,
+      "Item": 4205,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 26,
+      "Item": 4206,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 18,
+      "Item": 4208,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 32,
+      "Item": 4209,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 36,
+      "Item": 4210,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 34,
+      "Item": 4211,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1746,
+      "Item": 4212,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1778,
+      "Item": 4213,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 35,
+      "Item": 4214,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1726,
+      "Item": 4215,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 15,
+      "Item": 4216,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1501,
+      "Item": 4217,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 22,
+      "Item": 4219,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1790,
+      "Item": 4220,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 20,
+      "Item": 4221,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 24,
+      "Item": 4223,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 21,
+      "Item": 4224,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 16,
+      "Item": 4225,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 19,
+      "Item": 4227,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1788,
+      "Item": 4228,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1789,
+      "Item": 4229,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 14,
+      "Item": 4231,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1893,
+      "Item": 4232,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1871,
+      "Item": 4233,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1873,
+      "Item": 4234,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1836,
+      "Item": 4235,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1631,
+      "Item": 4236,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1837,
+      "Item": 4238,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1824,
+      "Item": 4239,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1872,
+      "Item": 4241,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1831,
+      "Item": 4242,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1878,
+      "Item": 4244,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1879,
+      "Item": 4245,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1881,
+      "Item": 4246,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 711,
+      "Item": 4248,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1880,
+      "Item": 4249,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1877,
+      "Item": 4250,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1799,
+      "Item": 4255,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1801,
+      "Item": 4256,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1800,
+      "Item": 4257,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1862,
+      "Item": 4258,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1869,
+      "Item": 4259,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1865,
+      "Item": 4260,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1823,
+      "Item": 4262,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1864,
+      "Item": 4263,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1867,
+      "Item": 4264,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1863,
+      "Item": 4265,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1866,
+      "Item": 4266,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1822,
+      "Item": 4267,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1796,
+      "Item": 4268,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1846,
+      "Item": 4269,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1632,
+      "Item": 4270,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1876,
+      "Item": 4271,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1791,
+      "Item": 4272,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1774,
+      "Item": 4273,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1870,
+      "Item": 4274,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1828,
+      "Item": 4275,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1829,
+      "Item": 4276,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 710,
+      "Item": 4277,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1835,
+      "Item": 4278,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1830,
+      "Item": 4279,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1832,
+      "Item": 4281,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1833,
+      "Item": 4284,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1883,
+      "Item": 4286,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1834,
+      "Item": 4287,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1874,
+      "Item": 4288,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1859,
+      "Item": 4289,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1856,
+      "Item": 4290,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1855,
+      "Item": 4293,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1861,
+      "Item": 4294,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1858,
+      "Item": 4295,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1852,
+      "Item": 4296,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1850,
+      "Item": 4297,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1854,
+      "Item": 4298,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1857,
+      "Item": 4300,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1860,
+      "Item": 4301,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1851,
+      "Item": 4302,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1853,
+      "Item": 4303,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1849,
+      "Item": 4304,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1848,
+      "Item": 4308,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 38,
+      "Item": 4309,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1776,
+      "Item": 4316,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 37,
+      "Item": 4317,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 451,
+      "Item": 4320,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 455,
+      "Item": 4321,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 453,
+      "Item": 4322,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 31,
+      "Item": 4505,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 17,
+      "Item": 4524,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 23,
+      "Item": 4525,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 29,
+      "Item": 4533,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 395,
+      "Item": 4664,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 457,
+      "Item": 4707,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 459,
+      "Item": 4709,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 461,
+      "Item": 4711,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 547,
+      "Item": 4773,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 709,
+      "Item": 4916,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1745,
+      "Item": 5949,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1749,
+      "Item": 5952,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1750,
+      "Item": 5953,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1751,
+      "Item": 5954,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1752,
+      "Item": 5955,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1792,
+      "Item": 5987,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1794,
+      "Item": 5988,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1797,
+      "Item": 5990,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1798,
+      "Item": 5991,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1802,
+      "Item": 5992,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1803,
+      "Item": 5993,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1812,
+      "Item": 6002,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1814,
+      "Item": 6004,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1815,
+      "Item": 6005,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1816,
+      "Item": 6006,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1817,
+      "Item": 6007,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1818,
+      "Item": 6008,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1819,
+      "Item": 6009,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1820,
+      "Item": 6010,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1821,
+      "Item": 6011,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1827,
+      "Item": 6013,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1838,
+      "Item": 6015,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1839,
+      "Item": 6016,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1841,
+      "Item": 6018,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1842,
+      "Item": 6019,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1843,
+      "Item": 6020,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1844,
+      "Item": 6021,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1845,
+      "Item": 6022,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1868,
+      "Item": 6023,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1875,
+      "Item": 6024,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1882,
+      "Item": 6025,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1884,
+      "Item": 6026,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1890,
+      "Item": 6032,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1891,
+      "Item": 6033,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1892,
+      "Item": 6034,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1894,
+      "Item": 6035,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1903,
+      "Item": 6042,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1904,
+      "Item": 6043,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1905,
+      "Item": 6044,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1906,
+      "Item": 6045,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1907,
+      "Item": 6046,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1908,
+      "Item": 6047,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2093,
+      "Item": 6208,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2094,
+      "Item": 6209,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2122,
+      "Item": 6235,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2126,
+      "Item": 6240,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2162,
+      "Item": 6276,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2169,
+      "Item": 6283,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2452,
+      "Item": 6572,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2453,
+      "Item": 6573,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2454,
+      "Item": 6575,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2456,
+      "Item": 6576,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2734,
+      "Item": 6864,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2735,
+      "Item": 6865,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2736,
+      "Item": 6866,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2764,
+      "Item": 6893,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2927,
+      "Item": 7063,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2928,
+      "Item": 7064,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2929,
+      "Item": 7065,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2930,
+      "Item": 7066,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 3243,
+      "Item": 7394,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4009,
+      "Item": 8124,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4010,
+      "Item": 8125,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4011,
+      "Item": 8126,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4012,
+      "Item": 8127,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4013,
+      "Item": 8128,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4014,
+      "Item": 8129,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4015,
+      "Item": 8130,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4016,
+      "Item": 8131,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4017,
+      "Item": 8132,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4018,
+      "Item": 8133,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4019,
+      "Item": 8134,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4020,
+      "Item": 8135,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4021,
+      "Item": 8136,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4022,
+      "Item": 8137,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4023,
+      "Item": 8138,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4257,
+      "Item": 8332,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4258,
+      "Item": 8333,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4259,
+      "Item": 8334,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4260,
+      "Item": 8335,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4261,
+      "Item": 8336,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4306,
+      "Item": 8375,
+      "Type": "physical_main"
+    }
+  ],
+  "InfoGroup": [
+    {
+      "_id": 34,
+      "Name": "Guest Services"
+    },
+    {
+      "_id": 35,
+      "Name": "Help Centre"
+    },
+    {
+      "_id": 39,
+      "Name": "Privacy & Legal"
+    }
+  ],
+  "InfoItem": [
+    {
+      "_id": 200,
+      "Group": 34,
+      "Name": {
+        "en-GB": "Opening Times"
+      },
+      "URL": {
+        "en-GB": "https://www.altontowers.com/plan-your-visit/before-you-visit/opening-times/"
+      },
+      "Category": 34
+    },
+    {
+      "_id": 79,
+      "Group": 34,
+      "Name": {
+        "en-GB": "Buggy Hire"
+      },
+      "Content": {
+        "en-GB": "6829439d-6f74-5d57-9dfe-5f62b91e3cc8"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      },
+      "Category": 34
+    },
+    {
+      "_id": 80,
+      "Group": 34,
+      "Name": {
+        "en-GB": "Lockers"
+      },
+      "Content": {
+        "en-GB": "182a75b9-5115-5cb0-8929-6214a716a71d"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      },
+      "Category": 34
+    },
+    {
+      "_id": 81,
+      "Group": 34,
+      "Name": {
+        "en-GB": "Car Parking"
+      },
+      "Content": {
+        "en-GB": "1ec17e45-5bc5-54d1-ab26-cb5a42c62dd9"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      },
+      "Category": 34
+    },
+    {
+      "_id": 82,
+      "Group": 34,
+      "Name": {
+        "en-GB": "Disabled Access"
+      },
+      "Content": {
+        "en-GB": "ee31aff0-0638-5e60-99cf-e2e6624648a8"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      },
+      "Category": 34
+    },
+    {
+      "_id": 70,
+      "Group": 35,
+      "Name": {
+        "en-GB": "Day Visit FAQs"
+      },
+      "URL": {
+        "en-GB": "https://support.altontowers.com/hc/en-us"
+      },
+      "Category": 35
+    },
+    {
+      "_id": 83,
+      "Group": 35,
+      "Name": {
+        "en-GB": "Short Breaks FAQs"
+      },
+      "URL": {
+        "en-GB": "https://help.altontowersholidays.com/hc/en-gb?utm_source=Alton_Towers&utm_medium=app&utm_campaign=ShortBreakFAQ&utm_content=Info"
+      },
+      "Category": 35
+    },
+    {
+      "_id": 300,
+      "Group": 39,
+      "Name": {
+        "en-GB": "Privacy Policy"
+      },
+      "URL": {
+        "en-GB": "https://www.altontowers.com/privacy-policy/"
+      },
+      "Category": 39
+    }
+  ],
+  "InfoCategory": [
+    {
+      "_id": 34,
+      "Name": "Guest Services"
+    },
+    {
+      "_id": 35,
+      "Name": "Help Centre"
+    },
+    {
+      "_id": 39,
+      "Name": "Privacy & Legal"
+    }
+  ],
+  "ShopItem": [
+    {
+      "_id": 5,
+      "Name": "The Alton Towers Dungeon",
+      "Summary": "A hilariously hideous journey through Staffordshire's darkest history.",
+      "Image": "7ba37453-92f3-585f-a549-0d2ac956e8d1",
+      "Action": "Buy now",
+      "Content": {
+        "en-GB": "a33262d8-99c7-50a8-94b4-fe70ddc49470"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      }
+    },
+    {
+      "_id": 29,
+      "Name": "Fastrack",
+      "Summary": "Reduce your waiting time on our most popular attractions",
+      "Image": "e52f6165-4992-5fd5-b742-f3ed75161901",
+      "Action": "BUY NOW",
+      "Content": {
+        "en-GB": "045b4b31-a9a5-5c89-a436-fa5577009791"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      }
+    },
+    {
+      "_id": 25,
+      "Name": "Season Passes",
+      "Summary": "Our best value pass",
+      "Image": "7d97e437-f402-55ef-ba72-af794594b97b",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://me-twalton.store20.accesso.com/packageList/keyword/Local%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=SeasonPass&utm_content=Shop"
+      }
+    },
+    {
+      "_id": 100,
+      "Name": "Day Passes",
+      "Summary": "Book in advance and save",
+      "Image": "88e11ab0-57f5-5b91-a1cd-f0689452efda",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://me-twalton.store20.accesso.com/wizardCalendar/Wizard/WizardAdmissionDated?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Tickets&utm_content=Shop"
+      }
+    },
+    {
+      "_id": 27,
+      "Name": "Merlin Annual Pass",
+      "Summary": "An incredible year at the UK's Top Attractions",
+      "Image": "3473759f-2216-5d0f-b393-e15392dead26",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://me-twalton.store20.accesso.com/subKeyword/Annual%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=MAP&utm_content=Shop"
+      }
+    },
+    {
+      "_id": 28,
+      "Name": "Short Breaks",
+      "Summary": "One day just isn't enough",
+      "Image": "f44f9676-1279-5e74-93d0-f38d16201a80",
+      "Action": "BOOK NOW",
+      "Content": {
+        "en-GB": "2d91766f-364e-56e7-b1e9-a44601b8f848"
+      },
+      "Path": {
+        "en-GB": "index.html"
+      }
+    },
+    {
+      "_id": 31,
+      "Name": "Waterpark",
+      "Summary": "Boasting loads of interactive water features",
+      "Image": "95588460-f44c-5fd7-b922-94a95dfff809",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://me-twalton.store20.accesso.com/packageList/keyword/Waterpark?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
+      }
+    },
+    {
+      "_id": 32,
+      "Name": "Extraordinary Golf",
+      "Summary": "Two 9-hole courses with outrageous obstacles",
+      "Image": "ca387133-3958-5cf4-86ff-4f068a1a2db7",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://me-twalton.store20.accesso.com/packageList/keyword/Extraordinary%20Golf?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
+      }
+    },
+    {
+      "_id": 33,
+      "Name": "Alton Towers Spa",
+      "Summary": "Experience unique treatments for ultimate relaxation",
+      "Image": "618058d1-7e14-54ff-a2fb-1ff2e19d0ea1",
+      "Action": "BOOK NOW",
+      "URL": {
+        "en-GB": "https://www.altontowers.com/activities/alton-towers-spa/?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
+      }
+    }
+  ],
+  "Image": [
+    {
       "_id": 9259,
       "Item": 6045,
       "Image": "73f2295d-83a7-5471-b01d-efe3c15ac231"
@@ -2579,6 +4038,11 @@
       "Image": "8dda4e39-31ce-589f-a43b-5ee9fe24b6fe"
     },
     {
+      "_id": 13086,
+      "Item": 8134,
+      "Image": "65ef97c5-3f60-598b-8260-1b9ab5480ff7"
+    },
+    {
       "_id": 9009,
       "Item": 4231,
       "Image": "c9d49ed9-a44d-5ae5-b0d9-5ef4487e2ac8"
@@ -2592,6 +4056,11 @@
       "_id": 9561,
       "Item": 6208,
       "Image": "9ea20f98-290f-5867-a28c-1833e7f95276"
+    },
+    {
+      "_id": 11714,
+      "Item": 4217,
+      "Image": "a0e4b279-95a6-5f11-b2a9-2a07eaa48440"
     },
     {
       "_id": 9096,
@@ -2654,9 +4123,9 @@
       "Image": "425a1d47-5531-5bd8-a8ea-a6ae58955f6a"
     },
     {
-      "_id": 9113,
-      "Item": 4307,
-      "Image": "a5400a47-74d1-5fb0-84de-98404492b2ea"
+      "_id": 9733,
+      "Item": 6283,
+      "Image": "24a8f382-5e87-5570-907b-e46914ee8ac5"
     },
     {
       "_id": 9045,
@@ -2664,9 +4133,9 @@
       "Image": "f3b0b606-4970-52c4-a5ce-b07b33f9ee38"
     },
     {
-      "_id": 8970,
+      "_id": 10738,
       "Item": 5954,
-      "Image": "593ce6a3-9a55-5f08-9247-7e4ba1f66d4c"
+      "Image": "03d76e5c-cd8d-587c-8f49-d14ea24272ef"
     },
     {
       "_id": 9010,
@@ -2679,6 +4148,41 @@
       "Image": "866f7c4d-8bd4-59d9-86fa-1688573e677e"
     },
     {
+      "_id": 13090,
+      "Item": 8138,
+      "Image": "8f3a8d19-0ff3-511c-9d8f-64e41b636eff"
+    },
+    {
+      "_id": 13524,
+      "Item": 8375,
+      "Image": "5d71c829-3caa-5f35-949b-d6a2c0a853d5"
+    },
+    {
+      "_id": 13478,
+      "Item": 8336,
+      "Image": "c0f91a1b-59f6-5ec6-a695-828d4aa05971"
+    },
+    {
+      "_id": 13477,
+      "Item": 8335,
+      "Image": "5de966fb-e073-5f85-a3d5-eb466a1d85c5"
+    },
+    {
+      "_id": 13476,
+      "Item": 8334,
+      "Image": "70a60106-88e7-5b22-920e-0acb90c58b37"
+    },
+    {
+      "_id": 13468,
+      "Item": 8332,
+      "Image": "2bb85874-0e0a-5ac0-81c5-d97f6faad79a"
+    },
+    {
+      "_id": 13470,
+      "Item": 8333,
+      "Image": "def2a767-528e-5fa5-8d53-b7793843a4bc"
+    },
+    {
       "_id": 9058,
       "Item": 4275,
       "Image": "d6d45a54-b358-51ca-a65c-69410f1af80d"
@@ -2687,6 +4191,11 @@
       "_id": 9173,
       "Item": 6026,
       "Image": "60f977e7-3bcf-5f44-a024-67d9f00753ab"
+    },
+    {
+      "_id": 13085,
+      "Item": 8133,
+      "Image": "ac237f12-e783-5c4f-a699-035fccf98b71"
     },
     {
       "_id": 6114,
@@ -2704,9 +4213,9 @@
       "Image": "0ffc340b-c79b-51ef-bac7-f42ff1eae76a"
     },
     {
-      "_id": 8965,
-      "Item": 5950,
-      "Image": "1fc9e34b-f9a5-5ff0-9c1f-8d9911b995d8"
+      "_id": 10736,
+      "Item": 7064,
+      "Image": "373be5e3-ab67-527e-8a78-e341b6d13658"
     },
     {
       "_id": 6096,
@@ -2749,14 +4258,19 @@
       "Image": "10cb0ce2-4941-507f-8fcc-3640baaf4e59"
     },
     {
+      "_id": 10076,
+      "Item": 6575,
+      "Image": "6cd6b76d-c09c-5533-abe1-fd7522717c14"
+    },
+    {
       "_id": 9060,
       "Item": 4279,
       "Image": "28ab514c-d073-5781-b405-d33c7c57901e"
     },
     {
-      "_id": 9130,
-      "Item": 5951,
-      "Image": "5bd456b0-1978-52f7-83e4-5a02053bb045"
+      "_id": 10739,
+      "Item": 7065,
+      "Image": "60977dcf-8062-5406-886b-5ddd620fd0f5"
     },
     {
       "_id": 9016,
@@ -2764,9 +4278,9 @@
       "Image": "5e9b0c45-3eb8-5609-a8a1-966d50fb9b12"
     },
     {
-      "_id": 9698,
+      "_id": 13516,
       "Item": 4189,
-      "Image": "634b3b5c-da0d-5190-b695-b4ab395edae0"
+      "Image": "250e64e8-d333-5845-aa79-ce238a160675"
     },
     {
       "_id": 6172,
@@ -2777,6 +4291,11 @@
       "_id": 9021,
       "Item": 4224,
       "Image": "d2727d6d-fb98-541c-8c08-3d9fb5f2e3d8"
+    },
+    {
+      "_id": 11681,
+      "Item": 7394,
+      "Image": "db2f902f-7bda-578f-bbb5-8de721404cd2"
     },
     {
       "_id": 9022,
@@ -2824,9 +4343,9 @@
       "Image": "957b789f-9c05-5a67-bd9d-620d88dda878"
     },
     {
-      "_id": 6130,
+      "_id": 13511,
       "Item": 4241,
-      "Image": "c9329f36-8268-5e0e-8831-417dca55508d"
+      "Image": "e35d1016-80a4-5fa2-a928-91a876be1df8"
     },
     {
       "_id": 9026,
@@ -2837,6 +4356,16 @@
       "_id": 6139,
       "Item": 4250,
       "Image": "6e08c1ef-346f-5837-a2f4-855533f6c9dc"
+    },
+    {
+      "_id": 13084,
+      "Item": 8132,
+      "Image": "c9d0a721-23b1-5927-9910-5e4958ff6a8b"
+    },
+    {
+      "_id": 13078,
+      "Item": 8127,
+      "Image": "9378799d-7212-5695-8a48-08fb3057493f"
     },
     {
       "_id": 6123,
@@ -2884,6 +4413,11 @@
       "Image": "0cd17a6c-c81b-5029-9c69-2daac72eca62"
     },
     {
+      "_id": 10490,
+      "Item": 6893,
+      "Image": "3ded7cbb-bd27-5456-8364-b805f55dd1fa"
+    },
+    {
       "_id": 9178,
       "Item": 6033,
       "Image": "623cf9eb-b100-548c-a48d-857a677557a8"
@@ -2914,19 +4448,9 @@
       "Image": "754e92a0-e734-5e92-be80-0260d0f5c83e"
     },
     {
-      "_id": 6095,
-      "Item": 4191,
-      "Image": "85aa09a4-049c-5b81-961c-a701c009a665"
-    },
-    {
       "_id": 9064,
       "Item": 4284,
       "Image": "42233601-57dc-58ee-8965-8fc49c9e482b"
-    },
-    {
-      "_id": 9032,
-      "Item": 4218,
-      "Image": "54a11e18-5f12-5d0c-b391-7292c6900163"
     },
     {
       "_id": 9061,
@@ -2944,14 +4468,29 @@
       "Image": "3d8e9f8c-57cf-56b3-9b43-348291dbfb6e"
     },
     {
+      "_id": 13087,
+      "Item": 8135,
+      "Image": "41a63db2-507b-514d-87cb-64b8a3f02922"
+    },
+    {
       "_id": 9131,
       "Item": 5953,
       "Image": "661a3eab-2356-5d9f-b605-1af210c61728"
     },
     {
-      "_id": 9623,
+      "_id": 13434,
       "Item": 6235,
-      "Image": "77f38fa1-e199-59e2-9019-bf8c67cdafda"
+      "Image": "678c4f70-f04d-5c20-9c17-5d5727a016a4"
+    },
+    {
+      "_id": 10751,
+      "Item": 7066,
+      "Image": "a313c831-0130-5436-adb0-15ec95e726e5"
+    },
+    {
+      "_id": 13074,
+      "Item": 8124,
+      "Image": "299b243e-f384-5ab4-a7ca-9a1eeb906d96"
     },
     {
       "_id": 9028,
@@ -2962,6 +4501,16 @@
       "_id": 9133,
       "Item": 5949,
       "Image": "bac198f3-e69b-57b7-b7d1-c883464c471f"
+    },
+    {
+      "_id": 13083,
+      "Item": 8130,
+      "Image": "7ce50e4b-4975-51ca-ad14-460dc0578a46"
+    },
+    {
+      "_id": 13077,
+      "Item": 8125,
+      "Image": "f8838506-4ac1-5844-94d0-c0f9c8a962de"
     },
     {
       "_id": 9067,
@@ -2989,6 +4538,11 @@
       "Image": "58518ea0-db45-523f-85af-ec1d2d080e8e"
     },
     {
+      "_id": 13089,
+      "Item": 8137,
+      "Image": "ee1dd2ae-84b7-517a-891d-2a472835de92"
+    },
+    {
       "_id": 6151,
       "Item": 4270,
       "Image": "f36e1341-334f-565d-ba12-8bcc236e4cf1"
@@ -3014,6 +4568,16 @@
       "Image": "4eeb9eb0-7d9a-5109-aa21-d755669d224a"
     },
     {
+      "_id": 13082,
+      "Item": 8131,
+      "Image": "109b3aca-3721-51ac-a5f9-dd9ad1198f70"
+    },
+    {
+      "_id": 10074,
+      "Item": 6572,
+      "Image": "099adcf6-04fb-5a9d-8800-c1f20ff185e9"
+    },
+    {
       "_id": 6102,
       "Item": 4213,
       "Image": "95280e94-1deb-5858-b50a-fa78f1f5ebef"
@@ -3032,11 +4596,6 @@
       "_id": 9134,
       "Item": 4709,
       "Image": "6f0d71a8-5b9d-5e1a-b98f-d34dafb27ba5"
-    },
-    {
-      "_id": 6119,
-      "Item": 4230,
-      "Image": "6b1d525e-25a8-56d1-8a96-71211464e0a2"
     },
     {
       "_id": 9077,
@@ -3064,14 +4623,14 @@
       "Image": "fdbe9689-f22d-53f2-8273-c25d337b4b31"
     },
     {
-      "_id": 9083,
-      "Item": 4296,
-      "Image": "e7becfdb-59d9-554d-b4bb-7f00e7be43ba"
-    },
-    {
       "_id": 9084,
       "Item": 4303,
       "Image": "db1f0074-c775-5e9c-ad07-3afa5daf8bbe"
+    },
+    {
+      "_id": 9083,
+      "Item": 4296,
+      "Image": "e7becfdb-59d9-554d-b4bb-7f00e7be43ba"
     },
     {
       "_id": 9085,
@@ -3159,14 +4718,24 @@
       "Image": "418bcde0-9ea8-5b19-a5a9-93f240365132"
     },
     {
+      "_id": 13076,
+      "Item": 8126,
+      "Image": "36032b2d-b001-51a9-9f7d-1dc0fc51a19f"
+    },
+    {
       "_id": 6189,
       "Item": 4321,
       "Image": "cb4e58db-8664-598b-a133-a381e7f894ae"
     },
     {
-      "_id": 9708,
+      "_id": 13088,
+      "Item": 8136,
+      "Image": "188a461e-215a-516e-a3b4-e4ef4f72e2d4"
+    },
+    {
+      "_id": 13500,
       "Item": 6276,
-      "Image": "7bebad84-2f75-5b45-aae7-34b3392a709c"
+      "Image": "cac76239-886c-57a7-bd71-6cfc601b6f2a"
     },
     {
       "_id": 9040,
@@ -3184,6 +4753,11 @@
       "Image": "4da586e7-34ee-50f3-9078-be67c665b3d5"
     },
     {
+      "_id": 10735,
+      "Item": 7063,
+      "Image": "a635d2c6-04ed-5bf6-ba94-62b0113f027b"
+    },
+    {
       "_id": 6170,
       "Item": 4190,
       "Image": "98326dd8-57e4-5109-b883-05f21195ac02"
@@ -3197,6 +4771,16 @@
       "_id": 9071,
       "Item": 4238,
       "Image": "17d8bf96-35fb-5661-8b3d-7f479cd57984"
+    },
+    {
+      "_id": 13079,
+      "Item": 8128,
+      "Image": "dd13eabd-f99c-547b-9798-97af2c0af3e1"
+    },
+    {
+      "_id": 10075,
+      "Item": 6573,
+      "Image": "dbb0fa8d-7ceb-5811-a22c-b1c68f068fdc"
     },
     {
       "_id": 9129,
@@ -3214,9 +4798,19 @@
       "Image": "ad1261bb-b1fd-5f94-8c03-41f2815b11da"
     },
     {
-      "_id": 9041,
-      "Item": 4217,
-      "Image": "98ce3be3-213c-5c26-8510-175fe70237e9"
+      "_id": 10377,
+      "Item": 6864,
+      "Image": "079bf59b-7c50-5f80-8d3b-d6e8ad176166"
+    },
+    {
+      "_id": 10378,
+      "Item": 6865,
+      "Image": "217ec668-371a-553b-a02c-8c967e395667"
+    },
+    {
+      "_id": 10379,
+      "Item": 6866,
+      "Image": "a45be2b6-ea22-5c52-976f-067e691373f1"
     },
     {
       "_id": 9042,
@@ -3234,9 +4828,9 @@
       "Image": "8f226949-6846-5cb4-8bdb-ad025c2abe04"
     },
     {
-      "_id": 8962,
-      "Item": 4706,
-      "Image": "66c4cf35-e9f8-516c-9565-8bef96de98b0"
+      "_id": 10077,
+      "Item": 6576,
+      "Image": "c756141d-e170-5396-9539-88611df34c3d"
     },
     {
       "_id": 9107,
@@ -3309,14 +4903,19 @@
       "Image": "eca5abc8-ecf0-58b3-90c5-efd5a4ef19c9"
     },
     {
-      "_id": 9186,
+      "_id": 10866,
       "Item": 6035,
-      "Image": "f8254114-3963-5ae4-abdf-196d32bb5aa9"
+      "Image": "902c658e-823b-5911-8285-6c55417d7ff5"
     },
     {
       "_id": 9006,
       "Item": 4773,
       "Image": "7d85639b-7c6b-5522-9e4d-bec0b3776446"
+    },
+    {
+      "_id": 13501,
+      "Item": 4773,
+      "Image": "6c6f68ed-ac6c-53cd-893d-261c6b827e5b"
     },
     {
       "_id": 9174,
@@ -3332,31 +4931,31 @@
       "_id": 9047,
       "Item": 4257,
       "Image": "3c081b32-88b6-517e-b7bf-ec469070bdd9"
-    }
-  ],
-  "Feature": [{
-      "_id": 205,
-      "Title": "Stargazing Pods",
-      "Summary": "Escape to the great British Outdoors and stay in the brand new Stargazing Pods",
-      "Image": "09c4674d-bce8-5ffb-90f3-1f0456463946",
-      "URL": "https://www.altontowers.com/short-breaks/stargazing-pods/?utm_source=2018App&utm_medium=Featured&utm_campaign=Pods"
     },
     {
-      "_id": 202,
-      "Title": "2019 Season Pass",
-      "Summary": "Your key to days and days of Theme Park fun from only £56",
-      "Image": "fc1c399a-891f-5947-bc33-3bcec76f9958",
-      "URL": "https://www.altontowers.com/tickets/season-pass?utm_source=2018App&utm_medium=Featured&utm_campaign=SeasonPass"
-    },
-    {
-      "_id": 204,
-      "Title": "The Alton Towers Dungeon",
-      "Summary": "A hilariously hideous journey through Staffordshire’s darkest history. Uncover secrets hidden deep beneath the Towers",
-      "Image": "022d511c-a6a9-5567-bd33-45b39dd77d59",
-      "URL": "https://www.altontowers.com/theme-park/dungeon/?utm_source=2018App&utm_medium=Featured&utm_campaign=Dungeon"
+      "_id": 13080,
+      "Item": 8129,
+      "Image": "9769019d-7a01-544d-a51a-cffc289778df"
     }
   ],
-  "Offer": [{
+  "Feature": [
+    {
+      "_id": 436,
+      "Title": "Know Before You Go",
+      "Summary": "We’ve introduced a number of additional hygiene and safety measures which you’ll see in place when you next visit",
+      "Image": "fe2b07ee-d009-5939-8fc5-32459f6e4372",
+      "URL": "https://www.altontowers.com/plan-your-visit/before-you-visit/know-before-you-go/?utm_source=2018App&utm_medium=Featured&utm_campaign=Gardens"
+    },
+    {
+      "_id": 428,
+      "Title": "We're back!",
+      "Summary": "We've reopened our Theme Park & Accommodation and can't wait to see you! Pre-booking your visit is essential for all guests",
+      "Image": "4be9200d-c040-599b-a12d-9494b4fd6554",
+      "URL": "https://www.altontowers.com/tickets-passes/?utm_source=2018App&utm_medium=Featured&utm_campaign=Gardens"
+    }
+  ],
+  "Offer": [
+    {
       "_id": 63,
       "Title": "Midweek Short Breaks from £139",
       "Summary": "Enjoy a midweek escape, ride the UK's top rollercoasters, explore CBeebies Land and enjoy a fun-filled evening with B&B",
@@ -3522,21 +5121,6 @@
       "ActionTitle": "Book now"
     },
     {
-      "_id": 374,
-      "Title": "The Alton Towers Dungeon",
-      "Summary": "Laugh & Scream through Staffordshire's darkest history for only £7.50",
-      "Image": "dcf0139d-989f-5dab-afae-27ecf5b2cda4",
-      "DisplaySchedule": "{\"type\":\"period\",\"offset_date\":\"2000-01-01 09:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":15,\"minute\":0}}",
-      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 hands on shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nRecommended for ages 10+, reserve your time in the Alton Towers Dungeon which is located next to the Dark Forest behind the Tower Ruins.\n\nBuy your ticket at www.altontowers.com/traitor",
-      "TermsAndConditions": "44bc5fc6-eea8-5c1b-af1b-a5760c49175f",
-      "ShowOnResort": true,
-      "ShowOffResort": false,
-      "Resort": 49,
-      "ActionCode": null,
-      "ActionCodeDisplayFormat": "text",
-      "ActionTitle": "Buy now"
-    },
-    {
       "_id": 375,
       "Title": "2019 Season Pass",
       "Summary": "Upgrade today from only £23 and come back all season for free!*",
@@ -3566,12 +5150,99 @@
       "ActionTitle": null
     },
     {
-      "_id": 383,
-      "Title": "2019 Season Pass",
-      "Summary": "Upgrade today from only £23 and come back all season for free!*",
-      "Image": "9437a630-3706-5ebf-8c68-0f48db5dc940",
-      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2019-04-22 00:00:00\",\"end\":\"2019-11-18 00:00:00\"}",
-      "Description": "Visit the Resort Box Office to upgrade your ticket into days and days of Theme Park fun! Standard Season Passes are available from £23 (Exclusions apply) or you can upgrade to a Premium Season Pass from £37 and visit during Scarefest & unlock the key to the Alton Towers Dungeon",
+      "_id": 424,
+      "Title": "Merlin Annual Pass",
+      "Summary": "Summer offer now on! Visit the Resort Box Office to upgrade",
+      "Image": "e3731b20-19b5-5a64-a093-1651ee3f81dc",
+      "DisplaySchedule": "{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2019-08-16 13:00:00\",\"end\":\"2019-09-03 19:00:00\"},{\"type\":\"period\",\"offset_date\":\"2000-01-01 13:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":19,\"minute\":0}}]}",
+      "Description": "A Merlin Annual Pass unlocks access to over 30 of the UK’s most exciting attractions! When you purchase a Premium Merlin Annual Pass, you’ll receive a FREE Annual DigiPass – allowing you to save your digital memories! Offer is valid until 3rd September 2019.",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 437,
+      "Title": "Spooktacular Family & Thrill Mazes",
+      "Summary": "Purchase family scare attractions & thrilling scare maze tickets using your phone including the Alton Towers Dungeon!",
+      "Image": "f98697c8-5574-539a-8adb-07fe00a5730e",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2019-10-04 00:00:00\",\"end\":\"2019-11-03 00:00:00\"}",
+      "Description": "**Scarefest takes place on selected dates: 12th - 13th, 18th October - 3rd November**\n\nThis year our multi-award winning scare mazes have been re-scarified and we've added another NEW maze to the line-up! Spine-tingling frights await those brave enough to enter...\n\n**Purchase your Scare Maze tickets using your phone - visit the Shop now! Or visit www.altontowers.com/mazes**",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 461,
+      "Title": "The Alton Towers Dungeon",
+      "Summary": "Laugh & Scream for only £2.50 exclusively during Services Day",
+      "Image": "e26784c8-088b-5d4a-aae8-124cb25fd2d9",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2020-03-07 00:00:00\",\"end\":\"2020-03-08 00:00:00\"}",
+      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 hands on shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nRecommended for ages 10+, reserve your time at the Alton Towers Dungeon which is located next to the Dark Forest behind the Tower Ruins.",
+      "TermsAndConditions": "67fe6f04-6e8b-55d4-9432-6ebb78b121c3",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 466,
+      "Title": "The Alton Towers Dungeon",
+      "Summary": "Laugh & Scream for only £1 exclusively for John Lewis & Partners",
+      "Image": "abc46727-c3c0-531e-812c-eda6273d7279",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2020-03-14 00:00:00\",\"end\":\"2020-03-14 00:00:00\"}",
+      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 hands on shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nRecommended for ages 10+, reserve your time at the Alton Towers Dungeon which is located next to the Dark Forest behind the Tower Ruins.",
+      "TermsAndConditions": "3b526879-6f24-5f41-9dcf-010a90d19aad",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 467,
+      "Title": "The Alton Towers Dungeon",
+      "Summary": "Laugh & Scream for free exclusively for Priority guests - pre-book your time slot at the Dungeon or the Resort Box Office",
+      "Image": "e8973200-c357-543f-8060-1e27e7645d39",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2020-03-15 00:00:00\",\"end\":\"2020-03-15 00:00:00\"}",
+      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 hands on shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nRecommended for ages 10+, reserve your time at the Alton Towers Dungeon which is located next to the Dark Forest behind the Tower Ruins.",
+      "TermsAndConditions": "a4baac7e-e20d-56fc-8bcb-862ab7ce81a3",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 479,
+      "Title": "Mobile food ordering is here!",
+      "Summary": "You can now order your food in advance from The Burger Kitchen or Just Chicken using our app",
+      "Image": "77f42e4b-3807-5768-8ebd-9ad4b74a63b7",
+      "DisplaySchedule": "{\"type\":\"period\",\"offset_date\":\"2000-01-01 11:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":16,\"minute\":0}}",
+      "Description": "Mobile food ordering is now available through the Alton Towers Resort app!\n\nVisit the Just Chicken or The Burger Kitchen (Mutiny Bay) locations and tap the order button, you will then be able to order contact-free and collect your food from the restaurant.\n\n𝗠𝗲𝗿𝗹𝗶𝗻 𝗣𝗮𝘀𝘀𝗵𝗼𝗹𝗱𝗲𝗿 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗶𝘀 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝘄𝗵𝗲𝗻 𝗼𝗿𝗱𝗲𝗿𝗶𝗻𝗴 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗰𝗼𝘂𝗻𝘁𝗲𝗿 𝗮𝘀 𝘂𝘀𝘂𝗮𝗹, 𝘁𝗵𝗲 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗰𝗮𝗻𝗻𝗼𝘁 𝗯𝗲 𝘂𝘀𝗲𝗱 𝘄𝗶𝘁𝗵 𝗺𝗼𝗯𝗶𝗹𝗲 𝗳𝗼𝗼𝗱 𝗼𝗿𝗱𝗲𝗿𝘀",
+      "ShowOnResort": true,
+      "ShowOffResort": false,
+      "Resort": 49,
+      "ActionCode": null,
+      "ActionCodeDisplayFormat": "text",
+      "ActionTitle": null
+    },
+    {
+      "_id": 490,
+      "Title": "The Alton Towers Dungeon",
+      "Summary": "Book your entry into the Alton Towers Dungeon through our app shop now...",
+      "Image": "efc1ef48-50d9-5ef6-b669-8bc0e0c66bc0",
+      "DisplaySchedule": "{\"type\":\"period\",\"offset_date\":\"2000-01-01 09:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":16,\"minute\":0}}",
+      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nVisit the shop within the app to book your entry into the Dungeon or visit altontowers.com/traitors\n\nRecommended for ages 10+, the Alton Towers Dungeon is located next to the Dark Forest behind the Tower Ruins.",
       "ShowOnResort": true,
       "ShowOffResort": false,
       "Resort": 49,
@@ -3580,7 +5251,8 @@
       "ActionTitle": null
     }
   ],
-  "Category": [{
+  "Category": [
+    {
       "_id": 498,
       "Name": "Attractions",
       "Icon": "f0c96d55-b148-507b-811e-8ab03b9e817e",
@@ -3687,9 +5359,76 @@
       "Name": "Shows",
       "Icon": "b3a52c0a-ed17-565d-bc49-c5dd27bfa704",
       "Parent": null
+    },
+    {
+      "_id": 749,
+      "Name": "Young Fun & Imagination",
+      "Icon": "1f13ab63-420d-5b29-8feb-fe670cfb6c9b",
+      "Parent": 498
+    },
+    {
+      "_id": 804,
+      "Name": "Fast Food",
+      "Icon": "8b6e802f-b0a4-5d16-b954-5686bf690ee3",
+      "Parent": 499
+    },
+    {
+      "_id": 805,
+      "Name": "Restaurants",
+      "Icon": "f2c5c761-c643-5af1-a67e-15eb1789d5e7",
+      "Parent": 499
+    },
+    {
+      "_id": 806,
+      "Name": "Snacks",
+      "Icon": "3ea166b2-0ab4-5e21-8e9d-f71a0958e2d0",
+      "Parent": 499
+    },
+    {
+      "_id": 807,
+      "Name": "Healthy Food",
+      "Icon": "e29ec4ca-5653-509e-924d-302d01999ca2",
+      "Parent": 499
+    },
+    {
+      "_id": 808,
+      "Name": "Hotels",
+      "Icon": "fc71b6b1-bca2-549b-ad41-30e71ceba836",
+      "Parent": 499
+    },
+    {
+      "_id": 809,
+      "Name": "Family",
+      "Icon": "99ee0df7-2e97-5bdc-a5ef-b0a82d90b1c4",
+      "Parent": 523
+    },
+    {
+      "_id": 810,
+      "Name": "Kids",
+      "Icon": "80f03de9-ccf1-5b42-bde4-8eaf87d64775",
+      "Parent": 523
+    },
+    {
+      "_id": 1109,
+      "Name": "Resort Activities",
+      "Icon": "92ff5b89-b476-50f6-89d2-82515fa69834",
+      "Parent": null
+    },
+    {
+      "_id": 1223,
+      "Name": "Heritage",
+      "Icon": "ce15cd9c-37f6-583a-a960-7a6dd2ff94e4",
+      "Parent": null
+    },
+    {
+      "_id": 1238,
+      "Name": "Coca-Cola Freestyle",
+      "Icon": "23968c02-c2ff-530e-a538-cd22f978b763",
+      "Parent": 499
     }
   ],
-  "Classification": [{
+  "Classification": [
+    {
       "_id": 119,
       "Name": "Thrill Rides",
       "Icon": "c379b51c-2ac4-5dfd-8c34-81dd6c913833"
@@ -3698,9 +5437,90 @@
       "_id": 120,
       "Name": "Family Rides",
       "Icon": "cb4036bb-daa9-5699-a1e5-62af3468a01c"
+    },
+    {
+      "_id": 151,
+      "Name": "CBeebies Land",
+      "Icon": null
+    },
+    {
+      "_id": 152,
+      "Name": "Cloud Cuckoo Land",
+      "Icon": null
+    },
+    {
+      "_id": 153,
+      "Name": "Dark Forest",
+      "Icon": null
+    },
+    {
+      "_id": 154,
+      "Name": "Gloomy Wood",
+      "Icon": null
+    },
+    {
+      "_id": 155,
+      "Name": "Katanga Canyon",
+      "Icon": null
+    },
+    {
+      "_id": 156,
+      "Name": "Mutiny Bay",
+      "Icon": null
+    },
+    {
+      "_id": 157,
+      "Name": "The Towers & Gardens",
+      "Icon": null
+    },
+    {
+      "_id": 158,
+      "Name": "Towers Street",
+      "Icon": null
+    },
+    {
+      "_id": 159,
+      "Name": "X-Sector",
+      "Icon": null
+    },
+    {
+      "_id": 160,
+      "Name": "Forbidden Valley",
+      "Icon": null
+    },
+    {
+      "_id": 162,
+      "Name": "On-Resort Activities",
+      "Icon": null
+    },
+    {
+      "_id": 163,
+      "Name": "Splash Landings Hotel",
+      "Icon": null
+    },
+    {
+      "_id": 164,
+      "Name": "Alton Towers Hotel",
+      "Icon": null
+    },
+    {
+      "_id": 165,
+      "Name": "Enchanted Village",
+      "Icon": null
+    },
+    {
+      "_id": 166,
+      "Name": "CBeebies Land Hotel",
+      "Icon": null
+    },
+    {
+      "_id": 429,
+      "Name": "Scarefest",
+      "Icon": null
     }
   ],
-  "FeedbackReason": [{
+  "FeedbackReason": [
+    {
       "_id": 8,
       "Reason": "Ride Availability"
     },
@@ -3725,180 +5545,40 @@
       "Reason": "Food Quality"
     }
   ],
-  "Configuration": [{
-    "_id": 1,
-    "NavigationBarColor": "ff211c5b",
-    "StatusBarColor": "ff14193a",
-    "SelectedIconColor": "ffccb457",
-    "Beacons": "{\"type\":\"ibeacon\",\"uuid\":\"5262fdc3-c11b-4290-b46a-26f2727c5413\"}",
-    "ShowQueueTimesOutsideResort": true,
-    "AlternateImperialHeightRestriction": true,
-    "OnboardingBackgroundColor": "ff444781",
-    "OnboardingTitleColor": "ffe0d286",
-    "RegistrationOptIn": "Merlin Entertainments plc, and the wider Merlin Entertainments Group, would like to use your personal data (including your contact information, postcode, device data, and purchase data) to keep in touch with personalised email and SMS updates about our magical attractions, hotels and the amazing offers we have available.\n\nFor more information about how we manage your personal data, please read our Privacy Policy. To change your preferences or to stop receiving direct marketing emails from us, you just need to click the link at the bottom of our emails.\n\nYes, I am happy to receive these updates from Merlin Entertainments plc and the wider Merlin Entertainments Group, and I confirm that I am over 16 years of age.",
-    "TitleFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"23edfa55-d1b6-4390-a718-391af23dd2ec\",\"font\":\"MotherHenAOE\"}]}",
-    "HeaderFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"345e79c2-db04-47ce-9667-efad5b80c257\",\"font\":\"Edmondsans-Bold\"}]}",
-    "BodyFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"345e79c2-db04-47ce-9667-efad5b80c257\",\"font\":\"Edmondsans-Medium\"}]}",
-    "RequestBluetooth": true,
-    "SearchLogoWidth": 80,
-    "SearchFieldMargin": 48,
-    "TitleFontUppercase": false,
-    "TitleFontSizeAdjust": 1,
-    "OnboardingLogoHeight": 100,
-    "OnboardingButtonColor": "ffffffff",
-    "OnboardingTextColor": "ffffffff",
-    "OnboardingSkipColor": "88ffffff",
-    "MapIconColor": "ffdeae1c",
-    "MapSelectedIconColor": "ffe3000b",
-    "GeneralIconColor": "ff211c5b",
-    "POITitleColor": "ff211c5b",
-    "CardAlertColor": "ffd62229",
-    "CardInfoColor": "ffac4f8e",
-    "CardFeatureColor": "ff5eb045",
-    "CardOfferColor": "ff025b9e",
-    "PlannerTintColor": "ffac4f8e"
-  }],
-  "ShopItem": [{
-      "_id": 9,
-      "Name": "The Alton Towers Dungeon",
-      "Summary": "A hilariously hideous journey through Staffordshire’s darkest history",
-      "Action": "Buy Now",
-      "Image": "f0424c15-6659-47fb-894d-699748d51d21",
-      "Content": "ea9f8afc-47cc-430b-9a1c-ed67a187cbfb"
-    },
+  "Configuration": [
     {
-      "_id": 2,
-      "Name": "Season Passes",
-      "Summary": "Our best value pass",
-      "Action": "Buy Now",
-      "Image": "1af95965-7646-46dd-b0a6-c18182d2c75b",
-      "URL": "https://me-twalton.store20.accesso.com/packageList/keyword/Local%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=SeasonPass&utm_content=Shop"
-    },
-    {
-      "_id": 100,
-      "Name": "Day Passes",
-      "Summary": "Book in advance and save",
-      "Action": "Buy Now",
-      "Image": "79073f09-2a04-498c-a115-7befeda8e02a",
-      "URL": "https://me-twalton.store20.accesso.com/wizardCalendar/Wizard/WizardAdmissionDated?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Tickets&utm_content=Shop"
-    },
-    {
-      "_id": 3,
-      "Name": "Merlin Annual Passes",
-      "Summary": "An incredible year at the UK’s Top Attractions",
-      "Action": "Buy Now",
-      "Image": "85f20395-4f38-4864-b8c3-e8c4cd0cd3cf",
-      "URL": "https://me-twalton.store20.accesso.com/packageList/keyword/Annual%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=MAP&utm_content=Shop"
-    },
-    {
-      "_id": 4,
-      "Name": "Short Breaks",
-      "Summary": "One day just isn’t enough",
-      "Action": "Book Now",
-      "Image": "272fe1e9-5da4-4b21-afaf-268028b1ea22",
-      "Content": "ae51c6f4-f04b-48da-b02c-78a43f900fdd"
-    },
-    {
-      "_id": 10,
-      "Name": "Fastrack",
-      "Summary": "Reduce your waiting time on our most popular attractions",
-      "Action": "Buy Now",
-      "Image": "1b67d6e4-d21d-489d-9acd-812eb7deb64f",
-      "Content": "bb16df0b-4d69-4f4d-b40d-86f63a1674a5"
-    },
-    {
-      "_id": 5,
-      "Name": "Extras",
-      "Summary": "An all day DigiPass and more…",
-      "Action": "Buy Now",
-      "Image": "8a6e76a5-4ee4-4f49-8fb2-8382a4c0b3bc",
-      "Content": "33fc2b76-b6f3-4860-92b9-fc32cc93e591"
-    },
-    {
-      "_id": 6,
-      "Name": "Waterpark",
-      "Summary": "Boasting loads of interactive water features",
-      "Action": "Buy Now",
-      "Image": "2aa3bfd5-be4d-4ae9-91ae-954c14679622",
-      "URL": "https://me-twalton.store20.accesso.com/packageList/keyword/Waterpark?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
-    },
-    {
-      "_id": 7,
-      "Name": "Extraordinary Golf",
-      "Summary": "Two 9-hole courses with outrageous obstacles",
-      "Action": "Buy Now",
-      "Image": "3afb7425-838d-4a3f-97d4-c89eaf020025",
-      "URL": "https://me-twalton.store20.accesso.com/packageList/keyword/Extraordinary%20Golf?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
-    },
-    {
-      "_id": 8,
-      "Name": "Alton Towers Spa",
-      "Summary": "Experience unique treatments for ultimate relaxation",
-      "Action": "Book Now",
-      "Image": "2a2363b8-5d8c-4fd7-8118-f48724944264",
-      "URL": "https://www.altontowers.com/activities/alton-towers-spa/?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Extras&utm_content=Shop"
-    }
-  ],
-  "InfoCategory": [{
       "_id": 1,
-      "Name": "Guest Services"
-    },
-    {
-      "_id": 2,
-      "Name": "Help Centre"
-    },
-    {
-      "_id": 3,
-      "Name": "Privacy & Legal"
-    }
-  ],
-  "InfoItem": [{
-      "_id": 200,
-      "Name": "Opening Times",
-      "Category": 1,
-      "URL": "https://www.altontowers.com/useful-info/opening-times/?utm_source=Alton_Towers&utm_medium=app&utm_campaign=OpeningTimes&utm_content=Info"
-    },
-    {
-      "_id": 2,
-      "Name": "Car Parking",
-      "Category": 1,
-      "Content": "80b68d1e-4823-47bb-9fc6-e8326ea19bb0"
-    },
-    {
-      "_id": 3,
-      "Name": "Disabled Access",
-      "Category": 1,
-      "Content": "a4d8bc18-933a-4cae-9d90-d55a21986a54"
-    },
-    {
-      "_id": 4,
-      "Name": "Buggy Hire",
-      "Category": 1,
-      "Content": "f24dd275-915b-46e3-a5ae-c52659f7bdb9"
-    },
-    {
-      "_id": 5,
-      "Name": "Lockers",
-      "Category": 1,
-      "Content": "8beb89e1-6e85-4827-8384-92833ebbd366"
-    },
-    {
-      "_id": 6,
-      "Name": "Day Visit FAQs",
-      "Category": 2,
-      "URL": "https://support.altontowers.com/hc/en-us?utm_source=Alton_Towers&utm_medium=app&utm_campaign=DayFAQ&utm_content=Info"
-    },
-    {
-      "_id": 7,
-      "Name": "Short Break FAQs",
-      "Category": 2,
-      "URL": "https://help.altontowersholidays.com/hc/en-gb?utm_source=Alton_Towers&utm_medium=app&utm_campaign=ShortBreakFAQ&utm_content=Info"
-    },
-    {
-      "_id": 300,
-      "Name": "Privacy Policy",
-      "Category": 3,
-      "URL": "https://www.altontowers.com/privacy-policy/?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Privacy&utm_content=Info"
+      "NavigationBarColor": "ff211c5b",
+      "StatusBarColor": "ff14193a",
+      "SelectedIconColor": "ffccb457",
+      "Beacons": "{\"type\":\"ibeacon\",\"uuid\":\"5262fdc3-c11b-4290-b46a-26f2727c5413\"}",
+      "ShowQueueTimesOutsideResort": true,
+      "AlternateImperialHeightRestriction": true,
+      "OnboardingBackgroundColor": "ff444781",
+      "OnboardingTitleColor": "ffe0d286",
+      "RegistrationOptIn": "Merlin Entertainments Limited, and the wider Merlin Entertainments Group, would like to use your personal data (including your contact information, postcode, device data, and purchase data) to keep in touch with personalised email and SMS updates about our magical attractions, hotels and the amazing offers we have available.\n\nFor more information about how we manage your personal data, please read our Privacy Policy. To change your preferences or to stop receiving direct marketing emails from us, you just need to click the link at the bottom of our emails.\n\nYes, I am happy to receive these updates from Merlin Entertainments Limited and the wider Merlin Entertainments Group, and I confirm that I am over 16 years of age.",
+      "TitleFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"23edfa55-d1b6-4390-a718-391af23dd2ec\",\"font\":\"MotherHenAOE\"}]}",
+      "HeaderFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"345e79c2-db04-47ce-9667-efad5b80c257\",\"font\":\"Edmondsans-Bold\"}]}",
+      "BodyFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"345e79c2-db04-47ce-9667-efad5b80c257\",\"font\":\"Edmondsans-Medium\"}]}",
+      "RequestBluetooth": true,
+      "SearchLogoWidth": 80,
+      "SearchFieldMargin": 48,
+      "TitleFontUppercase": false,
+      "TitleFontSizeAdjust": 1,
+      "OnboardingLogoHeight": 100,
+      "OnboardingButtonColor": "ffffffff",
+      "OnboardingSkipButtonColor": "ffffffff",
+      "OnboardingTextColor": "ffffffff",
+      "OnboardingSkipColor": "88ffffff",
+      "MapIconColor": "ffdeae1c",
+      "MapSelectedIconColor": "ffe3000b",
+      "GeneralIconColor": "ff211c5b",
+      "POITitleColor": "ff211c5b",
+      "CardAlertColor": "ffd62229",
+      "CardInfoColor": "ffac4f8e",
+      "CardFeatureColor": "ff5eb045",
+      "CardOfferColor": "ff025b9e",
+      "PlannerTintColor": "ffac4f8e"
     }
   ]
 }

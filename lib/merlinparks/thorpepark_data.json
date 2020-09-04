@@ -1,16 +1,22 @@
 {
-  "Resort": [{
-    "_id": 43,
-    "Name": "Thorpe Park",
-    "FeedbackURL": "https://www.thorpepark.com/resort-info/contact-us/general-enquiries",
-    "TripAdvisorURL": "https://www.tripadvisor.co.uk/UserReviewEdit-g642238-d216468-THORPE_PARK_Resort-Chertsey_Surrey_England.html",
-    "Region": "{\"regions\":[{\"type\":\"circle\",\"latitude\":51.405194999999999,\"longitude\":-0.51301113757324002,\"radius\":471}]}",
-    "TimeZone": "Europe/London",
-    "Country": "GB",
-    "DirectionsLocation": "51.407605,-0.507949",
-    "DefaultMapFocalRegion": "{\"regions\":[{\"type\":\"circle\",\"latitude\":51.404910000000001,\"longitude\":-0.51275599999999999,\"radius\":60}]}"
-  }],
-  "Item": [{
+  "Resort": [
+    {
+      "_id": 43,
+      "Name": "Thorpe Park",
+      "FeedbackURL": "https://www.thorpepark.com/resort-info/contact-us/general-enquiries",
+      "TripAdvisorURL": "https://www.tripadvisor.co.uk/UserReviewEdit-g642238-d216468-THORPE_PARK_Resort-Chertsey_Surrey_England.html",
+      "TicketsURL": null,
+      "PrivacyPolicyURL": null,
+      "OptInMessage": null,
+      "Region": "{\"regions\":[{\"type\":\"circle\",\"latitude\":51.405194999999999,\"longitude\":-0.51301113757324002,\"radius\":471}]}",
+      "TimeZone": "Europe/London",
+      "Country": "GB",
+      "DirectionsLocation": "51.407605,-0.507949",
+      "DefaultMapFocalRegion": "{\"regions\":[{\"type\":\"circle\",\"latitude\":51.404910000000001,\"longitude\":-0.51275599999999999,\"radius\":60}]}"
+    }
+  ],
+  "Item": [
+    {
       "_id": 4643,
       "Name": "Ambulance",
       "Summary": "",
@@ -18,7 +24,7 @@
       "DefaultImage": null,
       "Location": "51.405630026137,-0.51486722621155",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": false,
       "Category": 0,
       "Parent": null,
@@ -27,35 +33,41 @@
     {
       "_id": 3907,
       "Name": "Amity Beach",
-      "Summary": "Families can kick back and relax on Amity Beach where young thrill seekers can make a splash on the Wet Wet Wet water slides or paddle in the pool!",
+      "Summary": "Please note, Amity Beach is open, Time slots first come first served (one hour per group) Maximum Capacity enforced.\n\nFamilies can kick back and relax on Amity Beach where young thrill seekers can make a splash on the Wet Wet Wet water slides or paddle in the pool!",
       "Keywords": "Amity Beach, Sand, Beach, Pool, Relax, Families, Kids, Children, Waterslides, slides, Water, Play, disabled access, wheelchair access, disabled friendly, Neptunes kingdom, seating",
       "DefaultImage": 6459,
       "Location": "51.404947367889,-0.51341346892548",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 918,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        314
+      ],
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": 12,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your age is less than 12 years, then you must be accompanied by an adult."
     },
     {
-      "_id": 4531,
-      "Name": "Amity Beach Shack",
-      "Summary": "Grab an ice cream by the beach!",
-      "Keywords": "",
-      "DefaultImage": 6528,
-      "Location": "51.404984178152,-0.51370314749909",
+      "_id": 3873,
+      "Name": "Amity Donut Bites",
+      "Summary": "Ready for a sweet treat? They're freshly made and still warm!\nThis is a card only unit.",
+      "Keywords": "Card only, Doughnuts, Donuts, Dough, Hot Drinks, Slush, Slush Puppy, Slush Puppie",
+      "DefaultImage": 6500,
+      "Location": "51.403843046205,-0.51429323348236",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 928,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        321
+      ],
       "MenuURL": null,
       "AllergyInformationURL": null
     },
@@ -69,37 +81,50 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        60
+        314
       ],
       "MenuURL": "https://www.thorpepark.com/media/535387/fright-nights-map-2018.pdf",
       "AllergyInformationURL": null
     },
     {
+      "_id": 3870,
+      "Name": "Amity Kebab Co.",
+      "Summary": "Order up a delicious, hot kebab meal at Amity Kebab Co. and choose from a ton of tasty options including Meditarranean Chicken and Lamb Shish as well as Halal and veggie options!\n\nOpens at peak times only.",
+      "Keywords": "Amity, Kebab, Chips, take away, pita, fast food",
+      "DefaultImage": 6523,
+      "Location": "51.404632806247,-0.513687054245",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 926,
+      "Parent": null,
+      "Classifications": [
+        314
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
       "_id": 3926,
       "Name": "ANGRY BIRDS 4D Experience",
-      "Summary": "Bringing the Angry Birds world alive, THORPE PARK Resort premiere’s the world’s first ANGRY BIRDS 4D Experience.\nTimed air gusts, water jets, leg ticklers, flashing lights, bubbles and smoke blasts will be sure to get pulses racing from start to finish!",
+      "Summary": "Bringing the Angry Birds world alive, THORPE PARK Resort premiere’s the world’s first ANGRY BIRDS 4D Experience. First show at 12pm. Show on the hour every hour until the last show at 5pm.",
       "Keywords": "Angry Birds, Cinema, 4D cinema, show, showtime, family, children, kids, Angry Birds Land, over 4,",
       "DefaultImage": 6442,
       "Location": "51.404130841699,-0.51524273547363",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
-        59
+        314
       ],
       "Inversions": 0,
       "Length": 0,
-      "IsBigSix": true,
-      "MinimumHeightRequirement": null,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": null,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your age is greater than 4 years, then you can ride."
+      "IsBigSix": true
     },
     {
       "_id": 3843,
@@ -111,28 +136,28 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        60
+        322
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
     },
     {
-      "_id": 3853,
-      "Name": "Calypso Coffee",
-      "Summary": "Serving great coffee, frappes and traditional Cornish pasties.",
-      "Keywords": "Coffee, Cafe, Frappe, Pasties, Hot Drink",
-      "DefaultImage": 6511,
-      "Location": "51.402990525091,-0.51446087154579",
+      "_id": 3905,
+      "Name": "Burger King (Old Town)",
+      "Summary": "Burger King located between Derren Brown's Ghost Train: Rise of the Demon and Saw - The Ride, in Old Town.",
+      "Keywords": "",
+      "DefaultImage": 10784,
+      "Location": "51.402370575811,-0.51408938559723",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        61
+        323
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -149,7 +174,9 @@
       "VisibleOnMap": true,
       "Category": 462,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3918,
@@ -163,7 +190,9 @@
       "VisibleOnMap": true,
       "Category": 462,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3844,
@@ -177,7 +206,9 @@
       "VisibleOnMap": true,
       "Category": 462,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3863,
@@ -191,35 +222,21 @@
       "VisibleOnMap": true,
       "Category": 462,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
-      "_id": 6079,
-      "Name": "Coca Cola SUPER FREEZE vending machines",
-      "Summary": "Cool down with a refreshing Coca Cola. Tap your bottle to watch it freeze! Available in Original Coca Cola or Coca Cola Cherry!",
-      "Keywords": "Drinks, Coca cola, coke, cola, cold drink, vending machine",
-      "DefaultImage": null,
-      "Location": "51.405195,-0.51301113757324",
+      "_id": 8511,
+      "Name": "Chocolate & Waffles",
+      "Summary": "Hot Belgian waffles, chocolate dipped apples and melted chocolate fountain - what more could you ask for!?",
+      "Keywords": "waffles, chocolate, chocolate fountain",
+      "DefaultImage": 13799,
+      "Location": "51.402380615543,-0.51378361376954",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 460,
-      "Parent": null,
-      "Classifications": [],
-      "MenuURL": null,
-      "AllergyInformationURL": null
-    },
-    {
-      "_id": 3866,
-      "Name": "Coke Refill Point (Flock n' Shop)",
-      "Summary": "The stop shop to get your Quencher refilled, plus a perfect place if you fancy a drink, ice cream or small snack before you continue your non-stop adrenaline-fuelled stay on some of Europe’s most extreme rides!",
-      "Keywords": "",
-      "DefaultImage": 6513,
-      "Location": "51.403990290637,-0.51497451457215",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 660,
       "Parent": null,
       "Classifications": [
         61
@@ -228,19 +245,106 @@
       "AllergyInformationURL": null
     },
     {
-      "_id": 3845,
-      "Name": "Coke Refill Point (The Inferno Shop)",
-      "Summary": "The stop shop to get your Quencher refilled, plus a perfect place if you fancy a drink, ice cream or small snack before you continue your non-stop adrenaline-fuelled stay on some of Europe’s most extreme rides!",
-      "Keywords": "",
-      "DefaultImage": 6514,
-      "Location": "51.403140282158,-0.515037546484",
+      "_id": 8512,
+      "Name": "Churros, Waffles & Coffee",
+      "Summary": "Check out Churros, Waffles & Coffee for a super sweet snacks plus a selection of hot and cold drinks.",
+      "Keywords": "churros, waffles, coffee, drinks, cold drinks, hot drinks, tea",
+      "DefaultImage": 13800,
+      "Location": "51.404288124516,-0.51460436972809",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 460,
+      "Parent": null,
+      "Classifications": [
+        61
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 3866,
+      "Name": "Coca Cola Freestyle  (Amity)",
+      "Summary": "Buy a Thorpe Park vessel at our retail units and get unlimited drinks all day from our Freestyle Soda Fountain Machines. Freestyle machines have 100+ different Coca-Cola drink products available. Create your own bespoke drink combination and #mymix to share your favourite",
+      "Keywords": "Freestyle, quencher, freestyle quencher, drink, refills, refillable drink, cold drinks, soft drinks, fizzy drink, unlimited",
+      "DefaultImage": 9673,
+      "Location": "51.404719812875,-0.51366559657288",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 660,
       "Parent": null,
       "Classifications": [
-        61
+        314
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 6263,
+      "Name": "Coca Cola Freestyle (Nemesis Inferno)",
+      "Summary": "Buy a Thorpe Park vessel at our retail units and get unlimited drinks all day from our Freestyle Soda Fountain Machines. Freestyle machines have 100+ different Coca-Cola drink products available. Create your own bespoke drink combination and #mymix to share your favourite",
+      "Keywords": "Freestyle, quencher, freestyle quencher, drink, refills, refillable drink, cold drinks, soft drinks, fizzy drink, unlimited",
+      "DefaultImage": 9679,
+      "Location": "51.403113509981,-0.51492087039185",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 660,
+      "Parent": null,
+      "Classifications": [
+        322
+      ]
+    },
+    {
+      "_id": 3865,
+      "Name": "Coca Cola Freestyle (Rush)",
+      "Summary": "Buy a Thorpe Park vessel at our retail units and get unlimited drinks all day from our Freestyle Soda Fountain Machines. Freestyle machines have 100+ different Coca-Cola drink products available. Create your own bespoke drink combination and #mymix to share your favourite",
+      "Keywords": "Freestyle, quencher, freestyle quencher, drink, refills, refillable drink, cold drinks, soft drinks, fizzy drink, unlimited",
+      "DefaultImage": 9678,
+      "Location": "51.404401903239,-0.51286093386841",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 660,
+      "Parent": null,
+      "Classifications": [
+        61,
+        320
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 6264,
+      "Name": "Coca Cola Freestyle (Tidal Wave)",
+      "Summary": "Buy a Thorpe Park vessel at our retail units and get unlimited drinks all day from our Freestyle Soda Fountain Machines. Freestyle machines have 100+ different Coca-Cola drink products available. Create your own bespoke drink combination and #mymix to share your favourite",
+      "Keywords": "Freestyle, quencher, freestyle quencher, drink, refills, refillable drink, cold drinks, soft drinks, fizzy drink, unlimited",
+      "DefaultImage": 9680,
+      "Location": "51.404284778079,-0.51450781020355",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 660,
+      "Parent": null,
+      "Classifications": [
+        314
+      ]
+    },
+    {
+      "_id": 3845,
+      "Name": "Coca Cola Freestyle (Upper Dome)",
+      "Summary": "Buy a Thorpe Park vessel at our retail units and get unlimited drinks all day from our Freestyle Soda Fountain Machines. Freestyle machines have 100+ different Coca-Cola drink products available. Create your own bespoke drink combination and #mymix to share your favourite",
+      "Keywords": "Freestyle, quencher, freestyle quencher, drink, refills, refillable drink, cold drinks, soft drinks, fizzy drink, unlimited",
+      "DefaultImage": 9675,
+      "Location": "51.405171575398,-0.51231242212486",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 660,
+      "Parent": null,
+      "Classifications": [
+        325
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -255,7 +359,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
         58
@@ -264,25 +368,27 @@
       "Length": 850,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": 1.96,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your chest is less than 130 cm, then you can ride. If your height is greater than 1.96 m, then you cannot ride."
+      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your height is greater than 1.96 m, then you cannot ride. If your chest is greater than 130 cm, then you cannot ride."
     },
     {
       "_id": 3887,
       "Name": "Colossus Hot Dogs",
-      "Summary": "Treat your tastebuds to a tailor made hot dog!\n\nOpens at peak times only.",
+      "Summary": "Located next to the Colossus store, treat your taste buds to a tailor made hot dog!\n\nOpens at peak times only.",
       "Keywords": "Hot Dogs, Fast Food, Hot Drinks, Chips, Alcohol, Beer",
       "DefaultImage": 6417,
       "Location": "51.403883203825,-0.51247469577027",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 926,
       "Parent": null,
       "Classifications": [
-        60
+        320
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -297,10 +403,10 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        61
+        320
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -317,7 +423,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        320
+      ]
     },
     {
       "_id": 3886,
@@ -329,10 +437,10 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        61
+        320
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -347,7 +455,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -356,34 +464,12 @@
       "Length": 60,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
-    },
-    {
-      "_id": 4528,
-      "Name": "Derren Brown's Ghost Train: Rise Of The Demon",
-      "Summary": "New for 2017, experience Derren Brown’s Ghost Train: Rise Of The Demon.\nTake your one way ticket on a horrifying journey into the chilling depths of the unknown. with intense live action and thrilling physical effects, the grasp of the demon awaits.",
-      "Keywords": "Derren Brown, VR, Virtual Reality, Scary, fun, thrilling, Demons, fastrack, fast track, disabled access, wheelchair access",
-      "DefaultImage": 6496,
-      "Location": "51.403357805518,-0.51406256350708",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 459,
-      "Parent": null,
-      "Classifications": [
-        59
-      ],
-      "Inversions": 0,
-      "Length": 0,
-      "IsBigSix": true,
-      "MinimumHeightRequirement": 1.3999999999999999,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": 13,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your age is less than 13 years, then you cannot ride. If your height is less than 1.4 m, then you cannot ride."
     },
     {
       "_id": 3841,
@@ -395,7 +481,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -404,61 +490,27 @@
       "Length": 60,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.3 m, then you cannot ride. If your chest is less than 130 cm, then you can ride."
-    },
-    {
-      "_id": 3873,
-      "Name": "Donut Compound",
-      "Summary": "Ready for a sweet treat? They're freshly made and still warm!\n\nThis is a card only unit.",
-      "Keywords": "Card only, Doughnuts, Donuts, Dough, Hot Drinks, Slush, Slush Puppy, Slush Puppie",
-      "DefaultImage": 6500,
-      "Location": "51.403843046205,-0.51429323348236",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 460,
-      "Parent": null,
-      "Classifications": [
-        61
-      ],
-      "MenuURL": null,
-      "AllergyInformationURL": null
+      "RestrictionSummary": "If your height is less than 1.3 m, then you cannot ride."
     },
     {
       "_id": 3872,
       "Name": "Donut Factory",
-      "Summary": "Freshly made and still warm! You can’t resist the smell as you walk by!\n\nOpens at peak times only.",
+      "Summary": "Freshly made and still warm! You can’t resist the smell as you walk by!\nOpens at peak times only.",
       "Keywords": "Donut, Doughnut, Hot drinks, Ice Cream, Fast Food, snack",
       "DefaultImage": 6521,
       "Location": "51.404137534595,-0.51296554001999",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 928,
       "Parent": null,
       "Classifications": [
-        61
-      ],
-      "MenuURL": null,
-      "AllergyInformationURL": null
-    },
-    {
-      "_id": 3920,
-      "Name": "Fin's Bar & Grill",
-      "Summary": "Fin’s Bar & Grill serves up  wide range of island delicacies including freshly prepared favourites like 100% British beef burgers, piri piri chicken, crispy duck & warm chocolate brownie\n\nOpens at peak times only. This is a card only unit.",
-      "Keywords": "Fins, Restaurant, Eat In, Sit Down, Grill, Pizza, Fish, Hot Drinks, Beer, Alcohol, Chips, Kids Meals, Jacket Potatoes, Veggie, Vegetarian, Burgers, Halal",
-      "DefaultImage": 6419,
-      "Location": "51.405044413065,-0.51201872023773",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 460,
-      "Parent": null,
-      "Classifications": [
-        60
+        314
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -473,9 +525,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 531,
+      "Category": 930,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3860,
@@ -489,7 +543,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3856,
@@ -501,37 +557,21 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
-        58
+        121
       ],
       "Inversions": 0,
       "Length": 234,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
-    },
-    {
-      "_id": 3865,
-      "Name": "Hydration Station (Amity)",
-      "Summary": "The stop shop to get your Quencher refilled, plus a perfect place if you fancy a drink, ice cream or small snack before you continue your non-stop adrenaline-fuelled stay on some of Europe’s most extreme rides!",
-      "Keywords": "",
-      "DefaultImage": 6512,
-      "Location": "51.404401903239,-0.51286093386841",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 660,
-      "Parent": null,
-      "Classifications": [
-        61
-      ],
-      "MenuURL": null,
-      "AllergyInformationURL": null
     },
     {
       "_id": 3848,
@@ -543,10 +583,28 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        60
+        322
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 3920,
+      "Name": "Infinity Bar & Kitchen",
+      "Summary": "Infinity Bar & Kitchen serves up a wide range of gastropub inspired favourites like 100% British beef burgers, fresh salads & hand battered cod and chips.\n\nThis is a card only unit.",
+      "Keywords": "Infinity, Fins, Restaurant, Eat In, Sit Down, Grill, Pizza, Fish, Hot Drinks, Beer, Alcohol, Chips, Kids Meals, Jacket Potatoes, Veggie, Vegetarian, Burgers, Halal",
+      "DefaultImage": 6419,
+      "Location": "51.405044413065,-0.51201872023773",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 925,
+      "Parent": null,
+      "Classifications": [
+        325
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -561,9 +619,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 931,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 4540,
@@ -577,7 +637,9 @@
       "VisibleOnMap": true,
       "Category": 532,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3917,
@@ -589,24 +651,26 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 461,
+      "Category": 929,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3876,
       "Name": "KFC",
-      "Summary": "KFC - Finger Lickin' Good.",
+      "Summary": "KFC - Finger Lickin' Good.\n\nMade the Colonel’s way since 1939 with the secret blend of 11 herbs & spices. All of our food is freshly prepared in restaurant using only the highest quality ingredients. Enjoy a delicious KFC meal today. There's something for everyone!",
       "Keywords": "Kentucky Fried Chicken, Chicken, Chips, Burgers, Fast Food,  Eat In, Take Away",
-      "DefaultImage": 1186,
-      "Location": "51.404083991392,-0.51476530226898",
+      "DefaultImage": 9631,
+      "Location": "51.403920014944,-0.51460973414612",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        60
+        314
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -621,7 +685,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -629,25 +693,29 @@
       "Inversions": 0,
       "Length": 0,
       "IsBigSix": true,
-      "MinimumHeightRequirement": null,
+      "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is greater than 1.1 m, then you can ride. If your height is less than 1.3 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "If your height is less than 1.3 m, then you must be accompanied by an adult. If your height is less than 1.1 m, then you cannot ride."
     },
     {
       "_id": 6081,
       "Name": "Lake View Marquee",
-      "Summary": "An event space like no other! \nPlanning a conference, awards evening or need a place to throw your Christmas Party? Why not book out our Lake View marquee?",
+      "Summary": "An event space like no other! \nPlanning a conference, awards evening or need a place to throw your Christmas Party? Why not book out our Lake View marquee?\nBook our venue for: \nMeetings and conferences\nCorporate Away Days\nTeam Building \nParties and BBQ's\nExclusive Ride/ Park Hire\nGala Dinners! \n\nEnquire now: events@thorpe-park.co.uk",
       "Keywords": "event, lakeview, lake view, marquee, event space, corporate event, parties, party",
       "DefaultImage": 9300,
       "Location": "51.405857576622,-0.51379970702362",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 933,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 4535,
@@ -661,7 +729,9 @@
       "VisibleOnMap": true,
       "Category": 464,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 3913,
@@ -675,21 +745,9 @@
       "VisibleOnMap": true,
       "Category": 464,
       "Parent": null,
-      "Classifications": []
-    },
-    {
-      "_id": 3896,
-      "Name": "Lockers (SAW)",
-      "Summary": "Secure your personal belongings in a locker. Lockers will cost £2 and the correct change is needed.",
-      "Keywords": "locker, storage, safe",
-      "DefaultImage": 9363,
-      "Location": "51.402634954669,-0.5118148723526",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 464,
-      "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3861,
@@ -703,7 +761,9 @@
       "VisibleOnMap": true,
       "Category": 464,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 4642,
@@ -713,7 +773,7 @@
       "DefaultImage": null,
       "Location": "51.405195,-0.51301113757324",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": false,
       "Category": 0,
       "Parent": null,
@@ -725,21 +785,23 @@
     {
       "_id": 4663,
       "Name": "Lumber Jump",
-      "Summary": "Spring onto Lumber Jump and bounce high and low, reaching high into the sky!\n\nLumber Jump will close at 2pm.",
+      "Summary": "Spring onto Lumber Jump and bounce high and low, reaching high into the sky!\n\nOpen from 10am - 2pm on FRIGHT NIGHTS dates.",
       "Keywords": "family fun, family friendly, children, kid friendly, kids, drop ride, lumber",
       "DefaultImage": 8287,
       "Location": "51.402189860269,-0.51358513030243",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
       ],
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
@@ -753,7 +815,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -762,8 +824,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
     },
@@ -777,7 +841,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
         58
@@ -786,8 +850,10 @@
       "Length": 750,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
@@ -801,10 +867,10 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        61
+        322
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -812,32 +878,36 @@
     {
       "_id": 4549,
       "Name": "Nitrogenie",
-      "Summary": "NEW FOR FRIGHT NIGHTS 2018! - RIP-CREAM! A perfectly spooky blend of Cookie Crumbs, Whipped Cream & Chocolate Ice Cream\n\nEnjoy the world's best ice creams using the magic of liquid nitrogen!\n\nOpens at peak times only. This is a card only unit.",
+      "Summary": "Enjoy the world's best ice creams using the magic of liquid nitrogen!\n\nOpens at peak times only. This is a card only unit.",
       "Keywords": "ice cream, take away, liquid nitrogen",
-      "DefaultImage": 9014,
+      "DefaultImage": 6673,
       "Location": "51.403555248901,-0.51451317462158",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 928,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        322
+      ],
       "MenuURL": null,
       "AllergyInformationURL": null
     },
     {
-      "_id": 4913,
+      "_id": 7034,
       "Name": "Peckish",
-      "Summary": "Choose from Rollover Hot Dogs, a selection of jacket potatoes and traditional Cornish pasties.\n\nThis is a card only unit.",
-      "Keywords": "Card only, Hot Dog, Jacket Potatoes, Cornish Pasties, Pasties, Hot Drinks, Ice Cream, Chips, Veggie, Vegetarian",
-      "DefaultImage": 7635,
-      "Location": "51.405195,-0.51301113757324",
+      "Summary": "Jacket Potatoes, Pasties, Hotdogs, sweet treats and a range of beverages",
+      "Keywords": "Food, Drink, Snacks, jacket potato, hotdog, angry birds, angry birds land,",
+      "DefaultImage": 10704,
+      "Location": "51.404301510263,-0.51537148150635",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 926,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        315
+      ],
       "MenuURL": null,
       "AllergyInformationURL": null
     },
@@ -851,7 +921,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -860,8 +930,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
     },
@@ -873,7 +945,7 @@
       "DefaultImage": null,
       "Location": "51.405195,-0.51301113757324",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": false,
       "Category": 0,
       "Parent": null,
@@ -882,14 +954,14 @@
     {
       "_id": 3900,
       "Name": "Rocky Express",
-      "Summary": "The whole family can dip and dive on our dizzy train ride, Rocky Express. You’ll be on the edge of your seat as Rocky Express speeds up and down on it’s out of control journey.\n\nRocky Express will close at 2pm",
+      "Summary": "The whole family can dip and dive on our dizzy train ride, Rocky Express. You’ll be on the edge of your seat as Rocky Express speeds up and down on it’s out of control journey.\n\nOpen from 10am - 2pm on FRIGHT NIGHTS dates.",
       "Keywords": "Rocky express, train, runaway train, kids, children, family friendly, fun, disabled access, wheelchair access",
       "DefaultImage": 5688,
       "Location": "51.402068546195,-0.51326326522064",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -898,8 +970,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
     },
@@ -913,31 +987,33 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 918,
       "Parent": null,
       "Classifications": [
-        59
+        121
       ],
       "Inversions": 0,
       "Length": 460,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
     },
     {
       "_id": 3879,
       "Name": "Rush",
-      "Summary": "Swing into action and leave your stomach behind!\n\nRush is currently unavailable.",
+      "Summary": "Swing into action and leave your stomach behind!",
       "Keywords": "Rush, adrenaline, High, swing, thrill seeker, disabled access, wheelchair access, fastrack, fast track",
       "DefaultImage": 5610,
       "Location": "51.404358399643,-0.51236740740967",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -946,8 +1022,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.3 m, then you cannot ride."
     },
@@ -961,7 +1039,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -970,10 +1048,12 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your chest is less than 130 cm, then you can ride."
+      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
     {
       "_id": 3894,
@@ -985,7 +1065,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
         58
@@ -994,8 +1074,10 @@
       "Length": 720,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
     },
@@ -1005,14 +1087,14 @@
       "Summary": "Standing in line might get you peckish…  Get your snacks or drinks here!\n(You must be standing in the SAW queue to buy food from here).",
       "Keywords": "Queue, Queue line, Q, Food, snacks",
       "DefaultImage": 6520,
-      "Location": "51.402362209367,-0.51177329811287",
+      "Location": "51.402368902523,-0.51157481464577",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        61
+        323
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -1029,7 +1111,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        323
+      ]
     },
     {
       "_id": 4640,
@@ -1039,7 +1123,7 @@
       "DefaultImage": null,
       "Location": "51.406018199812,-0.51278046759796",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": false,
       "Category": 0,
       "Parent": null,
@@ -1055,9 +1139,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 934,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 6086,
@@ -1069,9 +1155,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 934,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        320
+      ]
     },
     {
       "_id": 6087,
@@ -1081,25 +1169,29 @@
       "DefaultImage": 9367,
       "Location": "51.405195,-0.51301113757324",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": false,
-      "Category": 522,
+      "Category": 934,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        323
+      ]
     },
     {
       "_id": 4914,
-      "Name": "Sombrero's Burrito Bar",
-      "Summary": "Tuck into a zinging range of delicious burrito fillings with a choice of Mexican chilli orange pork, tinga chicken and vegan beef – OR skip the tortilla entirely with our NEW naked burrito bowl!\n\nThis unit accepts cash and card.",
-      "Keywords": "Burrito, Cash, Card, Sit in, Take away, Mexican, Veggie, Vegetarian, Slush, Alcohol, Beer",
-      "DefaultImage": 7636,
-      "Location": "51.404007022929,-0.5157952705307",
+      "Name": "Sombrero's Street Food",
+      "Summary": "Whether you fancy a mouth-watering burrito or would rather snack on tasty jalapeño poppers and delicious loaded nachos washed down with a refreshing frozen Margarita, Sombrero’s has you covered!\n\nThis unit accepts cash and card.",
+      "Keywords": "Burrito, Cash, Card, Take away, Mexican, Veggie, Vegetarian, Slush, Alcohol, Beer",
+      "DefaultImage": 13801,
+      "Location": "51.403943440188,-0.51597766074372",
       "Featured": false,
-      "WayfindingEnabled": false,
+      "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 925,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        322
+      ],
       "MenuURL": null,
       "AllergyInformationURL": null
     },
@@ -1113,7 +1205,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
         58
@@ -1122,10 +1214,12 @@
       "Length": 400,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
-      "MaximumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": null,
+      "MaximumHeightRequirement": 1.96,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your chest is less than 130 cm, then you can ride."
+      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your height is greater than 1.96 m, then you cannot ride."
     },
     {
       "_id": 3858,
@@ -1137,7 +1231,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -1146,8 +1240,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you cannot ride. If your height is less than 1.3 m, then you must be accompanied by an adult."
     },
@@ -1161,7 +1257,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 918,
       "Parent": null,
       "Classifications": [
         59
@@ -1170,8 +1266,10 @@
       "Length": 142,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
     },
@@ -1187,20 +1285,24 @@
       "VisibleOnMap": true,
       "Category": 533,
       "Parent": null,
-      "Classifications": [],
+      "Classifications": [
+        322
+      ],
       "MinimumHeightRequirement": null,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": 4,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your age is less than 4 years, then you cannot ride."
     },
     {
-      "_id": 3870,
-      "Name": "The Amity Kebab Co.",
-      "Summary": "Get down to Amity Kebab Co where we use authentic methods and recipes to bring you the biggest, freshest and quickest kebab. \n\nOpens at peak times only.",
-      "Keywords": "Amity, Kebab, Chips, take away, pita, fast food",
-      "DefaultImage": 6523,
-      "Location": "51.404632806247,-0.513687054245",
+      "_id": 8513,
+      "Name": "The Cantina",
+      "Summary": "The Cantina infuses bespoke authentic recipes with street food favourites to create out-of-this-world flavourful dishes with a cosmic twist!",
+      "Keywords": "pasta, rice, drinks, cold drinks, garlic bread",
+      "DefaultImage": 13802,
+      "Location": "51.404010369387,-0.51190606745911",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
@@ -1214,18 +1316,18 @@
     },
     {
       "_id": 3919,
-      "Name": "Coffee Shack: Proud To Serve Costa",
+      "Name": "The Coffee Shack: Proud To Serve Costa",
       "Summary": "Surfs up! Grab a brew at the Coffee Shack, where we are proud to serve COSTA Coffee. Indulge in a selection of hot drinks, mouth-watering sandwiches and paninis or treat yourself to a delicious cake.\n\nOpens at peak times only. This is a card only unit.",
       "Keywords": "Costa, Coffee, Take Away, Hot Drinks, Sandwiches, Snacks, Cake, Card only",
       "DefaultImage": 6524,
-      "Location": "51.405093772171,-0.51202408465576",
+      "Location": "51.405157353313,-0.51191679629517",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        60
+        325
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -1242,7 +1344,63 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        321
+      ]
+    },
+    {
+      "_id": 8510,
+      "Name": "The Grill",
+      "Summary": "Head to The Grill and tuck into classic German Bratwurst, Currywurst and Rib Burgers. You’ll also find a fan Thorpe favourite - curly fries!",
+      "Keywords": "bratwurst, currywurst, hotdog, burger, ribs, rib burger, fries, chips, curly fries",
+      "DefaultImage": 13798,
+      "Location": "51.40214635457,-0.51345101985169",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 460,
+      "Parent": null,
+      "Classifications": [
+        60
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 7035,
+      "Name": "Hotdog Hut (Amity)",
+      "Summary": "A delicious range of hotdogs, snack and beverages!",
+      "Keywords": "hotdogs, food, drink, snacks",
+      "DefaultImage": 10701,
+      "Location": "51.404358399643,-0.51394454631043",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 926,
+      "Parent": null,
+      "Classifications": [
+        315
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 7033,
+      "Name": "The Huntsman's Arms",
+      "Summary": "Relax with a range of alcoholic beverages as well as soft drinks and some classic pub snacks at The Huntsman's Arms!",
+      "Keywords": "Drinks, Snacks, Beer, Seating, Bar",
+      "DefaultImage": 10702,
+      "Location": "51.402711925443,-0.51411084326935",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 1064,
+      "Parent": null,
+      "Classifications": [
+        322
+      ],
+      "MenuURL": null,
+      "AllergyInformationURL": null
     },
     {
       "_id": 3847,
@@ -1256,7 +1414,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3912,
@@ -1270,7 +1430,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 6077,
@@ -1282,9 +1444,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 929,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3859,
@@ -1298,7 +1462,9 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 3889,
@@ -1310,7 +1476,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 921,
       "Parent": null,
       "Classifications": [
         58
@@ -1319,8 +1485,10 @@
       "Length": 775,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": 1.96,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your height is greater than 1.96 m, then you cannot ride. If your chest is greater than 130 cm, then you cannot ride."
     },
@@ -1334,10 +1502,10 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 460,
+      "Category": 927,
       "Parent": null,
       "Classifications": [
-        61
+        324
       ],
       "MenuURL": null,
       "AllergyInformationURL": null
@@ -1354,49 +1522,27 @@
       "VisibleOnMap": true,
       "Category": 461,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        324
+      ]
     },
     {
-      "_id": 5934,
-      "Name": "THE WALKING DEAD: Living Nightmare",
-      "Summary": "Nightmares become reality as you find yourself with other survivors at the terrifying mercy of the notorious Saviours. On the brink of imminent death, relive the horror of the story so far in THE WALKING DEAD: Living Nightmare.\n\nOpens at 3pm.",
-      "Keywords": "Walking dead, horror, zombie, walkers, AMC, Living Nightmare, thrill, x, horror maze, live, actors, disabled access, wheelchair access",
-      "DefaultImage": 8919,
-      "Location": "51.403033193356,-0.51342419776154",
+      "_id": 8509,
+      "Name": "The Veggie Box",
+      "Summary": "The Veggie Box is your go to for tasty vegan and vegetarian meals. Pick up freshly made falafel, salads, wraps, burgers and fruit juice.",
+      "Keywords": "vegetarian, veggie, vegan, falafel, salad, wraps, fruit, healthy",
+      "DefaultImage": 13797,
+      "Location": "51.40369914778,-0.5140840211792",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 460,
       "Parent": null,
       "Classifications": [
-        59
+        60
       ],
-      "MinimumHeightRequirement": null,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": 13,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your age is less than 13 years, then you cannot ride."
-    },
-    {
-      "_id": 4780,
-      "Name": "The Walking Dead: The Ride",
-      "Summary": "THORPE PARK Resort is overrun by Walkers and there is but one goal: survive. We will see you at the Safe Zone…For the first time ever, experience The Walking Dead: The Ride. Those who ride…survive!",
-      "Keywords": "Walking dead, horror, zombie, walkers, AMC, the walking dead ride, thrill, x, x no way out, disabled access, wheelchair access",
-      "DefaultImage": 7525,
-      "Location": "51.403408003069,-0.51330081614685",
-      "Featured": false,
-      "WayfindingEnabled": true,
-      "VisibleOnMap": true,
-      "Category": 459,
-      "Parent": null,
-      "Classifications": [
-        58
-      ],
-      "MinimumHeightRequirement": 1.3999999999999999,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": 13,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your age is less than 13 years, then you cannot ride. If your height is less than 1.4 m, then you cannot ride."
+      "MenuURL": null,
+      "AllergyInformationURL": null
     },
     {
       "_id": 6084,
@@ -1408,14 +1554,16 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 522,
+      "Category": 935,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 6080,
-      "Name": "THORPE Shark Hotel",
-      "Summary": "Jawesome THORPE SHARK Hotel breaks in the heart of The Island Like No Other with breakfast and 2nd Day FREE.",
+      "Name": "THORPE Shark Cabins",
+      "Summary": "Jawesome THORPE SHARK Cabin breaks in the heart of The Island Like No Other with breakfast and 2nd Day FREE.",
       "Keywords": "hotel, holiday, overnight, short stay, short break, shark hotel,",
       "DefaultImage": 9298,
       "Location": "51.406008160879,-0.51273755225372",
@@ -1424,7 +1572,9 @@
       "VisibleOnMap": true,
       "Category": 661,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 4534,
@@ -1438,7 +1588,9 @@
       "VisibleOnMap": true,
       "Category": 533,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3855,
@@ -1450,7 +1602,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 918,
       "Parent": null,
       "Classifications": [
         59
@@ -1459,22 +1611,24 @@
       "Length": 422,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
     },
     {
       "_id": 4589,
       "Name": "Timber Tug Boat",
-      "Summary": "All hands on deck, watch out for the twists and turns of Timber Tug Boat.\n\nTimber Tug Boat will close at 2pm.",
+      "Summary": "All hands on deck, watch out for the twists and turns of Timber Tug Boat.\n\nOpen from 10am - 2pm on FRIGHT NIGHTS dates.",
       "Keywords": "timber, tug, boat, ride, kids ride, children, family friendly, fun, spinning, swinging, disabled access, wheelchair access",
       "DefaultImage": 8290,
       "Location": "51.401999104201,-0.51348857077789",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 919,
       "Parent": null,
       "Classifications": [
         121
@@ -1483,8 +1637,10 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult. If your height is less than 0.9 m, then you cannot ride."
     },
@@ -1500,7 +1656,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3915,
@@ -1514,7 +1672,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        325
+      ]
     },
     {
       "_id": 3902,
@@ -1528,7 +1688,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        323
+      ]
     },
     {
       "_id": 3852,
@@ -1542,7 +1704,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        322
+      ]
     },
     {
       "_id": 3869,
@@ -1556,7 +1720,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        314
+      ]
     },
     {
       "_id": 3893,
@@ -1570,7 +1736,9 @@
       "VisibleOnMap": true,
       "Category": 463,
       "Parent": null,
-      "Classifications": []
+      "Classifications": [
+        324
+      ]
     },
     {
       "_id": 3881,
@@ -1582,7 +1750,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -1591,31 +1759,46 @@
       "Length": 0,
       "IsBigSix": true,
       "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride. If your chest is greater than 130 cm, then you cannot ride."
     },
     {
-      "_id": 3908,
-      "Name": "Wet Wet Wet",
-      "Summary": "Opens Summer 2019. Fun water slides for all the family.\n\n\n\n* Dates may change subject to availability.",
-      "Keywords": "wet, water slide, park, play, play area, slides, fun, family friendly, kids, water, splash zone, disabled access",
-      "DefaultImage": 1320,
-      "Location": "51.405211731851,-0.51345638426972",
+      "_id": 7031,
+      "Name": "Wilderness Bar & Kitchen",
+      "Summary": "Head into Wilderness Bar & Kitchen and get your hands on dirty dogs, fries, sides and a range of alcoholic and soft beverages!",
+      "Keywords": "Wilderness Bar & Kitchen, Hotdogs, Fries, Drinks, Food",
+      "DefaultImage": 10703,
+      "Location": "51.402855826974,-0.51431469115448",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 925,
       "Parent": null,
       "Classifications": [
-        59
+        322
       ],
-      "MinimumHeightRequirement": null,
-      "MaximumHeightRequirement": null,
-      "MinimumAgeRequirement": null,
-      "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1 m, then you must be accompanied by an adult."
+      "MenuURL": null,
+      "AllergyInformationURL": null
+    },
+    {
+      "_id": 8514,
+      "Name": "Wilderness Waffles",
+      "Summary": "Satisfy your sweet tooth with a signature Wafflemeister waffle smothered in your favourite toppings.",
+      "Keywords": "waffle",
+      "DefaultImage": 13803,
+      "Location": "51.402962916192,-0.5143897930069",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 460,
+      "Parent": null,
+      "Classifications": [],
+      "MenuURL": null,
+      "AllergyInformationURL": null
     },
     {
       "_id": 3882,
@@ -1627,7 +1810,7 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 459,
+      "Category": 920,
       "Parent": null,
       "Classifications": [
         59
@@ -1635,17 +1818,25 @@
       "Inversions": 0,
       "Length": 0,
       "IsBigSix": true,
-      "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.3999999999999999,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.4 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "If your height is less than 1.1 m, then you cannot ride. If your height is less than 1.4 m, then you must be accompanied by an adult."
     }
   ],
-  "Entrance": [{
+  "Entrance": [
+    {
       "_id": 1640,
       "Location": "51.404623816514,-0.51343381404877",
       "Item": 3907
+    },
+    {
+      "_id": 1606,
+      "Location": "51.403850788667,-0.51424920558929",
+      "Item": 3873
     },
     {
       "_id": 1601,
@@ -1653,14 +1844,24 @@
       "Item": 3868
     },
     {
+      "_id": 1603,
+      "Location": "51.404627162927,-0.51362693309784",
+      "Item": 3870
+    },
+    {
+      "_id": 2657,
+      "Location": "51.404119463767,-0.51512515439788",
+      "Item": 3926
+    },
+    {
       "_id": 1575,
       "Location": "51.404104283004,-0.51603689789772",
       "Item": 3843
     },
     {
-      "_id": 1585,
-      "Location": "51.403001614228,-0.51449194550514",
-      "Item": 3853
+      "_id": 1638,
+      "Location": "51.402465329439,-0.514195561409",
+      "Item": 3905
     },
     {
       "_id": 1597,
@@ -1678,18 +1879,33 @@
       "Item": 3863
     },
     {
-      "_id": 2559,
-      "Location": "51.404346321113,-0.51324277146739",
-      "Item": 6079
-    },
-    {
-      "_id": 1599,
-      "Location": "51.403987993697,-0.51499485969543",
+      "_id": 2625,
+      "Location": "51.40469769522,-0.51364099568707",
       "Item": 3866
     },
     {
+      "_id": 2626,
+      "Location": "51.403124856785,-0.51498746461255",
+      "Item": 6263
+    },
+    {
+      "_id": 1598,
+      "Location": "51.404359449153,-0.51284372806549",
+      "Item": 3865
+    },
+    {
+      "_id": 2627,
+      "Location": "51.40427269953,-0.51453148908001",
+      "Item": 6264
+    },
+    {
       "_id": 1577,
-      "Location": "51.403148024739,-0.51501631736755",
+      "Location": "51.405192703121,-0.51229119300842",
+      "Item": 3845
+    },
+    {
+      "_id": 2624,
+      "Location": "51.405166189829,-0.51224364860934",
       "Item": 3845
     },
     {
@@ -1723,29 +1939,14 @@
       "Item": 3906
     },
     {
-      "_id": 2554,
-      "Location": "51.403456161293,-0.51435416991842",
-      "Item": 4528
-    },
-    {
       "_id": 1573,
       "Location": "51.403920227849,-0.51504984498024",
       "Item": 3841
     },
     {
-      "_id": 1606,
-      "Location": "51.403850788667,-0.51424920558929",
-      "Item": 3873
-    },
-    {
       "_id": 1605,
       "Location": "51.404142767171,-0.51301002502441",
       "Item": 3872
-    },
-    {
-      "_id": 1652,
-      "Location": "51.405055501704,-0.51209807395935",
-      "Item": 3920
     },
     {
       "_id": 1592,
@@ -1758,14 +1959,14 @@
       "Item": 3856
     },
     {
-      "_id": 1598,
-      "Location": "51.404359449153,-0.51283836364746",
-      "Item": 3865
-    },
-    {
       "_id": 1580,
       "Location": "51.403847442197,-0.51608920097351",
       "Item": 3848
+    },
+    {
+      "_id": 1652,
+      "Location": "51.405055501704,-0.51209807395935",
+      "Item": 3920
     },
     {
       "_id": 1650,
@@ -1774,8 +1975,13 @@
     },
     {
       "_id": 1609,
-      "Location": "51.404085040909,-0.51476418972015",
+      "Location": "51.404028151189,-0.51450133323669",
       "Item": 3876
+    },
+    {
+      "_id": 2658,
+      "Location": "51.404320250322,-0.51502859487334",
+      "Item": 4527
     },
     {
       "_id": 2561,
@@ -1788,11 +1994,6 @@
       "Item": 3913
     },
     {
-      "_id": 1629,
-      "Location": "51.402652737007,-0.51180303096771",
-      "Item": 3896
-    },
-    {
       "_id": 1593,
       "Location": "51.404081694457,-0.51366448402405",
       "Item": 3861
@@ -1801,6 +2002,11 @@
       "_id": 1594,
       "Location": "51.404085040909,-0.51366448402405",
       "Item": 3861
+    },
+    {
+      "_id": 2656,
+      "Location": "51.402101510209,-0.51354801549712",
+      "Item": 4663
     },
     {
       "_id": 1643,
@@ -1828,8 +2034,8 @@
       "Item": 3900
     },
     {
-      "_id": 1574,
-      "Location": "51.403952019247,-0.5165921151638",
+      "_id": 2659,
+      "Location": "51.403895251124,-0.51661109819213",
       "Item": 3842
     },
     {
@@ -1849,7 +2055,7 @@
     },
     {
       "_id": 1630,
-      "Location": "51.402365768857,-0.51176145672798",
+      "Location": "51.402365768857,-0.51157906651497",
       "Item": 3897
     },
     {
@@ -1873,8 +2079,8 @@
       "Item": 3854
     },
     {
-      "_id": 1590,
-      "Location": "51.404336024124,-0.51582634449005",
+      "_id": 2660,
+      "Location": "51.404270053772,-0.51582789315978",
       "Item": 3858
     },
     {
@@ -1888,14 +2094,14 @@
       "Item": 5819
     },
     {
-      "_id": 1603,
-      "Location": "51.404627162927,-0.51362693309784",
-      "Item": 3870
-    },
-    {
       "_id": 1651,
       "Location": "51.405099841231,-0.51206588745117",
       "Item": 3919
+    },
+    {
+      "_id": 2688,
+      "Location": "51.402642955035,-0.51417806613279",
+      "Item": 7033
     },
     {
       "_id": 1579,
@@ -1918,8 +2124,8 @@
       "Item": 3859
     },
     {
-      "_id": 1622,
-      "Location": "51.405661192659,-0.51573514938354",
+      "_id": 2661,
+      "Location": "51.405792657943,-0.5159566391925",
       "Item": 3889
     },
     {
@@ -1931,11 +2137,6 @@
       "_id": 1623,
       "Location": "51.405570841479,-0.5151692032814",
       "Item": 3890
-    },
-    {
-      "_id": 2526,
-      "Location": "51.402599481119,-0.51365580628078",
-      "Item": 5934
     },
     {
       "_id": 2560,
@@ -1988,14 +2189,9 @@
       "Item": 3881
     },
     {
-      "_id": 1879,
-      "Location": "51.404800444014,-0.51227786578238",
-      "Item": 3908
-    },
-    {
-      "_id": 2556,
-      "Location": "51.405182921692,-0.51355487163198",
-      "Item": 3908
+      "_id": 2686,
+      "Location": "51.402890599624,-0.51445701587033",
+      "Item": 7031
     },
     {
       "_id": 1615,
@@ -2003,7 +2199,868 @@
       "Item": 3882
     }
   ],
-  "Image": [{
+  "QueueLine": [
+    {
+      "_id": 40,
+      "Item": 3840,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 47,
+      "Item": 3841,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 51,
+      "Item": 3842,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1055,
+      "Item": 3843,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1937,
+      "Item": 3844,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2066,
+      "Item": 3845,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1950,
+      "Item": 3847,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 701,
+      "Item": 3848,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1971,
+      "Item": 3849,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1052,
+      "Item": 3850,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1939,
+      "Item": 3852,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 707,
+      "Item": 3853,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 44,
+      "Item": 3854,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 55,
+      "Item": 3855,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 42,
+      "Item": 3856,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 54,
+      "Item": 3857,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 61,
+      "Item": 3858,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1951,
+      "Item": 3859,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1948,
+      "Item": 3860,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1931,
+      "Item": 3861,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1938,
+      "Item": 3863,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1928,
+      "Item": 3864,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2065,
+      "Item": 3865,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2064,
+      "Item": 3866,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 706,
+      "Item": 3868,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1940,
+      "Item": 3869,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 703,
+      "Item": 3870,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 704,
+      "Item": 3872,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 583,
+      "Item": 3873,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1048,
+      "Item": 3876,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 41,
+      "Item": 3877,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 52,
+      "Item": 3879,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 53,
+      "Item": 3880,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 56,
+      "Item": 3881,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 57,
+      "Item": 3882,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 50,
+      "Item": 3883,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 362,
+      "Item": 3884,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2053,
+      "Item": 3885,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1953,
+      "Item": 3886,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 702,
+      "Item": 3887,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1952,
+      "Item": 3888,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 45,
+      "Item": 3889,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 365,
+      "Item": 3890,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1970,
+      "Item": 3891,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1957,
+      "Item": 3893,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 43,
+      "Item": 3894,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 363,
+      "Item": 3895,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1932,
+      "Item": 3896,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1969,
+      "Item": 3897,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 60,
+      "Item": 3900,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1935,
+      "Item": 3902,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2901,
+      "Item": 3905,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 59,
+      "Item": 3906,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1775,
+      "Item": 3907,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 466,
+      "Item": 3908,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 586,
+      "Item": 3909,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 58,
+      "Item": 3910,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 364,
+      "Item": 3912,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1930,
+      "Item": 3913,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1934,
+      "Item": 3915,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1926,
+      "Item": 3916,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1051,
+      "Item": 3917,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1936,
+      "Item": 3918,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 700,
+      "Item": 3919,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 580,
+      "Item": 3920,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1925,
+      "Item": 3926,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 62,
+      "Item": 4527,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 48,
+      "Item": 4528,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 49,
+      "Item": 4529,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 582,
+      "Item": 4530,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1959,
+      "Item": 4531,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1949,
+      "Item": 4532,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1567,
+      "Item": 4534,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1933,
+      "Item": 4535,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1927,
+      "Item": 4538,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1929,
+      "Item": 4540,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 705,
+      "Item": 4549,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 450,
+      "Item": 4589,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 288,
+      "Item": 4640,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 289,
+      "Item": 4641,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 291,
+      "Item": 4642,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 290,
+      "Item": 4643,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 361,
+      "Item": 4663,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 554,
+      "Item": 4780,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 699,
+      "Item": 4914,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1566,
+      "Item": 5819,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1730,
+      "Item": 5934,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1956,
+      "Item": 6077,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1958,
+      "Item": 6078,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1960,
+      "Item": 6079,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1961,
+      "Item": 6080,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1962,
+      "Item": 6081,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1965,
+      "Item": 6084,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1967,
+      "Item": 6086,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 1968,
+      "Item": 6087,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2063,
+      "Item": 6178,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2149,
+      "Item": 6263,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2150,
+      "Item": 6264,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2164,
+      "Item": 6278,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2225,
+      "Item": 6341,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2226,
+      "Item": 6342,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2797,
+      "Item": 6928,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2813,
+      "Item": 6944,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2814,
+      "Item": 6945,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2815,
+      "Item": 6946,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2816,
+      "Item": 6947,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2817,
+      "Item": 6948,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2818,
+      "Item": 6949,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2895,
+      "Item": 7031,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2896,
+      "Item": 7032,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2897,
+      "Item": 7033,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2898,
+      "Item": 7034,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2899,
+      "Item": 7035,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2900,
+      "Item": 7036,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 2935,
+      "Item": 7071,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4449,
+      "Item": 8509,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4450,
+      "Item": 8510,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4451,
+      "Item": 8511,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4452,
+      "Item": 8512,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4453,
+      "Item": 8513,
+      "Type": "physical_main"
+    },
+    {
+      "_id": 4454,
+      "Item": 8514,
+      "Type": "physical_main"
+    }
+  ],
+  "InfoGroup": [
+    {
+      "_id": 31,
+      "Name": "GUEST SERVICES"
+    },
+    {
+      "_id": 32,
+      "Name": "LOOKING FOR SOMETHING MORE?"
+    },
+    {
+      "_id": 33,
+      "Name": "CONTACT US"
+    },
+    {
+      "_id": 43,
+      "Name": "PRIVACY & LEGAL"
+    }
+  ],
+  "InfoItem": [
+    {
+      "_id": 200,
+      "Group": 31,
+      "Name": {
+        "en-GB": "Opening Hours"
+      },
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/resort-info/opening-times-and-travel"
+      },
+      "Category": 31
+    },
+    {
+      "_id": 63,
+      "Group": 31,
+      "Name": {
+        "en-GB": "Car Parking"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "08c02838-0ff8-5ad7-9ac9-66bac02971eb-en-GB.html"
+      },
+      "Category": 31
+    },
+    {
+      "_id": 92,
+      "Group": 31,
+      "Name": {
+        "en-GB": "Rentals"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "2c6a2f46-907d-598d-bc9d-71d8d326865f-en-GB.html"
+      },
+      "Category": 31
+    },
+    {
+      "_id": 93,
+      "Group": 31,
+      "Name": {
+        "en-GB": "Ride Access Passes"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "3ca74f2f-f913-5d54-b6ae-be56bdb405f0-en-GB.html"
+      },
+      "Category": 31
+    },
+    {
+      "_id": 229,
+      "Group": 31,
+      "Name": {
+        "en-GB": "Accessibility"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "69ef3db5-fda6-5a05-ae2f-3416872850d9-en-GB.html"
+      },
+      "Category": 31
+    },
+    {
+      "_id": 94,
+      "Group": 32,
+      "Name": {
+        "en-GB": "Upgrade Your Ticket"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "5eee0865-3eef-5e7f-8e4d-555ca08738e1-en-GB.html"
+      },
+      "Category": 32
+    },
+    {
+      "_id": 95,
+      "Group": 32,
+      "Name": {
+        "en-GB": "THORPE SHARK Cabins"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "02939ee0-163d-59b9-a896-e0b63cfee862-en-GB.html"
+      },
+      "Category": 32
+    },
+    {
+      "_id": 96,
+      "Group": 33,
+      "Name": {
+        "en-GB": "Facebook"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "f4d9fbfc-24ec-547d-b66a-28079c596a60-en-GB.html"
+      },
+      "Category": 33
+    },
+    {
+      "_id": 97,
+      "Group": 33,
+      "Name": {
+        "en-GB": "Twitter"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "b5033382-9d21-53ce-b630-b4e3a1146d51-en-GB.html"
+      },
+      "Category": 33
+    },
+    {
+      "_id": 98,
+      "Group": 33,
+      "Name": {
+        "en-GB": "Email Us"
+      },
+      "Content": "d04cb4ff-226f-495d-bd70-59040be9a984",
+      "Path": {
+        "en-GB": "3686fa2d-1003-5130-a1a9-6f0a4e63df4d-en-GB.html"
+      },
+      "Category": 33
+    },
+    {
+      "_id": 99,
+      "Group": 33,
+      "Name": {
+        "en-GB": "Island FAQs"
+      },
+      "URL": {
+        "en-GB": "https://support.thorpepark.com/hc/en-us"
+      },
+      "Category": 33
+    },
+    {
+      "_id": 100,
+      "Group": 33,
+      "Name": {
+        "en-GB": "Short Breaks FAQs"
+      },
+      "URL": {
+        "en-GB": "https://help.thorpebreaks.co.uk/hc/en-gb"
+      },
+      "Category": 33
+    },
+    {
+      "_id": 101,
+      "Group": 43,
+      "Name": {
+        "en-GB": "Terms & Conditions"
+      },
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/terms-conditions"
+      },
+      "Category": 43
+    },
+    {
+      "_id": 300,
+      "Group": 43,
+      "Name": {
+        "en-GB": "Privacy Policy"
+      },
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/privacy-policy"
+      },
+      "Category": 43
+    }
+  ],
+  "InfoCategory": [
+    {
+      "_id": 31,
+      "Name": "GUEST SERVICES"
+    },
+    {
+      "_id": 32,
+      "Name": "LOOKING FOR SOMETHING MORE?"
+    },
+    {
+      "_id": 33,
+      "Name": "CONTACT US"
+    },
+    {
+      "_id": 43,
+      "Name": "PRIVACY & LEGAL"
+    }
+  ],
+  "ShopItem": [
+    {
+      "_id": 100,
+      "Name": "Day Tickets",
+      "Summary": "Book your journey to an Island Like No Other",
+      "Image": "3846d90b-9d58-572e-b388-8d82c686d911",
+      "Action": "BOOK NOW",
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/tickets-passes/day-passes?utm_source=Thorpe_Park&utm_medium=app&utm_campaign=day_tickets"
+      }
+    },
+    {
+      "_id": 9,
+      "Name": "Season & Annual Passes",
+      "Summary": "Visit over and over again for the season!",
+      "Image": "8e4b1cac-5e54-5984-ad68-d115d949bf23",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/tickets-passes/annual-passes?utm_source=Thorpe_Park&utm_medium=app&utm_campaign=season_annual"
+      }
+    },
+    {
+      "_id": 11,
+      "Name": "Short Breaks",
+      "Summary": "An Island Getaway Like No Other",
+      "Image": "e7e60eed-982c-540d-bb56-1fe54e6a5773",
+      "Action": "BOOK NOW",
+      "URL": {
+        "en-GB": "https://www.thorpebreaks.co.uk/?utm_source=App&utm_medium=App%20Purchase&utm_campaign=ShortBreaks"
+      }
+    },
+    {
+      "_id": 13,
+      "Name": "Meal Deals",
+      "Summary": "Save money when you buy your Meal Deal online",
+      "Image": "7ffd729a-1994-59a0-82e0-b6cf41f6c9ce",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/tickets-passes/day-passes?package=42815&utm_source=Thorpe_Park&utm_medium=app&utm_campaign=meal_deal"
+      }
+    },
+    {
+      "_id": 14,
+      "Name": "Photos",
+      "Summary": "Enjoy unlimited photos of your day with a Digipass",
+      "Image": "b03f30e9-c57c-58f4-82db-f4097c2626b9",
+      "Action": "BUY NOW",
+      "URL": {
+        "en-GB": "https://www.thorpepark.com/tickets-passes/photos?utm_source=Thorpe_Park&utm_medium=app&utm_campaign=photos"
+      }
+    }
+  ],
+  "Image": [
+    {
       "_id": 6459,
       "Item": 3907,
       "Image": "c6499c90-b4c4-5660-8219-a59a4a717e24"
@@ -2019,6 +3076,11 @@
       "Image": "32a63bc7-693e-5bd1-be96-ccaa46490c47"
     },
     {
+      "_id": 6500,
+      "Item": 3873,
+      "Image": "72cea002-4526-58af-aa03-d4a00df536ec"
+    },
+    {
       "_id": 6418,
       "Item": 3868,
       "Image": "43eb523e-b6c4-58e6-a80b-384658375be4"
@@ -2027,6 +3089,11 @@
       "_id": 6679,
       "Item": 3868,
       "Image": "a8607017-2218-582b-a332-c2e1b9f82769"
+    },
+    {
+      "_id": 6523,
+      "Item": 3870,
+      "Image": "93dc5b1f-6675-5e87-a6de-41e0f4d5e99e"
     },
     {
       "_id": 6442,
@@ -2044,14 +3111,24 @@
       "Image": "17d2d116-d321-5b1b-8330-ca34bdd40ad6"
     },
     {
+      "_id": 10568,
+      "Item": 6928,
+      "Image": "e1299d64-9f5d-5c86-9097-ae6fa9d5ff76"
+    },
+    {
+      "_id": 9846,
+      "Item": 6341,
+      "Image": "d66bba42-661c-5bc2-b889-ae3b996dd1dc"
+    },
+    {
       "_id": 6508,
       "Item": 3843,
       "Image": "2bf3e766-296b-57f3-887f-a8039e4930eb"
     },
     {
-      "_id": 6509,
+      "_id": 10784,
       "Item": 3905,
-      "Image": "377a122e-abb0-5e50-b868-7e6b8165f35e"
+      "Image": "c7ac8695-f415-56bf-9ac6-50e2bdef2fff"
     },
     {
       "_id": 6511,
@@ -2084,19 +3161,44 @@
       "Image": "03830695-ce87-5085-a2fd-3dbfc312d411"
     },
     {
+      "_id": 13799,
+      "Item": 8511,
+      "Image": "b6d9c2df-2f0a-5882-ba01-c3fd9cc3adb6"
+    },
+    {
+      "_id": 13800,
+      "Item": 8512,
+      "Image": "15ba910b-1e5d-548e-a4fc-c8a16181a136"
+    },
+    {
+      "_id": 9673,
+      "Item": 3866,
+      "Image": "cc483519-8bd0-5d28-bbf7-0d63c34f2666"
+    },
+    {
+      "_id": 9679,
+      "Item": 6263,
+      "Image": "cf36aee4-19b3-584a-af07-d575d322b73d"
+    },
+    {
+      "_id": 9678,
+      "Item": 3865,
+      "Image": "d0c837a1-e247-5f52-bacd-67eb728c5ed9"
+    },
+    {
+      "_id": 9680,
+      "Item": 6264,
+      "Image": "234ffef9-91d7-5b85-aa8d-7dc350c2b10c"
+    },
+    {
+      "_id": 9675,
+      "Item": 3845,
+      "Image": "b194100c-f22d-51a5-a790-30b2baae9f69"
+    },
+    {
       "_id": 6527,
       "Item": 4530,
       "Image": "06598a4c-c989-5d32-9b76-256ab90088c4"
-    },
-    {
-      "_id": 6513,
-      "Item": 3866,
-      "Image": "29bcdfc1-9398-5707-93a8-474a90c847a8"
-    },
-    {
-      "_id": 6514,
-      "Item": 3845,
-      "Image": "6b16853c-78e8-5d60-8f36-6a6d36506b98"
     },
     {
       "_id": 6444,
@@ -2132,6 +3234,16 @@
       "_id": 6516,
       "Item": 3886,
       "Image": "ea87c9c3-6ac1-5a20-b36a-39ad7c2e77b7"
+    },
+    {
+      "_id": 10569,
+      "Item": 6947,
+      "Image": "8e6d407f-e25b-55fe-815e-ed4028002696"
+    },
+    {
+      "_id": 10570,
+      "Item": 6945,
+      "Image": "fa39400f-df1d-56e6-ae90-0f7ca4f6963b"
     },
     {
       "_id": 5686,
@@ -2174,11 +3286,6 @@
       "Image": "44191001-53aa-537b-8906-7f4f6cd36e65"
     },
     {
-      "_id": 6500,
-      "Item": 3873,
-      "Image": "72cea002-4526-58af-aa03-d4a00df536ec"
-    },
-    {
       "_id": 6521,
       "Item": 3872,
       "Image": "9fbfc1ba-1c23-5c36-8572-a74bbaa312cf"
@@ -2192,11 +3299,6 @@
       "_id": 6532,
       "Item": 3909,
       "Image": "b218508f-3b2f-5a18-8a30-3cf82cdf8cc8"
-    },
-    {
-      "_id": 6419,
-      "Item": 3920,
-      "Image": "17e0c064-d038-5f98-ac60-06f6a078b3d9"
     },
     {
       "_id": 9358,
@@ -2214,9 +3316,9 @@
       "Image": "716a724f-0eed-584c-abdf-e7c3af97f400"
     },
     {
-      "_id": 6512,
-      "Item": 3865,
-      "Image": "a064b1aa-af4e-5735-ae4f-222e0caa289f"
+      "_id": 9716,
+      "Item": 6278,
+      "Image": "6354df44-d94c-546e-806f-8ca5f497a251"
     },
     {
       "_id": 6498,
@@ -2244,6 +3346,11 @@
       "Image": "735fc2f4-ea3a-54b7-978d-d3da061fa7d9"
     },
     {
+      "_id": 6419,
+      "Item": 3920,
+      "Image": "17e0c064-d038-5f98-ac60-06f6a078b3d9"
+    },
+    {
       "_id": 9359,
       "Item": 6078,
       "Image": "f03b9a51-87b5-5de8-b0fb-4707aec22223"
@@ -2259,14 +3366,14 @@
       "Image": "c744ab5d-4b73-5af1-a8dc-76990cbed543"
     },
     {
+      "_id": 9847,
+      "Item": 6342,
+      "Image": "ccc0cceb-5697-5290-a1e1-d9a25eda0043"
+    },
+    {
       "_id": 1186,
       "Item": 3876,
       "Image": "d7cdf4c0-d895-5e5c-bb7d-3b67315de3aa"
-    },
-    {
-      "_id": 1183,
-      "Item": 3876,
-      "Image": "31d73845-96b8-52cb-93c5-da6da4ea7000"
     },
     {
       "_id": 1184,
@@ -2274,9 +3381,9 @@
       "Image": "6990f925-2098-5d3f-a4a0-352592e67396"
     },
     {
-      "_id": 1185,
+      "_id": 9631,
       "Item": 3876,
-      "Image": "13b642a8-6365-5001-b993-5c24151f6934"
+      "Image": "4fae3763-e9a9-5f27-bd83-96e5b9d02be5"
     },
     {
       "_id": 6494,
@@ -2364,14 +3471,14 @@
       "Image": "4115e239-07fe-54c1-8363-acef4f41844f"
     },
     {
-      "_id": 9014,
-      "Item": 4549,
-      "Image": "604e85cc-509e-5e62-ae48-b2149bb76148"
+      "_id": 10704,
+      "Item": 7034,
+      "Image": "27a3ead6-b7c0-56a5-b920-8ff518ea8e2a"
     },
     {
-      "_id": 7635,
-      "Item": 4913,
-      "Image": "41b11c2e-c098-5d69-9783-769db815156e"
+      "_id": 10571,
+      "Item": 6946,
+      "Image": "a8f06a86-3d55-532a-b5e9-75738a63dd6f"
     },
     {
       "_id": 6462,
@@ -2449,6 +3556,11 @@
       "Image": "2fae5aee-2c0b-5f51-93ef-e5eb94b2177b"
     },
     {
+      "_id": 10572,
+      "Item": 6948,
+      "Image": "9e02d332-3fbc-53c2-a550-a904a881b090"
+    },
+    {
       "_id": 9382,
       "Item": 6178,
       "Image": "74cb023a-4f7d-59d6-8dbe-1dc13e5d0898"
@@ -2464,9 +3576,9 @@
       "Image": "0fa8da65-a370-5d7b-9e3c-14112778578e"
     },
     {
-      "_id": 7636,
+      "_id": 13801,
       "Item": 4914,
-      "Image": "22593f3c-5b15-55b3-8984-5e245516e538"
+      "Image": "4e21ce4e-3e40-5285-bcec-c68185325c83"
     },
     {
       "_id": 6475,
@@ -2519,9 +3631,14 @@
       "Image": "92728e0c-6553-5b98-9f50-3811ebfd3bd4"
     },
     {
-      "_id": 6523,
-      "Item": 3870,
-      "Image": "93dc5b1f-6675-5e87-a6de-41e0f4d5e99e"
+      "_id": 10573,
+      "Item": 6949,
+      "Image": "222ddc7d-dfc4-531e-b51f-9fb1576bb402"
+    },
+    {
+      "_id": 13802,
+      "Item": 8513,
+      "Image": "2d1adf0f-a8aa-56d0-b457-b10a673be914"
     },
     {
       "_id": 6524,
@@ -2529,9 +3646,34 @@
       "Image": "2106172d-80a2-5d35-828f-e9955869e2bf"
     },
     {
+      "_id": 10706,
+      "Item": 7032,
+      "Image": "e94c02ac-940a-5d1c-a596-ff93f0793995"
+    },
+    {
       "_id": 6539,
       "Item": 4532,
       "Image": "9fea9d7b-6411-5df3-8fdc-46e0c30cab49"
+    },
+    {
+      "_id": 10705,
+      "Item": 7036,
+      "Image": "5f05575d-daeb-5700-824d-a713ba48a81e"
+    },
+    {
+      "_id": 13798,
+      "Item": 8510,
+      "Image": "116373c0-f9cd-512f-972f-d2ae3d419e58"
+    },
+    {
+      "_id": 10701,
+      "Item": 7035,
+      "Image": "1d8b97e0-881c-5fc4-ae63-29114fe69732"
+    },
+    {
+      "_id": 10702,
+      "Item": 7033,
+      "Image": "3825cb5b-58f5-55c9-9f92-0a8763345cd4"
     },
     {
       "_id": 6534,
@@ -2589,6 +3731,16 @@
       "Image": "899a7121-8aee-561e-87f3-662b9cc31c25"
     },
     {
+      "_id": 13797,
+      "Item": 8509,
+      "Image": "6ec65883-633f-5305-807e-c0a4b0d96a00"
+    },
+    {
+      "_id": 10574,
+      "Item": 6944,
+      "Image": "9f206a9d-9d18-5e69-92d7-38906ce7f8a1"
+    },
+    {
       "_id": 8919,
       "Item": 5934,
       "Image": "ef38723a-debf-5b98-be86-1790c7aed867"
@@ -2597,6 +3749,11 @@
       "_id": 8920,
       "Item": 5934,
       "Image": "3db0dd45-605f-5604-ae4f-f970bb0d3273"
+    },
+    {
+      "_id": 10575,
+      "Item": 5934,
+      "Image": "6226c4ce-e27d-5a05-b1df-bffc5faf971c"
     },
     {
       "_id": 7525,
@@ -2699,25 +3856,31 @@
       "Image": "38c550ac-3f8a-5ce7-b387-7f30162dca4b"
     },
     {
+      "_id": 10703,
+      "Item": 7031,
+      "Image": "82bf98b2-0922-5ba2-a832-62f69fe1e507"
+    },
+    {
+      "_id": 13803,
+      "Item": 8514,
+      "Image": "7e50f90a-1c5a-58c5-b329-7884493a141c"
+    },
+    {
       "_id": 6492,
       "Item": 3882,
       "Image": "fd5caeb4-ac54-5561-aea4-c446d66a70d5"
     }
   ],
-  "Offer": [{
-      "_id": 81,
-      "Title": "Unlimited drink re-fills all day!",
-      "Summary": "Get unlimited drink re-fills all over the Island for only £7!",
-      "Image": "c81353f3-c649-5b5e-baa3-33f79cce4737",
-      "Description": "Get unlimited drink re-fills all over the Island for only £7!\navailable at Colossus Hotdogs, Amity Bites, Donut Factory, Amity Kebabs",
-      "TermsAndConditions": "9e501679-ffc4-5f4a-a740-1b567f1e9688",
-      "ShowOnResort": true,
-      "ShowOffResort": false,
-      "Resort": 43,
-      "ActionCode": null,
-      "ActionCodeDisplayFormat": "text",
-      "ActionTitle": null
-    },
+  "Feature": [
+    {
+      "_id": 395,
+      "Title": "We’re ready to welcome you back!",
+      "Summary": "In line with the latest Government guidance, we will reopen from 4th July. Please remember to bring a mask.",
+      "Image": "e680d70b-0f76-5efe-a8fc-72923266f83b",
+      "URL": "https://www.thorpepark.com/about-thorpe-park/coronavirus/"
+    }
+  ],
+  "Offer": [
     {
       "_id": 85,
       "Title": "All you can eat pizza and pasta for £20!",
@@ -2726,20 +3889,6 @@
       "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2017-10-14 00:00:00\",\"end\":\"2017-10-15 00:00:00\"}",
       "Description": "Get all you can eat at Inferno's Pizza & Pasta in the Jungle for only £20 after 3pm for 2 people!",
       "TermsAndConditions": "eca26e14-6595-5361-8962-dd96da501b51",
-      "ShowOnResort": true,
-      "ShowOffResort": false,
-      "Resort": 43,
-      "ActionCode": null,
-      "ActionCodeDisplayFormat": "text",
-      "ActionTitle": null
-    },
-    {
-      "_id": 86,
-      "Title": "Get 3 for 2 on keyrings and magnets!",
-      "Summary": "Buy 2 keyrings or magnets and get the 3rd one completely FREE!",
-      "Image": "148fe85b-416d-5b52-87c5-3f60a73913a0",
-      "Description": "Buy 2 keyrings or magnets and get the 3rd one completely FREE!",
-      "TermsAndConditions": "14647694-1946-510f-8069-6b2e738a855c",
       "ShowOnResort": true,
       "ShowOffResort": false,
       "Resort": 43,
@@ -2793,7 +3942,8 @@
       "ActionTitle": null
     }
   ],
-  "Category": [{
+  "Category": [
+    {
       "_id": 459,
       "Name": "Attractions",
       "Icon": "56122d0c-f9bc-5a64-8b6f-f25de6dc0363",
@@ -2870,9 +4020,106 @@
       "Name": "Hotels",
       "Icon": "0b1936a5-3882-5abc-822c-4052cefe9b66",
       "Parent": null
+    },
+    {
+      "_id": 918,
+      "Name": "Water Rides",
+      "Icon": "d65e8349-cfc1-5850-8516-b7e9124d9ebb",
+      "Parent": 459
+    },
+    {
+      "_id": 919,
+      "Name": "Family Fun",
+      "Icon": "1fe82a2f-9067-5dfe-a61e-f14b9651d170",
+      "Parent": 459
+    },
+    {
+      "_id": 920,
+      "Name": "Thrill Rides",
+      "Icon": "6cf8e8e0-f786-58cd-b16c-7a422f42025c",
+      "Parent": 459
+    },
+    {
+      "_id": 921,
+      "Name": "Coasters",
+      "Icon": "f3453102-5d19-54bb-93dc-19ffd21a2986",
+      "Parent": 459
+    },
+    {
+      "_id": 925,
+      "Name": "Restaurant",
+      "Icon": "f8c0cff3-6639-5a0d-a967-e2f152f7242d",
+      "Parent": 460
+    },
+    {
+      "_id": 926,
+      "Name": "Fast Food",
+      "Icon": "51fd7124-f447-5347-a82c-80e68227c7c0",
+      "Parent": 460
+    },
+    {
+      "_id": 927,
+      "Name": "Snacks",
+      "Icon": "95923d21-c681-5827-89b9-1bb2c2655c85",
+      "Parent": 460
+    },
+    {
+      "_id": 928,
+      "Name": "Sweet Treats",
+      "Icon": "a3b386be-a2e2-5075-832e-2b2b6f46e667",
+      "Parent": 460
+    },
+    {
+      "_id": 929,
+      "Name": "Sales And Information",
+      "Icon": "2428d6fb-a449-53ec-88f8-b5b6973f64b5",
+      "Parent": 522
+    },
+    {
+      "_id": 930,
+      "Name": "First Aid",
+      "Icon": "14f213d9-fcd0-5af7-aaf8-1f1c2d597251",
+      "Parent": 522
+    },
+    {
+      "_id": 931,
+      "Name": "Disabled Access Facility",
+      "Icon": "0ef4b1ad-4d22-55e2-8428-37b2b0db7725",
+      "Parent": 522
+    },
+    {
+      "_id": 932,
+      "Name": "Guest Services",
+      "Icon": "d9c32df1-bd25-5b81-9a88-901223958e4b",
+      "Parent": 522
+    },
+    {
+      "_id": 933,
+      "Name": "Events Space",
+      "Icon": "7cfc69c7-fcd1-5ba4-86fb-2e30d11741e2",
+      "Parent": null
+    },
+    {
+      "_id": 934,
+      "Name": "Smoking Area",
+      "Icon": "95c5ad15-5d3e-59d8-99ad-5d5f3aa6500c",
+      "Parent": 522
+    },
+    {
+      "_id": 935,
+      "Name": "Bus Stop",
+      "Icon": "17245396-18a1-59f6-9c45-c55173193857",
+      "Parent": 522
+    },
+    {
+      "_id": 1064,
+      "Name": "Bar",
+      "Icon": "16ba3603-d771-5dc5-a264-6ec2d501f24f",
+      "Parent": 460
     }
   ],
-  "Classification": [{
+  "Classification": [
+    {
       "_id": 58,
       "Name": "Coasters",
       "Icon": "b4240af9-5a38-515f-ad1d-e56c96425370"
@@ -2896,10 +4143,50 @@
       "_id": 121,
       "Name": "Family Fun",
       "Icon": "263d9da2-54b5-5c25-97a5-29735fcb811d"
+    },
+    {
+      "_id": 314,
+      "Name": "Amity",
+      "Icon": null
+    },
+    {
+      "_id": 315,
+      "Name": "Amity",
+      "Icon": null
+    },
+    {
+      "_id": 320,
+      "Name": "Lost City",
+      "Icon": null
+    },
+    {
+      "_id": 321,
+      "Name": "The Dock Yard",
+      "Icon": null
+    },
+    {
+      "_id": 322,
+      "Name": "The Jungle",
+      "Icon": null
+    },
+    {
+      "_id": 323,
+      "Name": "Old Town",
+      "Icon": null
+    },
+    {
+      "_id": 324,
+      "Name": "Swarm Island",
+      "Icon": null
+    },
+    {
+      "_id": 325,
+      "Name": "Port And Basecamp",
+      "Icon": null
     }
   ],
-  "Feature": [],
-  "FeedbackReason": [{
+  "FeedbackReason": [
+    {
       "_id": 33,
       "Reason": "Car Parking"
     },
@@ -2936,219 +4223,41 @@
       "Reason": "Ride availability"
     }
   ],
-  "Configuration": [{
-    "_id": 1,
-    "NavigationBarColor": "ff152348",
-    "StatusBarColor": "ff21293c",
-    "SelectedIconColor": "ff8fbad7",
-    "Beacons": "{\"type\":\"ibeacon\",\"uuid\":\"5c068c0f-50db-40e3-a106-979d294b5336\"}",
-    "ShowQueueTimesOutsideResort": true,
-    "OnboardingBackgroundColor": "ff142248",
-    "OnboardingTitleColor": "ff8fbad7",
-    "RegistrationOptIn": "Yes, I confirm that I am over 16 years of age and that I am happy for THORPE PARK Resort and Merlin Entertainments plc, to keep in touch with me via email.\n\nTo stop receiving exclusive offers, discounts and updates from us, you just need to click the link at the bottom of our emails. For more information about how we manage your personal data, please read our privacy policy.",
-    "TitleFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"3267cec3-c89f-4bc1-9c03-b976b665d6d9\",\"font\":\"TitilliumWeb-Black\"}]}",
-    "HeaderFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"d43a6a66-25f2-4f79-be1c-cedfeeff09c5\",\"font\":\"GillSans-SemiBold\"}]}",
-    "BodyFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"d43a6a66-25f2-4f79-be1c-cedfeeff09c5\",\"font\":\"GillSans\"}]}",
-    "InlineSearchLogo": true,
-    "SearchLogoWidth": 80,
-    "SearchFieldMargin": 70,
-    "TitleFontUppercase": true,
-    "TitleFontSizeAdjust": 0.75,
-    "OnboardingLogoHeight": 160,
-    "OnboardingButtonColor": "ff8fbad7",
-    "OnboardingTextColor": "ccffffff",
-    "OnboardingSkipColor": "99ffffff",
-    "MapIconColor": "ff8fbad7",
-    "MapSelectedIconColor": "fff7c810",
-    "GeneralIconColor": "fff7c810",
-    "POITitleColor": "ff142248",
-    "CardAlertColor": "ffaf0710",
-    "CardInfoColor": "ff203e99",
-    "CardFeatureColor": "ff458e9c",
-    "CardOfferColor": "ff204487",
-    "RequestBluetooth": true
-  }],
-  "ShopItem": [{
-      "_id": 100,
-      "Name": "Day Tickets",
-      "Summary": "Book your journey to an Island Like No Other",
-      "Action": "Book Now",
-      "Image": "7fb42b4e-8f83-47b5-ba8b-12d51187ea34",
-      "_URL": "https://thorpe.fun/apptickets",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
+  "Configuration": [
     {
-      "_id": 2,
-      "Name": "Season & Annual Passes",
-      "Summary": "Visit over and over again for the season!",
-      "Action": "Buy Now",
-      "Image": "8fb4e73b-4b49-45d0-8de9-4a4205aa1f31",
-      "_URL": "https://thorpe.fun/app-passes",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 3,
-      "Name": "Group Tickets",
-      "Summary": "Save money when you and your crew come",
-      "Action": "Book Now",
-      "Image": "04a49212-92d5-4fa8-a89c-75b0e564c098",
-      "_URL": "https://thorpe.fun/app-groups",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 4,
-      "Name": "Short Breaks",
-      "Summary": "An Island Getaway Like No Other",
-      "Action": "Book Now",
-      "Image": "c3512409-3c96-41ab-b6cf-84fdfc8f6dc0",
-      "URL": "https://www.thorpebreaks.co.uk/?utm_source=App&utm_medium=App%20Purchase&utm_campaign=ShortBreaks"
-    },
-    {
-      "_id": 5,
-      "Name": "Fastrack",
-      "Summary": "Beat The Queues",
-      "Action": "Buy Now",
-      "Image": "13a73d17-65a5-4d73-8256-ed49565fdb38",
-      "_URL": "https://thorpe.fun/app-fastrack",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 6,
-      "Name": "Meal Deals",
-      "Summary": "Save money when you buy your Meal Deal online",
-      "Action": "Buy Now",
-      "Image": "3388b391-7ad4-4037-a68e-d84685ac7955",
-      "_URL": "https://thorpe.fun/app-food",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 7,
-      "Name": "Photos",
-      "Summary": "Enjoy unlimited photos of your day with a Digipass",
-      "Action": "Buy Now",
-      "Image": "9eee1f16-066f-4f40-bcbb-b6729ff6b625",
-      "_URL": "https://thorpe.fun/app-photos",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 8,
-      "Name": "Games",
-      "Summary": "Win ALL the stuffed creatures!",
-      "Action": "Play Now",
-      "Image": "ceab3dd9-6017-44ec-9e3a-2e84d51fe02b",
-      "_URL": "https://thorpe.fun/app-games",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    },
-    {
-      "_id": 9,
-      "Name": "VIP Experiences",
-      "Summary": "Be a Kardashian for a day!",
-      "Action": "Book Now",
-      "Image": "75039668-64df-4bde-ab42-470b1292da38",
-      "_URL": "https://thorpe.fun/app-vip",
-      "URL": "https://www.thorpepark.com/tickets-passes/day-passes"
-    }
-  ],
-  "InfoCategory": [{
       "_id": 1,
-      "Name": "Guest Services"
-    },
-    {
-      "_id": 2,
-      "Name": "Looking for something more?"
-    },
-    {
-      "_id": 3,
-      "Name": "Contact Us"
-    },
-    {
-      "_id": 4,
-      "Name": "Privacy & Legal"
-    }
-  ],
-  "InfoItem": [{
-      "_id": 200,
-      "Name": "Opening Hours",
-      "Category": 1,
-      "URL": "https://www.thorpepark.com/resort-info/opening-times-and-travel"
-    },
-    {
-      "_id": 2,
-      "Name": "Car Parking",
-      "Category": 1,
-      "Path": "CarParking.html"
-    },
-    {
-      "_id": 3,
-      "Name": "Rentals",
-      "Category": 1,
-      "Path": "Rentals.html"
-    },
-    {
-      "_id": 4,
-      "Name": "Ride Access Passes",
-      "Category": 1,
-      "Path": "RideAccessPass.html"
-    },
-    {
-      "_id": 5,
-      "Name": "Accessibility",
-      "Category": 1,
-      "Path": "Accessibility.html"
-    },
-    {
-      "_id": 6,
-      "Name": "Upgrade Your Ticket",
-      "Category": 2,
-      "Path": "UpgradeYourTicket.html"
-    },
-    {
-      "_id": 7,
-      "Name": "THORPE SHARK Hotel",
-      "Category": 2,
-      "Path": "ThorpeSharkHotel.html"
-    },
-    {
-      "_id": 8,
-      "Name": "Facebook",
-      "Category": 3,
-      "Path": "Facebook.html"
-    },
-    {
-      "_id": 9,
-      "Name": "Twitter",
-      "Category": 3,
-      "Path": "Twitter.html"
-    },
-    {
-      "_id": 10,
-      "Name": "Email Us",
-      "Category": 3,
-      "Path": "Email.html"
-    },
-    {
-      "_id": 11,
-      "Name": "Island FAQs",
-      "Category": 3,
-      "URL": "https://support.thorpepark.com/hc/en-us"
-    },
-    {
-      "_id": 12,
-      "Name": "Short Break FAQs",
-      "Category": 3,
-      "URL": "https://help.thorpebreaks.co.uk/hc/en-gb"
-    },
-    {
-      "_id": 13,
-      "Name": "Terms & Conditions",
-      "Category": 4,
-      "URL": "https://www.thorpepark.com/terms-conditions"
-    },
-    {
-      "_id": 300,
-      "Name": "Privacy Policy",
-      "Category": 4,
-      "URL": "https://www.thorpepark.com/privacy-policy"
+      "NavigationBarColor": "ff152348",
+      "StatusBarColor": "ff21293c",
+      "SelectedIconColor": "ff8fbad7",
+      "Beacons": "{\"type\":\"ibeacon\",\"uuid\":\"5c068c0f-50db-40e3-a106-979d294b5336\"}",
+      "ShowQueueTimesOutsideResort": true,
+      "AlternateImperialHeightRestriction": true,
+      "OnboardingBackgroundColor": "ff142248",
+      "OnboardingTitleColor": "ff8fbad7",
+      "RegistrationOptIn": "Merlin Entertainments Limited, and the wider Merlin Entertainments Group, would like to use your personal data (including your contact information, postcode, device data, and purchase data) to keep in touch with personalised email and SMS updates about our magical attractions, hotels and the amazing offers we have available. To see a list of the attractions we will be telling you about and a note of the companies in the Merlin Entertainments Group, please click on the link directly below.\n\nFor more information about how we manage your personal data, please read our Privacy Policy at the link directly below. To change your preferences or to stop receiving direct marketing emails from us, you just need to click the link at the bottom of our emails.\n\nYes, I am happy to receive these updates from Merlin Entertainments Limited and the wider Merlin Entertainments Group, and I confirm that I am over 16 years of age.",
+      "TitleFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"3267cec3-c89f-4bc1-9c03-b976b665d6d9\",\"font\":\"TitilliumWeb-Black\"}]}",
+      "HeaderFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"d43a6a66-25f2-4f79-be1c-cedfeeff09c5\",\"font\":\"GillSans-SemiBold\"}]}",
+      "BodyFont": "{\"priority\":[{\"type\":\"custom\",\"media\":\"d43a6a66-25f2-4f79-be1c-cedfeeff09c5\",\"font\":\"GillSans\"}]}",
+      "InlineSearchLogo": true,
+      "SearchLogoWidth": 80,
+      "SearchFieldMargin": 70,
+      "TitleFontUppercase": true,
+      "TitleFontSizeAdjust": 0.75,
+      "OnboardingLogoHeight": 160,
+      "OnboardingButtonColor": "ff8fbad7",
+      "OnboardingSkipButtonColor": "ff8fbad7",
+      "OnboardingTextColor": "ccffffff",
+      "OnboardingSkipColor": "99ffffff",
+      "MapIconColor": "ff8fbad7",
+      "MapSelectedIconColor": "fff7c810",
+      "GeneralIconColor": "fff7c810",
+      "POITitleColor": "ff142248",
+      "CardAlertColor": "ffaf0710",
+      "CardInfoColor": "ff203e99",
+      "CardFeatureColor": "ff458e9c",
+      "CardOfferColor": "ff204487",
+      "RequestBluetooth": true,
+      "PlannerTintColor": "ff203e99"
     }
   ]
 }
