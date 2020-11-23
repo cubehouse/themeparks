@@ -1,8 +1,80 @@
 # Change Log
+
 Key changes to themeparks NPM module.
+
+## 5.0.0
+
+* 5.1.44 Switch Efteling to use shared 6.x bridge solution
+* 5.1.43 Add special hours to legacy hosted 5.x parks
+* 5.1.42 Fix for WDW parks not updated in some cloud environments (see #314). Fix for old Alton Towers data not being refreshed
+* 5.1.41 Fix for Universal data being cached for incorrect time period (thanks @evanlanglais #316)
+* 5.1.40 Fix WDW database connection issues (see #314)
+* 5.1.39 Fix Phantasialand (4ee8b4d), Tokyo Disneyland (see #302 thanks @nearprosmith), improved Bellewaerde data (see #301 thanks @LouisForaux)
+* 5.1.38 Add virtual lines to Universal Parks (see #292 thanks @DougSisk)
+* 5.1.37 Updated Efteling API (see #290)
+* 5.1.36 Fix for new Shanghai Disney Resort API changes (thanks @zacharyedwardbull @nearprosmith #287)
+* 5.1.35 Fix for WDW live access (thanks @cmlara #283)
+* 5.1.34 Fix for Tokyo Disney Resort (thanks @nearprosmith #279)
+* 5.1.33 Fix for Dollywood Calendar API (#273)
+* 5.1.32 Fux Phantasialand Calendar (again) and add Liseberg Park (@hemi1986 #266 and #270)
+* 5.1.31 Fix Phantasialand and Alton Towers Calendars (@hemi1986 #265 and #262)
+* 5.1.30 Add Fastpass support to Disneyland Paris (see #254)
+* 5.1.29 Add Fastpass metadata to Tokyo Disney parks (@nearprosmith #258)
+* 5.1.28 Additional hotfix for previous release when Disney Paris parks returns no data outside of operating hours
+* 5.1.27 Minor hotfix for Disney Paris parks when closed sometimes returning no data and some environments not parsing JSON correctly (#250 #252)
+* 5.1.26 Allow ride name language override for Disney Paris parks (@LouisForaux #249)
+* 5.1.25 Fix Portaventura opening hours (thanks @jeanmatthieud #248)
+* 5.1.24 Ignore invalid Disney Paris rides and return facility code for Tokyo Disneyland rides (thanks @rorpage #245)
+* 5.1.23 Add Busch Gardens Tampa & Willamsburg (thanks @thomasstoeckert PR #243)
+* 5.1.22 Disneyland Paris reports ride opening times consistently with Park Asterix style (thanks @LouisForaux)
+* 5.1.21 Hotfix for Disneyland Paris' new API (see #239)
+* 5.1.20 Hotfix for Tokyo Disney Resort wait times
+* 5.1.19 Hotfix for Disney Paris parks rejecting language headers
+* 5.1.18 Add Heide Park (thanks @hemi1986), clean up Six Flags park statuses, Shanghai Disney Resort now returns English names (see #190)
+* 5.1.17 Fix Cedar Park (#235), Universal Studios Japan (#234), Alton Towers, Chessington, and Thorpe Park (#233)
+* 5.1.16 Fix Tokyo Disneyland Ride Statuses (thanks @dotaguro #232)
+* 5.1.15 Fix PortAventura opening hours
+* 5.1.14 Tidy up Tokyo DisneySea ride names
+* 5.1.13 Clear out fastpass availability metadata when unavailable (thanks @webdeck #121)
+* 5.1.12 Improve Seaworld ride names (thanks @jeanmatthieud #207)
+* 5.1.11 Improve Universal and Portaventura wait time status reporting
+* 5.1.10 Improve Universal wait time statuses to reflect actual status correctly
+* 5.1.9 Add Phantasialand to supported parks
+* 5.1.8
+  * ! Fix lastUpdate not updating when meta data changes
+  * ~ Tidy up some park names for consistency (thanks @jeanmatthieud #187)
+  * ~ Tidy up SixFlags ride times (thanks @jeanmatthieud #188)
+  * ~ Tidy up Universal ride times so they can't return an invalid status
+* 5.1.7 Improve PortAventura opening hours loading
+* 5.1.6 Minor fix for #183, fallback on offline data if we fail to fetch the English HTML correctly
+* 5.1.5
+  * ! Fix "legacy" Disney Park opening hour timezones
+  * \+ Added Universal Studios Japan to supported parks
+* 5.1.4 Add thrill data and other metadata to Europa Park (see 386126c86b3c2fecfadf31b34c309b50e6d36f45)
+* 5.1.3 ! Fix Tokyo Disney parks failing to query API after caching latest API version (#179)
+* 5.1.2 ! Fix HTTP error returning after failing (thanks @jeanmatthieud #177)
+* 5.1.1 Add meta data to some Disney ride results (fastpass return times, single ride, photopass etc.)
+* 5.1.0 First non-beta release of 5.x
+* 5.0.0 ! (breaking change) you must now allow for a small SQLite database to cache data to use the library
+  * Library rewritten in more modern JS for easier development and maintenance
 
 ## v4.0.0
 
+* 4.7.20 ! Disney park (Shanghai/Tokyo) fixes from @jeanmatthieud (#170)
+* 4.7.19 ! Various fixes from @jeanmatthieud (#167 #162 #161 #160)
+* 4.7.18 ! Various fixes from @jeanmatthieud (#154 #155 #156 #157)
+* 4.7.17 ! Merge Parc Asterix fixes from 5.0 (thanks @BenediktCleff #150)
+* 4.7.16 ! Fix Europa API (thanks @BenediktCleff #149)
+* 4.7.15 ! Fix Europa API (thanks @LouisForaux #148)
+* 4.7.14 ! Fix Tokyo Disneyland Device ID generation (thanks @SomethingWithComputers #146)
+* 4.7.13 ! Fix Disneyland Paris URLs (thanks @midiland #145)
+* 4.7.12 ! Fix Tokyo and Shanghai Disney Resorts with latest API changes (thanks @dozer47528 #141 and @nicectrl #142)
+* 4.7.11 ! Remove TE2 auth token at request of park technology representative
+* 4.7.10 ! Minor fix for Tokyo Disney Resort API version bump (see #138)
+* 4.7.9 ! Minor fix for Tokyo Disney Resort API version bump
+* 4.7.8 ! Fix for Efteling POI data (thanks @renssies #130)
+* 4.7.7 Add support for rides under refurbishment for Efteling (thanks @janvankampen #126)
+* 4.7.6 Add support for Down rides at Efteling (thanks @janvankampen #124)
 * 4.7.5 ! Fix for Tokyo Disney Resort API version bump (thanks @dotaguro #123)
 * 4.7.4 ! Fix for Tokyo Disney Resort API version bump (see #121)
 * 4.7.3 Minor hotfix for missing attraction name for Astrix Parc (thanks @skyforce77 #120)
