@@ -429,5 +429,6 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
 * [ChronoPass](https://www.chronopass.app) - All parks
 * [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
+* [Themeparks](https://themeparks.arendz.nl/#/home) - Efteling, Phantasialand, Parc Asterix, Bellewaerde and Portaventura World
 
 Make a pull request to add your project to the list.
