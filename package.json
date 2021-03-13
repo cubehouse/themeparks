@@ -43,11 +43,11 @@
     "url": "git://github.com/cubehouse/themeparks.git"
   },
   "scripts": {
-    "test": "./node_modules/.bin/eslint ./lib/** && node_modules/.bin/mocha lib/test.js",
-    "testonline": "node_modules/.bin/mocha --exit lib/testonline.js",
-    "travislocal": "node_modules/.bin/trevor",
-    "docs": "node dev/UpdateREADME.js && node_modules/.bin/jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
-    "lint": "./node_modules/.bin/eslint ./lib/**",
+    "test": "eslint ./lib/**.js && mocha lib/test.js",
+    "testonline": "mocha --exit lib/testonline.js",
+    "travislocal": "trevor",
+    "docs": "node dev/UpdateREADME.js && jsdoc -c docs.conf.json -R README.md -t node_modules/ink-docstrap/template -r -d docs",
+    "lint": "eslint ./lib/**.js",
     "snyk-protect": "snyk protect"
   },
   "main": "./lib/index.js",
