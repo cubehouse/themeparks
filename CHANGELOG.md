@@ -4,6 +4,8 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.46 Add Toverland (thanks @tpxtron PR #323)
+* 5.1.45 Switch American Universal parks to use hosted solution
 * 5.1.44 Switch Efteling to use shared 6.x bridge solution
 * 5.1.43 Add special hours to legacy hosted 5.x parks
 * 5.1.42 Fix for WDW parks not updated in some cloud environments (see #314). Fix for old Alton Towers data not being refreshed

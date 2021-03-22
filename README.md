@@ -88,7 +88,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**61** Parks Supported
+**62** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -151,6 +151,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Busch Gardens Tampa (ThemeParks.Parks.BuschGardensTampa)
 * Busch Gardens Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
 * Liseberg (ThemeParks.Parks.Liseberg)
+* Toverland (ThemeParks.Parks.Toverland)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -165,8 +166,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10007;|
 |California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10007;|
-|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
-|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10007;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
@@ -220,6 +221,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
 |Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
 |Liseberg|&#10003;|&#10003;|&#10007;|
+|Toverland|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -371,6 +373,7 @@ Prints:
 * Busch Gardens Tampa [(28°2′13.60″N, 82°25′10.57″W)]: (America/New_York)
 * Busch Gardens Williamsburg [(37°18′10.15″N, 76°59′16.96″W)]: (America/New_York)
 * Liseberg [(57°41′46.49″N, 11°59′8.33″E)]: (Europe/Stockholm)
+* Toverland [(51°23′48.78″N, 5°59′5.16″E)]: (Europe/Amsterdam)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
@@ -429,5 +432,6 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
 * [ChronoPass](https://www.chronopass.app) - All parks
 * [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
+* [Themeparks](https://themeparks.arendz.nl/#/home) - Efteling, Phantasialand, Parc Asterix, Bellewaerde and Portaventura World
 
 Make a pull request to add your project to the list.
