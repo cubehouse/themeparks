@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.47 Update Alton Towers data records (PR #331)
 * 5.1.46 Add Toverland (thanks @tpxtron PR #323)
 * 5.1.45 Switch American Universal parks to use hosted solution
 * 5.1.44 Switch Efteling to use shared 6.x bridge solution
