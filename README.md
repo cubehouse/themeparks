@@ -152,6 +152,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Busch Gardens Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
 * Liseberg (ThemeParks.Parks.Liseberg)
 * Toverland (ThemeParks.Parks.Toverland)
+* Walibi Holland (ThemeParks.Parks.WalibiHolland)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -222,6 +223,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
 |Liseberg|&#10003;|&#10003;|&#10007;|
 |Toverland|&#10003;|&#10003;|&#10007;|
+|Walibi Holland|&#10003;|&#10007;|&#10003;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -374,7 +376,7 @@ Prints:
 * Busch Gardens Williamsburg [(37°18′10.15″N, 76°59′16.96″W)]: (America/New_York)
 * Liseberg [(57°41′46.49″N, 11°59′8.33″E)]: (Europe/Stockholm)
 * Toverland [(51°23′48.78″N, 5°59′5.16″E)]: (Europe/Amsterdam)
-
+* Walibi Holland [(52°44′8.68″N, 5°76′4.77″E)]: (Europe/Amsterdam)
 <!-- END_PARK_TIMEZONE_LIST -->
 
 ## Development
