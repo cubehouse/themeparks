@@ -33,7 +33,7 @@ You can change some settings of the library by editing the properties of the `Th
 | CacheOpeningTimesLength | 1 hour                           | Time to cache opening times (in seconds)     |
 
 ## Example Use
-
+```javascript
     // include the Themeparks library
     const Themeparks = require("themeparks");
 
@@ -61,9 +61,9 @@ You can change some settings of the library by editing the properties of the `Th
     CheckWaitTimes();
 
     // you can also call GetOpeningTimes on themeparks objects to get park opening hours
-
+```
 ### Proxy
-
+```javascript
 If you wish to use themeparks with a proxy, you can pass a proxy agent when you construct the park object.
 
     // include the Themeparks library
@@ -79,7 +79,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
     const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom({
         proxyAgent: MyProxy
     });
-
+```
 ## Change Log
 
 [View themeparks Change Log](CHANGELOG.md)
@@ -228,7 +228,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 ## Result Objects
 
 ### Ride Wait Times
-
+```
     [
         {
             id: (string or number: uniquely identifying a ride),
@@ -260,9 +260,9 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
         },
         ...
     ]
-
+```
 ### Schedules
-
+```
     [
         {
             date: (dateFormat timestamp: day this schedule applies),
@@ -277,7 +277,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
         },
         ...
     ]
-
+```
 ## Park Object values
 
 There are some values available on each park object that may be useful.
@@ -294,7 +294,7 @@ There are some values available on each park object that may be useful.
 | FastPassReturnTimes   | Does this park tell you the FastPass return times?                                                          |
 | Now                   | Current date/time at this park (returned as a Moment object)                                                |
 | UserAgent             | The HTTP UserAgent this park is using to make API requests (usually randomly generated per-park at runtime) |
-
+```javascript
     const ThemeParks = require("themeparks");
 
     // construct our park objects and keep them in memory for fast access later
@@ -307,7 +307,7 @@ There are some values available on each park object that may be useful.
     for (const park in Parks) {
       console.log(`* ${Parks[park].Name} [${Parks[park].LocationString}]: (${Parks[park].Timezone})`);
     }
-
+```
 Prints:
 
 <!-- START_PARK_TIMEZONE_LIST -->
