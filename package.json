@@ -57,12 +57,12 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "ink-docstrap": "^1.3.2",
+    "ink-docstrap": "^0.5.4",
     "jsdoc": "^3.6.6",
     "mocha": "^7.2.0",
     "restify": "^8.5.1",
     "snyk": "^1.452.0",
-    "trevor": "^2.4.1",
+    "trevor": "^1.1.2",
     "tz-lookup": "^6.1.25"
   },
   "snyk": true
