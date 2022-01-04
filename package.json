@@ -29,7 +29,7 @@
     "needle": "^2.6.0",
     "random-useragent": "^0.3.1",
     "socks-proxy-agent": "^3.0.1",
-    "sqlite3": ^5.0.2",
+    "sqlite3": "^5.0.2",
     "uuid": "^3.4.0",
     "xml2js": "^0.4.23",
     "yauzl": "^2.10.0"
