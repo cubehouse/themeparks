@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.1.53 Bump dependencies
 * 5.1.52 Fix Heide Park (thanks @Alpakat2) and update Heide Park API path
 * 5.1.47 Update Alton Towers data records (PR #331)
 * 5.1.46 Add Toverland (thanks @tpxtron PR #323)
