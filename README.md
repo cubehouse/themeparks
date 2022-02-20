@@ -1,3 +1,13 @@
+# Notice
+
+This library will be soon replaced with a new codebase (6.x) that interfaces with [ThemeParks.wiki](https://www.themeparks.wiki/) to get park data. The current implementation (5.x) will no longer be actively maintained.
+
+[API Documentation](https://api.themeparks.wiki/docs/v1/) is available for the new API, and some auto-generated client libraries are available:
+* [JavaScript](https://github.com/ThemeParks/ThemeParks_JavaScript)
+* [Python](https://github.com/ThemeParks/ThemeParks_Python)
+
+If you are interested in how data is sourced for the new API, you can browse the [ParksAPI](https://github.com/ThemeParks/parksapi) repo, which contains the source code for fetching park data. However, to avoid further takedown requests, this repo will not contain details like API keys that are required to access most services.
+
 # themeparks
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
@@ -14,10 +24,6 @@ An unofficial API library for accessing ride wait times and park opening times f
 ## Install
 
     npm install themeparks --save
-
-## Migrate from themeparks 4.x
-
-If you have been using themeparks 4.x, please follow this guide to [migrate from themeparks 4.x to themeparks 5.x](https://github.com/cubehouse/themeparks/wiki/Migrating-from-4.x-to-5.x)
 
 ## Settings
 
