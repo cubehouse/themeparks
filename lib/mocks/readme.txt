@@ -1,1 +1,0 @@
-This is where mock HTTP requests are stored.
