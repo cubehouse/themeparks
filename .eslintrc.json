@@ -9,12 +9,23 @@
     "no-underscore-dangle": 0,
     "linebreak-style": 0,
     "max-len": 0,
-    "no-param-reassign": ["error", {
-      "props": false
-    }],
-    "comma-dangle": ["error", "always-multiline", {
-      "functions": "never"
-    }],
-    "class-methods-use-this": 0
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "class-methods-use-this": 0,
+    "max-classes-per-file": 0
   }
 }

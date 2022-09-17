@@ -33,8 +33,8 @@
     "url": "git://github.com/cubehouse/themeparks.git"
   },
   "scripts": {
-    "test": "mocha --exit lib/testonline.js",
-    "testonline": "mocha --exit lib/testonline.js",
+    "test": "mocha --exit tests/testonline.js",
+    "testonline": "mocha --exit tests/testonline.js",
     "lint": "eslint ./lib/**.js",
     "snyk-protect": "snyk protect"
   },
@@ -43,6 +43,8 @@
   "license": "MIT",
   "snyk": true,
   "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
     "mocha": "^10.0.0",
     "moment-timezone": "^0.5.34"
   }

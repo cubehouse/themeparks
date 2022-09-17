@@ -1,8 +1,7 @@
 const moment = require('moment-timezone');
 
 const assert = require('assert');
-const parks = require('../lib/index').Parks;
-
+const parks = require('./index').Parks;
 
 // define Mocha functions for eslint
 /* global describe it */
@@ -126,7 +125,7 @@ function TestPark(park) {
         // status string should only ever be one of these three options
         assert(
           ride.status === 'Operating' || ride.status === 'Refurbishment' || ride.status === 'Closed' || ride.status === 'Down',
-          `Invalid status string returned by ${ride.name}: ${ride.status}`,
+          `Invalid status string returned by ${ride.name}: ${ride.status}`
         );
       });
     });
