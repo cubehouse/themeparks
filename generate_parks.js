@@ -61,6 +61,7 @@ const parks = {
   AsterixPark: {
     name: 'Parc Asterix',
     entityId: '6cc48df2-f126-4f28-905d-b4c2c15765f2',
+    calendarEntityId: '9e938687-fd99-46f3-986a-1878210378f8',
   },
   CaliforniasGreatAmerica: {
     name: 'California\\\'s Great America',
@@ -269,7 +270,7 @@ const BaseParkObject = require('./themeparkswiki');\n\n`;
     constructor() {
         super({
             name: '${parks[park].name}',
-            entityId: '${parks[park].entityId}',
+            entityId: '${parks[park].entityId}',${parks[park].calendarEntityId ? ('\ncalendarEntityId: \'' + parks[park].calendarEntityId + '\',') : ''}
         });
     }
 }`);
