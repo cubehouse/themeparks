@@ -1,15 +1,7 @@
 language: node_js
 node_js:
+  - "18"
+  - "16"
   - "14"
-  - "12"
-  - "10"
 os: linux
 dist: xenial
-env:
-  - CXX=g++-4.9
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.9
