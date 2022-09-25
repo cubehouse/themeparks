@@ -1,7 +1,7 @@
 const moment = require('moment-timezone');
 
 const assert = require('assert');
-const parks = require('./index').Parks;
+const parks = require('../lib/index').Parks;
 
 // define Mocha functions for eslint
 /* global describe it */
