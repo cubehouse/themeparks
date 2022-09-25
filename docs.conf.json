@@ -1,9 +1,11 @@
 {
     "source": {
-        "include": ["./lib/"]
+        "include": [
+            "./lib/"
+        ]
     },
     "templates": {
-        "systemName": "ThemeParks",
+        "systemName": "ThemeParks Docs",
         "theme": "paper",
         "linenums": true,
         "inverseNav": true

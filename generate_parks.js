@@ -260,7 +260,12 @@ const BaseParkObject = require('./themeparkswiki');\n\n`;
   const parkKeys = Object.keys(parks);
   const parkObjects = [];
   parkKeys.forEach((park) => {
-    parkObjects.push(`class ${park} extends BaseParkObject {
+    parkObjects.push(`/**
+    * Implements the ${parks[park].name} API.
+    * @class
+    * @extends ThemeParksWikiPark
+    */
+    class ${park} extends BaseParkObject {
     constructor() {
         super({
             name: '${parks[park].name}',
@@ -270,7 +275,15 @@ const BaseParkObject = require('./themeparkswiki');\n\n`;
 }`);
   });
   return `${fileHeader + parkObjects.join('\n')}\n
+/**
+ * Array of all Theme Park Objects
+ * @type {ThemeParksWikiPark[]}
+ **/
 exports.AllParks = [\n${parkKeys.join(',\n')},\n];
+/**
+ * Object of all Theme Park Objects
+ * @type {Object.<string, ThemeParksWikiPark>}
+ **/
 exports.Parks = {\n${parkKeys.join(',\n')},\n};
 `;
 }
@@ -280,4 +293,4 @@ const indexTxt = GenerateParkObjects();
 // get current script directory
 const scriptDir = path.dirname(fs.realpathSync(__filename));
 
-fs.writeFileSync(`${scriptDir}/index.js`, indexTxt);
+fs.writeFileSync(`${scriptDir}/lib/index.js`, indexTxt);

@@ -4,6 +4,7 @@ Key changes to themeparks NPM module.
 
 ## 5.0.0
 
+* 5.2.0 Fully using api.themeparks.wiki for access. Removed Six Flags water parks and Universal Singapore & Japan.
 * 5.1.53 Bump dependencies
 * 5.1.52 Fix Heide Park (thanks @Alpakat2) and update Heide Park API path
 * 5.1.47 Update Alton Towers data records (PR #331)
