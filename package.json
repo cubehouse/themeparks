@@ -35,10 +35,8 @@
   "scripts": {
     "build": "node generate_parks.js && npm run lintfix && npm run docs",
     "test": "mocha --exit tests/testonline.js",
-    "testonline": "mocha --exit tests/testonline.js",
     "lint": "eslint ./lib/**.js",
     "lintfix": "eslint ./lib/**.js --fix",
-    "snyk-protect": "snyk protect",
     "docs": "jsdoc -c docs.conf.json -R README.md -r -d docs"
   },
   "main": "./lib/index.js",
