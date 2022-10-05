@@ -270,7 +270,8 @@ const BaseParkObject = require('./themeparkswiki');\n\n`;
     constructor() {
         super({
             name: '${parks[park].name}',
-            entityId: '${parks[park].entityId}',${parks[park].calendarEntityId ? ('\ncalendarEntityId: \'' + parks[park].calendarEntityId + '\',') : ''}
+            entityId: '${parks[park].entityId}',
+            oldParkId: '${park}',${parks[park].calendarEntityId ? ('\ncalendarEntityId: \'' + parks[park].calendarEntityId + '\',') : ''}
         });
     }
 }`);
