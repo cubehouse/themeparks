@@ -4,8 +4,7 @@ An unofficial API library for accessing ride wait times and park opening times f
 
 This library uses [ThemeParks.wiki](https://themeparks.wiki) to source data.
 
-[![Discord Server](https://img.shields.io/discord/734308155315453963.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Vs2zQB7)
-[![Donate](https://img.shields.io/liberapay/patrons/cube.svg?logo=liberapay)](https://en.liberapay.com/cube/)
+[![Sponsor Me](https://img.shields.io/github/sponsors/cubehouse)](https://github.com/sponsors/cubehouse) [![Discord Server](https://img.shields.io/discord/734308155315453963.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Vs2zQB7)
 
 [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cubehouse/themeparks.svg)
 
