@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: themeparkswiki.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: themeparkswiki.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const fetch = require('node-fetch');
+
+/**
+ * Represents a ThemeParksWiki API object
+ * Can be used to fetch park opening times from the api.themeparks.wiki service
+ */
+class ThemeParksWikiPark {
+  /**
+   *
+   * @param {object} options
+   * @param {string} options.entityId The ThemeParksWiki entity ID for this park
+   * @param {string} options.name The name of this park
+   */
+  constructor(options = {}) {
+    this.name = options.name;
+    if (!this.name) {
+      throw new Error('ThemeParksWikiPark requires a name');
+    }
+
+    this.entityId = options.entityId;
+    if (!this.entityId) {
+      throw new Error('entityId is required');
+    }
+
+    // optional calendar entity Id override
+    if (options.calendarEntityId) {
+      this.calendarEntityId = options.calendarEntityId;
+    }
+  }
+
+  /**
+   * Does this park support ride schedules?
+   * @returns {boolean} true if this park supports ride schedules
+   */
+  get SupportsRideSchedules() {
+    return false;
+  }
+
+  /**
+   * Does this park support park opening times?
+   * @returns {boolean} true if this park supports park opening times
+   */
+  get SupportsOpeningTimes() {
+    return true;
+  }
+
+  /**
+   * Does this park support ride wait times?
+   * @returns {boolean} true if this park supports ride wait times
+   */
+  get SupportsWaitTimes() {
+    return true;
+  }
+
+  /**
+   * Does this park support ride fastpass?
+   * @returns {boolean} true if this park supports ride fastpass
+   */
+  get FastPassReturnTimes() {
+    return false;
+  }
+
+  /**
+   * Does this park support ride fastpass?
+   * @returns {boolean} true if this park supports ride fastpass
+   */
+  get FastPass() {
+    return false;
+  }
+
+  /**
+   * Return how many possible opening time schedule days will be returned
+   * Numer can be less if API doesn't have enough data
+   * @returns {number} number of days of opening time schedule to return
+   */
+  get GetNumScheduleDays() {
+    return 30;
+  }
+
+  /**
+   * Fetch attraction wait times for this park
+   * @returns {Promise} A promise that resolves with an array of ride objects
+   * @example
+   * [{
+   *   id: 'rideid',
+   *   name: 'Ride Name',
+   *   active: true,
+   *   waitTime: 10,
+   *   status: 'Operating',
+   *   lastUpdate: '2018-01-01T00:00:00.000Z',
+   *   meta: {
+   *     type: 'ATTACTION',
+   *     entityId: 'themeparkswiki-entity-id',
+   *   },
+   * }]
+   */
+  GetWaitTimes() {
+    return fetch(`https://api.themeparks.wiki/v1/entity/${this.entityId}/live`).then((response) => {
+      return response.json();
+    }).then((data) => {
+      return data.liveData.map((ride) => {
+        const hasFastpass = !!(ride.queue &amp;&amp; (ride.queue.RETURN_TIME || ride.queue.PAID_RETURN_TIME));
+        // eslint-disable-next-line no-nested-ternary
+        const waitTime = (ride.queue &amp;&amp; ride.queue.STANDBY) ? ride.queue.STANDBY.waitTime : (
+          // no standby queue, deduce waitTime from status (to match v5 style)
+          ride.status === 'OPERATING' ? 0 : null
+        );
+        return {
+          id: ride.externalId,
+          name: ride.name,
+          waitTime,
+          status: ride.status.charAt(0).toUpperCase() + ride.status.slice(1).toLowerCase(),
+          active: ride.status === 'OPERATING',
+          fastPass: hasFastpass,
+          meta: {
+            type: ride.entityType,
+            entityId: ride.id,
+          },
+          lastUpdate: new Date(ride.lastUpdated),
+        };
+      });
+    });
+  }
+
+  /**
+   * Fetch opening times for this park
+   * @returns {Promise} A promise that resolves with an array of opening time objects
+   */
+  GetOpeningTimes() {
+    const entityForSchedules = this.calendarEntityId || this.entityId;
+    return fetch(`https://api.themeparks.wiki/v1/entity/${entityForSchedules}/schedule`).then((response) => {
+      return response.json();
+    }).then((data) => {
+      // split data into regular opening times and "other"
+      const openingTimes = data.schedule.filter((x) => {
+        return x.type === 'OPERATING';
+      });
+      const specialTimes = data.schedule.filter((x) => {
+        return x.type !== 'OPERATING';
+      });
+
+      const dates = openingTimes.map((x) => {
+        const d = {
+          date: x.date,
+          openingTime: x.openingTime,
+          closingTime: x.closingTime,
+          type: x.type,
+          special: [],
+        };
+        if (x.description) {
+          d.description = x.description;
+        }
+        return d;
+      });
+
+      // inject special times into dates
+      specialTimes.forEach((x) => {
+        const date = dates.find((d) => {
+          return d.date === x.date;
+        });
+        if (date) {
+          const d = {
+            date: x.date,
+            openingTime: x.openingTime,
+            closingTime: x.closingTime,
+            type: x.type,
+          };
+
+          if (x.description) {
+            d.description = x.description;
+          }
+
+          date.special.push(d);
+        }
+      });
+
+      return dates;
+    });
+  }
+}
+
+module.exports = ThemeParksWikiPark;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AltonTowers.html">AltonTowers</a></li><li><a href="AsterixPark.html">AsterixPark</a></li><li><a href="Bellewaerde.html">Bellewaerde</a></li><li><a href="BuschGardensTampa.html">BuschGardensTampa</a></li><li><a href="BuschGardensWilliamsburg.html">BuschGardensWilliamsburg</a></li><li><a href="CaliforniasGreatAmerica.html">CaliforniasGreatAmerica</a></li><li><a href="CanadasWonderland.html">CanadasWonderland</a></li><li><a href="Carowinds.html">Carowinds</a></li><li><a href="CedarPoint.html">CedarPoint</a></li><li><a href="ChessingtonWorldOfAdventures.html">ChessingtonWorldOfAdventures</a></li><li><a href="DisneylandParisMagicKingdom.html">DisneylandParisMagicKingdom</a></li><li><a href="DisneylandParisWaltDisneyStudios.html">DisneylandParisWaltDisneyStudios</a></li><li><a href="DisneylandResortCaliforniaAdventure.html">DisneylandResortCaliforniaAdventure</a></li><li><a href="DisneylandResortMagicKingdom.html">DisneylandResortMagicKingdom</a></li><li><a href="Dollywood.html">Dollywood</a></li><li><a href="Efteling.html">Efteling</a></li><li><a href="EuropaPark.html">EuropaPark</a></li><li><a href="FerrariLand.html">FerrariLand</a></li><li><a href="HeidePark.html">HeidePark</a></li><li><a href="HersheyPark.html">HersheyPark</a></li><li><a href="HongKongDisneyland.html">HongKongDisneyland</a></li><li><a href="KingsIsland.html">KingsIsland</a></li><li><a href="KnottsBerryFarm.html">KnottsBerryFarm</a></li><li><a href="LaRondeMontreal.html">LaRondeMontreal</a></li><li><a href="Liseberg.html">Liseberg</a></li><li><a href="Phantasialand.html">Phantasialand</a></li><li><a href="PortAventura.html">PortAventura</a></li><li><a href="SeaworldOrlando.html">SeaworldOrlando</a></li><li><a href="ShanghaiDisneyResortMagicKingdom.html">ShanghaiDisneyResortMagicKingdom</a></li><li><a href="SilverDollarCity.html">SilverDollarCity</a></li><li><a href="SixFlagsAmerica.html">SixFlagsAmerica</a></li><li><a href="SixFlagsDiscoveryKingdom.html">SixFlagsDiscoveryKingdom</a></li><li><a href="SixFlagsFiestaTexas.html">SixFlagsFiestaTexas</a></li><li><a href="SixFlagsGreatAdventure.html">SixFlagsGreatAdventure</a></li><li><a href="SixFlagsGreatAmerica.html">SixFlagsGreatAmerica</a></li><li><a href="SixFlagsMagicMountain.html">SixFlagsMagicMountain</a></li><li><a href="SixFlagsMexico.html">SixFlagsMexico</a></li><li><a href="SixFlagsNewEngland.html">SixFlagsNewEngland</a></li><li><a href="SixFlagsOverGeorgia.html">SixFlagsOverGeorgia</a></li><li><a href="SixFlagsOverTexas.html">SixFlagsOverTexas</a></li><li><a href="SixFlagsStLouis.html">SixFlagsStLouis</a></li><li><a href="TheGreatEscape.html">TheGreatEscape</a></li><li><a href="ThemeParksWikiPark.html">ThemeParksWikiPark</a></li><li><a href="ThorpePark.html">ThorpePark</a></li><li><a href="TokyoDisneyResortDisneySea.html">TokyoDisneyResortDisneySea</a></li><li><a href="TokyoDisneyResortMagicKingdom.html">TokyoDisneyResortMagicKingdom</a></li><li><a href="Toverland.html">Toverland</a></li><li><a href="UniversalIslandsOfAdventure.html">UniversalIslandsOfAdventure</a></li><li><a href="UniversalStudiosFlorida.html">UniversalStudiosFlorida</a></li><li><a href="UniversalStudiosHollywood.html">UniversalStudiosHollywood</a></li><li><a href="UniversalVolcanoBay.html">UniversalVolcanoBay</a></li><li><a href="WaltDisneyWorldAnimalKingdom.html">WaltDisneyWorldAnimalKingdom</a></li><li><a href="WaltDisneyWorldEpcot.html">WaltDisneyWorldEpcot</a></li><li><a href="WaltDisneyWorldHollywoodStudios.html">WaltDisneyWorldHollywoodStudios</a></li><li><a href="WaltDisneyWorldMagicKingdom.html">WaltDisneyWorldMagicKingdom</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AllParks">AllParks</a></li><li><a href="global.html#Parks">Parks</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Wed Oct 05 2022 16:13:08 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
