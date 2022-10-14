@@ -7,11 +7,13 @@
       "TripAdvisorURL": "https://www.tripadvisor.co.uk/Attraction_Review-g504148-d285167-Reviews-Alton_Towers-Alton_Staffordshire_England.html",
       "TicketsURL": null,
       "PrivacyPolicyURL": null,
+      "BookingURL": null,
       "OptInMessage": null,
       "Region": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.986806148208998,\"longitude\":-1.8841128253784001,\"radius\":1093}]}",
       "TimeZone": "Europe/London",
       "Country": "GB",
       "DirectionsLocation": "52.993137,-1.894724",
+      "Map": "e2633558-6e1f-44f0-9e65-e72770e3b4be",
       "DefaultMapFocalRegion": "{\"regions\":[{\"type\":\"circle\",\"latitude\":52.990808000000001,\"longitude\":-1.89235,\"radius\":60}]}"
     }
   ],
@@ -28,6 +30,7 @@
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -42,6 +45,7 @@
       "VisibleOnMap": true,
       "Category": 1109,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         162
       ]
@@ -58,6 +62,7 @@
       "VisibleOnMap": true,
       "Category": 1109,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         162
       ],
@@ -75,6 +80,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -89,21 +95,22 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156,
         120
       ],
       "WebPageURL": null,
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements."
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 10:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 13:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:30:00\",\"period_length\":{\"day\":1}}]}",
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 00:00:00\",\"end\":\"2021-11-08 00:00:00\"},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 10:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 10:45:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 13:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 13:45:00\",\"period_length\":{\"day\":1}}]}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 00:00:00\",\"end\":\"2021-04-17 00:00:00\"},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:45:00\",\"period_length\":{\"day\":1}}]}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-19 00:00:00\",\"end\":\"2021-05-17 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2018-01-06 00:00:00\",\"period_length\":{\"day\":7},\"range_length\":{\"day\":2}},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 16:45:00\",\"period_length\":{\"day\":1}}]}]}]}",
       "_id": 6208,
       "Name": "Bing's Picnic",
       "Summary": "Bing and Flop are having an exciting day out at Alton Towers Resort!  Join them as they stop off in Big Fun Showtime to have their picnic, play games and make some new friends.\nAn interactive show where children get to meet and play with Bing and Flop.",
@@ -115,6 +122,7 @@
       "VisibleOnMap": true,
       "Category": 810,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -122,7 +130,7 @@
     {
       "_id": 4217,
       "Name": "Bugbie-Go-Round",
-      "Summary": "Are you ready to go on an adventure with the friendly Bugbies? Then hop aboard your own Bugbie cart and take control of the steering wheel as you whizz around, what will you be exploring today?",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nAre you ready to go on an adventure with the friendly Bugbies? Then hop aboard your own Bugbie cart and take control of the steering wheel as you whizz around, what will you be exploring today?",
       "Keywords": "carousel, numbers, bugbie, cbeebies land",
       "DefaultImage": 11714,
       "Location": "52.990787485349,-1.8938139919192",
@@ -131,6 +139,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
@@ -156,6 +165,7 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -172,6 +182,7 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155
       ]
@@ -188,6 +199,7 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -204,6 +216,7 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -220,6 +233,7 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155
       ]
@@ -236,8 +250,26 @@
       "VisibleOnMap": true,
       "Category": 512,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
+      ]
+    },
+    {
+      "_id": 4309,
+      "Name": "Buggy Park (Sharkbait Reef)",
+      "Summary": "",
+      "Keywords": "pushchair, pram, stroller",
+      "DefaultImage": 9103,
+      "Location": "52.989809361464,-1.8892680311051",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 512,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        156
       ]
     },
     {
@@ -252,8 +284,43 @@
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
+      ]
+    },
+    {
+      "_id": 6023,
+      "Name": "Car Parking Tickets",
+      "Summary": "",
+      "Keywords": "",
+      "DefaultImage": 9108,
+      "Location": "52.99100735924,-1.8922613763657",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 513,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        158
+      ]
+    },
+    {
+      "_id": 5987,
+      "Name": "Cash Point (Entrance Plaza)",
+      "Summary": "",
+      "Keywords": "ATM, card, credit, bank",
+      "DefaultImage": 9110,
+      "Location": "52.991288286523,-1.8916122817841",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 510,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        158
       ]
     },
     {
@@ -268,6 +335,7 @@
       "VisibleOnMap": true,
       "Category": 510,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -284,6 +352,7 @@
       "VisibleOnMap": true,
       "Category": 510,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -300,7 +369,26 @@
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
+    },
+    {
+      "_id": 4273,
+      "Name": "CBeebies Land Photo Studio",
+      "Summary": "Get your photo taken with your favourite CBeebies characters.",
+      "Keywords": "cbeebies, cbeebies land, photo, photo studio",
+      "DefaultImage": 9010,
+      "Location": "52.98981904891,-1.8937419557419",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 749,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        151
+      ],
+      "WebPageURL": null
     },
     {
       "_id": 4216,
@@ -314,6 +402,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ],
@@ -331,6 +420,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -345,6 +435,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153
       ],
@@ -365,6 +456,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ],
@@ -385,6 +477,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155
       ],
@@ -405,6 +498,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -425,6 +519,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ],
@@ -445,6 +540,7 @@
       "VisibleOnMap": true,
       "Category": 1238,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ],
@@ -465,12 +561,34 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ],
       "ReservationsURL": null,
       "MenuURL": null,
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "PreorderURL": null
+    },
+    {
+      "_id": 6026,
+      "Name": "Coffee Shack",
+      "Summary": "The perfect place to stop for a coffee between thrills. Proud to serve Costa Coffee.",
+      "Keywords": "costa coffee, hot drinks, breakfast, snacks, cakes, tea, hot chocolate, ice cream",
+      "DefaultImage": 9173,
+      "Location": "52.989305611235,-1.8893216752854",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 806,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        156
+      ],
+      "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
+      "ReservationsURL": null,
+      "MenuURL": null,
       "PreorderURL": null
     },
     {
@@ -485,6 +603,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -499,18 +618,19 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/congo-river-rapids/",
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 1.1,
+      "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.1m.\r\n\r\nGuests under 1.3m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nThis attraction has a moving turntable which guests need to be able to walk on to without assistance.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests.\r\n\r\nIf required, guests may need to climb through boats or walk down lift boards to evacuate this attraction."
     },
     {
       "_id": 4233,
@@ -524,6 +644,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ],
@@ -535,7 +656,7 @@
     {
       "_id": 4524,
       "Name": "Cuckoo Cars Driving School",
-      "Summary": "Get behind the wheel of one of the crazy, colourful Cuckoo Cars - the hottest wheels in town! Show off your supercool style as you tootle around Cloud Cuckoo Land, meeting the lively locals who are awaiting your visit.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nGet behind the wheel of one of the crazy, colourful Cuckoo Cars - the hottest wheels in town! Show off your supercool style as you tootle around Cloud Cuckoo Land, meeting the lively locals who are awaiting your visit.",
       "Keywords": "drive, cars, children cars",
       "DefaultImage": 9011,
       "Location": "52.985391659314,-1.8932967090454",
@@ -544,6 +665,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         152,
         120
@@ -551,7 +673,7 @@
       "WebPageURL": "https://www.altontowers.com/theme-park/driving-school/",
       "MinimumHeightRequirement": 1,
       "MinimumUnaccompaniedHeightRequirement": null,
-      "MaximumHeightRequirement": 1.3999999999999999,
+      "MaximumHeightRequirement": 1.4,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
@@ -560,7 +682,7 @@
     {
       "_id": 4208,
       "Name": "Duel - The Haunted House Strikes Back",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nWhen the ghosts and ghouls attack, this is your chance to fight back. Load your laser guns and have your wits about you.\n\nA legion of zombies have been drawn to the home of their creator, Dr Nicholas Roodyn, Prepare to Duel!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nWhen the ghosts and ghouls attack, this is your chance to fight back. Load your laser guns and have your wits about you.\n\nA legion of zombies have been drawn to the home of their creator, Dr Nicholas Roodyn, Prepare to Duel!",
       "Keywords": "duel, haunted house, lazer gun, laser gun, shooting",
       "DefaultImage": 6096,
       "Location": "52.988918107061,-1.8837748670426",
@@ -569,18 +691,19 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         154,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/duel/",
       "MinimumHeightRequirement": null,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group.\r\n\r\nThis ride has separate access for Standard Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nIn the unlikely event of an evacuation, the evacuation process requires guests to walk 25 m + independently.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nThis ride includes flashing lights and strobe lighting and as a result may not be suitable for all guests."
     },
     {
       "_id": 4276,
@@ -594,6 +717,7 @@
       "VisibleOnMap": true,
       "Category": 804,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -614,6 +738,7 @@
       "VisibleOnMap": true,
       "Category": 502,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         152
       ]
@@ -621,7 +746,7 @@
     {
       "_id": 4227,
       "Name": "Enterprise",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nA Ministry of Joy installation to totally disorientate you. Only the circular force of The Enterprise keeps you in place, as the monstrous steel wheel drags you upwards until you are upside down",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nA Ministry of Joy installation to totally disorientate you. Only the circular force of The Enterprise keeps you in place, as the monstrous steel wheel drags you upwards until you are upside down",
       "Keywords": "spinning wheel, upside down, x sector",
       "DefaultImage": 9015,
       "Location": "52.987319318302,-1.8966356758028",
@@ -630,18 +755,19 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159,
         119
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/enterprise/",
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.4,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.4 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.4m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThere is a maximum of 2 persons per car."
     },
     {
       "_id": 6034,
@@ -655,6 +781,7 @@
       "VisibleOnMap": true,
       "Category": 502,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -669,8 +796,9 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 805,
+      "Category": 1623,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155
       ],
@@ -691,6 +819,7 @@
       "VisibleOnMap": true,
       "Category": 1109,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         162
       ],
@@ -708,6 +837,7 @@
       "VisibleOnMap": true,
       "Category": 808,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         163
       ],
@@ -728,6 +858,7 @@
       "VisibleOnMap": true,
       "Category": 804,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153
       ],
@@ -737,9 +868,34 @@
       "PreorderURL": null
     },
     {
+      "_id": 10761,
+      "Name": "Funk’n’Fly",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nReady for a thrillingly funktastic flight? Then ride Funk’n’Fly and reach new retrotastic heights! Cowabunga – You’re one step closer to joining the Retro Squad!",
+      "Keywords": "retro squad",
+      "DefaultImage": 16568,
+      "Location": "52.986444456826,-1.8831955098953",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 506,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        119,
+        155
+      ],
+      "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
+      "MaximumHeightRequirement": null,
+      "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
+      "MaximumAgeRequirement": null,
+      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
+    },
+    {
       "_id": 4189,
       "Name": "Galactica",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nBlast through an advanced launch portal to a dimension beyond your imagination. Soar,  spiral and glide in our iconic flying rollercoaster on an exhilarating expedition.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nBlast through an advanced launch portal to a dimension beyond your imagination. Soar,  spiral and glide in our iconic flying rollercoaster on an exhilarating expedition.",
       "Keywords": "air, flying, rollercoaster, roller coaster, coaster",
       "DefaultImage": 13516,
       "Location": "52.985827636856,-1.8824230336991",
@@ -748,6 +904,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160,
         119
@@ -756,18 +913,33 @@
       "Length": 840,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/galactica/",
-      "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 1.4,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.4m.\r\n\r\nThe maximum chest size restriction is 48cm.\r\n\r\nThe minimum age restriction is 14 years of age.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes smoke/mist/fog effects and flashing lights and as a result may not be suitable for all guests."
+    },
+    {
+      "_id": 10724,
+      "Name": "Garden Centre",
+      "Summary": "Here, you can purchase the same plants and flowers that you see around our Gardens so you can take home a little piece of the Resort.",
+      "Keywords": "garden centre, conservatory",
+      "DefaultImage": 16498,
+      "Location": "52.987490770035,-1.8895255231704",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 500,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": []
     },
     {
       "_id": 4219,
       "Name": "Get Set Go Tree Top Adventure",
-      "Summary": "The Get Set Go Tree Top Adventure is a great place for families to begin their day at CBeebies Land. Wake up the sleeping bugs in the CBeebies bedroom and Get Set Go on this fun ride offering plenty of imaginative play.\n\nPlease be aware this ride will close at dusk.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nThe Get Set Go Tree Top Adventure is a great place for families to begin their day at CBeebies Land. Wake up the sleeping bugs in the CBeebies bedroom and Get Set Go on this fun ride offering plenty of imaginative play.\n\nPlease be aware this ride will close at dusk.",
       "Keywords": "cbeebies land, monorail",
       "DefaultImage": 9022,
       "Location": "52.989305313955,-1.8938730005175",
@@ -776,13 +948,14 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/get-set-go-tree-top-adventure/",
       "MinimumHeightRequirement": null,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
@@ -792,7 +965,7 @@
     {
       "_id": 4525,
       "Name": "Go Jetters Vroomster Zoom Ride",
-      "Summary": "Join Kyan, Xuli, Lars and Foz on a Go Jetters global adventure as little thrill seekers fly around the world in a Vroomster.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nJoin Kyan, Xuli, Lars and Foz on a Go Jetters global adventure as little thrill seekers fly around the world in a Vroomster.",
       "Keywords": "gojetters, ubercorn, cbeebies land",
       "DefaultImage": 9023,
       "Location": "52.99001279739,-1.8946431779709",
@@ -801,23 +974,58 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/go-jetters-vroomster-zoom-ride/",
-      "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumHeightRequirement": 0.9,
       "MinimumUnaccompaniedHeightRequirement": 1.25,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.25 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.25m high must accompanied by an adult aged 16 or over.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation."
+    },
+    {
+      "_id": 10764,
+      "Name": "Guest Services",
+      "Summary": "Make no 1 guest services your one stop shop for Accessibility, Guest Feedback, Lost Property & Ride Access Pass",
+      "Keywords": "Accessibility, Guest Feedback, Lost Property, Ride Access Pass",
+      "DefaultImage": 16574,
+      "Location": "52.990862051308,-1.892679800972",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 513,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        158
+      ]
+    },
+    {
+      "_id": 4232,
+      "Name": "Haunted Hollow",
+      "Summary": "Dare you walk through the Haunted Hollow down to the Gloomy Wood? Meet a few of our more ancient ancestors that still call it home.",
+      "Keywords": "",
+      "DefaultImage": 6121,
+      "Location": "52.988407590643,-1.8875000718981",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 506,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        154
+      ]
     },
     {
       "_id": 4223,
       "Name": "Heave Ho",
-      "Summary": "Heave Ho and off we go! Rocking and twisting on top of the waves across Mutiny Bay.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nHeave Ho and off we go! Rocking and twisting on top of the waves across Mutiny Bay.",
       "Keywords": "ship, pirate, spinning ship",
       "DefaultImage": 9024,
       "Location": "52.989744481152,-1.8905738834292",
@@ -826,23 +1034,24 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/heave-ho/",
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right."
     },
     {
       "_id": 4505,
       "Name": "Hex - The Legend of the Towers",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nA beggar woman spurned by the arrogant Earl of Shrewsbury, as he returned home to Alton Towers one dark night, cast a curse that would last for centuries. How will the discovery of a sealed vault, hidden behind an old bookcase, give us any more insight to the tales?",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nA beggar woman spurned by the arrogant Earl of Shrewsbury, as he returned home to Alton Towers one dark night, cast a curse that would last for centuries.",
       "Keywords": "spinning room, history, heritage",
       "DefaultImage": 6420,
       "Location": "52.985585427654,-1.8929158353653",
@@ -851,21 +1060,22 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/hex/",
-      "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumHeightRequirement": 0.9,
       "MinimumUnaccompaniedHeightRequirement": 1.2,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.2 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.2m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nThis ride includes shock/surprise features, flashing lights and strobe lighting and as a result may not be suitable for all guests.\r\n\r\nOnly certain areas of this attraction are wheelchair accessible.\r\n\r\nPlease be aware that some scenes may be unsuitable for young children, who may find this attraction scary at times."
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 12:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 15:30:00\",\"period_length\":{\"day\":1}}]}",
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 00:00:00\",\"end\":\"2021-11-08 00:00:00\"},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 12:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 12:45:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 15:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 15:45:00\",\"period_length\":{\"day\":1}}]}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-19 00:00:00\",\"end\":\"2021-05-17 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2018-01-06 00:00:00\",\"period_length\":{\"day\":7},\"range_length\":{\"day\":2}},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 18:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 18:45:00\",\"period_length\":{\"day\":1}}]}]}]}",
       "_id": 6209,
       "Name": "Hey Duggee Live: The Big Day Out Badge",
       "Summary": "Duggee, Happy and their new Squirrel friend Jo need your help to plan the best day out ever for all the Squirrels.  If you can help them with the list of things they’d each like to do in CBeebies Land, you can earn a Big Day Out badge!",
@@ -877,6 +1087,7 @@
       "VisibleOnMap": true,
       "Category": 810,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -884,7 +1095,7 @@
     {
       "_id": 4209,
       "Name": "In The Night Garden Magical Boat Ride",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nSet sail on the magical In The Night Garden Boat Ride where you’ll be able to journey through a real Night Garden and spot all your favourite characters – whether it’s Upsy Daisy waving and blowing kisses or the Tombliboos playing peek-a-boo, everyone is there to find... even Igglepiggle!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nSet sail on the magical In The Night Garden Boat Ride where you’ll be able to journey through a real Night Garden and spot all your favourite characters.",
       "Keywords": "upsy daisy, iggle piggle, cbeebies land",
       "DefaultImage": 9025,
       "Location": "52.990510893907,-1.8944445624948",
@@ -893,6 +1104,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
@@ -904,7 +1116,7 @@
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nGuests under 1m high must accompanied by an adult aged 16 or over.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right."
     },
     {
       "_id": 4241,
@@ -916,8 +1128,9 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 804,
+      "Category": 1623,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ],
@@ -929,7 +1142,7 @@
     {
       "_id": 4211,
       "Name": "Justin's House Pie-O-Matic Factory",
-      "Summary": "Just like Justin’s House, the Pie-O-Matic Factory is full of fun chaos! Yes, Robert has been inventing again – this time it’s a factory for making the best custard pies and your job is to get the cherries on top!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nJust like Justin’s House, the Pie-O-Matic Factory is full of fun chaos! Yes, Robert has been inventing again – this time it’s a factory for making the best custard pies and your job is to get the cherries on top!",
       "Keywords": "mr tumble, cbeebies land, play area",
       "DefaultImage": 9026,
       "Location": "52.991003832911,-1.8940285686404",
@@ -938,18 +1151,36 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/justins-house-pie-o-matic-factory/",
-      "MinimumHeightRequirement": 0.90000000000000002,
+      "MinimumHeightRequirement": 0.9,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": 16,
       "MaximumAgeRequirement": null,
       "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your age is less than 16 years, then you must be accompanied by an adult."
+    },
+    {
+      "_id": 4250,
+      "Name": "Katanga Cargo",
+      "Summary": "Venture inside this amazing emporium and marvel at the huge selection of products and gifts on offer. Whether you’re buying something for yourself or a gift for someone else, you’re bound to find something you’ll love inside this jungle-themed store.",
+      "Keywords": "shop, rapids, mine train, runaway train, toys, plush, teddy, bears, t-shirts, mugs, medals",
+      "DefaultImage": 6139,
+      "Location": "52.989770314377,-1.8861884716898",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 500,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        160
+      ]
     },
     {
       "_id": 8132,
@@ -963,6 +1194,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -977,6 +1209,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -991,6 +1224,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ],
@@ -1011,6 +1245,7 @@
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -1027,6 +1262,7 @@
       "VisibleOnMap": true,
       "Category": 511,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153
       ]
@@ -1043,6 +1279,7 @@
       "VisibleOnMap": true,
       "Category": 511,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ]
@@ -1059,6 +1296,7 @@
       "VisibleOnMap": true,
       "Category": 511,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -1075,6 +1313,7 @@
       "VisibleOnMap": true,
       "Category": 511,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ]
@@ -1091,12 +1330,13 @@
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
       "_id": 4214,
       "Name": "Marauder's Mayhem",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nSwirl and twirl with the gunpowder barrels which make up Marauder's Mayhem. Beware the actions of your crewmates, who can make the barrel spin faster.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nSwirl and twirl with the gunpowder barrels which make up Marauder's Mayhem. Beware the actions of your crewmates, who can make the barrel spin faster.",
       "Keywords": "tea cups, barrels, pirates",
       "DefaultImage": 9030,
       "Location": "52.989748007583,-1.8902014398423",
@@ -1105,18 +1345,19 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/marauders-mayhem/",
-      "MinimumHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 1.1,
       "MinimumUnaccompaniedHeightRequirement": 1.3,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.1 m, then you cannot ride. If your height is less than 1.3 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 1.1m.\r\n\r\nGuests under 1.3m high must accompanied by an adult aged 16 or over.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right."
     },
     {
       "_id": 4268,
@@ -1130,9 +1371,67 @@
       "VisibleOnMap": true,
       "Category": 509,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
+    },
+    {
+      "_id": 10760,
+      "Name": "Mixtape",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nRide Mixtape, the bouncy one in the Retro Squad and you’ll be in for some major retrotastic laughs as you bounce up and down and down and up! Cowabunga – You’re one step closer to joining the Retro Squad!",
+      "Keywords": "retro squad",
+      "DefaultImage": 16567,
+      "Location": "52.987093561523,-1.8967031144943",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 506,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        119,
+        159
+      ],
+      "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
+      "MaximumHeightRequirement": null,
+      "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
+      "MaximumAgeRequirement": null,
+      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
+    },
+    {
+      "_id": 6033,
+      "Name": "Monorail - Entrance Plaza",
+      "Summary": "Hop on-board the Monorail back to the Hotels & Car Parks",
+      "Keywords": "monorail, car park, train",
+      "DefaultImage": 9178,
+      "Location": "52.991582128048,-1.8920199775544",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": false,
+      "Category": 498,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        158
+      ]
+    },
+    {
+      "_id": 6032,
+      "Name": "Monorail - Hotels & Car Parks",
+      "Summary": "Begin your escape to the Theme Park by climbing aboard the Monorail for a short journey to the Theme Park entrance.",
+      "Keywords": "monorail, car park, train",
+      "DefaultImage": 9177,
+      "Location": "52.985688770413,-1.8774609470215",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": false,
+      "Category": 498,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": []
     },
     {
       "_id": 4210,
@@ -1146,6 +1445,7 @@
       "VisibleOnMap": true,
       "Category": 810,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -1162,6 +1462,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -1182,6 +1483,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -1193,7 +1495,7 @@
     {
       "_id": 4188,
       "Name": "Nemesis",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nRide the twists and turns of Nemesis, as it races past the rocks and rivers of Forbidden Valley. Inverted on the track, it corkscrews, spins and races over the twisted steel track.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nRide the twists and turns of Nemesis, as it races past the rocks and rivers of Forbidden Valley. Inverted on the track, it corkscrews, spins and races over the twisted steel track.",
       "Keywords": "rollercoaster, roller coaster, coaster",
       "DefaultImage": 9031,
       "Location": "52.986974075322,-1.8828200006333",
@@ -1202,6 +1504,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160,
         119
@@ -1210,13 +1513,13 @@
       "Length": 716,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/nemesis/",
-      "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 1.4,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 1.4m.\r\n\r\nThe maximum chest size restriction is 52cm.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. \r\n\r\nGuests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 4284,
@@ -1230,6 +1533,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ],
@@ -1241,7 +1545,7 @@
     {
       "_id": 4192,
       "Name": "Oblivion",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nOblivion beckons you to face your fears, and as you’re held, overhanging the edge of the world’s first vertical drop rollercoaster, you get a moment to savour what is to come.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nOblivion beckons you to face your fears, and as you’re held, overhanging the edge of the world’s first vertical drop rollercoaster, you get a moment to savour what is to come.",
       "Keywords": "vertical drop, rollercoaster, roller coaster, coaster",
       "DefaultImage": 9027,
       "Location": "52.98658009145,-1.8964992666092",
@@ -1250,6 +1554,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159,
         119
@@ -1258,18 +1563,18 @@
       "Length": 372,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/oblivion/",
-      "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 1.4,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 1.4m.\r\n\r\nThe maximum chest size restriction is 52cm.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nAssistance dogs may accompany their owner to the ride access point, where they will need to be cared for by a member of their group until they return.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis attraction has flash photography and may be unsuitable for guests with photo-sensitive epilepsy and similar conditions.\r\n\r\nThis attraction has smoke/fog/misting effects and may be unsuitable for guests with asthma and similar conditions.\r\n\r\nThe ride is suitable for guests with a splint or moon boot if it can be removed."
     },
     {
       "_id": 4205,
       "Name": "Octonauts Rollercoaster Adventure",
-      "Summary": "Dive into CBeebies Land and join Captain Barnacles and crew as The Octonauts head to Alton Towers Resort on a Octonauts Rollercoaster Adventure!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nDive into CBeebies Land and join Captain Barnacles and crew as The Octonauts head to Alton Towers Resort on a Octonauts Rollercoaster Adventure!",
       "Keywords": "octonaughts, captain barnacles, barnacles, cbeebies land, coaster, rollercoaster, roller coaster",
       "DefaultImage": 6091,
       "Location": "52.989321757166,-1.8945948982087",
@@ -1278,18 +1583,19 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/octonauts-rollercoaster-adventure/",
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nWheelchair users must be able to transfer from their own chair into the ride vehicle without assistance.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 8135,
@@ -1303,12 +1609,13 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
       "_id": 6235,
       "Name": "Peter Rabbit Hippity Hop",
-      "Summary": "Playful Benjamin Bunny has hidden from his friends in Mr McGregor’s garden – join Peter Rabbit and Lily Bobtail as they explore the garden and solve puzzles to try to uncover his hiding place!  Unleash your inner bunny on the Peter RabbitTM Hippity Hop ride and hop high into the sky to see if you can find Benjamin from the top!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nPlayful Benjamin Bunny has hidden from his friends in Mr McGregor’s garden – join Peter Rabbit and Lily Bobtail as they explore the garden and solve puzzles to try to uncover his hiding place!",
       "Keywords": "peter rabbit, bunny rabbit, cbeebies land",
       "DefaultImage": 13434,
       "Location": "52.990629557598,-1.8949113988724",
@@ -1317,22 +1624,39 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 0.9 m, then you cannot ride. If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right."
+    },
+    {
+      "_id": 8124,
+      "Name": "Pirate Treats",
+      "Summary": "Serving a range of snacks and drinks for your stroll around Mutiny Bay",
+      "Keywords": "",
+      "DefaultImage": 13074,
+      "Location": "52.988947169995,-1.8897937440719",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 806,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [],
+      "PreorderURL": null
     },
     {
       "_id": 4206,
       "Name": "Postman Pat Parcel Post",
-      "Summary": "Postman Pat’s parcels have been mixed up! Report to the Sorting Office to receive your instructions and become part of Postman Pat’s Special Delivery Service.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nPostman Pat’s parcels have been mixed up! Report to the Sorting Office to receive your instructions and become part of Postman Pat’s Special Delivery Service.",
       "Keywords": "royal mail, mail, cbeebies land",
       "DefaultImage": 9028,
       "Location": "52.990519768467,-1.8935327434388",
@@ -1341,18 +1665,19 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/postman-pat-parcel-post/",
       "MinimumHeightRequirement": null,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 8130,
@@ -1366,6 +1691,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1380,6 +1706,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1394,6 +1721,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ],
@@ -1414,6 +1742,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ],
@@ -1434,6 +1763,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ],
@@ -1445,8 +1775,8 @@
     {
       "_id": 4308,
       "Name": "Resort Box Office",
-      "Summary": "Providing guest information and ticket sales.",
-      "Keywords": "guest services, complaints, fastrack, access, ride access pass, disabled, wheelchair",
+      "Summary": "Upgrade your day out with unlimited digital photos, fastrack & more!",
+      "Keywords": "fastrack",
       "DefaultImage": 9106,
       "Location": "52.990264669115,-1.8928460979309",
       "Featured": false,
@@ -1454,6 +1784,7 @@
       "VisibleOnMap": true,
       "Category": 513,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -1461,7 +1792,7 @@
     {
       "_id": 4195,
       "Name": "Rita",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nBrace yourself – as the lights turn green, Rita powers you straight to 100kph in just 2.5 seconds. At lightning pace, Rita navigates the track, as you break free from the clutches of Dark Forest",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nBrace yourself – as the lights turn green, Rita powers you straight to 100kph in just 2.5 seconds. At lightning pace, Rita navigates the track, as you break free from the clutches of Dark Forest",
       "Keywords": "coaster, rollercoaster, roller coaster, launch",
       "DefaultImage": 6081,
       "Location": "52.984926611752,-1.890877356514",
@@ -1470,6 +1801,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153,
         119
@@ -1478,13 +1810,13 @@
       "Length": 640,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/rita/",
-      "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 1.4,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.4m.\r\n\r\nThe maximum standing height restriction is 1.95m.\r\n\r\nThe maximum chest size restriction is 48cm.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThe ride has strong magnetic fields and is therefore not suitable for guests with implantable cardioverter defibrillators (ICDs) or pacemakers.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 8137,
@@ -1498,12 +1830,38 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
+    },
+    {
+      "_id": 10759,
+      "Name": "Roller Disco",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nRide Roller Disco and get ready to slide and swirl round and round, faster and faster in a head-spinning, totally rad experience! Cowabunga – You’re one step closer to joining the Retro Squad!",
+      "Keywords": "retro squad",
+      "DefaultImage": 16566,
+      "Location": "52.985320610706,-1.8892358445968",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 506,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        119,
+        153
+      ],
+      "MinimumHeightRequirement": 1.2,
+      "MinimumUnaccompaniedHeightRequirement": null,
+      "MaximumHeightRequirement": null,
+      "MinimumAgeRequirement": null,
+      "MinimumUnaccompaniedAgeRequirement": null,
+      "MaximumAgeRequirement": null,
+      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
     },
     {
       "_id": 4270,
       "Name": "Rollercoaster Restaurant",
-      "Summary": "Available for walk-ins only from 11am until 3:30pm.\n\nLocated at Alton Towers Resort the Rollercoaster Restaurant is set below a vast rollercoaster track, where you can watch as orders tackle two gravity defying loop-the-loops before dropping 8 metres - the equivalent of two double decker buses - down the tornado spiral to the table.",
+      "Summary": "Located at Alton Towers Resort the Rollercoaster Restaurant is set below a vast rollercoaster track, where you can watch as orders tackle two gravity defying loop-the-loops before dropping 8 metres - the equivalent of two double decker buses - down the tornado spiral to the table.",
       "Keywords": "coaster, steak, grills, vegetarian, burgers, curry, salad, pasta, ribs",
       "DefaultImage": 6151,
       "Location": "52.986005256076,-1.882589330658",
@@ -1512,6 +1870,7 @@
       "VisibleOnMap": true,
       "Category": 805,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ],
@@ -1523,7 +1882,7 @@
     {
       "_id": 4197,
       "Name": "Runaway Mine Train",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Runaway Mine Train twists and turns, getting faster and faster.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nThe Runaway Mine Train twists and turns, getting faster and faster.",
       "Keywords": "runaway train, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9029,
       "Location": "52.989518737048,-1.8856094980088",
@@ -1532,18 +1891,19 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         155,
         120
       ],
       "WebPageURL": "https://www.altontowers.com/theme-park/runaway-mine-train/",
-      "MinimumHeightRequirement": 0.90000000000000002,
-      "MinimumUnaccompaniedHeightRequirement": 1.1000000000000001,
+      "MinimumHeightRequirement": 0.9,
+      "MinimumUnaccompaniedHeightRequirement": 1.1,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.1 m, then you must be accompanied by an adult. If your height is less than 0.9 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 0.9m.\r\n\r\nGuests under 1.1m high must accompanied by an adult aged 16 or over.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 8131,
@@ -1557,13 +1917,14 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
       "_id": 8331,
       "Name": "Seating Area (Games Bunker)",
-      "Summary": null,
-      "Keywords": null,
+      "Summary": "",
+      "Keywords": "",
       "DefaultImage": null,
       "Location": "52.986806148209,-1.8841128253784",
       "Featured": false,
@@ -1571,6 +1932,7 @@
       "VisibleOnMap": true,
       "Category": 502,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1585,6 +1947,7 @@
       "VisibleOnMap": true,
       "Category": 805,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         164
       ],
@@ -1596,7 +1959,7 @@
     {
       "_id": 4213,
       "Name": "Sharkbait Reef by SEA LIFE",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask in this attraction. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUnder the wreckage of the galleon in Mutiny Bay, Captain Black and his crew open up Sharkbait Reef. Brimming with blacktip sharks and chocolate chip starfish, spotted rays, seahorses and a Tropical Interactive Pool with shrimp that will manicure the tips of your fingers if you dip them into the touch pool.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nUnder the wreckage of the galleon in Mutiny Bay, Captain Black and his crew open up Sharkbait Reef. Brimming with blacktip sharks and chocolate chip starfish, spotted rays, seahorses and a Tropical Interactive Pool.",
       "Keywords": "fish, aquarium, sealife",
       "DefaultImage": 6102,
       "Location": "52.98994821466,-1.8893753194657",
@@ -1605,6 +1968,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -1622,6 +1986,7 @@
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ]
@@ -1638,6 +2003,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -1654,6 +2020,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ]
@@ -1670,6 +2037,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -1686,6 +2054,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ]
@@ -1702,6 +2071,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -1718,6 +2088,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -1734,6 +2105,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         154
       ]
@@ -1750,6 +2122,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1764,6 +2137,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -1780,6 +2154,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1794,6 +2169,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ]
@@ -1810,6 +2186,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ]
@@ -1826,6 +2203,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -1842,6 +2220,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ]
@@ -1858,6 +2237,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         152
       ]
@@ -1874,6 +2254,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -1890,6 +2271,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -1906,6 +2288,7 @@
       "VisibleOnMap": true,
       "Category": 514,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ]
@@ -1922,6 +2305,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ],
@@ -1930,7 +2314,7 @@
     {
       "_id": 4194,
       "Name": "Spinball Whizzer",
-      "Summary": "Feel like a pin ball being catapulted along the 470 metre track at speeds of up to 60km per hour!  Each car will spin 360 degrees whilst flying around the tracks.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nFeel like a pin ball being catapulted along the 470 metre track at speeds of up to 60km per hour!  Each car will spin 360 degrees whilst flying around the tracks.",
       "Keywords": "pinball, sonic, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9039,
       "Location": "52.988940711567,-1.8945573472824",
@@ -1939,6 +2323,7 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157,
         119
@@ -1950,7 +2335,7 @@
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride. If your height is greater than 1.95 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.2m.\r\n\r\nGuests under 1.95m high must accompanied by an adult aged 16 or over.\r\n\r\nThe maximum size / weight restriction is 111kg.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nWheelchair users must be able to transfer from their own chair into the ride vehicle without assistance.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests."
     },
     {
       "_id": 4256,
@@ -1964,20 +2349,39 @@
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
+    },
+    {
+      "_id": 4249,
+      "Name": "Spooks R Us",
+      "Summary": "Enter the Spooks R Us store and be amazed by all the ghostly tricks & treats. Pick out a ghoulish gift for your friends or family or simply choose a spooky gift for yourself.",
+      "Keywords": "duel shop, posters, glow in the dark, t-shirts, hats",
+      "DefaultImage": 6138,
+      "Location": "52.988817703968,-1.8842197302729",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 500,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        154
+      ]
     },
     {
       "_id": 5993,
       "Name": "Stargazing Pods",
       "Summary": "New for 2019! Escape to the great British Outdoors and stay in the brand new Stargazing Pods at Alton Towers Resort.\n\nSet around a village green the minimalistic themed pods are perfect for families, couples and friends. In the evening as the night sky emerges seek out one of the telescopes to see the stars above. Will you discover some of the Resort's own constellations?",
       "Keywords": "pods, hotel",
-      "DefaultImage": 9050,
+      "DefaultImage": 15376,
       "Location": "52.985042874112,-1.8716566467133",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -1992,6 +2396,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -2006,10 +2411,11 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
-      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 11:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 14:30:00\",\"period_length\":{\"day\":1}}]}",
+      "ShowTimes": "{\"type\":\"union\",\"children\":[{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 00:00:00\",\"end\":\"2021-11-08 00:00:00\"},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 11:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 11:45:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 14:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 14:45:00\",\"period_length\":{\"day\":1}}]}]},{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-19 00:00:00\",\"end\":\"2021-05-17 00:00:00\"},{\"type\":\"period\",\"offset_date\":\"2018-01-06 00:00:00\",\"period_length\":{\"day\":7},\"range_length\":{\"day\":2}},{\"type\":\"union\",\"children\":[{\"type\":\"period\",\"offset_date\":\"2020-01-01 17:30:00\",\"period_length\":{\"day\":1}},{\"type\":\"period\",\"offset_date\":\"2020-01-01 17:45:00\",\"period_length\":{\"day\":1}}]}]}]}",
       "_id": 6276,
       "Name": "Teletubbies Big Band Live Show",
       "Summary": "Tinky-Winky, Dipsy, Laa-Laa and Po will transport you over the hills and far away to the iconic Teletubbyland, where you’ll get to play-along as you enjoy a delightfully interactive music and dance-filled performance.  You can also ‘meet and greet’ the Teletubbies each day following the twice-daily performances in Big Fun Showtime, before waving Tubby Bye Bye!",
@@ -2021,6 +2427,7 @@
       "VisibleOnMap": true,
       "Category": 810,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -2028,7 +2435,7 @@
     {
       "_id": 4196,
       "Name": "TH13TEEN",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nIf you go down to the woods today you'd better not go alone... Dip and dive through the Dark Forest, enter the ancient crypt and face the horror that lies within.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nIf you go down to the woods today you'd better not go alone... Dip and dive through the Dark Forest, enter the ancient crypt and face the horror that lies within.",
       "Keywords": "13, thirteen, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9040,
       "Location": "52.98471346328,-1.8905340337601",
@@ -2037,6 +2444,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153,
         119
@@ -2051,12 +2459,12 @@
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride. If your height is greater than 1.96 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.2m.\r\n\r\nThe maximum standing height restriction is 1.96m.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThe ride has strong magnetic fields and is therefore not suitable for guests with implantable cardioverter defibrillators (ICDs) or pacemakers.\r\n\r\nThis ride includes flashing lights and as a result may not be suitable for all guests.\r\n\r\nThe seats for this attraction have a lap bar which can be restrictive, please speak to a member of staff for further assistance."
     },
     {
       "_id": 6240,
       "Name": "The Alton Towers Dungeon",
-      "Summary": "Guests are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Alton Towers Dungeon, a hilariously hideous journey through Staffordshire’s darkest history. Uncover secrets from the past, hidden deep beneath the Towers.  Buy your tickets at www.altontowers.com/traitors",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nThe Alton Towers Dungeon, a hilariously hideous journey through Staffordshire’s darkest history. Uncover secrets from the past, hidden deep beneath the Towers.  Buy your tickets at www.altontowers.com/traitors",
       "Keywords": "towers, dungeon, scare maze",
       "DefaultImage": 9634,
       "Location": "52.9840514045,-1.8938921594468",
@@ -2065,6 +2473,7 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ],
@@ -2074,12 +2483,12 @@
       "MinimumAgeRequirement": 10,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your age is less than 10 years, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThe minimum age restriction is 10 years of age.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThis ride includes dark spaces, shock/surprise features, smoke/mist/fog effects, loud noises and flashing lights and as a result may not be suitable for all guests.\r\n\r\nWheelchair users must be able to transfer on to the ride – with assistance or can bypass the boat ride.\r\n\r\nWheelchair users can enjoy the full attraction including the boat ride if they are able to transfer into a boat with assistance. The guest’s wheelchair will re-join them during their departure from the boat. Guests who are not able to transfer will be able to by-pass the boat ride via a separate passage and re-join their group. Due to safety reasons, there must only be one wheelchair user per group.\r\n\r\nAt any point during the tour, guests can alert a member of staff if they or a member of their party needs to leave, and they will be able to escort them out of or away from the attraction.\r\n\r\nThis attraction is a 45 minute walking experience and guests are required to stand for most of it.\r\n\r\nSeating is available in some shows, but due to the nature of the attraction, priority seating cannot be guaranteed."
     },
     {
       "_id": 4190,
       "Name": "The Blade",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nIn a few swings of The Blade, you'll be zero gravity, near vertical.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nIn a few swings of The Blade, you'll be zero gravity, near vertical.",
       "Keywords": "pirate ship, swinging ship",
       "DefaultImage": 6170,
       "Location": "52.986831983193,-1.8839733505097",
@@ -2088,6 +2497,7 @@
       "VisibleOnMap": true,
       "Category": 506,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160,
         120
@@ -2099,7 +2509,7 @@
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.3 m, then you must be accompanied by an adult. If your height is less than 1 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes and Ride Access Passes (via Main Exit).\r\n\r\nThe minimum standing height restriction is 1m.\r\n\r\nGuests under 1.3m high must accompanied by an adult aged 16 or over.\r\n\r\nGuests need to be able to transfer into the ride vehicle, this can be with assistance from a member of their group.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements."
     },
     {
       "_id": 4239,
@@ -2111,8 +2521,9 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 804,
+      "Category": 1623,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -2123,7 +2534,7 @@
     },
     {
       "_id": 4238,
-      "Name": "The Burger Kitchen (Cloud Cuckoo Land)",
+      "Name": "The Burger Kitchen (The Towers)",
       "Summary": "The Burger Kitchen offers succulent burgers combining premium ingredients to create the best burgers possible! With a menu that provides great variety, The Burger Kitchen restaurants are perfect for all visitors, whether it's for a great dining experience or a 'grab and go' the choice is yours.",
       "Keywords": "burger king, mcdonalds, mc donalds",
       "DefaultImage": 9071,
@@ -2131,10 +2542,11 @@
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
-      "Category": 804,
+      "Category": 1623,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
-        152
+        157
       ],
       "ReservationsURL": null,
       "MenuURL": null,
@@ -2153,6 +2565,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -2167,18 +2580,36 @@
       "VisibleOnMap": true,
       "Category": 805,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         165
       ],
       "ReservationsURL": "https://bda.bookatable.com/?cid=UK-ALTONTOWERSWEB:72250&rid=287789&disableRememberMe=true",
       "MenuURL": "https://altontowers-secondary.azurewebsites.net/media/6224/crookedspoon-march2019.pdf",
       "AllergyInformationURL": "https://www.altontowers.com/activities/places-to-eat/theme-park/special-diets/",
-      "PreorderURL": null
+      "PreorderURL": "https://menus.preoday.com/merlin-entertainments/ATR-Crooked-Spoon#/main/venue/menu/outlets"
+    },
+    {
+      "_id": 4533,
+      "Name": "The Furchester Hotel Live Show",
+      "Summary": "A brand new live and interactive show, where you can join Phoebe, Funella, Furgus, Elmo and Cookie Monster at The Furchester Hotel.\nMake your way through the famous revolving doors before being welcomed with furry arms into the hotel.\n\nThe show sees the hotel prepare for the exciting arrival of Chick Swagger, you can sing and dance along to the rock-a-doodle-do hit, Tail Feather Shake.",
+      "Keywords": "",
+      "DefaultImage": 9129,
+      "Location": "52.99001279739,-1.8943481349793",
+      "Featured": false,
+      "WayfindingEnabled": true,
+      "VisibleOnMap": true,
+      "Category": 810,
+      "Parent": null,
+      "entityIds": [],
+      "Classifications": [
+        151
+      ]
     },
     {
       "_id": 6864,
       "Name": "The Skyride (Forbidden Valley)",
-      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Summary": "Guests (6+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
       "Keywords": "cable car, sky ride, skyride",
       "DefaultImage": 10377,
       "Location": "52.986961157875,-1.8851213359681",
@@ -2187,6 +2618,7 @@
       "VisibleOnMap": true,
       "Category": 498,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160,
         120
@@ -2195,7 +2627,7 @@
     {
       "_id": 6865,
       "Name": "The Skyride (Cloud Cuckoo Land)",
-      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Summary": "Guests (6+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
       "Keywords": "cable car, sky ride, skyride",
       "DefaultImage": 10378,
       "Location": "52.98456167509,-1.8922881984558",
@@ -2204,6 +2636,7 @@
       "VisibleOnMap": true,
       "Category": 498,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         152
       ]
@@ -2211,7 +2644,7 @@
     {
       "_id": 6866,
       "Name": "The Skyride (Towers Street)",
-      "Summary": "Guests over the age of 6 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
+      "Summary": "Guests (6+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nUp in the clouds, float hundreds of feet up in gondolas all the colours of the rainbow. Find your jaw dropping to the floor at the sights over Alton Towers and beyond.",
       "Keywords": "cable car, sky ride, skyride",
       "DefaultImage": 10379,
       "Location": "52.989890090121,-1.8913118743744",
@@ -2220,6 +2653,7 @@
       "VisibleOnMap": true,
       "Category": 498,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -2227,7 +2661,7 @@
     {
       "_id": 4193,
       "Name": "The Smiler",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThe Smiler is the world’s first 14-loop rollercoaster. Its twisting track combines the world beating 14 loops with a speed of 85 km/h and a track length 3x longer than Oblivion!",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nThe Smiler is the world’s first 14-loop rollercoaster. Its twisting track combines the world beating 14 loops with a speed of 85 km/h and a track length 3x longer than Oblivion!",
       "Keywords": "coaster, rollercoaster, roller coaster, 14 loops",
       "DefaultImage": 9042,
       "Location": "52.987280863553,-1.8953566455689",
@@ -2236,6 +2670,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159,
         119
@@ -2244,13 +2679,13 @@
       "Length": 1170,
       "IsBigSix": true,
       "WebPageURL": "https://www.altontowers.com/theme-park/the-smiler/",
-      "MinimumHeightRequirement": 1.3999999999999999,
+      "MinimumHeightRequirement": 1.4,
       "MinimumUnaccompaniedHeightRequirement": null,
       "MaximumHeightRequirement": null,
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.4 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes, Ride Access Passes and wheelchair users.\r\n\r\nThe minimum standing height restriction is 1.4m.\r\n\r\nThe maximum chest size restriction is 56cm.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nIn the unlikely event of an evacuation, the evacuation process requires guests to walk 25 m + independently.\r\n\r\nWheelchair users must be able to transfer from their own chair into the ride vehicle without assistance.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their feet and remain sitting up right.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThe ride has strong magnetic fields and is therefore not suitable for guests with implantable cardioverter defibrillators (ICDs) or pacemakers.\r\n\r\nThis ride includes flashing lights and smoke/mist/fog effects and as a result may not be suitable for all guests."
     },
     {
       "_id": 4229,
@@ -2264,6 +2699,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -2280,6 +2716,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ],
@@ -2300,6 +2737,7 @@
       "VisibleOnMap": true,
       "Category": 805,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         166
       ],
@@ -2320,6 +2758,7 @@
       "VisibleOnMap": true,
       "Category": 513,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -2336,6 +2775,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -2352,6 +2792,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -2368,6 +2809,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         160
       ]
@@ -2384,6 +2826,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         157
       ]
@@ -2400,6 +2843,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         154
       ]
@@ -2416,6 +2860,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ]
@@ -2432,6 +2877,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ]
@@ -2448,6 +2894,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -2464,6 +2911,7 @@
       "VisibleOnMap": true,
       "Category": 503,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         159
       ]
@@ -2480,6 +2928,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153
       ],
@@ -2500,6 +2949,7 @@
       "VisibleOnMap": true,
       "Category": 806,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ],
@@ -2514,12 +2964,13 @@
       "Summary": "Guests over the age of 11 are required to wear a suitable face mask within this outlet. If you do not have a mask, they are available to purchase from our retail outlets.\n\nThis is the ideal place to pick up that perfect souvenir to commemorate your visit to Alton Towers Resort or a gift for a friend or family member. It has a huge variety of keepsakes for you to purchase, ensuring your trip to Alton Towers Resort is unforgettable!",
       "Keywords": "main shop, big shop, entrance shop, store, hoodies, t-shirts, hats, stationary, ride merchandise,",
       "DefaultImage": 6134,
-      "Location": "52.990616343973,-1.8919176701456",
+      "Location": "52.990303121207,-1.8919498566538",
       "Featured": false,
       "WayfindingEnabled": true,
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         158
       ]
@@ -2536,6 +2987,7 @@
       "VisibleOnMap": true,
       "Category": 749,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         151
       ],
@@ -2544,7 +2996,7 @@
     {
       "_id": 4773,
       "Name": "Wicker Man",
-      "Summary": "Guests over the age of 11 are required to wear a suitable, secured face mask on this ride. If you do not have a mask, they are available to purchase from our retail outlets.\n\nJoin the chosen ones on the world’s most immersive rollercoaster experience to date, unifying cutting edge special effects with classic wooden coaster technology for the first time! Be Chosen.",
+      "Summary": "Guests (11+) are required to wear a suitable, secured face mask If you do not have a mask, they are available to purchase from our retail outlets. Any guests without a valid exemption will not be permitted to ride without a mask.\n\nJoin the chosen ones on the world’s most immersive rollercoaster experience to date, unifying cutting edge special effects with classic wooden coaster technology for the first time! Be Chosen.",
       "Keywords": "wickerman, wooden, coaster, rollercoaster, roller coaster",
       "DefaultImage": 9006,
       "Location": "52.98958332042,-1.8883829021302",
@@ -2553,6 +3005,7 @@
       "VisibleOnMap": true,
       "Category": 507,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156,
         119
@@ -2564,7 +3017,7 @@
       "MinimumAgeRequirement": null,
       "MinimumUnaccompaniedAgeRequirement": null,
       "MaximumAgeRequirement": null,
-      "RestrictionSummary": "If your height is less than 1.2 m, then you cannot ride."
+      "RestrictionSummary": "Guests who would find it difficult to exit the ride without assistance, in the unlikely event of an evacuation, will need to be accompanied by a member of their group. Group members providing assistance need to be over the age of 14.\r\n\r\nThis ride has separate access for Standard Passes, Fastrack Passes and Ride Access Passes.\r\n\r\nThe minimum standing height restriction is 1.2m.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for guests with back, heart or neck conditions.\r\n\r\nThis ride includes rigorous motion and / or velocity and is therefore not recommended for expectant mothers.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness . For this reason it is not suitable for all guests.\r\n\r\nWheelchair users must be able to transfer from their own chair into the ride vehicle without assistance.\r\n\r\nIn the unlikely event of an evacuation, the process may include climbing ladders, walking over narrow balconies and being strapped into a harness. For this reason it is not suitable for all guests.\r\n\r\nFor safety reasons, due to the speed and motion of this ride guests must be able to keep their head upright without assistance.\r\n\r\nDue to the speed and motion of this ride guests must be able to brace themselves with their hands and / or feet and remain sitting upright. Guests also need to be able to exit the ride independently / with assistance from a member of their group, in the unlikely event of an evacuation.\r\n\r\nGuests who have a plaster cast or brace should seek medical advice before choosing to ride. If guests choose to ride they should check they can meet the rides safety requirements.\r\n\r\nThe ride has strong magnetic fields and is therefore not suitable for guests with implantable cardioverter defibrillators (ICDs) or pacemakers.\r\n\r\nThis ride includes flashing lights and smoke/mist/fog effects and as a result may not be suitable for all guests.\r\n\r\nThis attraction has a pre-show experience which involves flashing lights, confined spaces and strong smells. If you wish to skip this part of the attraction, please speak to a member of staff just outside the baggage hold."
     },
     {
       "_id": 4916,
@@ -2578,6 +3031,7 @@
       "VisibleOnMap": true,
       "Category": 500,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         156
       ]
@@ -2594,6 +3048,7 @@
       "VisibleOnMap": true,
       "Category": 805,
       "Parent": null,
+      "entityIds": [],
       "Classifications": [
         153
       ],
@@ -2614,6 +3069,7 @@
       "VisibleOnMap": true,
       "Category": 501,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     },
     {
@@ -2628,6 +3084,7 @@
       "VisibleOnMap": true,
       "Category": 1223,
       "Parent": null,
+      "entityIds": [],
       "Classifications": []
     }
   ],
@@ -2688,6 +3145,11 @@
       "Item": 4316
     },
     {
+      "_id": 4094,
+      "Location": "52.986344668219,-1.8829261323075",
+      "Item": 10761
+    },
+    {
       "_id": 1785,
       "Location": "52.985682014193,-1.8818003777415",
       "Item": 4189
@@ -2701,6 +3163,16 @@
       "_id": 1877,
       "Location": "52.99006416623,-1.8945220950991",
       "Item": 4525
+    },
+    {
+      "_id": 1788,
+      "Location": "52.988632931444,-1.8895520456135",
+      "Item": 4232
+    },
+    {
+      "_id": 1789,
+      "Location": "52.98834875763,-1.8850727565587",
+      "Item": 4232
     },
     {
       "_id": 1790,
@@ -2743,6 +3215,21 @@
       "Item": 4268
     },
     {
+      "_id": 4093,
+      "Location": "52.986955345062,-1.8967180777384",
+      "Item": 10760
+    },
+    {
+      "_id": 2549,
+      "Location": "52.99154854628,-1.8922993634128",
+      "Item": 6033
+    },
+    {
+      "_id": 2548,
+      "Location": "52.985787591715,-1.8773326371097",
+      "Item": 6032
+    },
+    {
       "_id": 1795,
       "Location": "52.987164309922,-1.8834579829127",
       "Item": 4188
@@ -2766,6 +3253,11 @@
       "_id": 1800,
       "Location": "52.985013511242,-1.8899757508188",
       "Item": 4195
+    },
+    {
+      "_id": 4092,
+      "Location": "52.985598345514,-1.8898703714471",
+      "Item": 10759
     },
     {
       "_id": 2822,
@@ -2803,6 +3295,11 @@
       "Item": 4238
     },
     {
+      "_id": 1878,
+      "Location": "52.990077082749,-1.8942538741976",
+      "Item": 4533
+    },
+    {
       "_id": 2670,
       "Location": "52.98452485832,-1.8924817536258",
       "Item": 6865
@@ -2826,6 +3323,16 @@
       "_id": 2550,
       "Location": "52.986886236603,-1.8850252125644",
       "Item": 4265
+    },
+    {
+      "_id": 3384,
+      "Location": "52.990301758926,-1.8921787245199",
+      "Item": 4245
+    },
+    {
+      "_id": 3385,
+      "Location": "52.990763519543,-1.8919695122167",
+      "Item": 4245
     },
     {
       "_id": 1953,
@@ -2905,38 +3412,8 @@
       "Type": "physical_main"
     },
     {
-      "_id": 36,
-      "Item": 4210,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 34,
-      "Item": 4211,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1746,
-      "Item": 4212,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1778,
-      "Item": 4213,
-      "Type": "physical_main"
-    },
-    {
       "_id": 35,
       "Item": 4214,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1726,
-      "Item": 4215,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 15,
-      "Item": 4216,
       "Type": "physical_main"
     },
     {
@@ -2950,23 +3427,8 @@
       "Type": "physical_main"
     },
     {
-      "_id": 1790,
-      "Item": 4220,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 20,
-      "Item": 4221,
-      "Type": "physical_main"
-    },
-    {
       "_id": 24,
       "Item": 4223,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 21,
-      "Item": 4224,
       "Type": "physical_main"
     },
     {
@@ -2980,338 +3442,8 @@
       "Type": "physical_main"
     },
     {
-      "_id": 1788,
-      "Item": 4228,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1789,
-      "Item": 4229,
-      "Type": "physical_main"
-    },
-    {
       "_id": 14,
       "Item": 4231,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1893,
-      "Item": 4232,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1871,
-      "Item": 4233,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1873,
-      "Item": 4234,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1836,
-      "Item": 4235,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1631,
-      "Item": 4236,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1837,
-      "Item": 4238,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1824,
-      "Item": 4239,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1872,
-      "Item": 4241,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1831,
-      "Item": 4242,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1878,
-      "Item": 4244,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1879,
-      "Item": 4245,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1881,
-      "Item": 4246,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 711,
-      "Item": 4248,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1880,
-      "Item": 4249,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1877,
-      "Item": 4250,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1799,
-      "Item": 4255,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1801,
-      "Item": 4256,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1800,
-      "Item": 4257,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1862,
-      "Item": 4258,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1869,
-      "Item": 4259,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1865,
-      "Item": 4260,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1823,
-      "Item": 4262,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1864,
-      "Item": 4263,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1867,
-      "Item": 4264,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1863,
-      "Item": 4265,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1866,
-      "Item": 4266,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1822,
-      "Item": 4267,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1796,
-      "Item": 4268,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1846,
-      "Item": 4269,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1632,
-      "Item": 4270,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1876,
-      "Item": 4271,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1791,
-      "Item": 4272,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1774,
-      "Item": 4273,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1870,
-      "Item": 4274,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1828,
-      "Item": 4275,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1829,
-      "Item": 4276,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 710,
-      "Item": 4277,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1835,
-      "Item": 4278,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1830,
-      "Item": 4279,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1832,
-      "Item": 4281,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1833,
-      "Item": 4284,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1883,
-      "Item": 4286,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1834,
-      "Item": 4287,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1874,
-      "Item": 4288,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1859,
-      "Item": 4289,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1856,
-      "Item": 4290,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1855,
-      "Item": 4293,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1861,
-      "Item": 4294,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1858,
-      "Item": 4295,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1852,
-      "Item": 4296,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1850,
-      "Item": 4297,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1854,
-      "Item": 4298,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1857,
-      "Item": 4300,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1860,
-      "Item": 4301,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1851,
-      "Item": 4302,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1853,
-      "Item": 4303,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1849,
-      "Item": 4304,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1848,
-      "Item": 4308,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 38,
-      "Item": 4309,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1776,
-      "Item": 4316,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 37,
-      "Item": 4317,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 451,
-      "Item": 4320,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 455,
-      "Item": 4321,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 453,
-      "Item": 4322,
       "Type": "physical_main"
     },
     {
@@ -3330,258 +3462,8 @@
       "Type": "physical_main"
     },
     {
-      "_id": 29,
-      "Item": 4533,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 395,
-      "Item": 4664,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 457,
-      "Item": 4707,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 459,
-      "Item": 4709,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 461,
-      "Item": 4711,
-      "Type": "physical_main"
-    },
-    {
       "_id": 547,
       "Item": 4773,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 709,
-      "Item": 4916,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1745,
-      "Item": 5949,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1749,
-      "Item": 5952,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1750,
-      "Item": 5953,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1751,
-      "Item": 5954,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1752,
-      "Item": 5955,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1792,
-      "Item": 5987,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1794,
-      "Item": 5988,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1797,
-      "Item": 5990,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1798,
-      "Item": 5991,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1802,
-      "Item": 5992,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1803,
-      "Item": 5993,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1812,
-      "Item": 6002,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1814,
-      "Item": 6004,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1815,
-      "Item": 6005,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1816,
-      "Item": 6006,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1817,
-      "Item": 6007,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1818,
-      "Item": 6008,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1819,
-      "Item": 6009,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1820,
-      "Item": 6010,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1821,
-      "Item": 6011,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1827,
-      "Item": 6013,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1838,
-      "Item": 6015,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1839,
-      "Item": 6016,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1841,
-      "Item": 6018,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1842,
-      "Item": 6019,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1843,
-      "Item": 6020,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1844,
-      "Item": 6021,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1845,
-      "Item": 6022,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1868,
-      "Item": 6023,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1875,
-      "Item": 6024,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1882,
-      "Item": 6025,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1884,
-      "Item": 6026,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1890,
-      "Item": 6032,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1891,
-      "Item": 6033,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1892,
-      "Item": 6034,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1894,
-      "Item": 6035,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1903,
-      "Item": 6042,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1904,
-      "Item": 6043,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1905,
-      "Item": 6044,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1906,
-      "Item": 6045,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1907,
-      "Item": 6046,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 1908,
-      "Item": 6047,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2093,
-      "Item": 6208,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2094,
-      "Item": 6209,
       "Type": "physical_main"
     },
     {
@@ -3590,188 +3472,18 @@
       "Type": "physical_main"
     },
     {
-      "_id": 2126,
-      "Item": 6240,
+      "_id": 6713,
+      "Item": 10759,
       "Type": "physical_main"
     },
     {
-      "_id": 2162,
-      "Item": 6276,
+      "_id": 6714,
+      "Item": 10760,
       "Type": "physical_main"
     },
     {
-      "_id": 2169,
-      "Item": 6283,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2452,
-      "Item": 6572,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2453,
-      "Item": 6573,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2454,
-      "Item": 6575,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2456,
-      "Item": 6576,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2734,
-      "Item": 6864,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2735,
-      "Item": 6865,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2736,
-      "Item": 6866,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2764,
-      "Item": 6893,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2927,
-      "Item": 7063,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2928,
-      "Item": 7064,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2929,
-      "Item": 7065,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 2930,
-      "Item": 7066,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 3243,
-      "Item": 7394,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4009,
-      "Item": 8124,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4010,
-      "Item": 8125,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4011,
-      "Item": 8126,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4012,
-      "Item": 8127,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4013,
-      "Item": 8128,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4014,
-      "Item": 8129,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4015,
-      "Item": 8130,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4016,
-      "Item": 8131,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4017,
-      "Item": 8132,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4018,
-      "Item": 8133,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4019,
-      "Item": 8134,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4020,
-      "Item": 8135,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4021,
-      "Item": 8136,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4022,
-      "Item": 8137,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4023,
-      "Item": 8138,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4257,
-      "Item": 8332,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4258,
-      "Item": 8333,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4259,
-      "Item": 8334,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4260,
-      "Item": 8335,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4261,
-      "Item": 8336,
-      "Type": "physical_main"
-    },
-    {
-      "_id": 4306,
-      "Item": 8375,
+      "_id": 6715,
+      "Item": 10761,
       "Type": "physical_main"
     }
   ],
@@ -3847,7 +3559,7 @@
       "_id": 82,
       "Group": 34,
       "Name": {
-        "en-GB": "Disabled Access"
+        "en-GB": "Accessibility"
       },
       "Content": {
         "en-GB": "ee31aff0-0638-5e60-99cf-e2e6624648a8"
@@ -3907,39 +3619,16 @@
   ],
   "ShopItem": [
     {
-      "_id": 5,
-      "Name": "The Alton Towers Dungeon",
-      "Summary": "A hilariously hideous journey through Staffordshire's darkest history.",
-      "Image": "7ba37453-92f3-585f-a549-0d2ac956e8d1",
-      "Action": "Buy now",
-      "Content": {
-        "en-GB": "a33262d8-99c7-50a8-94b4-fe70ddc49470"
-      },
-      "Path": {
-        "en-GB": "index.html"
-      }
-    },
-    {
       "_id": 29,
       "Name": "Fastrack",
       "Summary": "Reduce your waiting time on our most popular attractions",
-      "Image": "e52f6165-4992-5fd5-b742-f3ed75161901",
+      "Image": "5f14f24c-6ee1-5682-9bbb-05a45c36f5b6",
       "Action": "BUY NOW",
       "Content": {
         "en-GB": "045b4b31-a9a5-5c89-a436-fa5577009791"
       },
       "Path": {
         "en-GB": "index.html"
-      }
-    },
-    {
-      "_id": 25,
-      "Name": "Season Passes",
-      "Summary": "Our best value pass",
-      "Image": "7d97e437-f402-55ef-ba72-af794594b97b",
-      "Action": "BUY NOW",
-      "URL": {
-        "en-GB": "https://me-twalton.store20.accesso.com/packageList/keyword/Local%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=SeasonPass&utm_content=Shop"
       }
     },
     {
@@ -3950,16 +3639,6 @@
       "Action": "BUY NOW",
       "URL": {
         "en-GB": "https://me-twalton.store20.accesso.com/wizardCalendar/Wizard/WizardAdmissionDated?utm_source=Alton_Towers&utm_medium=app&utm_campaign=Tickets&utm_content=Shop"
-      }
-    },
-    {
-      "_id": 27,
-      "Name": "Merlin Annual Pass",
-      "Summary": "An incredible year at the UK's Top Attractions",
-      "Image": "3473759f-2216-5d0f-b393-e15392dead26",
-      "Action": "BUY NOW",
-      "URL": {
-        "en-GB": "https://me-twalton.store20.accesso.com/subKeyword/Annual%20Passes?utm_source=Alton_Towers&utm_medium=app&utm_campaign=MAP&utm_content=Shop"
       }
     },
     {
@@ -4008,16 +3687,6 @@
   ],
   "Image": [
     {
-      "_id": 9259,
-      "Item": 6045,
-      "Image": "73f2295d-83a7-5471-b01d-efe3c15ac231"
-    },
-    {
-      "_id": 7147,
-      "Item": 4707,
-      "Image": "0b6e3870-cab3-5096-8177-29aca140b8a4"
-    },
-    {
       "_id": 9046,
       "Item": 4255,
       "Image": "5600b7f5-d39e-50d3-a3cc-a3a78ed767b0"
@@ -4033,11 +3702,6 @@
       "Image": "2eefb49f-e362-5078-99fa-44fcef22da0a"
     },
     {
-      "_id": 6187,
-      "Item": 4320,
-      "Image": "8dda4e39-31ce-589f-a43b-5ee9fe24b6fe"
-    },
-    {
       "_id": 13086,
       "Item": 8134,
       "Image": "65ef97c5-3f60-598b-8260-1b9ab5480ff7"
@@ -4046,11 +3710,6 @@
       "_id": 9009,
       "Item": 4231,
       "Image": "c9d49ed9-a44d-5ae5-b0d9-5ef4487e2ac8"
-    },
-    {
-      "_id": 6100,
-      "Item": 4212,
-      "Image": "5bd70b07-282b-53fa-975a-ede1ddc6a347"
     },
     {
       "_id": 9561,
@@ -4123,19 +3782,9 @@
       "Image": "425a1d47-5531-5bd8-a8ea-a6ae58955f6a"
     },
     {
-      "_id": 9733,
-      "Item": 6283,
-      "Image": "24a8f382-5e87-5570-907b-e46914ee8ac5"
-    },
-    {
       "_id": 9045,
       "Item": 5991,
       "Image": "f3b0b606-4970-52c4-a5ce-b07b33f9ee38"
-    },
-    {
-      "_id": 10738,
-      "Item": 5954,
-      "Image": "03d76e5c-cd8d-587c-8f49-d14ea24272ef"
     },
     {
       "_id": 9010,
@@ -4213,11 +3862,6 @@
       "Image": "0ffc340b-c79b-51ef-bac7-f42ff1eae76a"
     },
     {
-      "_id": 10736,
-      "Item": 7064,
-      "Image": "373be5e3-ab67-527e-8a78-e341b6d13658"
-    },
-    {
       "_id": 6096,
       "Item": 4208,
       "Image": "2f9a4d6f-e46d-54fa-8395-39efde7d08a1"
@@ -4253,11 +3897,6 @@
       "Image": "5e03eae0-5bb9-51bc-8ea1-f138fe35745a"
     },
     {
-      "_id": 9260,
-      "Item": 6046,
-      "Image": "10cb0ce2-4941-507f-8fcc-3640baaf4e59"
-    },
-    {
       "_id": 10076,
       "Item": 6575,
       "Image": "6cd6b76d-c09c-5533-abe1-fd7522717c14"
@@ -4268,14 +3907,9 @@
       "Image": "28ab514c-d073-5781-b405-d33c7c57901e"
     },
     {
-      "_id": 10739,
-      "Item": 7065,
-      "Image": "60977dcf-8062-5406-886b-5ddd620fd0f5"
-    },
-    {
-      "_id": 9016,
-      "Item": 4221,
-      "Image": "5e9b0c45-3eb8-5609-a8a1-966d50fb9b12"
+      "_id": 16568,
+      "Item": 10761,
+      "Image": "019cac2f-6ee7-55ff-ae97-baca771cd086"
     },
     {
       "_id": 13516,
@@ -4283,19 +3917,9 @@
       "Image": "250e64e8-d333-5845-aa79-ce238a160675"
     },
     {
-      "_id": 6172,
-      "Item": 4271,
-      "Image": "544d21cf-8d04-5ce9-8ae4-6779e09b9215"
-    },
-    {
-      "_id": 9021,
-      "Item": 4224,
-      "Image": "d2727d6d-fb98-541c-8c08-3d9fb5f2e3d8"
-    },
-    {
-      "_id": 11681,
-      "Item": 7394,
-      "Image": "db2f902f-7bda-578f-bbb5-8de721404cd2"
+      "_id": 16498,
+      "Item": 10724,
+      "Image": "dbbd6515-e4b8-5fe2-9104-7d9f58e36da1"
     },
     {
       "_id": 9022,
@@ -4308,9 +3932,9 @@
       "Image": "902ea9db-9085-55b7-82d7-cf2f98c9aca8"
     },
     {
-      "_id": 9132,
-      "Item": 5952,
-      "Image": "b703485a-d6e5-5338-88b4-735bb8066f11"
+      "_id": 16574,
+      "Item": 10764,
+      "Image": "3786fbe9-f903-576f-b66c-958bf03da8a6"
     },
     {
       "_id": 6121,
@@ -4331,11 +3955,6 @@
       "_id": 9562,
       "Item": 6209,
       "Image": "29fe8fbe-3bf2-5376-a07d-a218ad6afd53"
-    },
-    {
-      "_id": 8964,
-      "Item": 4322,
-      "Image": "d4590e1d-98aa-5d9b-99aa-83f51dbe828f"
     },
     {
       "_id": 9025,
@@ -4413,9 +4032,9 @@
       "Image": "0cd17a6c-c81b-5029-9c69-2daac72eca62"
     },
     {
-      "_id": 10490,
-      "Item": 6893,
-      "Image": "3ded7cbb-bd27-5456-8364-b805f55dd1fa"
+      "_id": 16567,
+      "Item": 10760,
+      "Image": "09dacca5-1e48-59d9-af7e-cc3cf44e7f0b"
     },
     {
       "_id": 9178,
@@ -4453,11 +4072,6 @@
       "Image": "42233601-57dc-58ee-8965-8fc49c9e482b"
     },
     {
-      "_id": 9061,
-      "Item": 4242,
-      "Image": "5282d765-3f5b-5daf-916f-8cb0596183ee"
-    },
-    {
       "_id": 9027,
       "Item": 4192,
       "Image": "df67527b-5485-5e7a-b5be-c2a364c0d48b"
@@ -4473,19 +4087,9 @@
       "Image": "41a63db2-507b-514d-87cb-64b8a3f02922"
     },
     {
-      "_id": 9131,
-      "Item": 5953,
-      "Image": "661a3eab-2356-5d9f-b605-1af210c61728"
-    },
-    {
       "_id": 13434,
       "Item": 6235,
       "Image": "678c4f70-f04d-5c20-9c17-5d5727a016a4"
-    },
-    {
-      "_id": 10751,
-      "Item": 7066,
-      "Image": "a313c831-0130-5436-adb0-15ec95e726e5"
     },
     {
       "_id": 13074,
@@ -4496,11 +4100,6 @@
       "_id": 9028,
       "Item": 4206,
       "Image": "e2c642a5-8bb6-5530-ad34-f68fbfe2a93e"
-    },
-    {
-      "_id": 9133,
-      "Item": 5949,
-      "Image": "bac198f3-e69b-57b7-b7d1-c883464c471f"
     },
     {
       "_id": 13083,
@@ -4543,6 +4142,11 @@
       "Image": "ee1dd2ae-84b7-517a-891d-2a472835de92"
     },
     {
+      "_id": 16566,
+      "Item": 10759,
+      "Image": "f7d3d72e-d866-57c5-80f1-1c1fee5c9579"
+    },
+    {
       "_id": 6151,
       "Item": 4270,
       "Image": "f36e1341-334f-565d-ba12-8bcc236e4cf1"
@@ -4551,21 +4155,6 @@
       "_id": 9029,
       "Item": 4197,
       "Image": "9f6cf714-95d4-5189-a871-eaab9a827e5e"
-    },
-    {
-      "_id": 9258,
-      "Item": 6044,
-      "Image": "b2e5f263-4754-5f3c-ac7d-ebeecc090f14"
-    },
-    {
-      "_id": 9257,
-      "Item": 6043,
-      "Image": "32327b80-afb3-5ef0-9eae-1fe5add4bc96"
-    },
-    {
-      "_id": 9256,
-      "Item": 6042,
-      "Image": "4eeb9eb0-7d9a-5109-aa21-d755669d224a"
     },
     {
       "_id": 13082,
@@ -4586,16 +4175,6 @@
       "_id": 6135,
       "Item": 4246,
       "Image": "c0e121d6-17d9-5eb1-ac28-02da8b2c9aee"
-    },
-    {
-      "_id": 9261,
-      "Item": 6047,
-      "Image": "7d57ac47-2ae4-54db-8972-4a307d769856"
-    },
-    {
-      "_id": 9134,
-      "Item": 4709,
-      "Image": "6f0d71a8-5b9d-5e1a-b98f-d34dafb27ba5"
     },
     {
       "_id": 9077,
@@ -4708,24 +4287,14 @@
       "Image": "6e58bfab-9dce-5f07-9a7b-7d77ceb1ccfa"
     },
     {
-      "_id": 7151,
-      "Item": 4711,
-      "Image": "7c8780b9-ef82-5ec2-a7c6-aeb7bef974bc"
-    },
-    {
-      "_id": 9050,
+      "_id": 15376,
       "Item": 5993,
-      "Image": "418bcde0-9ea8-5b19-a5a9-93f240365132"
+      "Image": "01076e6e-7f74-5de0-807f-817359bc1f1e"
     },
     {
       "_id": 13076,
       "Item": 8126,
       "Image": "36032b2d-b001-51a9-9f7d-1dc0fc51a19f"
-    },
-    {
-      "_id": 6189,
-      "Item": 4321,
-      "Image": "cb4e58db-8664-598b-a133-a381e7f894ae"
     },
     {
       "_id": 13088,
@@ -4743,19 +4312,9 @@
       "Image": "4c62c5b6-de50-5714-b9e6-6d7064ebda16"
     },
     {
-      "_id": 6137,
-      "Item": 4248,
-      "Image": "23460701-df3c-51e1-aee1-bbaa1bec860e"
-    },
-    {
       "_id": 9634,
       "Item": 6240,
       "Image": "4da586e7-34ee-50f3-9078-be67c665b3d5"
-    },
-    {
-      "_id": 10735,
-      "Item": 7063,
-      "Image": "a635d2c6-04ed-5bf6-ba94-62b0113f027b"
     },
     {
       "_id": 6170,
@@ -4786,16 +4345,6 @@
       "_id": 9129,
       "Item": 4533,
       "Image": "9d781d7a-de6f-5b06-909f-e741a4dac65e"
-    },
-    {
-      "_id": 6117,
-      "Item": 4228,
-      "Image": "b1419615-37a4-5576-bd44-414907f7ea57"
-    },
-    {
-      "_id": 8971,
-      "Item": 5955,
-      "Image": "ad1261bb-b1fd-5f94-8c03-41f2815b11da"
     },
     {
       "_id": 10377,
@@ -4903,11 +4452,6 @@
       "Image": "eca5abc8-ecf0-58b3-90c5-efd5a4ef19c9"
     },
     {
-      "_id": 10866,
-      "Item": 6035,
-      "Image": "902c658e-823b-5911-8285-6c55417d7ff5"
-    },
-    {
       "_id": 9006,
       "Item": 4773,
       "Image": "7d85639b-7c6b-5522-9e4d-bec0b3776446"
@@ -4947,11 +4491,20 @@
       "URL": "https://www.altontowers.com/plan-your-visit/before-you-visit/know-before-you-go/?utm_source=2018App&utm_medium=Featured&utm_campaign=Gardens"
     },
     {
-      "_id": 428,
-      "Title": "We're back!",
-      "Summary": "We've reopened our Theme Park & Accommodation and can't wait to see you! Pre-booking your visit is essential for all guests",
-      "Image": "4be9200d-c040-599b-a12d-9494b4fd6554",
-      "URL": "https://www.altontowers.com/tickets-passes/?utm_source=2018App&utm_medium=Featured&utm_campaign=Gardens"
+      "_id": 420,
+      "Title": "Alton Towers Historic Gardens",
+      "Summary": "Our Gardens are currently open! Pre-book your entry & download our guide to follow the suggested route",
+      "Image": "703ba2e0-2ac6-5ddc-a2c0-33accbf30b66",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2021-03-29 10:00:00\",\"end\":\"2021-04-11 15:00:00\"}",
+      "URL": "https://www.altontowers.com/media/4igpw2wo/alton-towers-gardens-nov-2020.pdf?utm_source=2018App&utm_medium=Featured&utm_campaign=Gardens"
+    },
+    {
+      "_id": 575,
+      "Title": "Mardi Gras",
+      "Summary": "From 22nd May, join us in getting the summer vibes going with a Mardi Gras inspired takeover",
+      "Image": "0ebd0d30-4a44-5bc4-b117-3c71813c2873",
+      "DisplaySchedule": "{\"type\":\"range\",\"start\":\"2021-04-12 00:01:00\",\"end\":\"2021-05-22 00:00:00\"}",
+      "URL": "https://www.altontowers.com/explore/events/mardi-gras/?utm_source=2018App&utm_medium=Featured&utm_campaign=MardiGras"
     }
   ],
   "Offer": [
@@ -5223,12 +4776,12 @@
       "ActionTitle": null
     },
     {
-      "_id": 479,
-      "Title": "Mobile food ordering is here!",
-      "Summary": "You can now order your food in advance from The Burger Kitchen or Just Chicken using our app",
-      "Image": "77f42e4b-3807-5768-8ebd-9ad4b74a63b7",
-      "DisplaySchedule": "{\"type\":\"period\",\"offset_date\":\"2000-01-01 11:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":16,\"minute\":0}}",
-      "Description": "Mobile food ordering is now available through the Alton Towers Resort app!\n\nVisit the Just Chicken or The Burger Kitchen (Mutiny Bay) locations and tap the order button, you will then be able to order contact-free and collect your food from the restaurant.\n\n𝗠𝗲𝗿𝗹𝗶𝗻 𝗣𝗮𝘀𝘀𝗵𝗼𝗹𝗱𝗲𝗿 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗶𝘀 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝘄𝗵𝗲𝗻 𝗼𝗿𝗱𝗲𝗿𝗶𝗻𝗴 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗰𝗼𝘂𝗻𝘁𝗲𝗿 𝗮𝘀 𝘂𝘀𝘂𝗮𝗹, 𝘁𝗵𝗲 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗰𝗮𝗻𝗻𝗼𝘁 𝗯𝗲 𝘂𝘀𝗲𝗱 𝘄𝗶𝘁𝗵 𝗺𝗼𝗯𝗶𝗹𝗲 𝗳𝗼𝗼𝗱 𝗼𝗿𝗱𝗲𝗿𝘀",
+      "_id": 588,
+      "Title": "Unlimited Digital Photos",
+      "Summary": "Capture all your unforgettable memories with imagic an incredible new way to enjoy unlimited digital photos direct to your phone",
+      "Image": "e483535d-51a6-56c4-b8b5-f7161d937fc5",
+      "DisplaySchedule": "{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 09:00:00\",\"end\":\"2021-11-07 20:00:00\"},{\"type\":\"period\",\"offset_date\":\"2000-01-01 09:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":20,\"minute\":0}}]}",
+      "Description": "Imagic is an incredible new way to enjoy unlimited digital photos captured at numerous locations throughout Alton Towers Resort—including our 7 world-class rollercoasters, all your family faves and much more! Simply enjoy your day knowing that your memories are being captured for you, purchase your imagic today!\n\nSimply, visit the Shop within the app and upload your selfie to begin!",
       "ShowOnResort": true,
       "ShowOffResort": false,
       "Resort": 49,
@@ -5237,12 +4790,12 @@
       "ActionTitle": null
     },
     {
-      "_id": 490,
-      "Title": "The Alton Towers Dungeon",
-      "Summary": "Book your entry into the Alton Towers Dungeon through our app shop now...",
-      "Image": "efc1ef48-50d9-5ef6-b669-8bc0e0c66bc0",
-      "DisplaySchedule": "{\"type\":\"period\",\"offset_date\":\"2000-01-01 09:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":16,\"minute\":0}}",
-      "Description": "The Alton Towers Dungeons is an interactive journey through Staffordshire’s darkest history, guaranteed to make you laugh and scream in equal measure.\n\nThis 45 minute experience journeys through 5 shows, a boat ride* and 6 themed areas. From the frantically funny to the seriously spooky, each show will introduce you to a real historical person from a key moment in Staffordshire’s history.\n\nVisit the shop within the app to book your entry into the Dungeon or visit altontowers.com/traitors\n\nRecommended for ages 10+, the Alton Towers Dungeon is located next to the Dark Forest behind the Tower Ruins.",
+      "_id": 589,
+      "Title": "Mobile food ordering is here!",
+      "Summary": "You can now order your food in advance from selected restaurants within the app!",
+      "Image": "18fb230c-d253-5531-a4c7-b160ba43e5b2",
+      "DisplaySchedule": "{\"type\":\"intersection\",\"children\":[{\"type\":\"range\",\"start\":\"2021-04-12 11:00:00\",\"end\":\"2021-11-07 16:00:00\"},{\"type\":\"period\",\"offset_date\":\"2000-01-01 11:00:00\",\"period_length\":{\"day\":1},\"range_end\":{\"hour\":16,\"minute\":0}}]}",
+      "Description": "Mobile food ordering is now available through the Alton Towers Resort app!\n\nVisit the Just Chicken, The Burger Kitchen (Mutiny Bay & The Towers) & Explorer's Pizza Pasta locations on the map and tap the order button, you will then be able to order contact-free and collect your food from the restaurant.\n\n𝗠𝗲𝗿𝗹𝗶𝗻 𝗣𝗮𝘀𝘀𝗵𝗼𝗹𝗱𝗲𝗿 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗶𝘀 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝘄𝗵𝗲𝗻 𝗼𝗿𝗱𝗲𝗿𝗶𝗻𝗴 𝗳𝗿𝗼𝗺 𝘁𝗵𝗲 𝗰𝗼𝘂𝗻𝘁𝗲𝗿 𝗮𝘀 𝘂𝘀𝘂𝗮𝗹, 𝘁𝗵𝗲 𝗱𝗶𝘀𝗰𝗼𝘂𝗻𝘁 𝗰𝗮𝗻𝗻𝗼𝘁 𝗯𝗲 𝘂𝘀𝗲𝗱 𝘄𝗶𝘁𝗵 𝗺𝗼𝗯𝗶𝗹𝗲 𝗳𝗼𝗼𝗱 𝗼𝗿𝗱𝗲𝗿𝘀",
       "ShowOnResort": true,
       "ShowOffResort": false,
       "Resort": 49,
@@ -5425,6 +4978,42 @@
       "Name": "Coca-Cola Freestyle",
       "Icon": "23968c02-c2ff-530e-a538-cd22f978b763",
       "Parent": 499
+    },
+    {
+      "_id": 1322,
+      "Name": "Scare Maze",
+      "Icon": "d345889b-7ef0-55cd-a980-12ce99de655b",
+      "Parent": 498
+    },
+    {
+      "_id": 1323,
+      "Name": "Scarefest",
+      "Icon": "ea3947e4-b3c7-5f30-9ad0-85408f4546e9",
+      "Parent": 523
+    },
+    {
+      "_id": 1416,
+      "Name": "Festive",
+      "Icon": "bb2becaa-203a-5c5a-a55a-1ff4ba263b67",
+      "Parent": 498
+    },
+    {
+      "_id": 1417,
+      "Name": "Festive",
+      "Icon": "d1969243-72f4-5f6f-8bc5-49279b0d8417",
+      "Parent": 523
+    },
+    {
+      "_id": 1422,
+      "Name": "Festive",
+      "Icon": "99372bd1-4bfd-5034-bbe8-6502bd7b78d6",
+      "Parent": 499
+    },
+    {
+      "_id": 1623,
+      "Name": "Mobile Order",
+      "Icon": "c84134db-5b2a-5863-97fc-9ef79c4d2bc5",
+      "Parent": 499
     }
   ],
   "Classification": [
@@ -5517,6 +5106,16 @@
       "_id": 429,
       "Name": "Scarefest",
       "Icon": null
+    },
+    {
+      "_id": 515,
+      "Name": "Festive",
+      "Icon": null
+    },
+    {
+      "_id": 516,
+      "Name": "Festive",
+      "Icon": null
     }
   ],
   "FeedbackReason": [
@@ -5545,6 +5144,7 @@
       "Reason": "Food Quality"
     }
   ],
+  "Activity": [],
   "Configuration": [
     {
       "_id": 1,

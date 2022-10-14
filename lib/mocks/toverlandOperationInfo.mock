@@ -1,0 +1,1354 @@
+[{
+	"id": 1,
+	"name": "F\u0113nix",
+	"area_id": "6",
+	"latitude": "51.400539",
+	"longitude": "5.983852",
+	"short_description": {
+		"nl": "De ultieme vliegervaring",
+		"de": "Das ultimative Flugerlebnis",
+		"en": "The ultimate flying experience"
+	},
+	"description": {
+		"nl": "Daar ga je! F\u0113nix is na 777 jaar herrezen uit zijn as en klaar voor zijn vurige, eerste vlucht. Vlieg mee naar 40 meter hoogte, raas door de lucht en ga meerdere keren over de kop!",
+		"de": "Es beginnt! F\u0113nix ist nach 777 Jahren aus seiner Asche hervorgestiegen und ist nun bereit f\u00fcr seinen ersten feurigen Flug. Fliege in 40 Meter H\u00f6he mit und rase durch die Luft, wo es mehrmals \u00fcber den Kopf geht!",
+		"en": "F\u0113nix has risen from the ashes after 777 years and is ready for its fiery first flight. Fly to a height of 40 meters, soar through the air and invert three times!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Fenix\/Fenix_onride_Vader_dochter.jpg",
+	"minLength": "10",
+	"supervision": null,
+	"header_description": {
+		"nl": "Wing coaster",
+		"de": "Wing-Coaster",
+		"en": "Wing coaster"
+	},
+	"last_status": {
+		"ride_id": "1",
+		"status_id": "3",
+		"status": {
+			"id": 3,
+			"name": {
+				"nl": "Storing",
+				"de": "St\u00f6rung",
+				"en": "Disorder"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "1",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 2,
+	"name": "Merlin's Quest",
+	"area_id": "6",
+	"latitude": "51.399694",
+	"longitude": "5.985833",
+	"short_description": {
+		"nl": "Een magische zoektocht",
+		"de": "Eine magische Suche",
+		"en": "A magical journey"
+	},
+	"description": {
+		"nl": "Maak je klaar voor een mysterieuze boottocht over de stille wateren van Avalon. Je eindbestemming is Tir na n\u00d3g, de bron van het eeuwige leven. Wie weet vliegt er ook nog een vuurvogel over.",
+		"de": "Bereite dich auf eine mysteri\u00f6se Bootsfahrt \u00fcber die stillen Gew\u00e4sser von Avalon vor. Dein eigentliches Ziel ist Tir na n\u00d3g, die Quelle des ewigen Lebens. Und wer wei\u00df: vielleicht fliegt ein Feuervogel \u00fcber dich hin\u00fcber.",
+		"en": "Get ready for a mysterious boat ride on the deep waters of Avalon. Your final destination is Tir na n\u00d3g, the source of eternal life. Who knows, there may also be a firebird flying over."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Merlins_Quest\/Merlins-Quest_Onride_groot_.jpg",
+	"minLength": "9",
+	"supervision": "6",
+	"header_description": {
+		"nl": "Boottocht met darkride",
+		"de": "Bootsfahrt mit Darkride",
+		"en": "Boat ride with darkride"
+	},
+	"last_status": {
+		"ride_id": "2",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "2",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 3,
+	"name": "Dwervelwind",
+	"area_id": "4",
+	"latitude": "51.399056",
+	"longitude": "5.985750",
+	"short_description": {
+		"nl": "Nog een rondje!",
+		"de": "Noch eine Runde!",
+		"en": "Another round!"
+	},
+	"description": {
+		"nl": "Maak je klaar voor een wervelende achtbaanrit. Hier ga je namelijk niet alleen vooruit, maar ook achteruit en draai je in de rondte als een \u00e9chte wervelwind!",
+		"de": "Bereite dich auf eine unvergessliche Achterbahnfahrt vor. Hier geht es nicht nur vorw\u00e4rts, sondern auch r\u00fcckw\u00e4rts. Au\u00dferdem drehst du dich,  wie ein echter Wirbelwind!",
+		"en": "Plunge forwards from left to right. The trains are spinning round and round, are we going forwards or backwards?! Sensational!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Dwervelwind\/Dwervelwind_onride_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Draaiende achtbaan",
+		"de": "Spinning-Coaster",
+		"en": "Spining coaster"
+	},
+	"last_status": {
+		"ride_id": "3",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "3",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 4,
+	"name": "Waku Waku",
+	"area_id": "4",
+	"latitude": "51.398583",
+	"longitude": "5.985889",
+	"short_description": {
+		"nl": "Een groot waterfestijn",
+		"de": "Ein gro\u00dfes Wasserfest!",
+		"en": "A big water feast"
+	},
+	"description": {
+		"nl": "Hier krijg je gegarandeerd natte voeten! Of lukt het jou toch om deze hindernisbaan af te leggen zonder nat te worden? Ga de uitdaging aan!",
+		"de": "Hier bekommst du garantiert nasse F\u00fc\u00dfe! Oder schaffst du es an den Hindernissen vorbei, ohne nass zu werden? Stelle dich der Herausforderung!",
+		"en": "A refreshing survival for water lovers. Brave the magical waters of Waku Waku without getting your feet wet."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Waku_Waku\/Waku-Waku_01.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Waterspeeltuin",
+		"de": "Wasserspielplatz",
+		"en": "Water playground"
+	},
+	"last_status": {
+		"ride_id": "4",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "4",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 5,
+	"name": "Coco Bolo",
+	"area_id": "4",
+	"latitude": "51.398861",
+	"longitude": "5.984972",
+	"short_description": {
+		"nl": "Warm nest op grote hoogte",
+		"de": "Warmes Nest in der H\u00f6he",
+		"en": "Warm nest at a great height"
+	},
+	"description": {
+		"nl": "Trek jezelf omhoog langs deze reusachtige rots en begroet het magische wezen, dat net uit haar ei gebroken is. Geniet van het uitzicht en laat je weer naar beneden glijden.",
+		"de": "Ziehe dich selbst an diesem riesigen Fels nach oben und begr\u00fc\u00dfe die magischen Wesen, die gerade erst geschl\u00fcpft sind. Genie\u00dfe die Aussicht und lasse dich wieder nach unten gleiten.",
+		"en": "High on a tree top somewhere in the Magische Vallei is the nest of Coco Bolo. Curious after the things she can see from up there? Climb along the tree trunk."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Coco_Bolo\/Coco_Bolo_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Toren",
+		"de": "Turm",
+		"en": "Tower"
+	},
+	"last_status": {
+		"ride_id": "5",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "5",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 6,
+	"name": "Tolly Molly",
+	"area_id": "4",
+	"latitude": "51.398743",
+	"longitude": "5.984740",
+	"short_description": {
+		"nl": "Lekker dobberen op het water",
+		"de": "Ruhig \u00fcber das Wasser schweben",
+		"en": "Nice float on the water"
+	},
+	"description": {
+		"nl": "De mythische waterwezens van de Magische Vallei ontwaken door de Dwervelfluit en gaan samen met jou op rondreis. Een behouden vaart.",
+		"de": "Die mysthischen Wasserwesen im Magische Vallei erwachen mit Hilfe der Dwervel Fl\u00f6te und ziehen danach ihre Kreise. Dies wird eine besonders ruhige Fahrt.",
+		"en": "The beautifully coloured water creatures ensure a relaxing tour. Have a spin on their back in this remarkable caroussel."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Tolly_Molly\/Tolly_Molly_vader-dochter_voorkant-lachen_groot.jpg",
+	"minLength": "7",
+	"supervision": "30",
+	"header_description": {
+		"nl": "Waterdraaimolen",
+		"de": "Wasserkarussel",
+		"en": "Water carousel"
+	},
+	"last_status": {
+		"ride_id": "6",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "6",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 7,
+	"name": "Djengu River",
+	"area_id": "4",
+	"latitude": "51.398222",
+	"longitude": "5.984250",
+	"short_description": {
+		"nl": "Spannend wildwateravontuur op een betoverde rivier",
+		"de": "Spannendes Wildwasserabenteuer auf einem bezaubernden Fluss",
+		"en": "Exciting white water adventure on an enchanted river"
+	},
+	"description": {
+		"nl": "Deze kolkende rivier voert je niet alleen door een prachtige, groene oase, maar ook door grotten en langs watervallen. Ben jij de pineut van je gezelschap en haal jij hier een compleet nat pak?",
+		"de": "Dieser spritzige Fluss f\u00fchrt nicht nur durch eine pr\u00e4chtige, gr\u00fcne Oase, sondern auch an Grotten und Wasserf\u00e4llen vorbei. Wirst du hier komplett nass?",
+		"en": "Thrilling wild water adventure on a bewitched river. Brave the raging water of the swirling river that runs through the heart of the Magische Vallei."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Djengu_River\/Djengu_River_zijkant_waterval_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Wildwaterbaan",
+		"de": "Wildwasserbahn",
+		"en": "Whitewater course"
+	},
+	"last_status": {
+		"ride_id": "7",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "7",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 8,
+	"name": "Booster Bike",
+	"area_id": "2",
+	"latitude": "51.397972",
+	"longitude": "5.985278",
+	"short_description": {
+		"nl": "Suis op een motor door de lucht",
+		"de": "Rase mit einem Motorrad durch die Luft",
+		"en": "Speed \u200b\u200bthrough the air on a motorbike"
+	},
+	"description": {
+		"nl": "Zet je schrap. Durf je plaats te nemen op \u00e9\u00e9n van de motors? Dan behaal je binnen 3 seconden een topsnelheid van ruim 75 km\/u. Wat volgt is het betere bochtenwerk door de lucht.",
+		"de": "Mach dich bereit. Traust du dich, auf einem der Motorr\u00e4der Platz zu nehmen? Dann erreichst du innerhalb von 3 Sekunden eine H\u00f6chstgeschwindigkeit von 75km\/h. Hier geht es kurvenreich durch die Luft.",
+		"en": "You'll get a magical feeling racing around on these bright green speed monsters. Go and find out for yourself!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Booster_Bike\/Boosterbike_zomer.jpg",
+	"minLength": "11",
+	"supervision": null,
+	"header_description": {
+		"nl": "Motorachtbaan",
+		"de": "Motorradachterbahn",
+		"en": "Motorbike roller coaster"
+	},
+	"last_status": {
+		"ride_id": "8",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "8",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 9,
+	"name": "Exploria Magica",
+	"area_id": "5",
+	"latitude": "51.397819",
+	"longitude": "5.982412",
+	"short_description": {
+		"nl": "Ontdek je eigen magie",
+		"de": "Entdecke deine eigene Magie",
+		"en": "Discover your own magic!"
+	},
+	"description": {
+		"nl": "Tover magische etalages kosteloos tot leven in Port Laguna met een interactieve toverstaf. Zwaai, zwiep en tik! Ga langs bij souvenirshop Mundo Magica en ontdek je eigen magie!",
+		"de": "Erwecke kostenlos magische Szenen in Port Laguna mit dem interaktiven Zauberstab zum Leben. Besuche den Souvenirshop Mundo Magica und entdecke deine eigene Magie!",
+		"en": "Discover the magic in yourself and magic in Port Laguna for free! Experience Exploria Magica thi season and tap, swipe or wave shop windows and magical objects to life!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Exploria_Magica\/Exploria_Magica.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Interactieve ervaring",
+		"de": "Interaktives Erlebnis",
+		"en": "Interactive experience"
+	},
+	"last_status": {
+		"ride_id": "9",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "9",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 10,
+	"name": "Paarden van Ithaka",
+	"area_id": "3",
+	"latitude": "51.397142",
+	"longitude": "5.983913",
+	"short_description": {
+		"nl": "Reis mee met Paarden van Ithaka",
+		"de": "Reise mit den Paarden van Ithaka",
+		"en": "Travel with Paarden van Ithaka"
+	},
+	"description": {
+		"nl": "In galop! Trek de teugels aan, geniet van het avontuurlijke uitzicht over Ithaka en ga in lichte draf over woeste gronden, langs waterpartijen en weelderige tuinen.",
+		"de": "Im Galopp! Ziehe an den Z\u00fcgeln und genie\u00dfe die idyllische Aussicht \u00fcber Ithaka und folge dem Weg \u00fcber verschiedene Wege und an Wasserf\u00e4llen und bezaubernden G\u00e4rten vorbei.",
+		"en": "Join us for a beautiful trip along dunes and old bridges. Get on your horse and make sure to hold on tight. We're on our way to Troy where we will battle for victory with small and big heroes."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Paarden_van_Ithaka\/Paarden_van_Ithaka_meisje_close-up_groot.jpg",
+	"minLength": "8",
+	"supervision": "33",
+	"header_description": {
+		"nl": "Rondrit",
+		"de": "Rundfahrgesch\u00e4ft",
+		"en": "Round trip"
+	},
+	"last_status": {
+		"ride_id": "10",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "10",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 11,
+	"name": "Scorpios",
+	"area_id": "3",
+	"latitude": "51.397165",
+	"longitude": "5.983631",
+	"short_description": {
+		"nl": "Trotseer de woeste zee van de Griekse eilanden",
+		"de": "Bezwinge die See der griechischen Inseln",
+		"en": "Overcome the raging sea of \u200b\u200bthe Greek islands"
+	},
+	"description": {
+		"nl": "De woeste golven zorgen ervoor dat het vlaggenschip Scorpios meters de lucht in gelanceerd wordt. Van links naar rechts! Heb jij de juiste zeebenen?",
+		"de": "Die hohen Wellen sorgen daf\u00fcr, dass das Flaggenschiff Scorpios meterhoch in die Luft fliegt. Von links nach rechts! Kannst du dies \u00fcberstehen?",
+		"en": "The Greek heroes continue their battle. Earlier they traveled on wild horses and fast chariots. But now their journey takes a turn, across the rough sea."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Scorpios\/Scorpios_zijkant_met-troy_groot.jpg",
+	"minLength": "9",
+	"supervision": null,
+	"header_description": {
+		"nl": "Schommelschip",
+		"de": "Schaukelschiff",
+		"en": "Rocking ship"
+	},
+	"last_status": {
+		"ride_id": "11",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "11",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 12,
+	"name": "Troy",
+	"area_id": "3",
+	"latitude": "51.396898",
+	"longitude": "5.982768",
+	"short_description": {
+		"nl": "Beleef de sensatie van Troy!",
+		"de": "Erlebe die Sensation von Troy!",
+		"en": "Experience the thrill of Troy!"
+	},
+	"description": {
+		"nl": "De strijdwagens zijn er klaar voor? Ben jij dat ook voor de snelste, hoogste en langste houten achtbaan van de Benelux? Na een metershoge optakeling volgt een sensationele rit zonder adempauze.",
+		"de": "Die Streitwagen sind bereit. Bist  du es auch, f\u00fcr die schnellste, h\u00f6chste und l\u00e4ngste Holzachterban der Benelux-L\u00e4nder? Nach einer hohen Auffahrt folgt ein sensationeller Ritt, ohne jegliche Atempause.",
+		"en": "Take place in the chariots of Troy: the fastest, tallest and longest wooden roller coaster of the Benelux. An enormous wooden structure with which the warriors conquer the city at full speed. Experience the magical feeling of victory yourself!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Troy\/Troy_onride_jongen_meisje.jpg",
+	"minLength": "9",
+	"supervision": null,
+	"header_description": {
+		"nl": "Houten achtbaan",
+		"de": "Holzachterbahn",
+		"en": "Wooden rollercoaster"
+	},
+	"last_status": {
+		"ride_id": "12",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "12",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 13,
+	"name": "Expedition Zork",
+	"area_id": "2",
+	"latitude": "51.397306",
+	"longitude": "5.985444",
+	"short_description": {
+		"nl": "Gigantische duik in het diepe",
+		"de": "Gigantischer Tauchgang in die Tiefe",
+		"en": "Gigantic dive into the deep"
+	},
+	"description": {
+		"nl": "Er staat je een wildwateravontuur met enorme splash te wachten, dus stap in \u00e9\u00e9n van de boomstammen. Er komen niet alleen voorwaartse afdalingen aan, dus wees gewaarschuwd.",
+		"de": "Es erwartet dich ein Wildwasserabenteuer mit einem enormen Splash, also auf geht's in einem Baumstamm. Es geht nicht nur Vorw\u00e4rts, also sei gewarnt.",
+		"en": "A babbling brook changes into a wild river. Suddenly, when you're fifteen metres high, a gigantic waterfall appears. Are you ready for an amazing dive?"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Expedition_Zork\/Expedition-Zork_jeugd_splash_groot.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Boomstam-wildwaterbaan",
+		"de": "Baumstamm-Wildwasserbahn",
+		"en": "Whitewater course"
+	},
+	"last_status": {
+		"ride_id": "13",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "13",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 14,
+	"name": "Alpenrutsche",
+	"area_id": "2",
+	"latitude": "51.397745",
+	"longitude": "5.985583",
+	"short_description": {
+		"nl": "Slee\u00ebnd de berg af",
+		"de": "Rutschend den Berg hinab",
+		"en": "Sleighing down the mountain"
+	},
+	"description": {
+		"nl": "Van links naar rechts \u00e9n van onder naar boven. De onvoorspelbare Alpenrutsche kan zomaar van richting veranderen. Handen in de lucht en lachen maar!",
+		"de": "Von links nach rechts und von unten nach oben. Die unvorhersehbare Alpenrutsche kann jederzeit die Richtung \u00e4ndern. H\u00e4nde in die Luft und los geht's!",
+		"en": "In the magical sledges of Alpenrutsche you go from left to right and into the deep again. Arms in the air and smile!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Alpenrutsche\/Alpenrutsche_meisje_close-up.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Dynamisch schommelschip",
+		"de": "Dynamisches Schaukelschiff",
+		"en": "Dynamic rocking ship"
+	},
+	"last_status": {
+		"ride_id": "14",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "14",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 15,
+	"name": "Wirbelbaum",
+	"area_id": "2",
+	"latitude": "51.397450",
+	"longitude": "5.986205",
+	"short_description": {
+		"nl": "Hoog(s)tepunt van Wunderwald",
+		"de": "H\u00f6chster Punkt des Wunderwalds",
+		"en": "Highest point of the Wunderwald"
+	},
+	"description": {
+		"nl": "Stap in \u00e9\u00e9n van de gondels van deze reusachtige boom en geniet van het uitzicht. Als je daar tijd voor hebt tenminste, want je draait ook nog rond en rond en rond!",
+		"de": "Betrete eine der Gondeln dieses riesigen Baums und genie\u00dfe die Aussicht. Wenn du daf\u00fcr genug Zeit findest, denn die Gondel dreht sich die ganze Zeit rund und rund und rund!",
+		"en": "Take a seat in a basket hanging off the branches of the bewitched Wirbelbaum. Je gaat hoger en hoger en kijkt zo uit over Magic Forest."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Wirbelbaum\/Wirbelbaum_gezin_bovenaanzicht_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Dynamisch reuzenrad",
+		"de": "Dynamisches Riesenrad",
+		"en": "Dynamic Ferris wheel"
+	},
+	"last_status": {
+		"ride_id": "15",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "15",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 16,
+	"name": "Maximus' Blitz Bahn",
+	"area_id": "2",
+	"latitude": "51.397333",
+	"longitude": "5.986306",
+	"short_description": {
+		"nl": "Word Maximus' snelste testrijder!",
+		"de": "Werde Maximus' schnellster Testfahrer",
+		"en": "Become Maximus' fastest test driver!"
+	},
+	"description": {
+		"nl": "Jij bent \u00e9\u00e9n van de uitverkorenen die de Bobslee van Maximus M\u00fcller mag uitproberen. Neem plaats, scheer door de bochten en zet recordtijd neer waarmee je je gezelschap verslaat.",
+		"de": "Du bist auserw\u00e4hlt, um die Bobbahn von Maximus M\u00fcller zu testen. Nimm Platz, rase durch die Kurvern und breche die Rekordzeit, mit der du alle verwundern wirst.",
+		"en": "Maximus\u2019 Blitz Bahn is a bobsleigh run following the latest technologies.  Je bepaalt zelf hoe hard je gaat!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Maximus_Blitz_Bahn\/Blitzbahn_moeder_dochter_winter_close-up.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Bobbaan",
+		"de": "Bobbahn",
+		"en": "Bobsleigh track"
+	},
+	"last_status": {
+		"ride_id": "16",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "16",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 17,
+	"name": "Villa Fiasko",
+	"area_id": "2",
+	"latitude": "51.397260",
+	"longitude": "5.986484",
+	"short_description": {
+		"nl": "E\u00e9n groot gekkenhuis!",
+		"de": "Ein gro\u00dfes, verr\u00fccktes Haus!",
+		"en": "One big madhouse!"
+	},
+	"description": {
+		"nl": "Je stapt nietsvermoedend deze villa binnen, maar al snel heb je het door: hier is niets wat het lijkt. Kun jij alle obstakels doorstaan tijdens je tour door de villa?",
+		"de": "Du betrittst nichtsdenkend diese Villa und siehst es sofort: Nichts ist hier so, wie es zu sein scheint. \u00dcberwindest du alle Hindernisse w\u00e4hrend deiner Tour durch die Villa?",
+		"en": "This isn't a simple house visit, but a mad journey full of obstacles. Eenmaal binnen blijkt niets is wat het lijkt."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Villa_Fiasko\/Villa_Fiasko_draaien_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Funhouse",
+		"de": "Funhouse",
+		"en": "Funhouse"
+	},
+	"last_status": {
+		"ride_id": "17",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "17",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 18,
+	"name": "Drakenslangen",
+	"area_id": "1",
+	"latitude": "51.396667",
+	"longitude": "5.986889",
+	"short_description": {
+		"nl": "Vliegensvlug naar beneden",
+		"de": "Blitzschnell nach unten",
+		"en": "Whizzing down"
+	},
+	"description": {
+		"nl": "Wat een spanning! Helemaal in het topje van Land van Toos, begint jouw avontuur. Stap in je eigen bootje en ga er eens goed voor zitten. Zet je schrap voor flinke golven en bereid je voor op een spetterende afdaling!",
+		"de": "Am h\u00f6chsten Punkt des Land van Toos betrittst du ein kleines Boot und es geht rasend schnell nach unten. Bist du schneller, als dein Gegner?",
+		"en": "This is not just a slide, Drakenslangen is a real water slide. And that means: quicker and more exciting."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Drakenslangen\/Drakenslangen_overview_groot.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Waterglijbanen",
+		"de": "Wassergleitbahn",
+		"en": "Water slide"
+	},
+	"last_status": {
+		"ride_id": "18",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "18",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 19,
+	"name": "Toos-Express",
+	"area_id": "1",
+	"latitude": "51.396885",
+	"longitude": "5.986291",
+	"short_description": {
+		"nl": "Op hol geslagen!",
+		"de": "Total verr\u00fcckt!",
+		"en": "Rampage!"
+	},
+	"description": {
+		"nl": "Hij lijkt wel ontspoord, deze knotsgekke trein die de hele dag met een rotgang door Land van Toos dendert. We geven het toe, je moet best wat lef hebben om in deze achtbaan te stappen. In een doldwaze rit hobbel je mee van grote hoogtes naar diepe dalen. Hup weer de volgende bocht om, hou je goed vast! Toos-Express komt weer veilig terug op zijn stationnetje.",
+		"de": "Er scheint v\u00f6llig entgleist zu sein, dieser total verr\u00fcckte Zug, der den ganzen Tag lang in einem m\u00f6rderischen Tempo durchs Land von Toos rast.  Bei dieser total irren Fahrt von schwindelerregenden H\u00f6hen in tiefe T\u00e4ler werdet ihr so richtig durchgesch\u00fcttelt. Toos-Express kommt nach jeder Fahrt wieder sich in seinem kleinen Bahnhof an.",
+		"en": "It seems like it's derailed, this crazy train that thunders through Land van Toos at breakneck speed. We admit, you must have some courage to step into this roller coaster. Inside this crazy ride you hobble along from great heights down to deep valleys. And hop.....taking the next turn, brace yourself! Toverland-Express always comes back safe to its little station."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Toos-Express\/Toos_express_voorkant_groot.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Indoor achtbaan",
+		"de": "Indoorachterbahn",
+		"en": "Indoor coaster"
+	},
+	"last_status": {
+		"ride_id": "19",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "19",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 20,
+	"name": "Truukjes",
+	"area_id": "1",
+	"latitude": "51.396778",
+	"longitude": "5.986611",
+	"short_description": {
+		"nl": "Favoriet van de allerkleinsten",
+		"de": "Favorit der Allerkleinsten",
+		"en": "Favourite of the little ones"
+	},
+	"description": {
+		"nl": "Handen aan het stuur, want zelfs de allerkleinste ervaren hier hun eerste rijles. Een brandweer, jeep of sportwagen? Voor welk voertuig ga jij?",
+		"de": "H\u00e4nde ans Lenkrad, denn hier erleben sogar die Allerkleinsten ihre erste Fahrt. Feuerwehr, oder doch lieber Sportwagen? Wof\u00fcr entscheidest du dich?",
+		"en": "A favourite for the tiny ones. No wonder, it's really cool to be the driver of your own fire engine, jeep or bus!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Truukjes\/121010_Truckjes_3.jpg",
+	"minLength": "5",
+	"supervision": "31",
+	"header_description": {
+		"nl": "Mini-autoparcours",
+		"de": "Mini-Autoparcours",
+		"en": "Mini autoparcours"
+	},
+	"last_status": {
+		"ride_id": "20",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "20",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 21,
+	"name": "Theekopjes",
+	"area_id": "1",
+	"latitude": "51.396596",
+	"longitude": "5.986615",
+	"short_description": {
+		"nl": "Dans in de rondte in de vrolijke theekopjes",
+		"de": "Drehe ein paar Runden in den fr\u00f6hlichen Teetassen",
+		"en": "Spinning around in these colourfull tea cups"
+	},
+	"description": {
+		"nl": "Voor een theekransje moet je ergens anders zijn, want deze theekopjes zijn ruiger dan je denkt. Neem plaats in \u00e9\u00e9n van de kleurrijke kopjes en het draaien kan beginnen.",
+		"de": "F\u00fcr ein Kaffekr\u00e4nzschen musst du woanders sein, denn diese Tassen sind schneller als erwartet. Nimm in einer der farbenfrohen Tassen Platz und das Drehen kann beginnen.",
+		"en": "Bright coloured tea cups dance through Land van Toos. There's room for the whole family. Enjoy dancing around together."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Theekopjes\/Tea_Cups_Gezin_groot.jpg",
+	"minLength": "9",
+	"supervision": "34",
+	"header_description": {
+		"nl": "Draaiende theekopjes",
+		"de": "Teetassen",
+		"en": "Tea cups"
+	},
+	"last_status": {
+		"ride_id": "21",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "21",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 22,
+	"name": "Vliegend Tapijt",
+	"area_id": "1",
+	"latitude": "51.396417",
+	"longitude": "5.986583",
+	"short_description": {
+		"nl": "Duikel van boven naar beneden",
+		"de": "Von oben nach unten",
+		"en": "From top to buttom"
+	},
+	"description": {
+		"nl": "Handen in de lucht, ben je er klaar voor? Neem plaats in \u00e9\u00e9n van de zes zitjes. Hier ga je omhoog, omlaag \u00e9n nog een keer!  Een spannende ervaring voor de (aller)kleinsten!",
+		"de": "H\u00e4nde in die Luft, bist du bereit? Nimm auf einem der sechs Sitze Platz. Hier gehts hoch und runter! Eine spannende Erfahrung f\u00fcr die (Aller-)Kleinsten!",
+		"en": "If you thought you could have a rest on his sofa, you're wrong! This grumpy pig will take care of that. You go up...and then down again."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Vliegend_Tapijt\/Vliegend_Tapijt_2.jpg",
+	"minLength": "5",
+	"supervision": null,
+	"header_description": {
+		"nl": "Mini vrije val",
+		"de": "Mini-Freifallturm",
+		"en": "Mini free fall"
+	},
+	"last_status": {
+		"ride_id": "22",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "22",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 23,
+	"name": "Toverhuis",
+	"area_id": "1",
+	"latitude": "51.396714",
+	"longitude": "5.986383",
+	"short_description": {
+		"nl": "Waar kleine heksen en jonge tovenaars hun toverkracht ontdekken",
+		"de": "Wo kleine Hexen und Zauberer ihre Zauberkraft entdecken",
+		"en": "Where little witches and young wizards discover their magic"
+	},
+	"description": {
+		"nl": "Dit huis heeft niet voor niets deze naam. De kleinste tovenaars en heksen kunnen met behulp van een toverstaf dit huis tot leven laten komen. Bami Salami!",
+		"de": "Dieses Haus hat nicht umsonst diesen Namen. Die kleinsten Zauberer und Hexen k\u00f6nnen mit Hilfe eines Zauberstabs das Haus zum Leben erwecken lassen. Bami Salami!",
+		"en": "Are you a real wizard? Magical things happen inside this bewitched Toverhuis when you use real magic spells."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Toverhuis\/Toverhuis_moeder_dochter_groot.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Interactieve ervaring",
+		"de": "Interaktives Erlebnis",
+		"en": "Interactive experience"
+	},
+	"last_status": {
+		"ride_id": "23",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "23",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 24,
+	"name": "Klokhuis",
+	"area_id": "1",
+	"latitude": "51.396506",
+	"longitude": "5.986224",
+	"short_description": {
+		"nl": "Voor de kleine deugnieten",
+		"de": "F\u00fcr die kleinen Schlingel",
+		"en": "For the little rascals"
+	},
+	"description": {
+		"nl": "Deze ondeugende, maar vrolijke rups eet zich een weg door het Land van Toos. Leuk voor de  kleinste oogappeltjes, maar ook ouders kunnen gezellig een ritje meerijden.",
+		"de": "Diese freche, aber fr\u00f6hlich Raupe frisst sich den Weg durch das Land van Toos. Toll f\u00fcr die Allerkleinsten, aber auch \u00c4ltere d\u00fcrfen hier eine Runde drehen.",
+		"en": "This naughty green caterpillar certainly is. He zig-zags and twists around the apple and if you don't look, he secretly takes a bite! Take a seat in one of the jolly trains, Mum and Dad can join you if you want."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Klokhuis\/Klokhuis.jpg",
+	"minLength": "5",
+	"supervision": "31",
+	"header_description": {
+		"nl": "Mini rupsbaan",
+		"de": "Raupenbahn",
+		"en": "Mini track"
+	},
+	"last_status": {
+		"ride_id": "24",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "24",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 25,
+	"name": "Djinn",
+	"area_id": "1",
+	"latitude": "51.396156",
+	"longitude": "5.986798",
+	"short_description": {
+		"nl": "Vlieg door de lucht in een betoverde zweefmolen",
+		"de": "Fliege mit dem bezauberten Kettenkarussel durch die Luft",
+		"en": "Fly trough the air in this magical swing ride"
+	},
+	"description": {
+		"nl": "Deze prachtige zweefmolen is betoverd met Oosterse magie. Kies een stoeltje uit en maak een magische tocht door de lucht. Zwieren, zwaaien en rondjes draaien.",
+		"de": "Fliege mit Djinn, dem bezaubernden Kettenkarussell durch die Luft. W\u00e4hle einen Platz aus und mache einen magischen Flug durch die Luft.",
+		"en": "A beautiful swing ride, enchanted with oriental magic. Flying high up in the air. Now you know how it feels to fly!"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Djinn\/Djinn_man_kind_onride_groot.jpg",
+	"minLength": "9",
+	"supervision": "32",
+	"header_description": {
+		"nl": "Zweefmolen",
+		"de": "Kettenkarussell",
+		"en": "Swing ride"
+	},
+	"last_status": {
+		"ride_id": "25",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "25",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 26,
+	"name": "Arthur\u2019s Tournament Training",
+	"area_id": "6",
+	"latitude": "51.401108",
+	"longitude": "5.984420",
+	"short_description": {
+		"nl": "Aan het hof van Koning Arthur",
+		"de": "Am Hofe von K\u00f6nig Arthur",
+		"en": "At the court of King Arthur"
+	},
+	"description": {
+		"nl": "Om koning te worden van de mythische wereld Avalon moet je sterk en strijdlustig zijn. Als jij dit trainingsparcours zonder moeite aflegt, is dat al een goed begin.",
+		"de": "Um der K\u00f6nig der mythischen Welt von Avalon zu werden, musst du stark und streitlustig sein. Wenn du diesen Trainingsparcours ohne Probleme absolvierst, ist dies bereits ein guter Anfang.",
+		"en": "Practising, playing and climbing! Have you got the talent to become the real king of the mythical world Avalon?"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Arthurs_Tournament_Training\/ATT_spelen_groot.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Speeltuin",
+		"de": "Spielplatz",
+		"en": "Playground"
+	},
+	"last_status": {
+		"ride_id": "26",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "26",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 27,
+	"name": "Dwaalhof",
+	"area_id": "1",
+	"latitude": "51.396419",
+	"longitude": "5.985627",
+	"short_description": {
+		"nl": "Ontdek verborgen paadjes in een betoverd labyrint",
+		"de": "Entdecke verborgene Pfade in diesem magischen Labyrinth",
+		"en": "Discover unexpected tracks in this magical labyrinth"
+	},
+	"description": {
+		"nl": "Stap het Dwaalhof in en je avontuur begint. Dit betoverde labyrint zit vol met geheime hofjes en onverwachte paden. Weet jij de uitgang te vinden?",
+		"de": "Betrete den Dwaalhof und das Abenteuer beginnt. Dieses bezaubernde Labyrinth steckt voller geheimer Pl\u00e4tze und unerwarteter Wege. Hoffentlich findest du den Ausgang noch?",
+		"en": "Out in the Tovertuin lies a wondrous maze full of secret courtyards and unexpected tracks. Walk along all the corners, so that you can find your way out."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Dwaalhof\/Doolhof_overview_groot.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Doolhof",
+		"de": "Labyrinth",
+		"en": "Labyrinth"
+	},
+	"last_status": {
+		"ride_id": "27",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "27",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 28,
+	"name": "Fort Boreas",
+	"area_id": "4",
+	"latitude": "51.398861",
+	"longitude": "5.984528",
+	"short_description": {
+		"nl": "Klimmen en klauteren naar de top",
+		"de": "Bis zur Spitze klettern",
+		"en": "Climb to the top"
+	},
+	"description": {
+		"nl": "In de schaduw van de Magische Vallei vind je dit bijzondere speelfort. De glijbanen, buizen en krappe bruggetjes komen rechtstreeks uit je eigen fantasie.",
+		"de": "Im Schatten des Magische Vallei  findest du diese besondere Spielfestung. Die Rutschen, Seile und Br\u00fccken k\u00f6nnten so direkt aus deiner Fantasie kommen.",
+		"en": "Climbing and scrambling to the top. Can you find your way to one of the thrilling slides?"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Fort_Boreas\/Fort_boreas_overview.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Speeltuin",
+		"de": "Spielplatz",
+		"en": "Playground"
+	},
+	"last_status": {
+		"ride_id": "28",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "28",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 29,
+	"name": "Karussell",
+	"area_id": "2",
+	"latitude": "51.397700",
+	"longitude": "5.985908",
+	"short_description": {
+		"nl": "Betoverend rondje nostalgie",
+		"de": "Eine magische Runde Nostalgie",
+		"en": "Enchanting round of nostalgia"
+	},
+	"description": {
+		"nl": "Nog een rondje, nog een rondje! Dat zul je zeggen na een ritje op deze nostalgische carrousel. Spring jij op het paard of wordt het toch een gondel?",
+		"de": "Noch eine Runde, noch eine Runde! Das wirst du w\u00e4hrend einer Fahrt in unserem nostalgischen Karussell sagen. Springst du auf ein Pferd oder wird es doch eine Gondel?",
+		"en": "A magical place must have a beautiful and nostalgic Karussell. Go and have a seat in a carriage or sit on the back of a horse."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Karussell\/Karussel_familie_close-up_groot.jpg",
+	"minLength": "7",
+	"supervision": "30",
+	"header_description": {
+		"nl": "Draaimolen",
+		"de": "Karussell",
+		"en": "Carousel"
+	},
+	"last_status": {
+		"ride_id": "29",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "29",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 30,
+	"name": "Kletterabenteuer",
+	"area_id": "2",
+	"latitude": "51.397608",
+	"longitude": "5.985522",
+	"short_description": {
+		"nl": "Een gigantische klim door Wunderwald",
+		"de": "Ein gro\u00dfes Abenteuer durch den Wunderwald",
+		"en": "A gigantic climb through Wunderwald"
+	},
+	"description": {
+		"nl": "Ga op speelavontuur in het Wunderwald en ontdek deze wereld op grote hoogte. Neem je de wiebelende touwbruggen, snelle rollerbanen of bewegende netten?",
+		"de": "Gehe auf ein Abenteuer im Wunderwald und entdecke die Welt aus gro\u00dfer H\u00f6he. Benutzt du die H\u00e4ngebr\u00fccken, die schnellen Rutschbahnen, oder doch lieber die Netze?",
+		"en": "A magical place must have a beautiful and nostalgic Karussell. Go and have a seat in a carriage or sit on the back of a horse."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Kletterabenteuer\/Kletterabenteuer.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Speeltuin",
+		"de": "Spielplatz",
+		"en": "Playground"
+	},
+	"last_status": {
+		"ride_id": "30",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "30",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 31,
+	"name": "Kletterparcours",
+	"area_id": "2",
+	"latitude": "51.396250",
+	"longitude": "5.984778",
+	"short_description": {
+		"nl": "Voor de echte waaghalzen",
+		"de": "F\u00fcr die Mutigen",
+		"en": "For daredevils (in the making)"
+	},
+	"description": {
+		"nl": "Verzamel al je moed bij elkaar en leg op grote hoogte dit klimparcours af. Als echte avonturier is jouw geen hindernis of obstakel te gek, dus komt maar op.",
+		"de": "Sammle all deinen Mut zusammen, denn hier geht es auf einen Kletterparcours in gro\u00dfer H\u00f6he. Als echter Abenteurer ist aber kein Hindernis zu schwer f\u00fcr dich.",
+		"en": "A thrilling survival track that challenges you to go one step further. Are you ready to become a real survivor?"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Kletterparcours\/Survivial_jongen_close-up.jpg",
+	"minLength": "11",
+	"supervision": null,
+	"header_description": {
+		"nl": "Klimparcours",
+		"de": "Kletterparcours",
+		"en": "Climbing course"
+	},
+	"last_status": {
+		"ride_id": "31",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "31",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 32,
+	"name": "Klimhoed",
+	"area_id": "1",
+	"latitude": "51.396073",
+	"longitude": "5.986429",
+	"short_description": {
+		"nl": "Springen, klimmen en glijden",
+		"de": "Springen, klettern und gleiten",
+		"en": "Jump, climb and slide"
+	},
+	"description": {
+		"nl": "Durf jij de uitdaging aan? Klim dan zo snel mogelijk omhoog naar het hoogste topje. Deze bijzondere toverhoed is een springkussen, klimwand en glijbaan in \u00e9\u00e9n.",
+		"de": "Traust du dich, dich dieser Herausforderung zu stellen? Klettere dann so schnell du kannst nach oben. Dieser Zauberhut ist ein Springkissen, eine Kletterwand und Rutsche in einem.",
+		"en": "A bouncy castle, a climbing wall and a slide\u2026.all in one. There's no end to this party! Are you the first one to reach the top?"
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Attractie\/Klimhoed\/Klimhoed_klimmen_groot.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Speeltuin",
+		"de": "Spielplatz",
+		"en": "Playground"
+	},
+	"last_status": {
+		"ride_id": "32",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "32",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}, {
+	"id": 60,
+	"name": "Magiezijn",
+	"area_id": "5",
+	"latitude": "51.397756",
+	"longitude": "5.983149",
+	"short_description": {
+		"nl": "In iedereen schuilt een tovenaar",
+		"de": "In jedem steckt ein Zauberer",
+		"en": "There is a wizard in everyone"
+	},
+	"description": {
+		"nl": "Er spoelen iedere dag flessen met toverstokken aan in Port Laguna met goede en minder goede magie. Jij bent uitverkoren om te helpen bij het testen. Dus, pas op!",
+		"de": "Es werden jeden Tag Flaschen mit Zauberst\u00e4ben an den Strand angesp\u00fclt. Diese enthalten gute oder weniger gute Magie.  Du wurdest auserw\u00e4hlt beim Testen mitzuhelfen. Passe also auf!",
+		"en": "An interactive show, that challenges you to discover your own magic, together with the Magistralis-family."
+	},
+	"thumbnail": "https:\/\/www.toverland.com\/fileadmin\/user_upload\/App\/Show\/Magiezijn\/Magiezijn_toverfoto.jpg",
+	"minLength": "12",
+	"supervision": null,
+	"header_description": {
+		"nl": "Interactieve ervaring",
+		"de": "Interaktive Show",
+		"en": "Interactive show"
+	},
+	"last_status": {
+		"ride_id": "60",
+		"status_id": "2",
+		"status": {
+			"id": 2,
+			"name": {
+				"nl": "Gesloten",
+				"de": "Geschlossen",
+				"en": "Closed"
+			}
+		}
+	},
+	"last_waiting_time": {
+		"ride_id": "60",
+		"waiting_time": "5"
+	},
+	"opening_times": []
+}]

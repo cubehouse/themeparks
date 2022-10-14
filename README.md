@@ -1,8 +1,18 @@
+# Notice
+
+This library will be soon replaced with a new codebase (6.x) that interfaces with [ThemeParks.wiki](https://www.themeparks.wiki/) to get park data. The current implementation (5.x) will no longer be actively maintained.
+
+[API Documentation](https://api.themeparks.wiki/docs/v1/) is available for the new API, and some auto-generated client libraries are available:
+* [JavaScript](https://github.com/ThemeParks/ThemeParks_JavaScript)
+* [Python](https://github.com/ThemeParks/ThemeParks_Python)
+
+If you are interested in how data is sourced for the new API, you can browse the [ParksAPI](https://github.com/ThemeParks/parksapi) repo, which contains the source code for fetching park data. However, to avoid further takedown requests, this repo will not contain details like API keys that are required to access most services.
+
 # themeparks
 
 An unofficial API library for accessing ride wait times and park opening times for many theme parks around the world, including Disney, Universal and SeaWorld parks.
 
-[![Discord Server](https://img.shields.io/discord/734308155315453963.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Z7RYWDg)
+[![Discord Server](https://img.shields.io/discord/734308155315453963.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/Vs2zQB7)
 [![Donate](https://img.shields.io/liberapay/patrons/cube.svg?logo=liberapay)](https://en.liberapay.com/cube/)
 
 ![Node.js CI](https://github.com/cubehouse/themeparks/workflows/Node.js%20CI/badge.svg) [![Build Status](https://travis-ci.com/cubehouse/themeparks.svg?branch=master)](https://travis-ci.com/cubehouse/themeparks) [![npm version](https://badge.fury.io/js/themeparks.svg)](https://badge.fury.io/js/themeparks) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/cubehouse/themeparks.svg)
@@ -14,10 +24,6 @@ An unofficial API library for accessing ride wait times and park opening times f
 ## Install
 
     npm install themeparks --save
-
-## Migrate from themeparks 4.x
-
-If you have been using themeparks 4.x, please follow this guide to [migrate from themeparks 4.x to themeparks 5.x](https://github.com/cubehouse/themeparks/wiki/Migrating-from-4.x-to-5.x)
 
 ## Settings
 
@@ -88,7 +94,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 
 <!-- START_SUPPORTED_PARKS_LIST -->
 
-**61** Parks Supported
+**62** Parks Supported
 
 * Magic Kingdom - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldMagicKingdom)
 * Epcot - Walt Disney World Florida (ThemeParks.Parks.WaltDisneyWorldEpcot)
@@ -151,6 +157,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 * Busch Gardens Tampa (ThemeParks.Parks.BuschGardensTampa)
 * Busch Gardens Williamsburg (ThemeParks.Parks.BuschGardensWilliamsburg)
 * Liseberg (ThemeParks.Parks.Liseberg)
+* Toverland (ThemeParks.Parks.Toverland)
 
 <!-- END_SUPPORTED_PARKS_LIST -->
 
@@ -165,8 +172,8 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Animal Kingdom - Walt Disney World Florida|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Disneyland Resort|&#10003;|&#10003;|&#10007;|
 |California Adventure - Disneyland Resort|&#10003;|&#10003;|&#10007;|
-|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10003;|
-|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10003;|
+|Magic Kingdom - Disneyland Paris|&#10003;|&#10003;|&#10007;|
+|Walt Disney Studios - Disneyland Paris|&#10003;|&#10003;|&#10007;|
 |Hong Kong Disneyland|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Shanghai Disney Resort|&#10003;|&#10003;|&#10007;|
 |Magic Kingdom - Tokyo Disney Resort|&#10003;|&#10003;|&#10007;|
@@ -220,6 +227,7 @@ If you wish to use themeparks with a proxy, you can pass a proxy agent when you 
 |Busch Gardens Tampa|&#10003;|&#10003;|&#10007;|
 |Busch Gardens Williamsburg|&#10003;|&#10003;|&#10007;|
 |Liseberg|&#10003;|&#10003;|&#10007;|
+|Toverland|&#10003;|&#10003;|&#10007;|
 
 <!-- END_PARK_FEATURES_SUPPORTED -->
 
@@ -371,6 +379,7 @@ Prints:
 * Busch Gardens Tampa [(28°2′13.60″N, 82°25′10.57″W)]: (America/New_York)
 * Busch Gardens Williamsburg [(37°18′10.15″N, 76°59′16.96″W)]: (America/New_York)
 * Liseberg [(57°41′46.49″N, 11°59′8.33″E)]: (Europe/Stockholm)
+* Toverland [(51°23′48.78″N, 5°59′5.16″E)]: (Europe/Amsterdam)
 
 <!-- END_PARK_TIMEZONE_LIST -->
 
@@ -429,5 +438,6 @@ If you're using themeparks for a project, please let me know! I'd love to see wh
 * [My Disney Visit](http://www.mydisneyvisit.com/) - Walt Disney World
 * [ChronoPass](https://www.chronopass.app) - All parks
 * [LogRide - The Theme Park Tracker](https://www.theparksman.com/parkwide/) - All parks
+* [Themeparks](https://themeparks.arendz.nl/#/home) - Efteling, Phantasialand, Parc Asterix, Bellewaerde and Portaventura World
 
 Make a pull request to add your project to the list.
